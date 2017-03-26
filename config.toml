@@ -1,4 +1,4 @@
-baseurl = "http://www.client9.com/"
+baseurl = "http://www-client9-com.s3-website-us-west-2.amazonaws.com"
 languageCode = "en-us"
 title = "Nick Galbreath"
 MetaDataFormat = "yaml"
