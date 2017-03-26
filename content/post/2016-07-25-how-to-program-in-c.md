@@ -1,8 +1,8 @@
-+++
-aliases = [ "20160725" ]
-date = "2016-07-25"
-title = "How To Program in C"
-+++
+---
+aliases:/20160725
+date: 2016-07-25
+title: How To Program in C
+---
 
 If you *must* program in C, here are a few references I've collected from the twitterverse. It should keep you busy for the next few... years. And even then this only covers *the basics*.  You'll need to do more research on concurrency, signals, testing and some other topics in security.
 
@@ -11,7 +11,7 @@ If you *must* program in C, here are a few references I've collected from the tw
 ## How to C in 2016#
 
 [How to C in 2016](https://matt.sh/howto-c) by [Matt
-Stancliff](https://twitter.com/mattsta) is the article I wish I wrote when Iwas in my prime C programming days and wish I had when I was starting out. 
+Stancliff](https://twitter.com/mattsta) is the article I wish I wrote when I was in my prime C programming days and wish I had when I was starting out. 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How to C in 2016: <a href="https://t.co/zETGzqm4ut">https://t.co/zETGzqm4ut</a></p>&mdash; Matt Stancliff (@mattsta) <a href="https://twitter.com/mattsta/status/685194223612735490">January 7, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -26,10 +26,7 @@ Matt](https://github.com/Keith-S-Thompson/how-to-c-response) adds or corrects a 
 
 ## And another critique 
 
-[Some notes C in 2016](
-http://blog.erratasec.com/2016/01/some-notes-c-in-2016.html) by [Robert Graham](https://twitter.com/erratarob) and [David Maynor](https://twitter.com/dave_maynor) of [Errata
-Security](http://blog.erratasec.com) is more higher level criticism and worth
-reading.
+[Some notes C in 2016](http://blog.erratasec.com/2016/01/some-notes-c-in-2016.html) by [Robert Graham](https://twitter.com/erratarob) and [David Maynor](https://twitter.com/dave_maynor) of [Errata Security](http://blog.erratasec.com) is more higher level criticism and worth reading.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Thoughts from <a href="https://twitter.com/ErrataRob">@ErrataRob</a> on How to C in 2016: <a href="https://t.co/V45ugSsyVP">https://t.co/V45ugSsyVP</a></p>&mdash; David Moore (@grajagandev) <a href="https://twitter.com/grajagandev/status/688814259434749952">January 17, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
