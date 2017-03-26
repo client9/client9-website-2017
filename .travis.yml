@@ -5,8 +5,7 @@ language: go
 install:
   - go get github.com/spf13/hugo
 
-script:
-  - hugo -t client9
+script: hugo -t client9
 
 deploy:
   provider: s3
