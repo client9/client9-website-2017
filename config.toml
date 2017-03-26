@@ -1,5 +1,11 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://www.client9.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Nick Galbreath"
 MetaDataFormat = "yaml"
+enableRobotsTXT= true
+googleAnalytics = ""
+
+[params]
+sitename="Nick Galbreath"
+useWebFonts = true
 

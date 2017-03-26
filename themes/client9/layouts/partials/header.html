@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="none">
+    <meta name="format-detection" content="telephone=no">
+    {{ .Hugo.Generator }}
+    <base href="{{ .Site.BaseURL }}">
+    {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+    {{ if .Site.Params.useWebFonts }}<link href="https://fonts.googleapis.com/css?family=Lato:700|Merriweather:300,300italic,700" rel='stylesheet' type='text/css'>{{ end }}
+    <title>
+      {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+      {{ if eq $url "/" }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
+      {{ end }}
+    </title>
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{ partial "styles.html" . }}
+{{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
+  </head>
+  <body>
+    <section id=nav>
+      <h1><a href="/">{{ .Site.Params.sitename }}</a></h1>
+    </section>
