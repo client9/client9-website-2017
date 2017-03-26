@@ -4,18 +4,14 @@ date = "2016-07-25"
 title = "How To Program in C"
 +++
 
-If you *must* program in C, here are a few references I've collected from
-the twitterverse.  It should keep you busy for the next few... years.   And even then
-this only covers *the basics*.  You'll need to do more research on concurrency, signals, testing and
-some other topics in security.
+If you *must* program in C, here are a few references I've collected from the twitterverse. It should keep you busy for the next few... years. And even then this only covers *the basics*.  You'll need to do more research on concurrency, signals, testing and some other topics in security.
 
 <!--more-->
 
 ## How to C in 2016#
 
 [How to C in 2016](https://matt.sh/howto-c) by [Matt
-Stancliff](https://twitter.com/mattsta) is the article I wish I wrote when I
-was in my prime C programming days and wish I had when I was starting out. 
+Stancliff](https://twitter.com/mattsta) is the article I wish I wrote when Iwas in my prime C programming days and wish I had when I was starting out. 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How to C in 2016: <a href="https://t.co/zETGzqm4ut">https://t.co/zETGzqm4ut</a></p>&mdash; Matt Stancliff (@mattsta) <a href="https://twitter.com/mattsta/status/685194223612735490">January 7, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -24,17 +20,14 @@ Update:  Matt as also written a guide on `const` rules [So You Think You Can con
 ## A Critique
 
 [A critique of "How to C in 2016" by
-Matt](https://github.com/Keith-S-Thompson/how-to-c-response) adds or corrects
-a lot of details.  I believe most of which has been integrated in the original
-document.
+Matt](https://github.com/Keith-S-Thompson/how-to-c-response) adds or corrects a lot of details.  I believe most of which has been integrated in the original document.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2/2 A response to &quot;How to C 2016&quot; by Keith Thompson cc <a href="https://twitter.com/mattsta">@mattsta</a> <a href="https://t.co/r0kjgkMcWG">https://t.co/r0kjgkMcWG</a> <a href="https://twitter.com/hashtag/c99?src=hash">#c99</a> <a href="https://twitter.com/hashtag/cpp?src=hash">#cpp</a></p>&mdash; Gaetan Juvin (@gtnjuvin) <a href="https://twitter.com/gtnjuvin/status/688088929917112320">January 15, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## And another critique 
 
 [Some notes C in 2016](
-http://blog.erratasec.com/2016/01/some-notes-c-in-2016.html) by [Robert Graham
-](https://twitter.com/erratarob) and [David Maynor](https://twitter.com/dave_maynor) of [Errata
+http://blog.erratasec.com/2016/01/some-notes-c-in-2016.html) by [Robert Graham](https://twitter.com/erratarob) and [David Maynor](https://twitter.com/dave_maynor) of [Errata
 Security](http://blog.erratasec.com) is more higher level criticism and worth
 reading.
 
