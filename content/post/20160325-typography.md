@@ -12,7 +12,7 @@ title: Typography
 
 ## Fonts
 
-I copied the combo of Lato (the headlines) and Merriweather (the text) from
+The combination of Lato (the headlines) and Merriweather (the body text) is from
 [10 Awesome Google Font Combinations](https://theclientclass.com/google-font-combinations/).
 
 ## Links and Underlines
@@ -24,11 +24,23 @@ Here's some tricks:
 * [Crafting link underlines on Medium](https://medium.design/crafting-link-underlines-on-medium-7c03a9274f9#.ericl0z92)
 * [Styling Underlines on the Web](https://css-tricks.com/styling-underlines-web/)
 
-Uh, I'm not doing crazy drop shadow/canvas/etc tricks.  To make the underline
-look like chunky, I made it gray.
+Uh, I'm not doing crazy drop shadow/canvas/etc tricks.  To make the underline look less chunky, I made it gray.
 
 Samples:
 
 * Regular body text: <span class="underline">ampers@nds_or_underscores and http://links</span>.
 * Computer code text: <span class="underline"><code>ampers@nds_or_underscores and http://links<code></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
