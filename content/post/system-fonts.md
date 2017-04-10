@@ -5,26 +5,32 @@ Title: "Using System Fonts"
 
 ## Sans Serif
 
+As per Github 2017-04-10
+
 ```css
-font-family: 
-  -apple-system, 
-  BinkMacSystemFont,
+font-family:
+  -apple-system,
+  BlinkMacSystemFont,
   "Segoe UI",
-  Roboto,
-  "Helvetica Neue",
-  sans-serif;
+  Helvetica,
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol";
 ```
 
 ### Monospace
 
+As per Github 2017-04-10
+
 ```css
 font-family:
-  menlo,
-  consolas,
-  "Roboto Mono",
+  "SFMono-Regular",
+  Consolas, 
   "Liberation Mono",
-  "Ubuntu Mono",
-  courier,
+  Menlo,
+  Courier,
   monospace;
 ```
 
