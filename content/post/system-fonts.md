@@ -24,13 +24,23 @@ font-family:
 
 As per Github 2017-04-10
 
+
 ```css
+/* 1: Future Mac and iOS system font
+ * 2: Modern Windows
+ * 3: Linux of some flavors
+ * 4: Current mac/iOS 
+ * 5: At this stage you either got a old or unusual system.
+ *  Use Courier so we don't use 
+ *  "courier new" which is very bad
+ * 6: default
+ */
 font-family:
-  "SFMono-Regular",
-  Consolas, 
-  "Liberation Mono",
-  Menlo,
-  Courier,
+  /* 1 */ "SFMono-Regular",
+  /* 2 */ Consolas, 
+  /* 3 */ "Liberation Mono",
+  /* 4 */ Menlo,
+  /* 5 */ Courier,
   monospace;
 ```
 
