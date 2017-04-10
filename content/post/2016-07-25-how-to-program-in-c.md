@@ -32,6 +32,7 @@ Update:  Matt as also written a guide on `const` rules [So You Think You Can con
 
 From the [README](https://github.com/struct/mms/blob/master/README.md)
 
+<blockquote>
   This repo contains the slides for a training course originally developed in
   2012. It has been delivered to many students since its creation. It's sold out
   at the Black Hat USA conference several years in a row. The content has gone
@@ -40,11 +41,9 @@ From the [README](https://github.com/struct/mms/blob/master/README.md)
   This latest version still focuses on that but also covers more topics such as
   custom memory allocators, hardening concepts, and exploitation at a high
   level.
+</blockquote>
 
-The full PDF is here:
-https://github.com/struct/mms/blob/master/Modern_Memory_Safety_In_C_CPP.pdf
-
-This covers C++ (even more things to remember) as well.
+The [full PDF](https://github.com/struct/mms/blob/master/Modern_Memory_Safety_In_C_CPP.pdf) covers both C and C++ (even more things to remember).
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Because a hackers work week always starts late on a Friday night... <a href="https://t.co/PCfh3prRsL">https://t.co/PCfh3prRsL</a></p>&mdash; Chris Rohlf (@chrisrohlf) <a href="https://twitter.com/chrisrohlf/status/756641193958772736">July 23, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
