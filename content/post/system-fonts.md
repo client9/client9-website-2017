@@ -1,6 +1,6 @@
 ---
-Date:2017-04-09
-Title: Using System Fonts
+Date: 2017-04-09
+Title: "Using System Fonts"
 ---
 
 ## Sans Serif
@@ -18,3 +18,6 @@ font-family: menlo, consolas, "Roboto Mono", "Liberation Mono", "Ubuntu Mono", c
 
 ### Serif
 
+### References
+
+* discussion [if gitlab should switch to system fonts](https://gitlab.com/gitlab-org/gitlab-ce/issues/20102).  They decided against, but has useful notes on monospace system fonts.
