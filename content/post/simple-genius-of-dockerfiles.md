@@ -1,5 +1,6 @@
 ---
-draft:true
+date: 2016-04-10
+draft: true
 title: "The simple genius of dockerfiles"
 ---
 
