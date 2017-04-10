@@ -8,7 +8,6 @@
     {{ .Hugo.Generator }}
     <base href="{{ .Site.BaseURL }}">
     {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
-    {{ if .Site.Params.useWebFonts }}<link href="https://fonts.googleapis.com/css?family=Lato:700|Merriweather:300,300italic,700" rel='stylesheet' type='text/css'>{{ end }}
     <title>
       {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
       {{ if eq $url "/" }}
