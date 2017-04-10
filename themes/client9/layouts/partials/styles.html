@@ -26,7 +26,7 @@ p,a,li,blockquote {
   font-size: 21px;
 }
 
-code {
+pre, code {
   font-family:
   "SFMono-Regular",
   Consolas, 
@@ -44,6 +44,62 @@ h1 {
 h2 {
   font-size: 32px;
 }
+code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+code::before,code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+pre {
+  word-wrap: normal;
+}
+pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+
+
+pre {
+  margin-bottom: 0;
+  word-break: normal;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+pre code::before, pre code::after {
+  content: normal;
+}
 
 a:link,a:visited {
   color: rgba(0,0,0,1.0);
@@ -57,4 +113,6 @@ a:link,a:visited {
   text-decoration-color: rgba(0,0,0,0.4);
   text-decoration-skip: ink;
 }
+
+
 </style>

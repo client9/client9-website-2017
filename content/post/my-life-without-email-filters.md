@@ -1,6 +1,7 @@
 ---
-draft: true
+draft: false
 title: "I deleted all my email filters.  You won't believe what happened next."
+date: 2017-04-11
 ---
 
 I deleted all my email filters.  you won't believe what happened next.
