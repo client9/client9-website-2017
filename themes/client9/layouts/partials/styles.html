@@ -101,6 +101,22 @@ pre code::before, pre code::after {
   content: normal;
 }
 
+blockquote {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+blockquote>:first-child {
+  margin-top: 0;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0;
+}
+
 a:link,a:visited {
   color: rgba(0,0,0,1.0);
   text-decoration: underline;
