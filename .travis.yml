@@ -11,7 +11,7 @@ install:
 script:
   - hugo -t client9
   - minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags  -r -o public public
-  - hugo -t client 9 -D -E -F  -d public-draft
+  - hugo -t client9 -D -E -F  -d public-draft
 
 deploy:
   - provider: s3
