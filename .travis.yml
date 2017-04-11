@@ -8,11 +8,12 @@ install:
 script: hugo -t client9
 
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: www-client9-com
-  region: us-west-2
-  endpoint: www-client9-com.s3-website-us-west-2.amazonaws.com
-  local-dir: public
-  skip_cleanup: true
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: www-client9-com
+    region: us-west-2
+    endpoint: www-client9-com.s3-website-us-west-2.amazonaws.com
+    local-dir: public
+    skip_cleanup: true
+
