@@ -1,6 +1,8 @@
 sudo: false
 
 language: go
+go:
+  - 1.8.x
 
 install:
   - go get github.com/spf13/hugo
