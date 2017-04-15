@@ -22,43 +22,31 @@ The quick brown fox jumped over the lazy dog.
 
 ### Times New Roman
 
-<p class="sample" style="font-family: times new roman, monospace">The quick brown fox jumped over the lazy dog.
+<p class="sample" style="font-family: times new roman, monospace">
+The quick brown fox jumped over the lazy dog.
 </p>
 
 ### Athelas
 
-<p class="sample" style="font-family: athelas, monospace">The quick brown fox jumped over the lazy dog.
+<p class="sample" style="font-family: athelas, monospace">
+The quick brown fox jumped over the lazy dog.
 </p>
 
 ### Georgia
 
-<p class="sample" style="font-family: Georgia, monospace">The quick brown fox jumped over the lazy dog.
+<p class="sample" style="font-family: Georgia, monospace">
+The quick brown fox jumped over the lazy dog.
 </p>
 
 ### Charter
 
-<p class="sample" style="font-family: Charter, monospace">The quick brown fox jumped over the lazy dog.
-</p>
-
-### Hoefler Text
-
-<p class="sample" style="font-family: Hoefler Text, monospace">The quick brown fox jumped over the lazy dog.
-</p>
-
-### Palatino
-
-<p class="sample" style="font-family: Palatino, monospace">The quick brown fox jumped over the lazy dog.
-</p>
-
-### Iowan Old Style
-
-<p class="sample" style="font-family: Iowan Old Style, monospace">The quick brown fox jumped over the lazy dog.
+<p class="sample" style="font-family: Charter, monospace">
+The quick brown fox jumped over the lazy dog.
 </p>
 
 ### Cambria
 
-Microsoft ClearType font Cambria.  Missing on most Mac systems unless MS Office is installed.
-
+Microsoft ClearType font Cambria.  For Mac, [Charter might be the most similar](http://practicaltypography.com/cambria-alternatives.html).
 <p class="sample" style="font-family: Cambria, monospace">
 The quick brown fox jumped over the lazy dog.
 </p>
@@ -69,7 +57,20 @@ The quick brown fox jumped over the lazy dog.
 The quick brown fox jumped over the lazy dog.
 </p>
 
+### Palatino
 
+<p class="sample" style="font-family: Palatino, monospace">
+The quick brown fox jumped over the lazy dog.
+</p>
 
+### Iowan Old Style
 
+<p class="sample" style="font-family: Iowan Old Style, monospace">
+The quick brown fox jumped over the lazy dog.
+</p>
 
+### Hoefler Text
+
+<p class="sample" style="font-family: Hoefler Text, monospace">
+The quick brown fox jumped over the lazy dog.
+</p>
