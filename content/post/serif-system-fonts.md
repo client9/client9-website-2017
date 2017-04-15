@@ -52,7 +52,8 @@ The quick brown fox jumped over the lazy dog.<br>
 
 <p class="sample" style="font-family: Georgia, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog. 0123456789<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
 11111.11<br>
 88888.88<br>
 0Oo il1I! 2z 8$s5S
