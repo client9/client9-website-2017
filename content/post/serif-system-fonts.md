@@ -17,7 +17,8 @@ Date: "2017-04-15"
 This the default serif font, typically Times New Roman.
 
 <p class="sample" style="font-family: serif;">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -25,7 +26,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Times New Roman
 
 <p class="sample" style="font-family: times new roman, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -33,7 +35,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Athelas
 
 <p class="sample" style="font-family: athelas, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -41,7 +44,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Georgia
 
 <p class="sample" style="font-family: Georgia, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -49,7 +53,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Charter
 
 <p class="sample" style="font-family: Charter, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -58,7 +63,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 
 Microsoft ClearType font Cambria.  For Mac, [Charter might be the most similar](http://practicaltypography.com/cambria-alternatives.html).
 <p class="sample" style="font-family: Cambria, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -66,7 +72,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Palatino
 
 <p class="sample" style="font-family: Palatino, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -74,7 +81,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Iowan Old Style
 
 <p class="sample" style="font-family: Iowan Old Style, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -82,7 +90,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 ### Hoefler Text
 
 <p class="sample" style="font-family: Hoefler Text, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
@@ -92,7 +101,8 @@ The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
 [legibility problems](http://usabilitynews.org/examining-the-legibility-of-two-new-cleartype-fonts/)
 
 <p class="sample" style="font-family: Constantia, monospace">
-The quick brown fox jumped over the lazy dog. 0123456789 0Oo il1I! 2z 8$s5<br>
+The quick brown fox jumped over the lazy dog. 0123456789<br>
+0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
 88888.88
 </p>
