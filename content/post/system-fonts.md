@@ -11,7 +11,7 @@ As per Github 2017-04-10
 /* 1: Safari/Mac special, BlinkMac is the current
  *    Chrome method for using the mac system font
  * 2: Recent windows
- * 3: Usual or older systems defaults 
+ * 3: Unusual or older systems defaults 
  * 4: Unicode emojis
  */
 font-family:
@@ -26,11 +26,11 @@ font-family:
 As per Github 2017-04-10
 
 ```css
-/* 1: Future Mac and iOS system font
+/* 1: Future MacOS/iOS system font
  * 2: Modern Windows
  * 3: Linux of some flavors
- * 4: Current mac/iOS 
- * 5: At this stage you either got a old or unusual system.
+ * 4: Current MacOS/iOS 
+ * 5: Unusual or old system default
  *    Specify "courier" so we don't use 
  *    "courier new" which is very bad
  */
@@ -44,7 +44,10 @@ font-family:
 
 ### Serif
 
-Tk
+* windows: Cambria or Constantia
+* mac: Hoefler Text (maybe)
+* default: Georgia or Palatino
+* serif
 
 ### References
 
