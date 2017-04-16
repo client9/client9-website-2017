@@ -44,7 +44,7 @@ font-family:
 
 ### Serif
 
-No operating system uses serif fonts in their user-interface, so their no canonical choice here.
+No operating system uses serif fonts in their user-interface, so there is no canonical choice here.  However the available fonts do  cluster into 3 or 4 choices.
 
 One stack is Georgia-based:
 
@@ -74,6 +74,15 @@ font-family:
   Palatino Linotype, Palatino,
   serif;
 ```
+
+old style stack
+
+Hoefler Text
+Constantia
+Palatino Linotype, Palatino,
+serif;
+
+
 
 Two other candidates would be Hoefler Text (mac) and Constania (windows), but it is not clear to me how to integrate them into a stack.
 

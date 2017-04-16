@@ -133,6 +133,17 @@ The quick brown fox jumped over the lazy dog.<br>
 0Oo il1I! 2z 8$s5S<br>
 </p>
 
+### Baskerville
+
+<p class="sample" style="font- family: Baskerville, monospace">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S<br>
+</p>
+
 ### Hoefler Text
 
 This Mac system font was designed to show off features in Apple typography.  That said, the font has some very thin lines and the bold is really heavy.
@@ -148,7 +159,8 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Constantia
 
-Tk
+Constantia is part of the Microsoft ClearType font collection. It may be available on Macs if Microsoft Office is installed. Typographically it seems to be similar to Hoefler however not sure on size comparison.
+
 
 [legibility problems](http://usabilitynews.org/examining-the-legibility-of-two-new-cleartype-fonts/)
 
