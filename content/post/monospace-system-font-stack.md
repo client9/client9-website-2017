@@ -1,6 +1,6 @@
 ---
 Date: 2017-04-09
-Title: "Monospace System Font Stack"
+Title: "CSS System Font Stack - Monospace"
 ---
 <style>
 .sample {
@@ -11,32 +11,28 @@ Title: "Monospace System Font Stack"
 </style>
 
 Most operating systems ship with a few decent if not great monospace fonts.
+And my goal is to use them, and to avoid "Courier New" and "Courier" if
+possible.
 
-Basically, the only goal is to avoid using "Courier New" and if possible
-regular Courier as well.
+It's possible in a few years that the default will actually be a real
+system font.  It's claimed [Firefox
+55 will use Consolas or
+Menlo](https://www.fxsitecompat.com/en-CA/docs/2017/some-of-browser-default-fonts-have-been-changed/).  Looks like Chrome on modern windows is also [using Consolas](https://bugs.chromium.org/p/chromium/issues/detail?id=388087).  And who knows, maybe Apple's Safari will use the mysterious [SFMono-Regular](https://developer.apple.com/fonts/) (right now seems only available for applications, not CSS).
 
-Other notes:
-* Menlo started shipping in 2009 with Mac OS X 10.6, so it's not worth
-  optimizing and adding
-  [Monaco](https://en.wikipedia.org/wiki/Monaco_(typeface))
-* [Consolas](https://www.microsoft.com/typography/fonts/font.aspx?FMID=1924) has been shipping in Microsoft products since 2007. 
-* The classic [Lucida Console](https://en.wikipedia.org/wiki/Lucida#Lucida_Console) could be swapped instead of Consolas to catch very old windows machines, but not worth optimizing for.
+Until then, here's my monospace system stack.  It's simple:
 
 ```css
-/* 1: Future MacOS/iOS system font
- * 2: Modern Windows
- * 3: Linux of some flavors
- * 4: Current MacOS/iOS 
- * 5: Unusual or old system default
- *    Specify "courier" so we don't use 
- *    "courier new" which is very bad
+/* 1: Current MacOS/iOS font since 2009
+ * 2: Current Windows font since 2007
+ * 3: If nothing else matches, use the system default.
+ *    Either it's over 10 years old and it's hopeless.  Or
+ *    it's linux or other OS, which hopefully has better defaults
+ *    and/or has been customized by the user.
  */
 font-family:
-  /* 1 */ "SFMono-Regular",
+  /* 1 */ menlo,
   /* 2 */ consolas, 
-  /* 3 */ "Liberation Mono",
-  /* 4 */ menlo,
-  /* 6 */ courier, monospace;
+  /* 3 */ monospace;
 ```
 
 ### monospace default
@@ -52,7 +48,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0Oo il1I! 2z 8$s5S😺
 </p>
 
-If a font is not installed, it will be in the standard *serif* font:
+If a font below is not installed, it will be in the standard *serif* font:
 
 <p class="sample" style="font-family: serif;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
@@ -63,9 +59,12 @@ The quick brown fox jumped over the lazy dog.<br>
 0Oo il1I! 2z 8$s5S😺
 </p>
 
-### San Francisco Mono
+### Menlo
 
-<p class="sample" style="font-family: SFMono-Regular, serif;">
+Menlo has been the current Mac (both MacOS and iOS) monospace system font
+since 2009 with the release of MacOS 10.6.
+
+<p class="sample" style="font-family: menlo;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
@@ -76,51 +75,9 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Consolas
 
-<p class="sample" style="font-family: consolas, serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+[Consolas](https://www.microsoft.com/typography/fonts/font.aspx?FMID=1924) has been available on Windows products since 2007.
 
-### Menlo
-
-<p class="sample" style="font-family: menlo, serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
-
-### Monaco
-
-<p class="sample" style="font-family: monaco, serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
-
-###  Lucida Console
-
-<p class="sample" style="font-family: lucida console, serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
-
-### Courier New 
-
-<p class="sample" style="font-family: courier new, serif;">
+<p class="sample" style="font-family: consolas;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
@@ -131,7 +88,62 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Courier
 
-<p class="sample" style="font-family: courier, serif;">
+<p class="sample" style="font-family: courier;">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺
+</p>
+
+###  Lucida Console
+
+Lucida Console has been the main monospace font on windows products for a very
+long time and is still available on Windows 10. That said, Consolas is likely
+a better choice for modern systems.
+
+<p class="sample" style="font-family: lucida console;">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺
+</p>
+
+### Monaco
+
+Monaco was the default monospace font for Mac, but has been superceeded by Menlo starting in 2009 with MacOS 10.6.  While it is still available in MacOS 10.12.4, it is missing in iOS 10.3.1.
+
+<p class="sample" style="font-family: monaco;">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺
+</p>
+
+### Courier New 
+
+It's so thin since it was designed for a piece of metal hitting a sloppy typewriter ribbon smashing ink onto a paper.  Why this even appeared at all as a digital font, I have no idea.
+
+<p class="sample" style="font-family: courier new;">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺
+</p>
+
+### SFMono-Regular
+
+Oddly not avaiable in Safari by default, and must be installed first.  I
+suspect a future release will clear this up.
+
+<p class="sample" style="font-family: SFMono-Regular;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
