@@ -49,10 +49,9 @@ The quick brown fox jumped over the lazy dog. 0123456789<br>
 
 Athelas is a system font on Macs and available in iBooks and Safari reader-mode.  It's similar in size to Times New Roman so it's almost a drop-in replacement with one exception: numbers. You'll have an opinion since Athelas numbers are:
 
-* very proportional
-* decenders
-* "one" is a small-caps,of "capital I"
-
+* has large variation in width 
+* has large descenders
+* "one" is a small-caps of "capital I"
 
 <p class="sample" style="font-family: athelas, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
@@ -119,7 +118,7 @@ The quick brown fox jumped over the lazy dog.<br>
 
 "Iowan Old Style" (not "Iowan") is a font available on Macs for use with iBook and Safari reader.  It's a solid upgrade from Palatino and is a touch heavier making it better for the screen. Unlike Palatino, it uses tabular numbers.
 
-<p class="sample" style="font-family: Iowan Old Style, monospace">
+<p class="sample" style="font- family: Iowan Old Style, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
