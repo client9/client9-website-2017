@@ -25,7 +25,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Times New Roman
@@ -46,9 +46,9 @@ That said at a larger point size it still looks good.
 <p class="sample" style="font-family: times new roman, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog. 0123456789<br>
-0Oo il1I! 2z 8$s5S<br>
 11111.11<br>
-88888.88
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺<br>
 </p>
 
 ### Athelas
@@ -65,7 +65,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S<br>
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Georgia
@@ -78,7 +78,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Charter
@@ -91,7 +91,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Cambria
@@ -104,7 +104,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Palatino
@@ -117,7 +117,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Baskerville
@@ -132,7 +132,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Iowan Old Style
@@ -145,7 +145,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S<br>
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Hoefler Text
@@ -158,7 +158,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S<br>
+0Oo il1I! 2z 8$s5S😺
 </p>
 
 ### Constantia
@@ -174,5 +174,5 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S
+0Oo il1I! 2z 8$s5S😺
 </p>
