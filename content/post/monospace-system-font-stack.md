@@ -2,7 +2,13 @@
 Date: 2017-04-09
 Title: "Monospace System Font Stack"
 ---
-
+<style>
+.sample {
+  background-color: #f5f5f5;
+  font-size: 22px;
+  margin-left:10px;
+  padding: 10px;
+</style>
 
 Most operating systems ship with a few decent if not great monospace fonts.
 
@@ -57,10 +63,9 @@ The quick brown fox jumped over the lazy dog.<br>
 0Oo il1I! 2z 8$s5S😺
 </p>
 
-
 ### San Francisco Mono
 
-<p class="sample" style="font-family: sfmono-regular, serif;">
+<p class="sample" style="font-family: SFMono-Regular, serif;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
@@ -90,18 +95,6 @@ The quick brown fox jumped over the lazy dog.<br>
 88888.88<br>
 0Oo il1I! 2z 8$s5S😺
 </p>
-
-### Seravek
-
-<p class="sample" style="font-family: seravek, serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
-
 
 ### Monaco
 
