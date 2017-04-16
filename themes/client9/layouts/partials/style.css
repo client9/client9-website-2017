@@ -126,12 +126,10 @@ blockquote>:last-child {
 a:link,a:visited {
   color: rgba(0,0,0,1.0);
   text-decoration: underline;
-  text-decoration-color: rgba(0,0,0,0.4);
   text-decoration-skip: ink;
 }
 
 .underline {
   text-decoration: underline;
-  text-decoration-color: rgba(0,0,0,0.4);
   text-decoration-skip: ink;
 }
