@@ -38,8 +38,8 @@ What's right with Times New Roman (TNR)?
 What's wrong with Times New Roman?
 
 * Used everywhere and is often the default unstyled font in web browsers.
-* Typically used at sizes that are too small, causing legibility problems.
-* A bit thin for screen use, since was designed for liquid ink absorbing into newsprint.
+* It's typically used at sizes that are too small, causing legibility problems.
+* It's thin for screen use, since was designed for liquid ink absorbing into newsprint.
 
 That said at a larger point size it still looks good.
 
@@ -70,7 +70,7 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Georgia
 
-Georgia is on both Macs and Windows, making it a great fallback font, if not primary.
+[Georgia](https://en.wikipedia.org/wiki/Georgia_(typeface)) is on both Macs and Windows, making it a great fallback font, if not primary.
 
 <p class="sample" style="font-family: Georgia, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
@@ -122,11 +122,11 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Baskerville
 
-This is a standard system font on Mac.
+[Baskerville](https://en.wikipedia.org/wiki/Baskerville) is a standard system font on Mac.
 
 On Windows this is not installed by default, but "Baskerville Old Face" is installed with Microsoft Office.
 
-<p class="sample" style="font- family: Baskerville, monospace">
+<p class="sample" style="font-family: Baskerville, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
