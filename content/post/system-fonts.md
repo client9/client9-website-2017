@@ -44,10 +44,38 @@ font-family:
 
 ### Serif
 
-* windows: Cambria or Constantia
-* mac: Hoefler Text (maybe)
-* default: Georgia or Palatino
-* serif
+No operating system uses serif fonts in their user-interface, so their no canonical choice here.
+
+One stack is Georgia-based:
+
+```css
+/* mac
+ * windows
+ * Georgia is on both 
+ * default
+ */
+font-family:
+  Charter,
+  Cambria,
+  Georgia,
+  serif;
+```
+
+The other is Palatino-based:
+
+```css
+/*
+ * mac
+ * windows and mac versions
+ * default 
+ */
+font-family:
+  Iowan Old Style,
+  Palatino Linotype, Palatino,
+  serif;
+```
+
+Two other candidates would be Hoefler Text (mac) and Constania (windows), but it is not clear to me how to integrate them into a stack.
 
 ### References
 
@@ -56,5 +84,5 @@ font-family:
 * 2016-07-21 [GitLab Issue 20102](https://gitlab.com/gitlab-org/gitlab-ce/issues/20102) has a discussion if gitlab should switch to system fonts.  They decided against, but has useful notes on monospace system fonts.
 * 2016-07-16 [Native Fonts in 4.6](https://make.wordpress.org/core/2016/07/07/native-fonts-in-4-6/) Wordpress switched to native fonts for their admin UI.  This documents their font stack.
 * 2015-11-12 [Using System Fonts in Web Design: A Quick and Practical Guide](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/)
-* 2015-10-31 [System Shock Mono](http://z12t.com/system-shock-mono/) describes making system font stack for monospace fonts.
-* 2015-10-21 [System Shock](https://medium.design/system-shock-6b1dc6d6596f) Discussion by medium.com on their use of system fonts.  I believe they have since switched back to web fonts.
+* 2015-10-31 [System Shock Mono](http://z12t.com/system-shock-mono/) describes making a system font stack for monospace fonts.
+* 2015-10-21 [System Shock](https://medium.design/system-shock-6b1dc6d6596f) Discussion by medium.com on their use of system fonts for their web UI (they use a custom web font for their article text).
