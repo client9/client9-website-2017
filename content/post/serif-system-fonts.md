@@ -12,6 +12,7 @@ Date: "2017-04-15"
   padding: 10px;
 </style>
 
+
 If a font is not installed it will render in `monospace`.
 
 ### Serif
@@ -29,11 +30,16 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Times New Roman
 
-What's wrong with Times New Roman (TNY)?
+What's right with Times New Roman (TNR)?
 
-* Used everywhere and is typically the default "unstyled" font.
-* At a point-size that is too small
-* A bit thin for screen use
+* It's very space efficient.  It's one of the more dense fonts.
+* Installed everywhere.
+
+What's wrong with Times New Roman?
+
+* Used everywhere and is often the default unstyled font in web browsers.
+* Typically used at sizes that are too small, causing legibility problems.
+* A bit thin for screen use, since was designed for liquid ink absorbing into newsprint.
 
 That said at a larger point size it still looks good.
 
@@ -49,9 +55,9 @@ The quick brown fox jumped over the lazy dog. 0123456789<br>
 
 Athelas is a system font on Macs and available in iBooks and Safari reader-mode.  It's similar in size to Times New Roman so it's almost a drop-in replacement with one exception: numbers. You'll have an opinion since Athelas numbers are:
 
-* has large variation in width 
+* has a large variation in width 
 * has large descenders
-* "one" is a small-caps of "capital I"
+* "one" is a small-caps version of "capital I"
 
 <p class="sample" style="font-family: athelas, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
@@ -77,7 +83,7 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Charter
 
-Charter is used as an alternate font on Macs for iBook and Safari Reader.  It is a near drop-in replacement for Georgia and is a slightly lighter and uses tabular numbers.
+[Charter](https://en.m.wikipedia.org/wiki/Bitstream_Charter) is used as an alternate font on Macs for iBook and Safari's reader-mode.  It is a near drop-in replacement for Georgia and is slightly lighter and uses tabular numbers.
 
 <p class="sample" style="font-family: Charter, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
@@ -129,7 +135,7 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Hoefler Text
 
-This Mac-only font was designed to show off features in Apple typography.  That said, the font has some very thin lines and the bold is really heavy.  I won't recommend it for screen body text.
+This Mac system font was designed to show off features in Apple typography.  That said, the font has some very thin lines and the bold is really heavy.
 
 <p class="sample" style="font-family: Hoefler Text, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
