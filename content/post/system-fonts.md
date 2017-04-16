@@ -71,20 +71,27 @@ The other is Palatino-based:
  */
 font-family:
   Iowan Old Style,
+  Baskerville Old Face, Baskerville,
   Palatino Linotype, Palatino,
   serif;
 ```
 
-old style stack
+Old style stack
 
-Hoefler Text
-Constantia
-Palatino Linotype, Palatino,
-serif;
+these are much more decorative and maybe best for print.
 
-
-
-Two other candidates would be Hoefler Text (mac) and Constania (windows), but it is not clear to me how to integrate them into a stack.
+```css
+/*
+ * mac
+ * windows and mac versions
+ * default 
+ */
+font-family:
+  Hoefler Text,
+  Constantia,
+  Palatino Linotype, Palatino,
+  serif;
+```
 
 ### References
 

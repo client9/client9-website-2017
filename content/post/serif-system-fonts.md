@@ -104,7 +104,7 @@ The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S<br>
+0Oo il1I! 2z 8$s5S
 </p>
 
 ### Palatino
@@ -120,22 +120,26 @@ The quick brown fox jumped over the lazy dog.<br>
 0Oo il1I! 2z 8$s5S
 </p>
 
-### Iowan Old Style
+### Baskerville
 
-"Iowan Old Style" (not "Iowan") is a font available on Macs for use with iBook and Safari reader.  It's a solid upgrade from Palatino and is a touch heavier making it better for the screen. Unlike Palatino, it uses tabular numbers.
+This is a standard system font on Mac.
 
-<p class="sample" style="font- family: Iowan Old Style, monospace">
+On Windows this is not installed by default, but "Baskerville Old Face" is installed with Microsoft Office.
+
+<p class="sample" style="font- family: Baskerville, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
 11111.11<br>
 88888.88<br>
-0Oo il1I! 2z 8$s5S<br>
+0Oo il1I! 2z 8$s5S
 </p>
 
-### Baskerville
+### Iowan Old Style
 
-<p class="sample" style="font- family: Baskerville, monospace">
+"Iowan Old Style" (not "Iowan") is a font available on Macs for use with iBook and Safari's reader-mode.  It's a solid upgrade from Palatino and a screen optimized alternative to Baskerville.
+
+<p class="sample" style="font- family: Iowan Old Style, monospace">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
