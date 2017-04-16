@@ -114,7 +114,7 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Monaco
 
-Monaco was the default monospace font for Mac, but has been superceeded by Menlo starting in 2009 with MacOS 10.6.  While it is still available in MacOS 10.12.4, it is missing in iOS 10.3.1.
+Monaco was the default monospace font for Mac, but has been superceeded by Menlo starting in 2009 with MacOS 10.6.  As of MacOS 10.12.4 and iOS 10.3.1, it is still available so you could use it if you wanted (similar to Lucida Console).
 
 <p class="sample" style="font-family: monaco;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
