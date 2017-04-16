@@ -6,8 +6,9 @@ title: Typography
 
 ## General Guidelines on Size and Contrast
 
-TLDR: use bigger fonts and higher contrast.
+TLDR: use better fonts, in a larger size with higher contrast.
 
+* [Butterick's Practical Typography](http://practicaltypography.com/index.html)
 * [How The Web Became Unreadable](https://backchannel.com/how-the-web-became-unreadable-a781ddc711b6#.gqhmlwt6u)
 * [Contrast Rebellion](http://contrastrebellion.com)
 * [Your Body Text Is Too Small](https://blog.attackthefront.io/your-body-text-is-too-small-5e02d36dc902#.ab5myen3s)
