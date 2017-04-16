@@ -61,7 +61,7 @@ font-family:
   serif;
 ```
 
-The other is Palatino-based:
+A slightly more decorative version would be:
 
 ```css
 /*
@@ -72,7 +72,7 @@ The other is Palatino-based:
 font-family:
   Iowan Old Style,
   Baskerville Old Face, Baskerville,
-  Palatino Linotype, Palatino,
+  Cambria, Georgia,
   serif;
 ```
 
