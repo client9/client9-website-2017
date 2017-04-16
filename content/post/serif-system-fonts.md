@@ -6,8 +6,8 @@ Date: "2017-04-15"
 
 <style>
 .sample {
-  background-color: #f0f0f0;
-  font-size: 30px;
+  background-color: #f5f5f5;
+  font-size: 22px;
   margin-left:10px;
   padding: 10px;
 </style>
