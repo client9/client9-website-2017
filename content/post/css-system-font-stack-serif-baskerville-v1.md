@@ -9,8 +9,8 @@ into
 
 ```css
 font-family:
-  /* 1 */ "Iowan Old Face",
-  /* 2 */ Baskerville,
+  /* 1 */ "Iowan Old Style",
+  /* 2 */ Baskerville Old Face, Baskerville,
   /* 3 */ Cambria, Georgia, serif;
 ```
 This is what it looks like on your browser:
