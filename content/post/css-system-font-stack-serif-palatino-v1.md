@@ -46,6 +46,8 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 ### Hoefler Text
 
+This is mac only.
+
 <p class="sample" style="font-family: hoefler text, monospace;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
@@ -56,6 +58,8 @@ The quick brown fox jumped over the lazy dog.<br>
 </p>
 
 ### Constania
+
+On Windows or Macs, if they have Microsoft Office installed.
 
 <p class="sample" style="font-family: constania, monospace;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
@@ -68,6 +72,8 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Palatino Linotype
 
+THis is windows only.
+
 <p class="sample" style="font-family: palatino linotype, monospace;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
@@ -78,6 +84,8 @@ The quick brown fox jumped over the lazy dog.<br>
 </p>
 
 ### Palatino
+
+THis is mac only
 
 <p class="sample" style="font-family: palatino, monospace;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>

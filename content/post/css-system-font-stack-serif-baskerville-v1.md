@@ -44,18 +44,9 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 ### Iowan Old Style
 
+This is mac-only.
+
 <p class="sample" style="font-family: iowan old style, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
-
-### Baskerville Old Face
-
-<p class="sample" style="font-family: baskerville old face, monospace;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
@@ -66,7 +57,9 @@ The quick brown fox jumped over the lazy dog.<br>
 
 ### Baskerville 
 
-<p class="sample" style="font-family: baskerville, monospace;">
+This is mac-only.
+
+<p class="sample" style="font-family: Baskerville, monospace;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
@@ -75,3 +68,26 @@ The quick brown fox jumped over the lazy dog.<br>
 0Oo il1I! 2z 8$s5S😺
 </p>
 
+### Baskerville Old Face
+
+This is windows-only.
+
+<p class="sample" style="font-family: baskerville old face, monospace;">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺
+</p>
+
+### serif
+
+<p class="sample" style="font-family: serif;">
+THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
+The quick brown fox jumped over the lazy dog.<br>
+0123456789<br>
+11111.11<br>
+88888.88<br>
+0Oo il1I! 2z 8$s5S😺
+</p>
