@@ -55,7 +55,7 @@ The quick brown fox jumped over the lazy dog.<br>
 If font below is not available on your system, it will be rendered in a
 `serif` font.
 
-<p class="sample" style="serif;">
+<p class="sample" style="font-family: serif;">
 This is not a monospace font.<br>
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 </p>
