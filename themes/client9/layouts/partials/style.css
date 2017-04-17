@@ -45,6 +45,7 @@ code {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
+  font-size: 85%;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
 }
@@ -54,9 +55,6 @@ code::before,code::after {
   content: "\00a0";
 }
 
-pre {
-  word-wrap: normal;
-}
 pre>code {
   padding: 0;
   margin: 0;
@@ -68,9 +66,11 @@ pre>code {
 }
 
 pre {
+  word-wrap: normal;
   margin-bottom: 0;
   word-break: normal;
   padding: 16px;
+  font-size: 85%;
   overflow: auto;
   line-height: 1.45;
   background-color: #f6f8fa;

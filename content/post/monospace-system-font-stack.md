@@ -35,7 +35,7 @@ This is what it looks like on your browser:
 
 <style>
 .sample {
-  background-color: #f5f5f5;
+  background-color: #f6f8fa;
   font-size: 22px;
   margin-left:10px;
   padding: 10px;
@@ -94,17 +94,6 @@ It's probably something gross like Courier New.  But maybe you are lucky and
 it's one of the above or something nice.
 
 <p class="sample" style="font-family: monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
-
-If a font below is not installed, it will be in the standard *serif* font:
-
-<p class="sample" style="font-family: serif;">
 THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
 The quick brown fox jumped over the lazy dog.<br>
 0123456789<br>
