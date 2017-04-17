@@ -22,6 +22,13 @@ font-family:
   /* 4 */ sans-serif;
   /* ? */ "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 ```
+<style>
+.sample {
+  background-color: #f6f8fa;
+  font-size: 22px;
+  margin-left:10px;
+  padding: 10px;
+</style>
 
 ### -apple-system
 
