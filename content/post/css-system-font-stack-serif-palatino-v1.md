@@ -1,6 +1,6 @@
 ---
 Date: 2017-04-09
-Title: "CSS System Font Stack - Serif Old Style - V1"
+Title: "CSS System Font Stack - Serif Palatino - V1"
 ---
 
 into
