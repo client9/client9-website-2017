@@ -1,9 +1,9 @@
 {{ partial "header.html" . }}
-<section>
+<section id="front">
   <ul>
     {{ range .Data.Pages.ByPublishDate }}
-    <li><time>{{ .Date.Format (.Site.Params.dateform | default "2006-01-02") }}</time>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a><br>
     </li>
     {{ end }}
   </ul>

@@ -1,24 +1,12 @@
 {{ partial "header.html" . }}
-
-<section id=content>
+<section id="content">
   <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
-
-  <div id=sub-header>
-    {{ .Date.Format (.Site.Params.dateform | default "2006-01-02") }}
+  <div id="sub-header">
+	  <time>{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
   </div>
-
   <div class="entry-content">
     {{ .Content }}
   </div>
-
-  <div id=links>
-    {{ if .PrevInSection }}
-      <a class="basic-alignment left" href="{{.PrevInSection.Permalink}}">&laquo; {{.PrevInSection.Title}}</a>
-    {{ end }}
-    {{ if .NextInSection }}
-      <a class="basic-alignment left" href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}} &raquo;</a>
-    {{ end }}
-  </div>
+  <div id="links"></div>
 </section>
-
 {{ partial "footer.html" . }}
