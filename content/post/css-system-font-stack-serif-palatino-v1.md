@@ -32,7 +32,7 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 This is mac only.
 
-{{ font-sample "font-family: hoefler text, monospace;" >}}
+{{< font-sample "font-family: hoefler text, monospace;" >}}
 
 ### Constania
 
