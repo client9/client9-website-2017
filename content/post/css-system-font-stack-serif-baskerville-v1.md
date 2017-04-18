@@ -15,22 +15,7 @@ font-family:
 ```
 This is what it looks like on your browser:
 
-<style>
-.sample {
-  background-color: #f6f8fa;
-  font-size: 22px;
-  margin-left:10px;
-  padding: 10px;
-</style>
-
-<p class="sample" style="font-family: iowan old style, baskerville old face, baskerville, cambria, georgia, serif;"> 
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample  style="font-family: iowan old style, baskerville old face, baskerville, cambria, georgia, serif;" >}} 
 
 ## The Fonts
 
@@ -46,48 +31,20 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 This is mac-only.
 
-<p class="sample" style="font-family: iowan old style, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: iowan old style, monospace;">}}
 
 ### Baskerville 
 
 This is mac-only.
 
-<p class="sample" style="font-family: Baskerville, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: Baskerville, monospace;" >}}
 
 ### Baskerville Old Face
 
 This is windows-only.
 
-<p class="sample" style="font-family: baskerville old face, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: baskerville old face, monospace;" >}}
 
 ### serif
 
-<p class="sample" style="font-family: serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: serif;"i >}}

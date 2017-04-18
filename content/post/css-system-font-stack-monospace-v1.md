@@ -3,7 +3,7 @@ Date: 2017-04-09
 Title: "CSS System Font Stack - Monospace V1"
 ---
 Most operating systems ship with a few decent if not great monospace fonts.  
-For me, I don't see a need to use a web font here.
+For now, I don't see a need to use a web font here. 
 
 It's possible in a few years that the default will actually be a real system
 font.  It's claimed [Firefox 55 will use Consolas or
@@ -33,22 +33,7 @@ font-family:
 
 This is what it looks like on your browser:
 
-<style>
-.sample {
-  background-color: #f6f8fa;
-  font-size: 22px;
-  margin-left:10px;
-  padding: 10px;
-</style>
-
-<p class="sample" style="font-family: menlo, consolas, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family:menlo, consolas, monospace;">}}
 
 ## Winners
 
@@ -66,43 +51,25 @@ Menlo has been the current Mac (both MacOS and iOS) monospace system font
 since 2009 with the release of MacOS 10.6.  It is unique to Mac, so it comes
 first.
 
-<p class="sample" style="font-family: menlo;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family:menlo;" >}}
 
 ### Consolas
 
 [Consolas](https://www.microsoft.com/typography/fonts/font.aspx?FMID=1924) has been available on Windows products since 2007.  It *might* be available on MacOS if Microsoft Office is installed.
 
-<p class="sample" style="font-family: consolas;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: consolas;" >}}
 
 ### monospace (default)
 
 It's probably something gross like Courier New.  But maybe you are lucky and
 it's one of the above or something nice.
 
-<p class="sample" style="font-family: monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: monospace;" >}}
 
 ## Losers
+
+The follow fonts were reject since they deprecated, don't work across
+platforms, or don't exist!
 
 ###  Lucida Console
 
@@ -110,14 +77,7 @@ Lucida Console has been the main monospace font on windows products for a very
 long time and is still available on Windows 10. That said, Consolas is likely
 a better choice for modern systems.
 
-<p class="sample" style="font-family: lucida console;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family:lucida console;">}}
 
 ### Monaco
 
@@ -126,40 +86,19 @@ Menlo starting in 2009 with MacOS 10.6.  Oddly in MacOS 10.12.4 it is
 avaialble but xwith iOS 10.3.1 it is rendered as Courier.  In otherwords, it's
 out.
 
-<p class="sample" style="font-family: monaco;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: monaco;" >}}
 
 ### Courier
 
 No comment.
 
-<p class="sample" style="font-family: courier;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: courier;" >}}
 
 ### Courier New 
 
 It's so thin since it was designed for a piece of metal hitting a sloppy typewriter ribbon smashing ink onto a paper.  Why this even appeared at all as a digital font, I have no idea.
 
-<p class="sample" style="font-family: courier new;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: courier new" >}}
 
 ### SFMono-Regular
 
@@ -171,14 +110,7 @@ applications.   Developers can install it as a system font, but otherwise it's
 not available to Safari on MacOS or iOS.  Until Apple clears this up, it's not
 going in the font stack.
 
-<p class="sample" style="font-family: SF Mono;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: SFMono-Regular;">}}
 
 ## Any Linux or Android Font
 

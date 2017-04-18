@@ -14,24 +14,10 @@ font-family:
   /* 3 */ Georgia,
   /* 4 */ serif;
 ```
+
 This is what it looks like on your browser:
 
-<style>
-.sample {
-  background-color: #f6f8fa;
-  font-size: 22px;
-  margin-left:10px;
-  padding: 10px;
-</style>
-
-<p class="sample" style="font-family: charter,cambria,georgia,serif;"> 
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: charter,cambria,georgia,serif;" >}} 
 
 ## The Fonts
 
@@ -45,44 +31,16 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 ### Charter
 
-<p class="sample" style="font-family: charter, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: charter, monospace;" >}}
 
 ### Cambria
 
-<p class="sample" style="font-family: cambria, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: cambria, monospace;" >}}
 
 ### Georgia
 
-<p class="sample" style="font-family: georgia, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: georgia, monospace;" >}}
 
 ### serif (default)
 
-<p class="sample" style="font-family: serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: serif;" >}}

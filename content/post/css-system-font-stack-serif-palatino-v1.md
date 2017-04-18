@@ -16,23 +16,7 @@ font-family:
 ```
 This is what it looks like on your browser:
 
-<style>
-.sample {
-  background-color: #f6f8fa;
-  font-size: 22px;
-  margin-left:10px;
-  padding: 10px;
-</style>
-
-<p class="sample" style="font-family: hoefler text, constantia, palatino
-linotype, palatino, serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: hoefler text, constantia, palatino linotype, palatino, serif;" >}}
 
 ## The Fonts
 
@@ -48,61 +32,26 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 This is mac only.
 
-<p class="sample" style="font-family: hoefler text, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{ font-sample "font-family: hoefler text, monospace;" >}}
 
 ### Constania
 
 On Windows or Macs, if they have Microsoft Office installed.
 
-<p class="sample" style="font-family: constania, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: constania, monospace;" >}}
 
 ### Palatino Linotype
 
-THis is windows only.
+This is windows only.
 
-<p class="sample" style="font-family: palatino linotype, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: palatino linotype, monospace;" >}}
 
 ### Palatino
 
-THis is mac only
+This is mac only
 
-<p class="sample" style="font-family: palatino, monospace;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: palatino, monospace;" >}}
 
 ## serif (default)
 
-<p class="sample" style="font-family: serif;">
-THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.<br>
-The quick brown fox jumped over the lazy dog.<br>
-0123456789<br>
-11111.11<br>
-88888.88<br>
-0Oo il1I! 2z 8$s5S😺
-</p>
+{{< font-sample "font-family: serif;" >}}
