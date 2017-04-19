@@ -3,19 +3,25 @@ Date: 2017-04-09
 Title: "CSS System Font Stack - Monospace V1"
 ---
 
-Most operating systems ship with a few decent if not great monospace fonts.
+Most operating systems ship with a decent monospace fonts.
 Use them.
 
-It's possible in a few years that the default will actually be a real system
+Right now, most browsers use something like Courier for their default
+monospace font.  This isn't very useful and not acceptable for code or
+programming samples.
+
+It's possible in a few years that the default will be a real system
 font.  It's claimed [Firefox 55 will use Consolas or
 Menlo](https://www.fxsitecompat.com/en-CA/docs/2017/some-of-browser-default-fonts-have-been-changed/).
 And it looks like Chrome on modern Windows is [using
 Consolas](https://bugs.chromium.org/p/chromium/issues/detail?id=388087).  And maybe Apple's Safari will someday default to use the mysterious
 [SFMono-Regular](https://developer.apple.com/fonts/).
 
+Until then, we need to do something else.
+
 ## CSS
 
-Until then, here's my monospace system stack.  It's simple:
+Below is a high-quality, monospace stack, that works on most modern (last eight years) systems.
 
 ```css
 /* 1: Current MacOS/iOS font since 2009
