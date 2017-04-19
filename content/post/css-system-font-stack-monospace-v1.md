@@ -2,15 +2,15 @@
 Date: 2017-04-09
 Title: "CSS System Font Stack - Monospace V1"
 ---
-Most operating systems ship with a few decent if not great monospace fonts.  
-For now, I don't see a need to use a web font here. 
+
+Most operating systems ship with a few decent if not great monospace fonts.
+Use them.
 
 It's possible in a few years that the default will actually be a real system
 font.  It's claimed [Firefox 55 will use Consolas or
 Menlo](https://www.fxsitecompat.com/en-CA/docs/2017/some-of-browser-default-fonts-have-been-changed/).
-Looks like Chrome on modern windows is also [using
-Consolas](https://bugs.chromium.org/p/chromium/issues/detail?id=388087).  And
-maybe Apple's Safari wll default to use the mysterious
+And it looks like Chrome on modern Windows is [using
+Consolas](https://bugs.chromium.org/p/chromium/issues/detail?id=388087).  And maybe Apple's Safari will someday default to use the mysterious
 [SFMono-Regular](https://developer.apple.com/fonts/).
 
 ## CSS
@@ -55,21 +55,19 @@ first.
 
 ### Consolas
 
-[Consolas](https://www.microsoft.com/typography/fonts/font.aspx?FMID=1924) has been available on Windows products since 2007.  It *might* be available on MacOS if Microsoft Office is installed.
+[Consolas](https://www.microsoft.com/typography/fonts/font.aspx?FMID=1924) has been available on Windows products since 2007. 
 
 {{< font-sample "font-family: consolas;" >}}
 
 ### monospace (default)
 
-It's probably something gross like Courier New.  But maybe you are lucky and
-it's one of the above or something nice.
+This is the default `monospace` font and it's probably something gross like Courier New. But maybe you are lucky and it's one of the above or something nice.
 
 {{< font-sample "font-family: monospace;" >}}
 
 ## Losers
 
-The follow fonts were reject since they deprecated, don't work across
-platforms, or don't exist!
+The followng fonts were rejected since they are deprecated, don't work across platforms, or don't exist.
 
 ###  Lucida Console
 
