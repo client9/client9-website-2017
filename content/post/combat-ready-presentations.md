@@ -47,17 +47,17 @@ They are the slide equivalent of chart-junk.  for very subtle backgrounds they e
 
 ### Skip the light-weight fonts
 
-Keynote with your default of  Helvitica Neue Light, I'm looking at you!
+Keynote with your default of  Helvetica Neue Light, I'm looking at you!
 
 ### Be careful the full-frame background image
 
-Cetainlly the occasional use of full frame images is ok (especially for the title slide, and team pictures).   But beyond that there are few reasons to reconsider the full-frame background image.  
+Cetainly the occasional use of full frame images is ok (especially for the title slide, and team pictures). But beyond that there are few reasons to reconsider the full-frame background image.  
 
 Size: Ideally you'll want your presentation under 5MB so it can be emailed without duress from various corporate email servers or have gmail complain about a file being too big
 
-Text Contrast:  unless the image has large areas of white or dark space, getting text to stand out can be challenging.
+Text Contrast: unless the image has large areas of white or dark space, getting text to stand out can be challenging.
 
-Failure case:  no idea why but I'll been at a few places where the rproject is either so washed out you can't tell what the image is.  Worse I've seen some that completely  turned the background  into a pixelated noises mess.
+Failure case: no idea why but I'll been at a few places where the projector is either so washed out you can't tell what the image is. Worse I've seen some that completely turned the background into a pixelated noises mess.
 
 Consider using a image that goes fills the space horizontally but leaves enough room vertically to add your headline and footer.  
 
@@ -70,16 +70,17 @@ In general prefer **bold** for emphasis.
 
 ## Skip using underlines.
 
-It looks horrible.
+It looks horrible. Even for links.
 
 ## Buy two adaptors
 
 ## Obnoxiously label your adaptors
 
-Partially to prevent other people from stealing them but also to remind yourself once you are done present to grab them.
+Partially to prevent other people from stealing them but also to remind yourself once you are done presenting to grab them.
 
 ## Keynote Users: Test export to Power Point
 
+You are all set to present off your laptop, and at last minute they as for your PPT since the AV tech will preload it on the windows laptop.
 
 ## Buy a thumb-drive
 
@@ -170,6 +171,21 @@ The remaining three and tried and true classics that may be useful
 
 
 everything else in Keynote is not particularly useful.
+
+
+CRP fonts - keynote 2017
+
+
+CRP Color
+
+
+combat Ready presentations - typography
+
+Prefer bold for emphasis
+
+No underlines.
+
+No  wikitext emphasis
 
 
 Helvetica vs Helvetica Nueue
