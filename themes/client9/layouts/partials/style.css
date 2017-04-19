@@ -1,3 +1,6 @@
+html {
+	text-rendering: optimizeLegibility;
+}
 body {
   color: #000;
   max-width:700px;
