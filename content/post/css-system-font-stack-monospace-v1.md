@@ -88,6 +88,10 @@ out.
 
 {{< font-sample "font-family: monaco;" >}}
 
+### Andale Mono
+
+{{< font-sample "font-family: andale mono;" >}}
+
 ### Courier
 
 No comment.
