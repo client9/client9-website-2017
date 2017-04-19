@@ -3,7 +3,9 @@ Date: 2017-04-09
 Title: "CSS System Font Stack - Serif Palatino - V1"
 ---
 
-into
+The Palatino font stack uses a number of more styled serif system fonts. While this can be used as body text, it might be best at larger sizes.
+
+All numbers are proportional and the primary font uses old style numbers with descenders.
 
 ## CSS
 
@@ -11,12 +13,11 @@ into
 font-family:
   /* 1 */ "Hoefler Text",
   /* 2 */ Constantia,
-  /* 3 */ "Palatino Linotype", Palatino,
-  /* 4 */ serif;
+  /* 3 */ Georgia, serif;
 ```
 This is what it looks like on your browser:
 
-{{< font-sample "font-family: hoefler text, constantia, palatino linotype, palatino, serif;" >}}
+{{< font-sample "font-family: hoefler text, constantia, Georgia,, serif;" >}}
 
 ## The Fonts
 
@@ -42,13 +43,13 @@ On Windows or Macs, if they have Microsoft Office installed.
 
 ### Palatino Linotype
 
-This is windows only.
+This is Windows name for the Palatino font.
 
 {{< font-sample "font-family: palatino linotype, monospace;" >}}
 
 ### Palatino
 
-This is mac only
+This is Mac version of Palatino.
 
 {{< font-sample "font-family: palatino, monospace;" >}}
 

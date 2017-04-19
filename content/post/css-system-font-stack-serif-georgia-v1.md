@@ -3,7 +3,10 @@ Date: 2017-04-09
 Title: "CSS System Font Stack - Serif Georgia - V1"
 ---
 
-into
+The Georgia system stack is serif system font stack best suited for body text.  It's plain but will be clear and legible.  The fallback font is Georgia hence the name.
+All of the fonts are close in size too, so the page  should not look radically different across platforms.
+
+One issue with this stack is that primary fonts all use tabular numbers while Georgia use proportional numbers.
 
 ## CSS
 
