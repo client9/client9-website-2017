@@ -90,6 +90,8 @@ out.
 
 ### Andale Mono
 
+Similar to Menlo, Andale Mono is an old font and available on MacOS but no longer on iOS.  It's out.
+
 {{< font-sample "font-family: andale mono;" >}}
 
 ### Courier
