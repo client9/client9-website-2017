@@ -20,11 +20,12 @@ p,a,li,blockquote {
 	/*
   font-family: avenir next,-apple-system, BlinkMacSystemFont,
     "Segoe UI", "Helvetica Neue", sans-serif;
-  font-family: charter, cambria, georgia, serif;
+  font-family: charter, georgia, serif;
   */
   font-family: athelas, cambria, serif;
+ 
   font-weight: 400;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 pre, code, kbd {
