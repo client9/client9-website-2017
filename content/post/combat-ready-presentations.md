@@ -193,3 +193,15 @@ Helvetica vs Helvetica Nueue
 Courier vs Courier New
 
 Avenir vs Avenir New
+
+Time vs Times New Roman
+
+Palatino vs Palatino Old Style
+
+What Aspect Ratio?
+
+4:3
+16:9
+16:10
+
+
