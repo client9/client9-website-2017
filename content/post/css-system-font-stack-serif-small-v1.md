@@ -1,6 +1,6 @@
 ---
 Date: 2017-04-09
-Title: "CSS System Font Stack - Serif Dense - V1"
+Title: "CSS System Font Stack - Serif Small - V1"
 ---
 
 This system stack is upgrade of the traditional serif font Times New Roman.  The Mac and Windows alternate are both very dense and screen optimized.
