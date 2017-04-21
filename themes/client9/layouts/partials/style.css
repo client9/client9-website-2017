@@ -176,4 +176,6 @@ ul { list-style-type: square; }
   font-family: -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Helvetica Neue", sans-serif;
   text-decoration: none;
+  font-weight: 400;
+  font-size: 22px;
 }
