@@ -130,12 +130,15 @@ a:link,a:visited {
 }
 
 #subheader a {
-font-family: {{ .Site.Data.css.titleFontFamily }};
-text-decoration: none;
-
+  font-family: {{ .Site.Data.css.titleFontFamily }};
+  text-decoration: none;
 }
 
-time {
+#subheader a:hover {
+  background-color: #FFEBCD;
+}
+
+#subheader time {
   font-family: {{ .Site.Data.css.titleFontFamily }};
 }
 
