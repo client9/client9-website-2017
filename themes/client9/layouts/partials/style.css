@@ -23,7 +23,6 @@ p,a,li,blockquote {
   */
   font-family: {{ .Site.Data.css.bodyFontFamily }};
   font-size: {{ .Site.Data.css.bodyFontSize }};
-  font-weight: 400;
 }
 
 pre, code, kbd {
