@@ -125,8 +125,14 @@ a:link,a:visited {
   text-decoration-skip: ink;
 }
 
-#sub-header {
+#subheader {
   font-family: {{ .Site.Data.css.titleFontFamily }};
+}
+
+#subheader a {
+font-family: {{ .Site.Data.css.titleFontFamily }};
+text-decoration: none;
+
 }
 
 time {
