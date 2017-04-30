@@ -1,6 +1,7 @@
 ---
-date: 2017-04-30
-title: Uninstall Xcode on macOS Sierra
+Date: 2017-04-30
+Title: Uninstall Xcode on macOS Sierra
+Draft: true
 ---
 
 ### Delete legacy Xcode installs
@@ -21,7 +22,7 @@ Double check that the command line tools are also uninstalled. Open up Terminal 
 
 ### Bonus: Rebuild Spotlight and AppStore indexes
 
-Unfortunaltely, Spotlight and AppStore still think Xcode is installed.   In time, they might correct themselves but it's easy to force a rebuild.
+Unfortunately, Spotlight and AppStore still think Xcode is installed.   In time, they might correct themselves but it's easy to force a rebuild.
 
 In System Preferences, under Spotlight, under Privacy, add the main hard disk.  Typically it's named Macintosh HD and if you don't see it, you may have to add it using Finder preferences.  Once you've added it, wait a few minutes and the entire Spotlight index should be destroyed.  You can test by typing anything into Spotlight and the results should be very boring.
 
