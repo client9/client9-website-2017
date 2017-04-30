@@ -11,26 +11,24 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: avenir next, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: {{ .Site.Data.css.titleFontFamily }};
   font-weight: 600;
 }
 
 p,a,li,blockquote {
 	/*
-  font-family: avenir next,-apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: avenir next,-apple-system, BlinkMacSystemFont,"Segoe UI", "Helvetica Neue", sans-serif;
   font-family: charter, georgia, serif;
-  */
   font-family: athelas, cambria, serif;
- 
+  */
+  font-family: {{ .Site.Data.css.bodyFontFamily }};
+  font-size: {{ .Site.Data.css.bodyFontSize }};
   font-weight: 400;
-  font-size: 24px;
 }
 
 pre, code, kbd {
-  font-family: menlo, consolas, monospace;
-  font-size: 18px;
+  font-family: {{ .Site.Data.css.codeFontFamily }};
+  font-size: {{ .Site.Data.css.codeFontSize }};
 }
 
 h1 {
@@ -128,13 +126,11 @@ a:link,a:visited {
 }
 
 #sub-header {
-  font-family: avenir next, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helveticai Neue", sans-serif;
+  font-family: {{ .Site.Data.css.titleFontFamily }};
 }
 
 time {
-  font-family: avenir next, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helveticai Neue", sans-serif;
+  font-family: {{ .Site.Data.css.titleFontFamily }};
 }
 
 hr {
@@ -175,8 +171,7 @@ ul { list-style-type: square; }
 }
 
 #front a {
-  font-family: avenir next, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: {{ .Site.Data.css.titleFontFamily }};
   text-decoration: none;
   font-weight: 400;
   font-size: 22px;
