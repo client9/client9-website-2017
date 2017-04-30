@@ -1,12 +1,17 @@
 ---
 Date: 2017-04-30
 Title: Uninstall Xcode on macOS Sierra
-Draft: true
+Draft: false
 ---
 
 ### Delete legacy Xcode installs
 
-TK
+If you started with an old version of Xcode, this
+may need to be run.  If you get a "not found" error, don't worry.
+
+```bash
+sudo /Developer/Library/uninstall-devtools --mode=all
+```
 
 ### Trash Xcode.app
 
@@ -14,7 +19,10 @@ Drag-n-drop Xcode into the trash can.  Then empty the trash.
 
 ### Delete Xcode 💩
 
-
+```bash
+sudo rm -rf ~/Library/Developer/
+sudo rm -rf ~/Library/Caches/com.apple.dt.Xcode
+```
 
 ### Win
 
@@ -31,7 +39,3 @@ Then remove the privacy setting and reboot. The computer's CPU will run hot for 
 Finally go into the AppStore and search for Xcode.  It should say it's not installed and give you the option to download. 
 
 Phew!
-
-
-
-
