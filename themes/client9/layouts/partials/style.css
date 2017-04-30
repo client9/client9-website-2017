@@ -132,6 +132,7 @@ a:link,a:visited {
 #subheader a {
   font-family: {{ .Site.Data.css.titleFontFamily }};
   text-decoration: none;
+  font-size:14px;
 }
 
 #subheader a:hover {
@@ -140,6 +141,7 @@ a:link,a:visited {
 
 #subheader time {
   font-family: {{ .Site.Data.css.titleFontFamily }};
+  font-size:14px;
 }
 
 hr {
