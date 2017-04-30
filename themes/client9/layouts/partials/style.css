@@ -6,7 +6,7 @@ body {
   max-width:700px;
   padding-left:20px;
   padding-right:20px;
-  line-height: 1.35;
+  line-height: {{ .Site.Data.css.bodyLineHeight }};
   margin:auto;
 }
 
@@ -23,6 +23,7 @@ p,a,li,blockquote {
   */
   font-family: {{ .Site.Data.css.bodyFontFamily }};
   font-size: {{ .Site.Data.css.bodyFontSize }};
+  letter-spacing: {{ .Site.Data.css.bodyLetterSpacing }};:
 }
 
 pre, code, kbd {
