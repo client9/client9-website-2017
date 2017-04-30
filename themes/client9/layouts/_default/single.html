@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <section id="content">
   <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
-  <div id="subheader">
+  <div id="byline">
   <a href="/">Nick Galbreath</a>
 	  <time>{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time> 	&#x2606; <a href="/">Nick Galbreath</a>
   </div>

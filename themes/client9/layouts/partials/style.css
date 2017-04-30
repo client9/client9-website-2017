@@ -125,21 +125,21 @@ a:link,a:visited {
   text-decoration-skip: ink;
 }
 
-#subheader {
+#byline {
   font-family: {{ .Site.Data.css.titleFontFamily }};
 }
 
-#subheader a {
+#byline a {
   font-family: {{ .Site.Data.css.titleFontFamily }};
   text-decoration: none;
   font-size:14px;
 }
 
-#subheader a:hover {
+#byline a:hover {
   background-color: #FFEBCD;
 }
 
-#subheader time {
+#byline time {
   font-family: {{ .Site.Data.css.titleFontFamily }};
   font-size:14px;
 }
