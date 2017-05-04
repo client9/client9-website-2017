@@ -6,3 +6,7 @@
   padding: 10px;
 }
 
+img#banner {
+  width: 100%;
+  height: auto;
+}
