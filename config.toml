@@ -4,7 +4,10 @@ title = "Nick Galbreath"
 MetaDataFormat = "yaml"
 enableRobotsTXT= true
 googleAnalytics = ""
+FootnoteReturnLinkContents = "foo"
 
 [params]
 sitename="Nick Galbreath"
 
+[blackfriday]
+extensions = ["footnotes"]

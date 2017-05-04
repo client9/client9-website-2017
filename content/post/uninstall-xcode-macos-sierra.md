@@ -4,6 +4,14 @@ Title: Uninstall Xcode on macOS Sierra
 Draft: false
 ---
 
+Maybe you want to free up tens of gigabytes of space?  Maybe you installed it
+once by mistake?  Or maybe you just want to start fresh.  Here's how to delete
+Xcode complete from macOS.
+
+The title says this is for macOS Sierra, but this should work for any version.
+This article assume that you are familiar with Mac and using Terminal or the
+command line.   Let's get cleaning!
+
 ### Delete legacy Xcode installs
 
 If you started with an old version of Xcode, this
@@ -22,6 +30,12 @@ Drag-n-drop Xcode into the trash can.  Then empty the trash.
 ```bash
 sudo rm -rf ~/Library/Developer/
 sudo rm -rf ~/Library/Caches/com.apple.dt.Xcode
+```
+
+Really old installs might have one more:
+
+```bash
+sudo rm -rf /Library/Developer/CommandLineTools
 ```
 
 ### Win

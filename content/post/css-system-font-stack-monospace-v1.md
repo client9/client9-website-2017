@@ -11,13 +11,11 @@ monospace font.  This isn't very useful and not acceptable for code or
 programming samples.
 
 It's possible in a few years that the default will be a real system
-font.  It's claimed [Firefox 55 will use Consolas or
-Menlo](https://www.fxsitecompat.com/en-CA/docs/2017/some-of-browser-default-fonts-have-been-changed/).
-And it looks like Chrome on modern Windows is [using
-Consolas](https://bugs.chromium.org/p/chromium/issues/detail?id=388087).  And maybe Apple's Safari will someday default to use the mysterious
-[SFMono-Regular](https://developer.apple.com/fonts/).
+font. It's claimed Firefox 55 will use Consolas or
+Menlo [^foo]. And it looks like Chrome on modern Windows is using
+Consolas [^2]. And maybe Apple's Safari will someday default to use the mysterious SFMono-Regular[^3].
 
-Until then, we need to do something else.
+Until then, we need to do something else. 
 
 ## CSS
 
@@ -146,3 +144,6 @@ plaforms.
 
 * 2015-10-31 [System Shock Mono](http://z12t.com/system-shock-mono/) describes making a system font stack for monospace fonts.
 
+[^foo]: [Some of browser default fonts have been changed](https://www.fxsitecompat.com/en-CA/docs/2017/some-of-browser-default-fonts-have-been-changed/)
+[^2]: [Chromium Bug #388087](https://bugs.chromium.org/p/chromium/issues/detail?id=388087)
+[^3]: [Apple Fonts](https://developer.apple.com/fonts/)
