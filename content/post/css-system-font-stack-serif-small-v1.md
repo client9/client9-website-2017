@@ -15,7 +15,7 @@ font-family:
 ```
 This is what it looks like on your browser:
 
-{{< font-sample "font-family: Athelas, Cambria, serif;" >}}
+{{< font-sample "font-family: athelas, cambria, serif;" >}}
 
 ## The Fonts
 
@@ -31,7 +31,7 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 This is mac only.
 
-{{< font-sample "font-family: Athelas, monospace;" >}}
+{{< font-sample "font-family: athelas, monospace;" >}}
 
 ### Cambria
 
