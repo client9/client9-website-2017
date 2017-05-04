@@ -2,7 +2,7 @@
 <div id="content"><article>
   <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
   <div id="byline">
-  <a href="/">{{ .Site.Params.sitename }}</a> &#x2606; <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}
+  <a href="/">{{ .Site.Params.sitename }}</a> &#x2606; <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}
   </div>
     {{ .Content }}
   <div id="links"></div>
@@ -10,7 +10,9 @@
 <script type="application/ld+json" async defer>
 {"@context":"http://schema.org",
 "@type":"BlogPosting",
+"headline": "{{ .Title }}",
 "author":{"@type":"Person","name":"{{ .Site.Params.sitename }}"},
+"datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
 "publisher":{"@type":"Organization","name":"{{ .Site.Params.sitename }}"}
 }
 </script>

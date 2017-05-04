@@ -1,4 +1,5 @@
-baseurl = "http://www-client9-com.s3-website-us-west-2.amazonaws.com"
+#baseurl = "http://www-client9-com.s3-website-us-west-2.amazonaws.com"
+baseurl = "https://www.client9.com"
 languageCode = "en-us"
 title = "Nick Galbreath"
 MetaDataFormat = "yaml"
@@ -8,6 +9,7 @@ FootnoteReturnLinkContents = "foo"
 
 [params]
 sitename="Nick Galbreath"
+twitter="@NGalbreath"
 
 [blackfriday]
 extensions = ["footnotes"]
