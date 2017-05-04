@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+<img src="/img/nick-galbreath-doors-700.jpg" width=700 height=176 />
+<div id="content">
+{{ .Content }}
+<hr>
+<section id="front">
+  <ul>
+    {{ range .Data.Pages.ByPublishDate }}
+    <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+</div>
+{{ partial "footer.html" . }}
