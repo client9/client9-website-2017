@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    {{ .Hugo.Generator }}
-    <base href="{{ .Site.BaseURL }}">
-    {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
-    <title>{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}{{ if eq $url "/" }}{{ .Site.Title }}{{ else }}{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}{{ end }} | {{ .Site.Params.sitename }}</title>
-
-
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+{{ .Hugo.Generator }}
+<base href="{{ .Site.BaseURL }}">
+{{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+<title>{{ if eq .Title "" }}{{ .Site.Params.sitename }}{{ else }}{{ .Title }} | Nick Galbreath{{ end }}</title>
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}">
 <meta property="og:type" content="article">
 <link rel="canonical" href="{{ .Permalink }}">
+{{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />{{ end }}
 <style>
 {{ partial "style.css"  . | safeCSS  }}
 {{ partial "style-extra.css" . | safeCSS }}
 </style>
-{{ if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
-  {{ partial "header-extra.html" }}
-  </head>
-  <body>
+{{ partial "header-extra.html" }}
+</head>
+<body>
