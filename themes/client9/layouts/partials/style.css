@@ -3,7 +3,7 @@ html {
 }
 body {
   color: #000;
-  max-width:700px;
+  max-width:768px;
   line-height: {{ .Site.Data.css.bodyLineHeight }};
   margin-top: 0;
   margin-left: auto;
