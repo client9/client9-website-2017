@@ -22,7 +22,6 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY
     bucket: www-draft-client9-com
     region: us-east-1
-    endpoint: www-draft-client9-com.s3-website-us-east-1.amazonaws.com
     local-dir: public-draft
     skip_cleanup: true
 
