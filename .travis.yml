@@ -15,7 +15,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: www-draft-client9-com
+    bucket: www-draft.client9.com
     region: us-east-1
     local_dir: public-draft
     skip_cleanup: true
