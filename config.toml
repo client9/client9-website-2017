@@ -6,7 +6,7 @@ MetaDataFormat = "yaml"
 enableRobotsTXT= true
 googleAnalytics = ""
 FootnoteReturnLinkContents = "foo"
-
+copyright="&copy; 2017 Nick Galbreath"
 [params]
 sitename="Nick Galbreath"
 twitter="@NGalbreath"

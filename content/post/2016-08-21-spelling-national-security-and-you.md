@@ -2,6 +2,7 @@
 aliases = [ "20160821" ]
 date = "2016-08-21"
 title = "Spelling, DevOps, and Data Sciences"
+draft=true
 +++
 
 or we proccessed 20 billions words from Reddit, so it looks like you know how

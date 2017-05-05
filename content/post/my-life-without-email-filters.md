@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "I deleted all my email filters.  You won't believe what happened next."
 date: 2017-04-11
 ---
@@ -12,11 +12,11 @@ I get a lot of email.  So being clever I set up a number of filters in gmail to 
 
 Unfortunately, this didn't actually save me any work or time at all.  The filters not only deferred the work, they actually made extra work.
 
-Since some types of emails were never visible in the Inbox, they'd pile up in the "bulk" or "reports" folder, unread.   Occassion I'd take a look and then spend 5 mins tring to delete hundreds of unread emails.   A true waste of time - spending time to delete things I'm not using.
+Since some types of emails were never visible in the Inbox, they'd pile up in the "bulk" or "reports" folder, unread.   Occasion I'd take a look and then spend 5 mins tring to delete hundreds of unread emails.   A true waste of time - spending time to delete things I'm not using.
 
  these folders also screwed up search results.  Given  the hundreds of high content emails, any keyword search would turn up some of these bulk text emails.   Often they would dominate search result hiding actual useful content.
 
-Occassionally some email sender would change their email address and would throw my filters off.  So then I would spend time adjusting my filters, to hide email,  that I would spend more time to deleting unread email.
+Occasionally some email sender would change their email address and would throw my filters off.  So then I would spend time adjusting my filters, to hide email,  that I would spend more time to deleting unread email.
 
 
 I'm not sure what the tipping point was, but at some point I just decided to delete all of them and start over.

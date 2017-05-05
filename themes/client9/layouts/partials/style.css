@@ -180,15 +180,21 @@ a:hover {
 ul { list-style-type: square; }
 
 #front ul {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
-  list-style-position: inside;
 }
 
 #front a {
-  font-family: {{ .Site.Data.css.titleFontFamily }};
   text-decoration: none;
   font-weight: 400;
   font-size: 22px;
+}
+
+#footer {
+	font-size: 14px;
+	font-family: {{ .Site.Data.css.titleFontFamily }};
+	text-align: center;
+	margin: auto;
+}
+
+#footer a {
+	text-decoration: none;
 }

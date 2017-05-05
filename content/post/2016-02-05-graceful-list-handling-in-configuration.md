@@ -1,4 +1,5 @@
 +++
+draft = true
 date = "2016-02-05T16:01:07-08:00"
 description = "How to handle a single value or an array for a single configuration element."
 tags = ["golang"]

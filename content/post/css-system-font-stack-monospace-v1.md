@@ -83,9 +83,9 @@ a better choice for modern systems.
 
 ### Monaco
 
-Monaco was the default monospace font for Mac, but has been superceeded by
+Monaco was the default monospace font for Mac, but has been superseded by
 Menlo starting in 2009 with MacOS 10.6.  Oddly in MacOS 10.12.4 it is
-avaialble but xwith iOS 10.3.1 it is rendered as Courier.  In otherwords, it's
+available but xwith iOS 10.3.1 it is rendered as Courier.  In otherwords, it's
 out.
 
 {{< font-sample "font-family: monaco;" >}}

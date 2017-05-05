@@ -1,4 +1,5 @@
 +++
+draft = true
 date = "2016-02-21"
 aliases = [ "20160221" ]
 title = "XML, JSON, YAML, TOML for Configuration"

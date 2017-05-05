@@ -1,10 +1,10 @@
 ---
 date: 2016-04-10
-draft: false
-title: "The simple genius of dockerfiles"
+draft: true
+title: "The Simple Genius of Dockerfiles"
 ---
 
-Why is [docker](https://docker.com/) so successfull?  One reason is the simple genius of the Dockerfile for use in provisioning.
+Why is [docker](https://docker.com/) so successful?  One reason is the simple genius of the Dockerfile for use in provisioning.
 
 ## What's in a Dockerfile?
 

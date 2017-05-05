@@ -2,13 +2,11 @@
 <img id="banner" src="/img/nick-galbreath-doors-700.jpg" width="700" height="176" />
 <div id="content">
 {{ .Content }}
-<hr>
+<h2>Notes and Presentations</h2>
 <section id="front">
   <ul>
     {{ range .Data.Pages.ByPublishDate }}
-    <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a><br>
-    </li>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
   </ul>
 </section>
