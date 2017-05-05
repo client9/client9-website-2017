@@ -9,6 +9,6 @@ compile:
 	minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public-draft public-draft
 
 clean:
-	rm -rf public
+	rm -rf public public-draft
 	git gc --aggressive
 
