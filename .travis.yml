@@ -11,10 +11,10 @@ install:
 script:
   - cp -f layouts/robots-all.txt layouts/robots.txt
   - hugo -t client9
-  - minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags  -r -o public public
+  - minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
   - cp -f layouts/robots-none.txt layouts/robots.txt
-  - hugo -t client9 -D -E -F  -d public-draft
-  - minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags  -r -o public-draft public-draft
+  - hugo -t client9 -D -E -F -d public-draft
+  - minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public-draft public-draft
 
 deploy:
   - provider: s3
