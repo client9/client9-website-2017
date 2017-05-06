@@ -37,7 +37,7 @@ pre, code, kbd {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 32px;
   margin-bottom: 0px;
 }
 
@@ -119,10 +119,16 @@ blockquote>:last-child {
   margin-bottom: 0;
 }
 
-a:link,a:visited {
-  color: #000000;
+a {
+  color: #3344dd;
+  text-decoration: none;
+}
+a:hover {
   text-decoration: underline;
   text-decoration-skip: ink;
+}
+a:visited {
+  color: #804180;
 }
 
 .underline {
@@ -136,6 +142,7 @@ a:link,a:visited {
 
 #byline a {
   font-family: {{ .Site.Data.css.titleFontFamily }};
+  color: #000;
   text-decoration: none;
   font-size:18px;
 }
