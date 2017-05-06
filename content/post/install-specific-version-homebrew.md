@@ -9,11 +9,11 @@ Here's how to install a specific version of a package on macOS using [homebrew](
 
 Homebrew used to provide this functionality.  If you do search you'll probably find one these methods that no longer works.   My guess is the team behind Homebrew removed the functionality since it never worked very well, at scale.
 
-In most Linux distrubtions, formulas can change multiple times, but in the end there is a separate package, and a separate release decided by humans. This creates lovely version numbers like "1.2.3-rc2-ubuntu10"
+In most Linux distrubtions, formulas are in separate repositories and can change multiple times before being released with a manual process. The version number is hand crafted and can look like "1.2.3-rc2-ubuntu10".
 
-With homebrew, every formula is in one git repository and every git commit is a potentially a new release for all formula.  This makes version numbers hard.   For example let's say homebrew did a mass whitespace reformatting of the formula in one commit.   Would every package need new version numbers?  How would you add them?  In a way that is consistent and doesn't have race conditions? 
+With homebrew, every formula is in one git repository and every git commit is a potentially a new release for all formula. This makes version numbers hard. For example let's say homebrew did a mass whitespace reformatting of the formula in one commit. Would every package need new version numbers?  How would you add them?  In a way that is consistent and doesn't have race conditions? 
 
-The good news is that getting the exact version your want already is indexed and ready, using git.  It's more work, but it's more accurate too.
+The good news is that getting the exact version your want already is indexed and ready, using git. It's more work, but it's more accurate too.
 
 ### Find the Hash, Locally
 
