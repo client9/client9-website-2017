@@ -15,17 +15,14 @@ With homebrew, every formula is in one git repository and every git commit is a 
 
 The good news is that getting the exact version your want already is indexed and ready, using git.  It's more work, but it's more accurate too.
 
-### Find the Hash
+### Find the Hash, Locally
 
-First find the location of the formula with:
+If you are just trying to lock to the latest or a very recently edition, the
+fastest way is to use
 
-```bash
-brew info NAME
 ```
-
-If it exists you'll see a link to a formula on GitHub.
-
-Then look at the commit history and find the appropriate version and it's commit hash. This sounds gross but in practice it's not very hard.
+brew log -p NAME
+```
 
 Then to `brew install` this version use the raw content from GitHub by replacing _HASH_ and _NAME_ appropriately:
 
@@ -34,25 +31,42 @@ BREWURL=https:///raw.githubusercontent.com/Homebrew/homebrew-core
 brew install ${BREWURL}/HASH/Formula/NAME.rb
 ```
 
+### Find the Hash, Remote Edition
+
+Homebrew provided a nice command to pop open a browser window pointing to
+the change log of a formaula:
+
+```bash
+brew info --github NAME
+```
+
+It takes a few clicks to get the full commit hash.  First you'll have to click
+the `History` button, find the change you like, then click on another icon to
+get the full hash.  It sounds gross, but in practice it's not too hard.
+
 ### When GitHub Lets You Down
 
 The `Homebrew/homebrew-core` repo is very large and using GitHub to look at
 the commit history for a particular file may timeout.  In this case you'll get
 a "Sorry I'm being lazy, go do it yourself" message.  OK then.
 
-Cloning the entire repo isn't so bad.  Yes there are 90k commits, but they are
-all very tiny.  I'd be surprisied if a full clone took more than a minute.
-However you can save some time by doing a shallow clone, by using the git flag
-`--depth=20000` (more or less depending your needs)
+Also because it's so big, Homebrew only downloads a bit.  However, you can get
+the full Homebrew history with:
 
-```bash
-BREWURL=https://github.com/Homebrew/homebrew-core
-git clone --depth=20000 ${BREWURL}.git
-cd homebrew-core
-git log master -- Formula/phantomjs.rb
+```
+git -C "$(brew --repo homebrew/core)" fetch --unshallow
 ```
 
-Then find the version you want, it's hash, and create the appropriate URL to the raw content.
+It's gross but I bet it takes under a minute.  There are a lot of commits, but
+they are very tiny.
+
+You can then use git to find the entry you want:
+
+```bash
+git -C "$(brew --repo homebrew/core)" log master -- Formula/phantomjs.rb
+```
+
+Use the hash, and craft the correct URL back to github.
 
 ### Next Steps
 
