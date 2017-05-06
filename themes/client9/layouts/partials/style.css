@@ -21,11 +21,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p,a,li,blockquote {
-	/*
-  font-family: avenir next,-apple-system, BlinkMacSystemFont,"Segoe UI", "Helvetica Neue", sans-serif;
-  font-family: charter, georgia, serif;
-  font-family: athelas, cambria, serif;
-  */
   font-family: {{ .Site.Data.css.bodyFontFamily }};
   font-size: {{ .Site.Data.css.bodyFontSize }};
   letter-spacing: {{ .Site.Data.css.bodyLetterSpacing }};
@@ -119,7 +114,7 @@ blockquote>:last-child {
   margin-bottom: 0;
 }
 
-a {
+a:link {
   color: #3344dd;
   text-decoration: none;
 }
@@ -171,10 +166,6 @@ hr {
 #nav h1 a {
   font-weight: 600;
   text-decoration: none;
-}
-
-a:hover {
-  background-color: #FFEBCD;
 }
 
 #nav h1 a:hover {
