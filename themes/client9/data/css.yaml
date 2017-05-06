@@ -12,6 +12,8 @@ bodyLineHeight: 1.58
 bodyLetterSpacing: -0.003em
 
 linkColor: "#000"
+linkHoverBackgroundColor: "#FFEBCD"
+
 #linkColor: "#531ff0"
 #linkColor: "#6e5eff"
 #linkColor: "#3344dd"

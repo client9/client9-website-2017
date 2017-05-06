@@ -108,7 +108,8 @@ blockquote {
 }
 
 blockquote>:first-child {
-  margin-top: 0;
+  marg
+  in-top: 0;
 }
 
 blockquote>:last-child {
@@ -125,6 +126,11 @@ a {
   font-size: {{ .Site.Data.css.bodyFontSize }};
   font-weight:400;
   text-shadow:-1px -1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, 1px -1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, -1px 1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, 1px 1px 0 {{ .Site.Data.css.bodyBackgroundColor }};
+  text-decoration:none;
+}
+a:hover {
+  background-color: {{ .Site.Data.css.linkHoverBackgroundColor }};
+  text-shadow:-1px -1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }}, 1px -1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }}, -1px 1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }}, 1px 1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }};
   text-decoration:none;
 }
 
@@ -148,7 +154,7 @@ a {
 }
 
 #byline a:hover {
-  background-color: #FFEBCD;
+  background-color: {{ .Site.Data.css.linkHoverBackgroundColor }};
 }
 
 #byline time {
@@ -174,7 +180,7 @@ hr {
 }
 
 #nav h1 a:hover {
-  background-color: #FFEBCD;
+  background-color: {{ .Site.Data.css.linkHoverBackgroundColor }};
 }
 #links a {
   text-decoration: none;
