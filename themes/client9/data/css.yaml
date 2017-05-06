@@ -1,3 +1,6 @@
+bodyColor: "#000"
+bodyBackgroundColor: "#FFFFFB"
+
 codeFontFamily: menlo,consolas,monospace
 codeFontSize: 18px
 
@@ -7,6 +10,12 @@ bodyFontFamily: charter,georgia,serif
 bodyFontSize: 21px
 bodyLineHeight: 1.58
 bodyLetterSpacing: -0.003em
+
+linkColor: "#000"
+#linkColor: "#531ff0"
+#linkColor: "#6e5eff"
+#linkColor: "#3344dd"
+#linkColor: "#5b9ad0"
 
 #bodyFontFamily: athelas,cambria,serif
 #bodyFontSize: 24px
