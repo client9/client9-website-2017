@@ -5,27 +5,19 @@ Title: "Using macOS Homebrew to Install a Specific Version"
 
 Here's how to install a specific version of a package on macOS using [homebrew](https://brew.sh/).  While the process isn't automatic, it's also not hard and provides stability.
 
-### Why is it so hard?
+### Why Installing Old Versions Is Hard
 
-I don't know.  I wrote this because literally the first top 10 in my search
-where wrong. 
+Homebrew used to provide this functionality.  If you do search you'll probably find one these methods that no longer works.   My guess is the team behind Homebrew removed the functionality since it never worked very well, at scale.
 
-In most Linux distrubtions, formulas can change multiple times, but in the end
-there is a separate package release decided by humans. This creates lovely
-version numbers like "1.2.3-rc2-ubuntu10"
+In most Linux distrubtions, formulas can change multiple times, but in the end there is a separate package, and a separate release decided by humans. This creates lovely version numbers like "1.2.3-rc2-ubuntu10"
 
-With homebrew, every git commit is a potentially a new release for all
-formula.  This make version numbers hard.   For example let's say homebrew did
-a mass whitespace reformatting of the formula in one commit.   Would every
-package need new version numbers?  How would you add them?  In a way that
-is consistent and doesn't have race conditions? 
+With homebrew, every formula is in one git repository and every git commit is a potentially a new release for all formula.  This makes version numbers hard.   For example let's say homebrew did a mass whitespace reformatting of the formula in one commit.   Would every package need new version numbers?  How would you add them?  In a way that is consistent and doesn't have race conditions? 
 
-The good news is that getting the exact version your want already is indexed
-and ready, using git.  It's more work, but it's more accurate too.
+The good news is that getting the exact version your want already is indexed and ready, using git.  It's more work, but it's more accurate too.
 
 ### Find the Hash
 
-First fine the location of the formula with:
+First find the location of the formula with:
 
 ```bash
 brew info NAME
@@ -60,11 +52,9 @@ cd homebrew-core
 git log master -- Formula/phantomjs.rb
 ```
 
-Then find the version, it's hash, and create the appropriate URL to the raw
-content.
+Then find the version you want, it's hash, and create the appropriate URL to the raw content.
 
 ### Next Steps
 
 Now that you know how to install a specific version, it would be good time to
 review how `brew pin` works so you don't lose all your hard work.
-
