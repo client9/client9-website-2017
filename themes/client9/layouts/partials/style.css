@@ -120,8 +120,8 @@ a:link {
 }
 a:hover {
   text-decoration: underline;
-  text-decoration-skip: ink;
 }
+
 a:visited {
   color: #804180;
 }
