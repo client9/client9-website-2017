@@ -5,7 +5,7 @@ Title: "Using macOS Homebrew to Install a Specific Version"
 
 Here's how to install a specific version of a package on macOS using [homebrew](https://brew.sh/).  While the process isn't automatic, it's also not hard and provides stability.
 
-### Why Installing Old Versions Is Hard
+### Why Isn't This Functionality Built-In?
 
 Homebrew used to provide this functionality.  If you do search you'll probably find one these methods that no longer works.   My guess is the team behind Homebrew removed the functionality since it never worked very well, at scale.
 
