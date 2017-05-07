@@ -6,6 +6,12 @@ title: Typography
 
 ## General Guidelines on Size and Contrast
 
+abcdefghjiklmnopqrstuvwxyz
+
+abcdefghjiklmnopqrstuvwxyzabcdefghjiklmnopqrstuvwxyz
+
+abcdefghjiklmnopqrstuvwxyzabcdefghjiklmnopqrstuvwxyzabcdefghjiklmnopqrstuvwxyz
+
 TLDR: use better fonts, in a larger size with higher contrast.
 
 * [Butterick's Practical Typography](http://practicaltypography.com/index.html)
