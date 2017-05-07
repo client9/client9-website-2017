@@ -1,5 +1,7 @@
 html {
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   font-size: 1em;
 }
@@ -14,14 +16,15 @@ body {
   margin-right: auto;
 }
 div#content {
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:2rem;
+    padding-right:2rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: {{ .Site.Data.css.titleFontFamily }};
   font-weight: 600;
   margin-top: 0;
+  line-height: 1.2;
 }
 
 p,li,blockquote {
@@ -82,7 +85,10 @@ pre {
   word-wrap: normal;
   margin-bottom: 0;
   word-break: normal;
-  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   overflow: auto;
   line-height: 1.45;
   background-color: #f6f8fa;
