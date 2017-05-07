@@ -1,5 +1,6 @@
 html {
   text-rendering: optimizeLegibility;
+  font-size: 1em;
 }
 body {
   color: {{ .Site.Data.css.bodyColor }};
@@ -18,37 +19,39 @@ div#content {
 h1,h2,h3,h4,h5,h6 {
   font-family: {{ .Site.Data.css.titleFontFamily }};
   font-weight: 600;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
-p,a,li,blockquote {
+p,li,blockquote {
   font-family: {{ .Site.Data.css.bodyFontFamily }};
   font-size: {{ .Site.Data.css.bodyFontSize }};
   letter-spacing: {{ .Site.Data.css.bodyLetterSpacing }};
 }
 
-pre, code, kbd {
+pre, kbd {
   font-family: {{ .Site.Data.css.codeFontFamily }};
-  font-size: {{ .Site.Data.css.codeFontSize }};
+  font-size: {{ .Site.Data.css.bodyFontSize }};
 }
 
 h1 {
-  font-size: 32px;
-  margin-bottom: 0px;
+  font-size: 2em;
+  margin-bottom: 0;
 }
 
 h2 {
-  font-size: 26px;
-  margin-bottom: 0px;
+  font-size: 1.75em;
+  margin-bottom: 0;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5em;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 code {
+  font-family: {{ .Site.Data.css.codeFontFamily }};
+  font-size: 0.9em;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -62,10 +65,11 @@ code::before,code::after {
   content: "\00a0";
 }
 
+p>code {
+}
 pre>code {
   padding: 0;
   margin: 0;
-  font-size: 100%;
   word-break: normal;
   white-space: pre;
   background: transparent;
@@ -108,8 +112,7 @@ blockquote {
 }
 
 blockquote>:first-child {
-  marg
-  in-top: 0;
+  margin-top: 0;
 }
 
 blockquote>:last-child {
@@ -121,9 +124,8 @@ a {
   background-image:linear-gradient(to bottom, {{ .Site.Data.css.linkColor }} 50%, {{ .Site.Data.css.linkColor }} 50%);
   background-repeat:repeat-x;
   background-size:1px 1px;
-  background-position:0 23px;
+  background-position:0 1.1em;
   color: {{ .Site.Data.css.linkColor }};
-  font-size: {{ .Site.Data.css.bodyFontSize }};
   font-weight:400;
   text-shadow:-1px -1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, 1px -1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, -1px 1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, 1px 1px 0 {{ .Site.Data.css.bodyBackgroundColor }};
   text-decoration:none;
@@ -134,13 +136,9 @@ a:hover {
   text-decoration:none;
 }
 
-.underline {
-  text-decoration: underline;
-  text-decoration-skip: ink;
-}
-
 #byline {
   font-family: {{ .Site.Data.css.titleFontFamily }};
+  font-size: 1.1em;
 }
 
 #byline a {
@@ -149,8 +147,8 @@ a:hover {
   background-image: none;
   text-shadow: none;
   text-decoration: none;
-  font-size:18px;
   font-weight: 400;
+  font-size: 1.1em;
 }
 
 #byline a:hover {
@@ -158,8 +156,6 @@ a:hover {
 }
 
 #byline time {
-  font-family: {{ .Site.Data.css.titleFontFamily }};
-  font-size:18px;
 }
 
 hr {
@@ -205,7 +201,7 @@ ul { list-style-type: square; }
 }
 
 #footer {
-  font-size: 14px;
+  font-size: 1em;
   font-family: {{ .Site.Data.css.titleFontFamily }};
   text-align: center;
   margin: auto;
