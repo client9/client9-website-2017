@@ -207,6 +207,12 @@ ul { list-style-type: square; }
   margin: auto;
 }
 
+/* 672px covers iphone 5,6 in landscape */
+@media (max-width: 42em) {
+  html {
+    font-size: 0.9em;
+  }
+}
 /* under 414px covers portrait mode of iphone 5,6,6+ */
 @media (max-width: 26em) {
   html {
@@ -214,9 +220,3 @@ ul { list-style-type: square; }
   }
 }
 
-/* 672px covers iphone 5,6 in landscape */
-@media (max-width: 42em) {
-    html {
-      font-size: 0.9em;
-    }
-}
