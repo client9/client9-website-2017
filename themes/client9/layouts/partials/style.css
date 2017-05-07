@@ -2,6 +2,8 @@ html {
   text-rendering: optimizeLegibility;
   font-size: 1em;
 }
+
+
 body {
   color: {{ .Site.Data.css.bodyColor }};
   background-color: {{ .Site.Data.css.bodyBackgroundColor }};
@@ -205,4 +207,10 @@ ul { list-style-type: square; }
   font-family: {{ .Site.Data.css.titleFontFamily }};
   text-align: center;
   margin: auto;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 0.6em;
+  }
 }
