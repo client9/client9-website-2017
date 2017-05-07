@@ -211,6 +211,6 @@ ul { list-style-type: square; }
 
 @media (max-width: 320px) {
   html {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
