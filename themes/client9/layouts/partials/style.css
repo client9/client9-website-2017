@@ -3,7 +3,6 @@ html {
   font-size: 1em;
 }
 
-
 body {
   color: {{ .Site.Data.css.bodyColor }};
   background-color: {{ .Site.Data.css.bodyBackgroundColor }};
@@ -82,7 +81,7 @@ pre {
   word-wrap: normal;
   margin-bottom: 0;
   word-break: normal;
-  padding: 16px;
+  padding: 1em;
   overflow: auto;
   line-height: 1.45;
   background-color: #f6f8fa;
@@ -150,7 +149,7 @@ a:hover {
   text-shadow: none;
   text-decoration: none;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 100%;
 }
 
 #byline a:hover {
@@ -192,7 +191,6 @@ ul { list-style-type: square; }
 #front a {
   text-decoration: none;
   font-weight: 400;
-  font-size: 22px;
   color: #000;
   background-image: none;
   text-shadow: none;
@@ -209,8 +207,16 @@ ul { list-style-type: square; }
   margin: auto;
 }
 
-@media (max-width: 320px) {
+/* under 414px covers portrait mode of iphone 5,6,6+ */
+@media (max-width: 26em) {
   html {
     font-size: 0.8em;
   }
+}
+
+/* 672px covers iphone 5,6 in landscape */
+@media (max-width: 42em) {
+    html {
+      font-size: 0.9em;
+    }
 }

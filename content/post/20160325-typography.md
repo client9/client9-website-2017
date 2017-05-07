@@ -6,11 +6,15 @@ title: Typography
 
 ## General Guidelines on Size and Contrast
 
-abcdefghjiklmnopqrstuvwxyz
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies,<br>
+risus vitae mattis consequat, purus velit faucibus ante, nec fringilla<br>
+felis ex suscipit lacus. Vestibulum a nulla sed magna tincidunt pharetrai<br>
+eu eget tellus. Morbi at dui ante. Integer mauris orci,<br>
+semper non tellus in, pellentesque vulputate eros. Suspendisse eget eros<br>
+id magna congue vehicula condimentum quis elit. Curabitur lobortis, mauris<br>
 
-abcdefghjiklmnopqrstuvwxyzabcdefghjiklmnopqrstuvwxyz
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies, risus vitae mattis consequat, purus velit faucibus ante, nec fringilla felis ex suscipit lacus. Vestibulum a nulla sed magna tincidunt pharetra eu eget tellus. Morbi at dui ante. Integer mauris orci, semper non tellus in, pellentesque vulputate eros. Suspendisse eget eros id magna congue vehicula condimentum quis elit. Curabitur lobortis, mauris
 
-abcdefghjiklmnopqrstuvwxyzabcdefghjiklmnopqrstuvwxyzabcdefghjiklmnopqrstuvwxyz
 
 TLDR: use better fonts, in a larger size with higher contrast.
 
