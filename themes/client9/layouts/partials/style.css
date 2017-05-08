@@ -132,7 +132,6 @@ table {
   font-family: {{ .Site.Data.css.bodyFontFamily }};
   border-spacing: 0;
   border-collapse: collapse;
-  display: block;
   width: 100%;
   overflow: auto;
 }
