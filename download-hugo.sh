@@ -19,7 +19,7 @@ TARBALL=hugo_${VERSION}_${OS}-64bit.tar.gz
 URL=https://github.com/spf13/hugo/releases/download/v${VERSION}/${TARBALL}
 echo "Download ${TARBALL}"
 curl -sSL -o /tmp/${TARBALL} ${URL}
-tar -C /tmp -xzvf /tmp/${TARBALL}
+tar -C /tmp -xzf /tmp/${TARBALL}
 cp /tmp/hugo .
 ./hugo version
 
