@@ -5,11 +5,11 @@
 
 VERSION=0.20.7
 
-HOSTOS=$(go env GOHOSTOS)
+HOSTOS=$(uname -s)
 case ${HOSTOS} in
-darwin) OS=macOS
+Darwin) OS=macOS
   ;;
-linux)  OS=Linux
+Linux)  OS=Linux
   ;;
 *)  echo "unknown platform '${HOSTOS}'"
   exit 1
@@ -21,5 +21,5 @@ echo "Download ${TARBALL}"
 curl -sSL -o /tmp/${TARBALL} ${URL}
 tar -C /tmp -xzvf /tmp/${TARBALL}
 cp /tmp/hugo .
-
+./hugo version
 
