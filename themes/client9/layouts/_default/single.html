@@ -7,7 +7,7 @@
     {{ .Content }}
   <div id="links"></div>
 </article></div>
-<script type="application/ld+json" async defer>
+<script type="application/ld+json">
 {"@context":"http://schema.org",
 "@type":"BlogPosting",
 "headline": "{{ .Title }}",
@@ -16,5 +16,4 @@
 "publisher":{"@type":"Organization","name":"{{ .Site.Params.sitename }}"}
 }
 </script>
-
 {{ partial "footer.html" . }}
