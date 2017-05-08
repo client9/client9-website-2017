@@ -7,13 +7,12 @@
     {{ .Content }}
   <div id="links"></div>
 </article></div>
-<script type="application/ld+json">
-{"@context":"http://schema.org",
+<script type="application/ld+json">{
+"@context":"http://schema.org",
 "@type":"BlogPosting",
 "headline": "{{ .Title }}",
 "author":{"@type":"Person","name":"{{ .Site.Params.sitename }}"},
 "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
 "publisher":{"@type":"Organization","name":"{{ .Site.Params.sitename }}"}
-}
-</script>
+}</script>
 {{ partial "footer.html" . }}
