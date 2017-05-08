@@ -143,16 +143,14 @@ table th {
 table th,
 table td {
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
 }
 
-table tr {
-  background-color: #fff;
+table tbody tr {
   border-top: 1px solid #c6cbd1;
 }
 
-table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+table th {
+	text-align: left;
 }
 
 /* https://benrabicoff.com/better-link-underline/ */
