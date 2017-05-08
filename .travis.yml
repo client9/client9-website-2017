@@ -5,7 +5,6 @@ go:
   - 1.8.x
 
 install:
-  - go get github.com/spf13/hugo
   - go get github.com/tdewolff/minify/cmd/minify
 
 script:
