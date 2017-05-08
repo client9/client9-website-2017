@@ -10,7 +10,11 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ replace (plainify .Summary) "\n" " " }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}" >
+<meta property="og:published_time" content="{{ .Date.UTC.Format "2006-01-02T15:04:05Z"}}" >
+{{ with .GitInfo }}
+<meta property="og:updated_time" content="{{ .AuthorDate.UTC.Format "2006-01-02T15:04:05Z"}}">
+<meta property="article:modified_time" content="{{ .AuthorDate.UTC.Format "2006-01-02T15:04:05Z" }}">
+{{ end }}
 <meta name="twitter:card" content="summary">
 {{ with .Site.Params.twitter }}<meta name="twitter:site" content="{{ . }}">{{ end }}
 {{ with .Site.Params.twitter }}<meta name="twitter:creator" content="{{ . }}">{{ end }}
