@@ -4,6 +4,8 @@ Draft: true
 Title: "Convert time format to golang"
 ---
 
+Converting time formats from PHP to golang.
+
 | strftime   | golang   | Description |
 |------------|----------|-------------|
 | %a         | Mon      | Abbreviated weekday name|
