@@ -13,4 +13,4 @@ clean:
 	git gc --aggressive
 
 hugo:
-	time ./download-hugo.sh	
+	./download-hugo.sh	

@@ -5,6 +5,7 @@ go:
   - 1.8.x
 
 install:
+  - ./download-hugo.sh
   - go get github.com/tdewolff/minify/cmd/minify
 
 script:
