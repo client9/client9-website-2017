@@ -3,7 +3,7 @@ Date: 2017-04-09
 Title: "CSS System Font Stack - Serif Small - V1"
 ---
 
-This system stack is upgrade of the traditional serif font Times New Roman.  The Mac and Windows alternate are both very dense and screen optimized.
+This system stack is upgrade of the traditional serif font Times New Roman.  The Mac and Windows alternates are dense and screen optimized.
 
 ## CSS
 
@@ -13,6 +13,7 @@ font-family:
   /* 2 */ Cambria,
   /* 3 */ serif;
 ```
+
 This is what it looks like on your browser:
 
 {{< font-sample "font-family: athelas, cambria, serif;" >}}
@@ -29,13 +30,13 @@ THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.
 
 ### Athelas
 
-This is mac only.
+This is macOS and iOS only.
 
 {{< font-sample "font-family: athelas, monospace;" >}}
 
 ### Cambria
 
-On Windows or Macs, if they have Microsoft Office installed.
+On Windows only.
 
 {{< font-sample "font-family: cambria, monospace;" >}}
 
