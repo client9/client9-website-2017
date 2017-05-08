@@ -4,9 +4,9 @@ bodyBackgroundColor: "#FFFFFB"
 codeFontFamily: menlo,consolas,monospace
 codeFontSize: 1.15em
 
-titleFontFamily: avenir next,-apple-system,BlinkMacSystemFont,Segoe UI,helvetica neue,sans-serif
+titleFontFamily: avenir next,-apple-system,BlinkMacSystemFont,segoe ui,helvetica neue,sans-serif
 
-bodyFontFamily: charter,georgia,serif
+bodyFontFamily: charter,georgia,serif,apple color emoji,segoe ui emoji, segoe ui symbol
 bodyFontSize: 1.3em
 bodyLineHeight: 1.58
 bodyLetterSpacing: -0.003em
