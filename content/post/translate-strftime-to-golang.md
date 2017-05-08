@@ -1,9 +1,8 @@
 ---
-Date:"2017-05-08"
+Date: 2017-05-08
 Draft: true
 Title: "Convert time format to golang"
 ---
-
 
 | strftime   | golang   | Description |
 |------------|----------|-------------|
