@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <title>{{ if eq .Title "" }}{{ .Site.Params.sitename }}{{ else }}{{ .Title }} | {{ .Site.Params.sitename }}{{ end }}</title>
+{{ if .Site.BuildDrafts }}<meta name="robots" content="none">{{ end }}
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ .Title }}">
