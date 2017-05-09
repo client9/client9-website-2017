@@ -1,11 +1,11 @@
 
 HUGO=./bin/hugo
 
-run: hugo
+run:
 	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell
 	${HUGO} -t client9 -v -D -E -F --watch server --bind 0.0.0.0
 
-compile: hugo
+compile:
 	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell
 	${HUGO} -t client9
 	minify --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
