@@ -5,8 +5,8 @@ go:
   - 1.8.x
 
 install:
-  - ./download-hugo.sh
-  - go get -u github.com/client9/misspell/cmd/misspell
+  - ./download-hugo.sh 0.20.7
+  - go get github.com/client9/misspell/cmd/misspell
   - go get github.com/tdewolff/minify/cmd/minify
 
 script:
