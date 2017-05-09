@@ -55,6 +55,10 @@ BINDIR="./bin"
 mkdir -p ${BINDIR}
 HUGO=${BINDIR}/hugo
 
+# default TMPDIR to /tmp
+# oddly not set on travis
+TMPDIR=${TMPDIR:-/tmp}
+
 # Do we need to get hugo?
 #
 #
