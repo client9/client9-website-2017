@@ -45,8 +45,6 @@ if [ -z "${VERSION}" ]; then
 fi
 
 
-echo "TMPDIR IS ${TMPDIR}"
-
 # strip leading "v" if any.
 # tarball doesn't use "v", but URL does.
 VERSION=${VERSION#v}
