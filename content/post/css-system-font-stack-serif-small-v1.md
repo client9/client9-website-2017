@@ -3,6 +3,8 @@ Date: 2017-04-09
 Title: "CSS System Font Stack - Serif Small - V1"
 ---
 
+Forget Times New Roman and upgrade with this CSS system font stack<!--more-->
+
 This system stack is upgrade of the traditional serif font Times New Roman.  The Mac and Windows alternates are dense and screen optimized.
 
 ## CSS
