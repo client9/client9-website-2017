@@ -4,9 +4,15 @@ title: git undo last commit
 draft: true
 ---
 
-## How do I change the last commit message?
+Ooops, I did it again. Here's how to undo your last git commit.<!--more-->
 
-Again, if you did not push, then:
+If you did `git push` then its best just to correct your mistake manually and repush.  Git does allow for repository surgery but it is not recommended and should only be used for critical security problems (e.g. I committed secret keys).
+
+If you didn't push you have a few options.
+
+## How do I just change the last commit message?
+
+If you did not push, then:
 
 ```bash
 git commit --amend -m "New commit message"
@@ -14,17 +20,17 @@ git commit --amend -m "New commit message"
 
 See [Stack Overflow](http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git) or [GitHub](https://help.github.com/articles/changing-a-commit-message) for more details.
 
-## How do I undo the last commit? (if you did not push).
+## How do I undo the last commit and but keep the changes locally.
 
-If you did `git push` then its best just to correct your mistake manually and repush.  Git does allow for repository surgery but it is not recommended and should only be used for critical security problems (e.g. I committed secret keys).
-
-If you did not push, then, this makes it so it never happened and restore everything just as  you never typed `git commit`
+This is useful when you forgot to add a file or what to make a few more edits.  If you did not push, then, this makes it so it never happened and restore everything just as you never typed `git commit:
 
 ```bash
 git reset HEAD~1
 ```
 
-Same as above but also reverts any changes to to file (as you never did the edits)
+### Undo the commit and discard the changes.
+
+Same as above but also reverts any changes to to file as if you never did the edits at all.
 
 ```bash
 git reset --hard HEAD~1
