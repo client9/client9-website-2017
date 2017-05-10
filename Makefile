@@ -18,6 +18,6 @@ clean:
 	git gc --aggressive
 
 hugo:
-	./download-hugo.sh 0.20.7
+	./godownloader-hugo.sh 0.20.7
 .PHONY: hugo
 
