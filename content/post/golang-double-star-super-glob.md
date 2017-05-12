@@ -1,6 +1,5 @@
 ---
 Date: 2017-05-11
-Draft: true
 Title: Golang globs and ** double star globs
 ---
 
