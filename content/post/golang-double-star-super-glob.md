@@ -1,6 +1,6 @@
 ---
 Date: 2017-05-11
-Title: Golang globs and ** double star globs
+Title: Golang globs and the ** Double Star Glob Operator
 ---
 
 Golang's glob library doesn't support the ** double-star operator.  Here's how to get it.<!--more-->
