@@ -52,7 +52,7 @@ Converting time formats to [Hugo](https://gohugo.io/).
 ### Note 1 - "Perferred" locale-specific formats
 
 There is no concept of a "perferred locale" in Hugo at this time.  You will need
-to use an explict format instead.
+to use an explict format instead.  See [Create a Multilingual Site](https://gohugo.io/tutorials/create-a-multilingual-site/) for more details.
 
 ### Note 2 - Week or Day of year
 
