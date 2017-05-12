@@ -1,7 +1,6 @@
 ---
-date: 2017-05-08
-title: git undo last commit
-draft: true
+Date: 2017-05-08
+Title: git undo last commit
 ---
 
 Ooops, I did it again. Here's how to undo your last git commit.<!--more-->
@@ -42,7 +41,7 @@ git reset --hard HEAD~1
 
 See [Stack Overflow](https://stackoverflow.com/questions/927358/how-to-undo-the-last-git-commit) for more details.
 
-## Undo a push and the commit.
+## Undo a push and the commit {#push}
 
 The cute answer is "keep going and don't try to revert."  That's not appropriate in all occasions, so if you need to undo a _push_ and a _commit_, check out see this [Stack Overflow](http://stackoverflow.com/questions/1270514/undoing-a-git-push) thread until I write up something.
 
