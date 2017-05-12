@@ -6,17 +6,12 @@ draft: true
 
 Ooops, I did it again. Here's how to undo your last git commit.<!--more-->
 
-If you did not `git push`, then you have a easy choice on how much you want to undo:
+If you did not `git push`, then you have a easy choice on how much you want to undo.  If you did push, it's more work but can be done.
 
 * [Keep changes, just modify the commit message](#messageonly)
 * [Undo commit, but keep changes](#uncommit)
 * [Undo the commit, undo the changes](#checkout)
-
-If you did do a `git push` then it is more work:
-
-* Undo manually and repush.  Boring but true.
-* Use a branch, checkout to previous commit, then push the branch to push an undo (needs more explanation).
-* Repository surgery.  You can purge a commit from the remote git repo but it's tricky and should only be used for critical security problems (e.g. secret keys keys were added to the remote repo).  
+* [Undo a push, and the commit](#push)
 
 
 ## How do I just change the last commit message? {#messageonly}
@@ -46,4 +41,8 @@ git reset --hard HEAD~1
 ```
 
 See [Stack Overflow](https://stackoverflow.com/questions/927358/how-to-undo-the-last-git-commit) for more details.
+
+## Undo a push and the commit.
+
+This is most complicated.  See this [Stack Overflow](http://stackoverflow.com/questions/1270514/undoing-a-git-push) thread in the meantime.
 
