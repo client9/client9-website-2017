@@ -15,19 +15,19 @@ Converting time formats to [Hugo](https://gohugo.io/).
 | %A       | Monday     | Full weekday name  |
 | %b       | Jan        | Abbreviated month |
 | %B       | January    | Full month name |
-| %c       | Note 1     | Perferred local datetime |
-| %C       | Note 1     | Century number |
+| %c       | [Note 1](#note1)     | Perferred local datetime |
+| %C       | [Note 1](#note1)     | Century number |
 | %d       | 02         | Day of month 01 to 31 |
 | %D       | 01/02/06   | USA month, day, year  |
 | %e       | 2          | Day of month, no leading zero |
 | %E       | TBD        | Modifier, use alternative format |
-| %G       | Note 2     | ISO week-based year, with century |
-| %g       | Note 2     | ISO week-based year, without century |
+| %G       | [Note 2](#note2)     | ISO week-based year, with century |
+| %g       | [Note 2](#note2)     | ISO week-based year, without century |
 | %F       | 2006-01-02 | ISO 8061 date|
 | %h       | Jan        | Abbreviated month (same as %b) |
 | %H       | 15         | Hour 00 to 23 |
 | %I       | 03         | Hour 00 to 12 |
-| %j       | Note 2     | Day of year 001 to 365 |
+| %j       | [Note 2](#note2)     | Day of year 001 to 365 |
 | %k       | 3          | Hour ' 0' to '23' with leading space |
 | %l       | 4          | Hour ' 0' to '12' with leading space |
 | %m       | 01         | Month number 01 to 12 |
@@ -35,30 +35,30 @@ Converting time formats to [Hugo](https://gohugo.io/).
 | %n       | \n         | Newline character |
 | %O       | TBD        | Modifier, use alternative format |
 | %p       | PM         | 'AM' or 'PM' |
-| %P       | Note 3     | 'am' or 'pm' |
+| %P       | [Note 3](#note3)     | 'am' or 'pm' |
 | %r       | 03:04:05 PM | same as `%I:%M:%S %p` |
 | %R       | 15:04      | same as `%H:%M` |
-| %s       | Note 4     | Seconds since Unix epoch |
+| %s       | [Note 4](#note4)     | Seconds since Unix epoch |
 | %S       | 05         | Second of hour, 00 to 60 |
 | %t       | \t         | Tab character |
-| %x       | Note 1     | Preferred |
-| %X       | Note 1     | Preferred |
+| %x       | [Note 1](#note1)     | Preferred |
+| %X       | [Note 1](#note2)     | Preferred |
 | %y       | 06         | Year without century |
 | %Y       | 2006       | Year with century |
 | %z       | -0700      | +/-hhmm time zone offset |
 | %Z       | MST        | Time zone abbreviation |
 | %%       | %          | "%" character |
 
-### Note 1 - "Perferred" locale-specific formats
+### Note 1 - "Perferred" locale-specific formats {#note1}
 
 There is no concept of a "perferred locale" in Hugo at this time.  You will need
 to use an explicit format instead.  See [Create a Multilingual Site](https://gohugo.io/tutorials/create-a-multilingual-site/) for more details.
 
-### Note 2 - Week or Day of year
+### Note 2 - Week or Day of year {#note2}
 
 These can be commputed using [Day](https://golang.org/pkg/time/#Time.Day) and [ISOWeek](https://golang.org/pkg/time/#Time.ISOWeek)
 
-### Note 3 - Lower case versions of AM or PM
+### Note 3 - Lower case versions of AM or PM {#note3}
 
 Hugo only supports `AM` or `PM`.  To do something different you'll have to create custom implementation:
 
@@ -66,7 +66,7 @@ Hugo only supports `AM` or `PM`.  To do something different you'll have to creat
 {{ if .Date.Hour > 12 }}pm{{ else }}am{{ end}}
 ```
 
-### Note 4 - Unix timestamps
+### Note 4 - Unix timestamps {#note4}
 
 Instead of a time format, you need to use the [UTC](https://golang.org/pkg/time/#Time.UTC) and [Unix](https://golang.org/pkg/time/#Time.Unix) methods of the [Time](https://golang.org/pkg/time/#Time) object:
 
@@ -78,7 +78,7 @@ Instead of a time format, you need to use the [UTC](https://golang.org/pkg/time/
 
 ### RFC 3339, ISO 8061
 
-This format is used in Open Graph, and Google metadata.
+This format is used in Open Graph, and Google metadata.  [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) and [ISO 8061](https://en.wikipedia.org/wiki/ISO_8601) defines a number of variations, but the following should work for most cases:
 
 ```
 {{ .Date.Format "2006-01-02T15:04:05Z07:00" }}
@@ -86,7 +86,7 @@ This format is used in Open Graph, and Google metadata.
 
 ### RFC 1123 HTTP dates
 
-Used in various [HTTP headers](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html).
+[RFC 1123](https://tools.ietf.org/html/rfc1123) is used in various [HTTP headers](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html).
 
 ```
 {{ .Date.UTC.Format "Mon, 02 Jan 2006 15:04:05 GMT" }}

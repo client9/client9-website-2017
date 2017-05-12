@@ -21,7 +21,7 @@ clean:
 
 setup:
 	./godownloader-hugo.sh 0.20.7
-	go get github.com/tdewolff/minify/...
+	go get github.com/tdewolff/minify/cmd/minify
 #	./download-minify.sh
 
 .PHONY: hugo
