@@ -51,8 +51,7 @@ Converting time formats to [Hugo](https://gohugo.io/).
 
 ### Note 1 - "Perferred" locale-specific formats {#note1}
 
-There is no concept of a "perferred locale" in Hugo at this time.  You will need
-to use an explicit format instead.  See [Create a Multilingual Site](https://gohugo.io/tutorials/create-a-multilingual-site/) for more details.
+There is no concept of a "perferred locale" in Hugo at this time. Use an explicit format instead.  See [Create a Multilingual Site](https://gohugo.io/tutorials/create-a-multilingual-site/) for more details.
 
 ### Note 2 - Week or Day of year {#note2}
 
@@ -60,7 +59,7 @@ These can be commputed using [Day](https://golang.org/pkg/time/#Time.Day) and [I
 
 ### Note 3 - Lower case versions of AM or PM {#note3}
 
-Hugo only supports `AM` or `PM`.  To do something different you'll have to create custom implementation:
+Hugo only supports `AM` or `PM`.  To do something different, create a custom implementation:
 
 ```
 {{ if .Date.Hour > 12 }}pm{{ else }}am{{ end}}
@@ -68,7 +67,7 @@ Hugo only supports `AM` or `PM`.  To do something different you'll have to creat
 
 ### Note 4 - Unix timestamps {#note4}
 
-Instead of a time format, you need to use the [UTC](https://golang.org/pkg/time/#Time.UTC) and [Unix](https://golang.org/pkg/time/#Time.Unix) methods of the [Time](https://golang.org/pkg/time/#Time) object:
+Instead of a time _format_, use the [UTC](https://golang.org/pkg/time/#Time.UTC) and [Unix](https://golang.org/pkg/time/#Time.Unix) methods of the [Time](https://golang.org/pkg/time/#Time) object:
 
 ```
 {{ .Date.UTC.Unix }}
@@ -78,7 +77,7 @@ Instead of a time format, you need to use the [UTC](https://golang.org/pkg/time/
 
 ### RFC 3339, ISO 8061
 
-This format is used in Open Graph, and Google metadata.  [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) and [ISO 8061](https://en.wikipedia.org/wiki/ISO_8601) defines a number of variations, but the following should work for most cases:
+This format is used in Open Graph, and Google metadata.  [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) and [ISO 8061](https://en.wikipedia.org/wiki/ISO_8601) defines a number of variations, but the following works:
 
 ```
 {{ .Date.Format "2006-01-02T15:04:05Z07:00" }}
@@ -86,7 +85,7 @@ This format is used in Open Graph, and Google metadata.  [RFC 3339](https://www.
 
 ### RFC 1123 HTTP dates
 
-[RFC 1123](https://tools.ietf.org/html/rfc1123) is used in various [HTTP headers](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html).
+[RFC 1123](https://tools.ietf.org/html/rfc1123) is used in various [HTTP headers](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html).  Note that it uses the old GMT timezone instead of UTC.
 
 ```
 {{ .Date.UTC.Format "Mon, 02 Jan 2006 15:04:05 GMT" }}
