@@ -11,6 +11,9 @@ https://github.com/client9/posixshell/blob/master/LICENSE.md
 but credits (and pull requests) appreciated.
 ------------------------------------------------------------------------
 EOF
+is_command() {
+  type $1 > /dev/null 2> /dev/null
+}
 uname_arch() {
   local arch=$(uname -m)
   case $arch in
@@ -44,13 +47,13 @@ http_download() {
   DEST=$1
   SOURCE=$2
   HEADER=$3
-  if type curl &> /dev/null; then
+  if is_command curl; then
     WGET="curl --fail -sSL"
     test -z "${HEADER}" || WGET="${WGET} -H \"${HEADER}\""
     if [ "${DEST}" != "-" ]; then
       WGET="$WGET -o $DEST"
     fi
-  elif type wget &> /dev/null; then
+  elif is_command wget &> /dev/null; then
     WGET="wget -q -O $DEST"
     test -z "${HEADER}" || WGET="${WGET} --header \"${HEADER}\""
   else
@@ -75,13 +78,13 @@ github_api() {
 }
 hash_sha256() {
   TARGET=${1:-$(</dev/stdin)};
-  if type gsha256sum &> /dev/null; then
+  if is_command gsha256sum; then
     gsha256sum $TARGET | cut -d ' ' -f 1
-  elif type sha256sum &> /dev/null; then
+  elif is_command sha256sum; then
     sha256sum $TARGET | cut -d ' ' -f 1
-  elif type shasum &> /dev/null; then
+  elif is_command shasum; then
     shasum -a 256 $TARGET | cut -d ' ' -f 1
-  elif type openssl &> /dev/null; then
+  elif is_command openssl; then
     openssl -dst openssl dgst -sha256 $TARGET | cut -d ' ' -f a
   else
     echo "Unable to compute hash. exiting"
