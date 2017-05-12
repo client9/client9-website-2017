@@ -6,8 +6,8 @@ go:
 
 install:
   - ./godownloader-hugo.sh 0.20.7
+  - ./download-minify.sh
   - go get github.com/client9/misspell/cmd/misspell
-  - go get github.com/tdewolff/minify/cmd/minify
 
 script:
   - make compile
