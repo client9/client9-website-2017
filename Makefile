@@ -1,6 +1,7 @@
 
 HUGO=./bin/hugo
-MINIFY=./bin/minify
+#MINIFY=./bin/minify
+MINIFY=minify
 
 run:
 	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell
@@ -20,7 +21,8 @@ clean:
 
 setup:
 	./godownloader-hugo.sh 0.20.7
-	./download-minify.sh
+	go get github.com/tdewolff/minify
+#	./download-minify.sh
 
 .PHONY: hugo
 
