@@ -44,5 +44,5 @@ See [Stack Overflow](https://stackoverflow.com/questions/927358/how-to-undo-the-
 
 ## Undo a push and the commit.
 
-This is the most complicated.  See this [Stack Overflow](http://stackoverflow.com/questions/1270514/undoing-a-git-push) thread in the meantime.
+The cute answer is "keep going and don't try to revert."  That's not appropriate in all occasions, so if you need to undo a _push_ and a _commit_, check out see this [Stack Overflow](http://stackoverflow.com/questions/1270514/undoing-a-git-push) thread until I write up something.
 
