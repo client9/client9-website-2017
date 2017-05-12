@@ -6,13 +6,13 @@ draft: true
 
 Ooops, I did it again. Here's how to undo your last git commit.<!--more-->
 
-If you did `git push` then its best just to correct your mistake manually and repush.  Git does allow for repository surgery but it is not recommended and should only be used for critical security problems (e.g. I committed secret keys).
+If you did not `git push` it's mostly easy and you have a few choice on how much you want to undo (see below).
 
-If you didn't push you have a few options.
+If you did `git push` then its best just to correct your mistake manually and repush.  Git does allow for repository surgery but it is not recommended and should only be used for critical security problems (e.g. secret keys keys were added to the remote repo).
 
 ## How do I just change the last commit message?
 
-If you did not push, then:
+If you didn't push, and just need to change the last commit message, use `--amend`
 
 ```bash
 git commit --amend -m "New commit message"

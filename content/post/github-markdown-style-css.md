@@ -10,11 +10,7 @@ Like how GitHub displays markdown?  Get the look with these CSS styles.
 
 ## sindresorhus/github-markdown-css
 
-[Sindre Sorhus](https://blog.sindresorhus.com/about-sindre-sorhus-42786d2e191b) made a site that covers just [everything about GitHub-flavored markdown](https://sindresorhus.com/github-markdown-css/).
-
-The CSS to replicate the GitHub style can be found at the matching  [GitHub repository](https://github.com/sindresorhus/github-markdown-css)
-
-https://github.com/sindresorhus/github-markdown-css
+[Sindre Sorhus](https://sindresorhus.com/) made a site that covers just [everything about GitHub-flavored markdown](https://sindresorhus.com/github-markdown-css/). The CSS to replicate the GitHub style can be found at the matching  [GitHub repository](https://github.com/sindresorhus/github-markdown-css)
 
 ## shurcool/github-flavored-markdown
 
