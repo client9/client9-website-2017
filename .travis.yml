@@ -6,7 +6,7 @@ go:
 
 install:
   - ./godownloader-hugo.sh 0.20.7
-  - go get github.com/tdewolff/minify
+  - go get github.com/tdewolff/minify/...
   - go get github.com/client9/misspell/cmd/misspell
 
 script:
