@@ -1,14 +1,20 @@
 ---
 Date: 2017-05-11
 Draft: true
-Title: Golang globs and superglob
+Title: Golang globs and ** double star globs
 ---
 
-* super glob operator
-* golang for ticket 
-* alternative globs
+Golang's glob library doesn't support the ** double-star operator.  Here's how to get it.<!--more-->
 
-Link to rsc paper
 
-https://github.com/gobwas/glob
-https://github.com/mattn/go-zglob
+The golang [filepath/glob](https://golang.org/pkg/path/filepath/#Glob) and [filepath/match](https://golang.org/pkg/path/filepath/#Match) functions provide [glob matching](https://en.wikipedia.org/wiki/Glob_(programming)) but does not support the "double star", "double asterisk", "glob star", "super glob", "super wildcard" operation that decends into other directories.  According to [Issue 11862](https://github.com/golang/go/issues/11862) the problem seems to be handling edge cases like crossing file system boundries, symlinks and infinite loops (if I read [rsc's comment](https://github.com/golang/go/issues/11862#issuecomment-168733265) correctly).
+
+In the meantime, one of these packages might work:
+
+* [mattn/go-zglob](https://github.com/mattn/go-zglob) looks very optimized for filewalking.
+* [bmatcuk/doublestar](https://github.com/bmatcuk/doublestar) appears to be the most mature but could use some [cleanups](https://goreportcard.com/report/github.com/bmatcuk/doublestar).
+* [godo/glob.go](https://github.com/go-godo/godo/blob/master/glob.go) is an implimentation embedded inside [godo](https://github.com/go-godo/godo)
+
+In addition [gobwas/glob](https://github.com/gobwas/glob) is an excellent generic glob package that claims huge performance advantage over other globs and the equivalent regular expressions.  It does not however provide a filewalker.
+
+Happy globbing, and if you want to know more about the sciences of globs, [@rsc wrote it up for you](https://research.swtch.com/glob).
