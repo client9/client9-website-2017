@@ -4,10 +4,9 @@ HUGO=./bin/hugo
 MINIFY=minify
 
 run:
-	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
 	${HUGO} -t client9 -v -D -E -F --watch server --bind 0.0.0.0
 
-compile:
+compile: lint
 	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
 	${HUGO} -t client9
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
@@ -19,10 +18,13 @@ clean:
 	rm -rf bin
 	git gc --aggressive
 
+lint:
+	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
 setup:
 	./godownloader-hugo.sh 0.20.7
 	go get github.com/tdewolff/minify/cmd/minify
 #	./download-minify.sh
 
-.PHONY: hugo
+.PHONY: hugo lint clean setup compile run
+
 
