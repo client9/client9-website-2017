@@ -12,7 +12,7 @@ In the meantime, one of these packages might work:
 
 * [mattn/go-zglob](https://github.com/mattn/go-zglob) looks very optimized for filewalking.
 * [bmatcuk/doublestar](https://github.com/bmatcuk/doublestar) appears to be the most mature but could use some [cleanups](https://goreportcard.com/report/github.com/bmatcuk/doublestar).
-* [godo/glob.go](https://github.com/go-godo/godo/blob/master/glob.go) is an implimentation embedded inside [godo](https://github.com/go-godo/godo)
+* [godo/glob.go](https://github.com/go-godo/godo/blob/master/glob.go) is an implementation embedded inside [godo](https://github.com/go-godo/godo)
 
 In addition [gobwas/glob](https://github.com/gobwas/glob) is an excellent generic glob package that claims huge performance advantage over other globs and the equivalent regular expressions.  It does not however provide a filewalker.
 
