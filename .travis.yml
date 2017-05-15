@@ -11,7 +11,9 @@ install:
   - go get github.com/client9/s3push
 
 script:
+  - echo $TRAVIS_BRANCH
   - make compile
+  - s3push
 
 deploy:
   - provider: script
