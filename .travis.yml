@@ -17,11 +17,11 @@ deploy:
   - provider: script
     skip_cleanup: true
     script: s3push
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-    bucket: www.client9.com
-    region: us-east-1
-    local_dir: public
-    skip_cleanup: true
-    cache_control: "max-age=3600"
+#  - provider: s3
+#    access_key_id: $AWS_ACCESS_KEY
+#    secret_access_key: $AWS_SECRET_KEY
+#    bucket: www.client9.com
+#    region: us-east-1
+#    local_dir: public
+#    skip_cleanup: true
+#    cache_control: "max-age=3600"

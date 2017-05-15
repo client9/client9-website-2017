@@ -18,7 +18,7 @@ clean:
 	git gc --aggressive
 
 lint:
-	find public -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
+	find content -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
 
 setup:
 	./godownloader-hugo.sh 0.20.7
