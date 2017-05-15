@@ -8,19 +8,15 @@ install:
   - ./godownloader-hugo.sh 0.20.7
   - ./download-minify.sh
   - go get github.com/client9/misspell/cmd/misspell
+  - go get github.com/client9/s3push
 
 script:
   - make compile
 
 deploy:
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-    bucket: www-draft.client9.com
-    region: us-east-1
-    local_dir: public-draft
+  - provider: script
     skip_cleanup: true
-    cache_control: "no-cache"
+    script: s3push
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
