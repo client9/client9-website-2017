@@ -23,7 +23,7 @@ lint:
 setup:
 	./godownloader-hugo.sh 0.20.7
 	go get github.com/client9/s3push
-  ./download-minify.sh
+	./download-minify.sh
 
 .PHONY: hugo lint clean setup compile run
 
