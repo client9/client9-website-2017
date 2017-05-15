@@ -1,0 +1,21 @@
+
+base: "../client9-website-2017/public-draft"
+bucket: "www-draft.client9.com"
+region: "us-east-1"
+
+select:
+  - filter:
+      include: "*"
+    conf:
+      storage-class: reduced_redundancy
+      cache-control: "max-age=3600"
+  - filter:
+      include: [ "*.html" ]
+    conf:
+      content-language: "en-US"
+      cache-control: "max-age=3601"
+  - filter:
+      include: [ "*.gif", "*.png", "*.jpg" ]
+    conf:
+      cache-control: "max-age=86400"
+

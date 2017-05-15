@@ -22,6 +22,7 @@ lint:
 	find . -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
 setup:
 	./godownloader-hugo.sh 0.20.7
+	go get github.com/client9/s3push
 	go get github.com/tdewolff/minify/cmd/minify
 #	./download-minify.sh
 
