@@ -1,7 +1,7 @@
 
 HUGO=./bin/hugo
-#MINIFY=./bin/minify
-MINIFY=minify
+MINIFY=./bin/minify
+#MINIFY=minify
 
 run:
 	${HUGO} -t client9 -v -D -E -F --watch server --bind 0.0.0.0
