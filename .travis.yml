@@ -15,10 +15,10 @@ script:
   - make compile
   - s3push
 
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: s3push
+#deploy:
+#  - provider: script
+#    skip_cleanup: true
+#    script: s3push
 #  - provider: s3
 #    access_key_id: $AWS_ACCESS_KEY
 #    secret_access_key: $AWS_SECRET_KEY
