@@ -20,19 +20,9 @@ clean:
 lint:
 	find content -name '*.md' | grep -v 2016-08-21 | xargs ${MISSPELL} -error
 
-setup1:
-	./godownloader-hugo.sh 0.20.7
-setup2:
-	go get github.com/client9/s3push
-setup3:
-	./download-minify.sh
-setup4:
-	./godownloader-misspell.sh 0.1.0
 
-setup: setup1 setup2 setup3 setup4
-
-.PHONY: setup setup1 setup2 setup3 setup4
-
+setup:
+	tail +2 setup.sh | xargs -P4 -ICMD /bin/sh -exc CMD 
 
 .PHONY: hugo lint clean setup compile run
 
