@@ -9,6 +9,7 @@ install:
   - ./download-minify.sh
   - go get github.com/client9/misspell/cmd/misspell
   - go get github.com/client9/s3push
+  - which parallel
 
 script:
   - echo $TRAVIS_BRANCH
