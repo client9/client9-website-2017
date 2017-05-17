@@ -1,9 +1,7 @@
 
 HUGO=./bin/hugo
 MINIFY=./bin/minify
-MISPELL./bin/misspell
-
-#MINIFY=minify
+MISPELL=./bin/misspell
 
 run:
 	${HUGO} -t client9 -v -D -E -F --watch server --bind 0.0.0.0
