@@ -1,6 +1,8 @@
 
 HUGO=./bin/hugo
 MINIFY=./bin/minify
+MISPELL./bin/misspell
+
 #MINIFY=minify
 
 run:
@@ -18,7 +20,7 @@ clean:
 	git gc --aggressive
 
 lint:
-	find content -name '*.md' | grep -v 2016-08-21 | xargs misspell -error
+	find content -name '*.md' | grep -v 2016-08-21 | xargs ${MISSPELL} -error
 
 setup1:
 	./godownloader-hugo.sh 0.20.7
@@ -27,7 +29,7 @@ setup2:
 setup3:
 	./download-minify.sh
 setup4:
-	go get github.com/client9/misspell/cmd/misspell
+	./godownloader-misspell.sh 0.1.0
 
 setup: setup1 setup2 setup3 setup4
 
