@@ -22,7 +22,7 @@ lint:
 
 
 setup:
-	tail +2 setup.sh | xargs -P4 -ICMD /bin/sh -exc CMD 
+	tail -n +2 setup.sh | xargs -P4 -ICMD /bin/sh -exc CMD 
 
 .PHONY: hugo lint clean setup compile run
 
