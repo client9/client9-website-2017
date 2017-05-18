@@ -4,11 +4,12 @@ language: go
 go:
   - 1.8.x
 
-install:
-  - make setup
+git:
+  depth: 1
 
 script:
   - echo $TRAVIS_BRANCH
+  - make setup
   - make compile
   - s3push
 
