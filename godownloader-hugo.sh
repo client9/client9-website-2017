@@ -28,11 +28,11 @@ but credits (and pull requests) appreciated.
 ------------------------------------------------------------------------
 EOF
 is_command() {
-  type $1 > /dev/null 2> /dev/null
+  command -v "$1" > /dev/null
 }
 uname_os() {
   os=$(uname -s | tr '[:upper:]' '[:lower:]')
-  echo ${os}
+  echo "$os"
 }
 uname_arch() {
   arch=$(uname -m)
@@ -83,10 +83,10 @@ uname_arch_check() {
 }
 untar() {
   tarball=$1
-  case ${tarball} in
-  *.tar.gz|*.tgz) tar -xzf ${tarball} ;;
-  *.tar) tar -xf ${tarball} ;;
-  *.zip) unzip ${tarball} ;;
+  case "${tarball}" in
+  *.tar.gz|*.tgz) tar -xzf "${tarball}" ;;
+  *.tar) tar -xf "${tarball}" ;;
+  *.zip) unzip "${tarball}" ;;
   *)
     echo "Unknown archive format for ${tarball}"
     return 1
@@ -94,8 +94,8 @@ untar() {
 }
 mktmpdir() {
    test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
-   mkdir -p ${TMPDIR}
-   echo ${TMPDIR}
+   mkdir -p "${TMPDIR}"
+   echo "${TMPDIR}"
 }
 http_download() {
   local_file=$1
@@ -134,7 +134,8 @@ github_api() {
 }
 github_last_release() {
   owner_repo=$1
-  html=$(github_api - https://api.github.com/repos/${owner_repo}/releases/latest)
+  giturl="https://api.github.com/repos/${owner_repo}/releases/latest"
+  html=$(github_api - "$giturl")
   version=$(echo "$html" | grep -m 1 "\"name\":" | cut -d ":" -f 2 | tr -d ' ",')
   test -z "$version" && return 1
   echo "$version"
@@ -142,17 +143,17 @@ github_last_release() {
 hash_sha256() {
   TARGET=${1:-/dev/stdin};
   if is_command gsha256sum; then
-    hash=$(gsha256sum $TARGET) || return 1
-    echo $hash | cut -d ' ' -f 1
+    hash=$(gsha256sum "$TARGET") || return 1
+    echo "$hash" | cut -d ' ' -f 1
   elif is_command sha256sum; then
-    hash=$(sha256sum $TARGET) || return 1
-    echo $hash | cut -d ' ' -f 1
+    hash=$(sha256sum "$TARGET") || return 1
+    echo "$hash" | cut -d ' ' -f 1
   elif is_command shasum; then
-    hash=$(shasum -a 256 $TARGET 2>/dev/null) || return 1
-    echo $hash | cut -d ' ' -f 1
+    hash=$(shasum -a 256 "$TARGET" 2>/dev/null) || return 1
+    echo "$hash" | cut -d ' ' -f 1
   elif is_command openssl; then
-    hash=$(openssl -dst openssl dgst -sha256 $TARGET) || return 1
-    echo $hash | cut -d ' ' -f a
+    hash=$(openssl -dst openssl dgst -sha256 "$TARGET") || return 1
+    echo "$hash" | cut -d ' ' -f a
   else
     echo "hash_sha256: unable to find command to compute sha-256 hash"
     return 1
@@ -166,12 +167,12 @@ hash_sha256_verify() {
      return 1
   fi
   BASENAME=${TARGET##*/}
-  want=$(grep ${BASENAME} "${checksums}" 2> /dev/null | tr '\t' ' ' | cut -d ' ' -f 1)
+  want=$(grep "${BASENAME}" "${checksums}" 2> /dev/null | tr '\t' ' ' | cut -d ' ' -f 1)
   if [ -z "$want" ]; then
      echo "hash_sha256_verify: unable to find checksum for '${TARGET}' in '${checksums}'"
      return 1
   fi
-  got=$(hash_sha256 $TARGET)
+  got=$(hash_sha256 "$TARGET")
   if [ "$want" != "$got" ]; then
      echo "hash_sha256_verify: checksum for '$TARGET' did not verify ${want} vs $got"
      return 1
@@ -198,7 +199,7 @@ case "${VERSION}" in
     VERSION=""
     ;;
  -h|-?|*help*)
-   usage $0
+   usage "$0"
    exit 1
    ;;
 esac
@@ -265,15 +266,15 @@ CHECKSUM_URL=https://github.com/${OWNER}/${REPO}/releases/download/v${VERSION}/$
 execute() {
   TMPDIR=$(mktmpdir)
   echo "$PREFIX: downloading ${TARBALL_URL}"
-  http_download ${TMPDIR}/${TARBALL} ${TARBALL_URL}
+  http_download "${TMPDIR}/${TARBALL}" "${TARBALL_URL}"
 
   echo "$PREFIX: verifying checksums"
-  http_download ${TMPDIR}/${CHECKSUM} ${CHECKSUM_URL}
-  hash_sha256_verify ${TMPDIR}/${TARBALL} ${TMPDIR}/${CHECKSUM}
+  http_download "${TMPDIR}/${CHECKSUM}" "${CHECKSUM_URL}"
+  hash_sha256_verify "${TMPDIR}/${TARBALL}" "${TMPDIR}/${CHECKSUM}"
 
-  (cd ${TMPDIR} && untar ${TARBALL})
-  install -d ${BINDIR}
-  install ${TMPDIR}/${BINARY} ${BINDIR}/
+  (cd "${TMPDIR}" && untar "${TARBALL}")
+  install -d "${BINDIR}"
+  install "${TMPDIR}/${BINARY}" "${BINDIR}/"
   echo "$PREFIX: installed as ${BINDIR}/${BINARY}"
 }
 
