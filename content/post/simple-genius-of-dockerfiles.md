@@ -16,13 +16,11 @@ Why is [docker](https://docker.com/) so successful?  One reason is the simple ge
 * `ARG` allows simple parameterization (command line arguments)
 * Some other docker-specific book-keeping
 
-And that's it.The whole spec fits on a few pages.  Compare that to other commercial configuration management tools.
+And that's it. The whole spec fits on a few pages.  Compare that to other commercial configuration management tools.
 
 One important detail is that `RUN` is stateless and a separate shell is used each time.  This means you can't change the dockerfile execution state.  This is different that say, hashicorp's Packer and Travis.ci which allow you to specify a list of shell commands, however they are run *in the same shell*.
 
 By convention   One command at-a-time, in a sequence.  `RUN` `RUN` `RUN`.  Either each statement worked, or the whole process failed.
-
-
 
 * Abstractions around basic OS functionality (If you
 * Interigations of OS to see capabilities (OS name, 
