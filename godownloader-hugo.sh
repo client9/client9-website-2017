@@ -30,6 +30,10 @@ EOF
 is_command() {
   type $1 > /dev/null 2> /dev/null
 }
+uname_os() {
+  os=$(uname -s | tr '[:upper:]' '[:lower:]')
+  echo ${os}
+}
 uname_arch() {
   arch=$(uname -m)
   case $arch in
@@ -40,9 +44,42 @@ uname_arch() {
   esac
   echo ${arch}
 }
-uname_os() {
-  os=$(uname -s | tr '[:upper:]' '[:lower:]')
-  echo ${os}
+uname_os_check() {
+  os=$(uname_os)
+  case "$os" in
+   darwin)    return 0 ;;
+   dragonfly) return 0 ;;
+   freebsd)   return 0 ;;
+   linux)     return 0 ;;
+   android)   return 0 ;;
+   nacl)      return 0 ;;
+   netbsd)    return 0 ;;
+   openbsd)   return 0 ;;
+   plan9)     return 0 ;;
+   solaris)   return 0 ;;
+   windows)   return 0 ;;
+  esac
+  echo "$0: uname_os_check: internal error '$(uname -s)' got converted to '$os' which is not a GOOS value. Please file bug at https://github.com/client9/posixshell"
+  return 1
+}
+uname_arch_check() {
+  arch=$(uname_arch)
+  case "$arch" in
+   386)      return 0 ;;
+   amd64)    return 0 ;;
+   arm64)    return 0 ;;
+   arm)      return 0 ;;
+   ppc64)    return 0 ;;
+   ppc64le)  return 0 ;;
+   mips)     return 0 ;;
+   mipsle)   return 0 ;;
+   mips64)   return 0 ;;
+   mips64le) return 0 ;;
+   s390x)    return 0 ;;
+   amd64p32) return 0 ;;
+  esac
+  echo "$0: uname_arch_check: internal error '$(uname -m)' got converted to '$arch' which is not a GOARCH value.  Please file bug report at https://github.com/client9/posixshell"
+  return 1
 }
 untar() {
   tarball=$1
@@ -96,13 +133,11 @@ github_api() {
   http_download "$local_file" "$source_url" "$header"
 }
 github_last_release() {
-  OWNER_REPO=$1
-  VERSION=$(github_api - https://api.github.com/repos/${OWNER_REPO}/releases/latest | grep -m 1 "\"name\":" | cut -d ":" -f 2 | tr -d ' ",')
-  if [ -z "${VERSION}" ]; then
-    echo "Unable to determine latest release for ${OWNER_REPO}"
-    return 1
-  fi
-  echo ${VERSION}
+  owner_repo=$1
+  html=$(github_api - https://api.github.com/repos/${owner_repo}/releases/latest)
+  version=$(echo "$html" | grep -m 1 "\"name\":" | cut -d ":" -f 2 | tr -d ' ",')
+  test -z "$version" && return 1
+  echo "$version"
 }
 hash_sha256() {
   TARGET=${1:-/dev/stdin};
@@ -154,14 +189,24 @@ BINARY=hugo
 FORMAT=tar.gz
 BINDIR=${BINDIR:-./bin}
 
-VERSION=$1
-if [ -z "${VERSION}" ]; then
-  usage $0
-  exit 1
-fi
+uname_os_check
+uname_arch_check
 
-if [ "${VERSION}" = "latest" ]; then
-  echo "Checking GitHub for latest version of ${OWNER}/${REPO}"
+VERSION=$1
+case "${VERSION}" in
+ latest)
+    VERSION=""
+    ;;
+ -h|-?|*help*)
+   usage $0
+   exit 1
+   ;;
+esac
+
+PREFIX="$OWNER/$REPO"
+
+if [ -z "${VERSION}" ]; then
+  echo "$PREFIX: checking GitHub for latest version"
   VERSION=$(github_last_release "$OWNER/$REPO")
 fi
 # if version starts with 'v', remove it
@@ -205,6 +250,8 @@ openbsd) ARCH=OpenBSD ;;
 windows) ARCH=Windows ;;
 esac
 
+echo "$PREFIX: found version ${VERSION} for ${OS}/${ARCH}"
+
 NAME=${BINARY}_${VERSION}_${OS}-${ARCH}
 TARBALL=${NAME}.${FORMAT}
 TARBALL_URL=https://github.com/${OWNER}/${REPO}/releases/download/v${VERSION}/${TARBALL}
@@ -217,14 +264,17 @@ CHECKSUM_URL=https://github.com/${OWNER}/${REPO}/releases/download/v${VERSION}/$
 # out preventing half-done work
 execute() {
   TMPDIR=$(mktmpdir)
+  echo "$PREFIX: downloading ${TARBALL_URL}"
   http_download ${TMPDIR}/${TARBALL} ${TARBALL_URL}
 
+  echo "$PREFIX: verifying checksums"
   http_download ${TMPDIR}/${CHECKSUM} ${CHECKSUM_URL}
   hash_sha256_verify ${TMPDIR}/${TARBALL} ${TMPDIR}/${CHECKSUM}
 
   (cd ${TMPDIR} && untar ${TARBALL})
   install -d ${BINDIR}
   install ${TMPDIR}/${BINARY} ${BINDIR}/
+  echo "$PREFIX: installed as ${BINDIR}/${BINARY}"
 }
 
 execute
