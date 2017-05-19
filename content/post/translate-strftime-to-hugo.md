@@ -6,6 +6,14 @@ Title: "Convert strftime time format to Hugo"
 Convert strptime formats from PHP, Python, and Ruby to Hugo.
 <!--more-->
 
+Golang uses the concept of the magic date.
+
+```
+xxx
+```
+
+To make your own format, just rearrange *that* date.
+
 You want to print the day, just type in "2".  Want 0-formated day?  "02".
 
 Converting time formats to [Hugo](https://gohugo.io/).
