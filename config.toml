@@ -6,7 +6,7 @@ enableRobotsTXT= true
 googleAnalytics = ""
 FootnoteReturnLinkContents = "foo"
 copyright="&copy; 2017 Nick Galbreath"
-enableGitInfo = true
+enableGitInfo = false
 
 [permalinks]
 post="/:title/"
