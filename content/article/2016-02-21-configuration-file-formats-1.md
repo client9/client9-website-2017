@@ -13,7 +13,7 @@ TLDR: Use [TOML](https://github.com/toml-lang/toml), and still looking for an ev
 
 No. Certainly not if humans are suppose either read or write it.
 
-More seriously, unless you are already reading and writing XML for another purpose, I wouldn't link in an XML parser just for the sake of configuration or even object state. XML is quiet complicated, and even in mature libraries such as libxml2, serious security bugs are still being found. In 2015, [11 CVE vulnerabilities were found in libxml2](https://www.cvedetails.com/vulnerability-list/vendor_id-1962/product_id-3311/Xmlsoft-Libxml2.html) That's a lot for a *configuration file format*. Avoid it if you can.
+More seriously, unless you are already reading and writing XML for another purpose, I wouldn't link in an XML parser just for the sake of configuration or even object state. XML is quite complicated, and even in mature libraries such as libxml2, serious security bugs are still being found. In 2015, [11 CVE vulnerabilities were found in libxml2](https://www.cvedetails.com/vulnerability-list/vendor_id-1962/product_id-3311/Xmlsoft-Libxml2.html) That's a lot for a *configuration file format*. Avoid it if you can.
 
 ### JSON
 
@@ -58,7 +58,7 @@ Cons:
 -	It's a superset of JSON - this means there are two ways of specifying the same configuration.
 -	Due to white space rules, it may or may not be easy to cut-n-paste.
 
-Conclusion: For *simple* configurations YAML is really nice. But sadly YAML seems to have added all the mistakes of XML into JSON. Using YAML also means linking in highly non-trivial pieces of code -- in fact it might be the *most* complicated code you are using it. That smells wrong for a configuration file.
+Conclusion: For *simple* configurations YAML is really nice. But sadly YAML seems to have added all the mistakes of XML into JSON. Using YAML also means linking in highly non-trivial pieces of code -- in fact it might be the *most* complicated code you are using. That smells wrong for a configuration file.
 
 I saw a few times on the Internets, "I like YAML since I can express really complicated data structures in my configuration". Now you have two problems: your configuration is too complicated, and your implementation is too complicated. Your poor users.
 
@@ -66,12 +66,11 @@ It would be nice if there was a YAML-light implementation. However I don't know 
 
 ### TOML
 
-You might be less familiar with TOML. The main [TOML specification](https://github.com/toml-lang/toml) is a good start, and [Nate Finch](https://github.com/natefinch) wrote even more on it https://npf.io/2014/08/intro-to-toml/
+You might be less familiar with TOML. The main [TOML specification](https://github.com/toml-lang/toml) is a good start, and [Nate Finch](https://github.com/natefinch) wrote [even more on it](https://npf.io/2014/08/intro-to-toml/).
 
 Pros:
 
 -	More simple
--	Appears to have good language and editor support
 -	Order of stanzas does not matter
 -	Easy to cut-n-paste
 -	Keys do not need to be quoted
@@ -89,9 +88,7 @@ Conclusion:
 
 Over-all I'm net-positive on TOML, but like all things there are some design decisions that have tradeoffs.
 
-JSON/YAML/XML represent object hierarchy through nested configuration. In TOML, configuration files are only 1-level deep, and hierarchy is explicitly listed. This means TOML is great for "spare configuration" where you have many possible sections, perhaps deeply needed. You can configure a specific item very quickly and clearly, e.g.
-
-TOML configuration is 1-level deep, but can represent a deeply nested structure.
+JSON/YAML/XML represent object hierarchy through nested configuration. In TOML, configuration files are only 1-level deep, and hierarchy is explicitly listed. This means TOML is great for "sparse configuration" where you have many possible sections, perhaps deeply needed. You can configure a specific item very quickly and clearly, e.g.
 
 ```toml
 [foo.bar.xyz.abc]
