@@ -1,4 +1,4 @@
-base ../client9-website-2017/public-draft
+base ./public
 bucket www-draft.client9.com
 region us-east-1
 
