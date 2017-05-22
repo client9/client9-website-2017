@@ -6,15 +6,23 @@ Title: "Convert strftime time format to Hugo"
 
 Convert strptime formats from PHP, Python, and Ruby to Hugo. <!--more-->
 
-Golang uses the concept of the magic date.
+Most languages use some variation of [strptime] to format date and time.  Hugo is based on the [the time package](https://golang.org/pkg/time/) from [Go](https://golang.org).  It uses the concept of the magic date as represented by:
 
 ```
-xxx
+Mon Jan 2 15:04:05 MST 2006
 ```
 
-To make your own format, just rearrange *that* date.
+or
 
-You want to print the day, just type in "2". Want 0-formated day? "02".
+```
+01/02 03:04:05PM '06 -0700
+```
+
+1,2,3,4,5,6,7.  Month, Day, Hour, Minute, Second, Time zone offset.
+
+To print your time, just re-arrange, or edit one of these magic times any way you want.   Just want to print the month? The format is `Jan`, `January`, `1`, or `01` depending on how you want to format it.   The *real* month will be filled in. The same goes for all the other parts of the time.
+
+Once you get the hang of it, you'll find `January 2, 2006` a lot clearer than `%b %e, %Y`.
 
 Converting time formats to [Hugo](https://gohugo.io/).
 
