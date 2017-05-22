@@ -46,7 +46,7 @@ provide a better error message when the input is completely wrong.
 
 ```
 type BarConfig struct {
-    ORder: interface{}
+    Order: interface{}
 }
 
 func NewFromConfig(c BarConfig) (*Bar, error) {
