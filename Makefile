@@ -7,15 +7,17 @@ run:
 	${HUGO} -t client9 -v -D -E -F --watch server --bind 0.0.0.0
 
 public:
+	rm -rf public/*
 	${HUGO} -t client9
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
 draft:
-	${HUGO} -t client9 -v -D -E -F -d public-draft --baseURL http://www-draft.client9.com
+	rm -rf public/*
+	${HUGO} -t client9 -v -D -E -F --baseURL http://www-draft.client9.com
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
 clean:
-	rm -rf public public-draft
+	rm -rf public 
 	rm -rf bin
 	git gc --aggressive
 
