@@ -1,5 +1,5 @@
 ---
-aliases: "/20160725"
+aliases: "20160725"
 date: 2016-07-25
 title: "How To Program in C"
 ---
