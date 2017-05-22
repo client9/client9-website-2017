@@ -14,7 +14,7 @@ Who doesn't want to go faster? It is common to have a setup script that download
 go get github.com/spf13/hugo
 
 # https://github.com/client9/misspell
-./godownloader-misspell 0.1.0
+./godownloader-misspell 0.1.2
 
 # shellcheck.net
 docker pull koalaman/shellcheck
