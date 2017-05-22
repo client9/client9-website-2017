@@ -12,8 +12,8 @@ script:
   - echo $TRAVIS_BRANCH
   - make setup
   - make lint
-  - $TRAVIS_BRANCH == "master" && make draft && s3push --bucket www-draft.client9.com
-  - $TRAVIS_BRANCH == "public" && make public && s3push --bucket www.client9.com
+  - test $TRAVIS_BRANCH == "master" && make draft && s3push --bucket www-draft.client9.com
+  - test $TRAVIS_BRANCH == "public" && make public && s3push --bucket www.client9.com
 
 #deploy:
 #  - provider: script
