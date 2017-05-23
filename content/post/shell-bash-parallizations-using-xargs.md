@@ -38,6 +38,6 @@ You can run the setup in serial (normal) for debugging and one-time setups, and 
 
 There are [other ways](https://www.codeword.xyz/2015/09/02/three-ways-to-script-processes-in-parallel/) to parallelize scripts, but this is easiest.
 
-Update:
+### Update
 
-[Alpine Linux](https://alpinelinux.org) uses [busybox](https://busybox.net) version of xargs which does not support `-P`.  You'll have to install [findutils](https://pkgs.alpinelinux.org/contents?file=&path=&name=findutils&branch=edge&repo=main&arch=x86) to get the [GNU findutils](https://www.gnu.org/software/findutils/).
+[Alpine Linux](https://alpinelinux.org) uses [busybox](https://busybox.net) version of xargs which does not support `-P`.  You'll have to install [findutils](https://pkgs.alpinelinux.org/contents?file=&path=&name=findutils&branch=edge&repo=main&arch=x86) to get the proper [GNU xargs](https://www.gnu.org/software/findutils/).
