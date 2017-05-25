@@ -261,8 +261,8 @@ ul { list-style-type: square; }
     font-size: 0.8rem;
   }
   div#content {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
