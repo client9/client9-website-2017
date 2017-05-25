@@ -9,7 +9,7 @@ git:
   depth: 1
 
 script:
-  - echo $TRAVIS_BRANCH
+  - gimme list
   - make setup
   - make lint
   - test $TRAVIS_BRANCH == "master" && make draft && s3push --bucket www-draft.client9.com || true
