@@ -9,16 +9,16 @@ html {
 body {
   color: {{ .Site.Data.css.bodyColor }};
   background-color: {{ .Site.Data.css.bodyBackgroundColor }};
-  max-width:768px;
+  max-width: 768px;
   line-height: {{ .Site.Data.css.bodyLineHeight }};
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
 }
 div#content {
-  padding-top:0rem;
-  padding-left:3rem;
-  padding-right:3rem;
+  padding-top: 0rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -155,7 +155,7 @@ table tbody tr {
 }
 
 table th {
-	text-align: left;
+  text-align: left;
 }
 
 /* https://benrabicoff.com/better-link-underline/ */
@@ -261,8 +261,8 @@ ul { list-style-type: square; }
     font-size: 0.8rem;
   }
   div#content {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 }
 
