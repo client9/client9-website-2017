@@ -56,7 +56,7 @@ generate a list of the top misspellings.
 
 ### Reddit
 
-[Reddit] has kindly published it's [entire comment history](https://archive.org/details/2015_reddit_comments_corpus) in collaboration with [Internet Archieve](https://archive.org).
+[Reddit] has kindly published it's [entire comment history](https://archive.org/details/2015_reddit_comments_corpus) in collaboration with [Internet Archive](https://archive.org).
 
 * Download the reddit dump files
 * Extract words.
