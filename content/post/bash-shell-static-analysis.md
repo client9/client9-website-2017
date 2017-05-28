@@ -1,7 +1,7 @@
 ---
-Draft: true
-Title: Bash Shell Static Analysis
-Date: 2017-05-24
+Draft: false
+Title: Static Analysis for Bash and Shell Scripts
+Date: 2017-05-28
 ---
 Your shell scripts need static analysis.  Here's how.<!--more-->
 
