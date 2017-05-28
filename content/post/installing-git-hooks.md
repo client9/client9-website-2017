@@ -32,4 +32,4 @@ build: hooks
 	go build .
 ```
 
-Now any time a build is done, the hooks will be set up and installed. If an commit and push happens it's much more likely it will meet your minimal standards. Of course, you still need to redo all these checks at the server level, this will help reduce the number of failed continuous integration runs and rejected pull-requests.  
+Now any time a build is done, the hooks will be set up and installed. If an commit and push happens it's much more likely it will meet your minimal standards. One still needs to redo all these checks at the server level, but having checks done locally will help reduce the number of failed continuous integration runs and rejected pull-requests.  
