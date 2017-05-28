@@ -1,6 +1,5 @@
 ---
-Date: 2017-05-08
-Draft: true
+Date: 2017-05-29
 Title: "Convert strftime time format to Hugo"
 ---
 
