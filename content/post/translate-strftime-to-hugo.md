@@ -6,7 +6,8 @@ Title: "Convert strftime time format to Hugo"
 
 Convert strptime formats from PHP, Python, and Ruby to Hugo. <!--more-->
 
-Most languages use some variation of [strptime] to format date and time.  Hugo is based on the [the time package](https://golang.org/pkg/time/) from [Go](https://golang.org).  It uses the concept of the magic date as represented by:
+Most languages use some variation of [strptime](http://pubs.opengroup.org/onlinepubs/009695399/functions/strptime.html) to format date and time values:w
+.  Hugo is based on the [the time package](https://golang.org/pkg/time/) from [Go](https://golang.org).  It uses the concept of the magic date as represented by:
 
 ```
 Mon Jan 2 15:04:05 MST 2006
@@ -18,13 +19,13 @@ or
 01/02 03:04:05PM '06 -0700
 ```
 
-1,2,3,4,5,6,7.  Month, Day, Hour, Minute, Second, Time zone offset.
+1, 2, 3, 4, 5, 6 , 7.  Month, Day, Hour, Minute, Second, Time zone offset.
 
 To print your time, just re-arrange, or edit one of these magic times any way you want.   Just want to print the month? The format is `Jan`, `January`, `1`, or `01` depending on how you want to format it.   The *real* month will be filled in. The same goes for all the other parts of the time.
 
 Once you get the hang of it, you'll find `January 2, 2006` a lot clearer than `%b %e, %Y`.
 
-Converting time formats to [Hugo](https://gohugo.io/).
+The table below translates all strptime formats to [Hugo](https://gohugo.io/).
 
 | strftime | golang           | Description                          |
 |----------|------------------|--------------------------------------|
@@ -79,7 +80,7 @@ These can be commputed using [Day](https://golang.org/pkg/time/#Time.Day) and [I
 Hugo only supports `AM` or `PM`. To do something different, create a custom implementation:
 
 ```
-{{ if .Date.Hour > 12 }}pm{{ else }}am{{ end}}
+{{ if .Date.Hour < 12 }}am{{ else }}pm{{ end}}
 ```
 
 ### Note 4 - Unix timestamps {#note4}
@@ -95,7 +96,7 @@ Common Time Formats
 
 ### RFC 3339, ISO 8061
 
-This format is used in Open Graph, and Google metadata. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) and [ISO 8061](https://en.wikipedia.org/wiki/ISO_8601) defines a number of variations, but the following works:
+This format is used in [Open Graph](http://ogp.me/#datetime), and [Google Schemas](https://developers.google.com/schemas/formats/datetime-formatting). [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) and [ISO 8061](https://en.wikipedia.org/wiki/ISO_8601) defines a number of variations, but the following works: 
 
 ```
 {{ .Date.Format "2006-01-02T15:04:05Z07:00" }}
