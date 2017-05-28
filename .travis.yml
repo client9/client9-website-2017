@@ -9,21 +9,7 @@ git:
   depth: 1
 
 script:
-  - gimme list
   - make setup
   - make lint
   - test $TRAVIS_BRANCH == "master" && make draft && s3push --bucket www-draft.client9.com || true
   - test $TRAVIS_BRANCH == "public" && make public && s3push --bucket www.client9.com || true
-
-#deploy:
-#  - provider: script
-#    skip_cleanup: true
-#    script: s3push
-#  - provider: s3
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
-#    bucket: www.client9.com
-#    region: us-east-1
-#    local_dir: public
-#    skip_cleanup: true
-#    cache_control: "max-age=3600"
