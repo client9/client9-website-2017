@@ -5,7 +5,7 @@ Title: Self-Documenting Makefiles
 ---
 Automatically have "make help" print usage!<!--more-->
 
-[Makefiles](https://www.gnu.org/software/make/manual/html_node/Introduction.html) are making a come-back due to wide use in the [golang](https://golang.org) community. The only problem is... what do they do? Reading a makefile can be hard -- it's often ugly and many of targets are internal use only.  And unlike a good CLI program there is no equivalant of `--help`.  
+[Makefiles](https://www.gnu.org/software/make/manual/html_node/Introduction.html) are making a come-back due to wide use in the [golang](https://golang.org) community. The only problem is... what do they do? Reading a makefile can be hard -- it's often ugly and many of targets are internal use only.  And unlike a good CLI program there is no equivalent of `--help`.  
 
 Wouldn't it be great if you could mark-up the makefile and have `make help` automatically produce a usage output?
 
