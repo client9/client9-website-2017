@@ -7,7 +7,7 @@ How to edit your code on GitHub, even on the smallest screens.<!--more-->
 
 I make lots of small edits to my code and text, and good news! GitHub has text/code editor, powered by [CodeMirror](http://codemirror.net). Unfortunately, GitHub's mobile website does not allow editing, and if you switch to desktop-mode the fonts small to the point of unusable. Even at on full-sized screens, I find a 12px monospace font to be too small.
 
-The usual method to fix this is by means of a "users ript" using a browser extention such as greasemoney or tampermoney.  These do not work on mobile however.
+The usual method to fix this is by means of a "users ript" using a browser extension such as greasemoney or tampermoney.  These do not work on mobile however.
 
 The hack around this is to use a bookmarklet.  
 The main one to [adjust font size](https://marcos.kirsch.mx/2012/04/29/font-size-bookmarklets/) doean't work since GitHub has hardwired `line-height: 18px` instead of the more flexible `1.5` (in `em`s).
