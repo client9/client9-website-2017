@@ -4,7 +4,7 @@ Title: Bookmarklet Generator CLI
 Date: 2017-05-31
 ----
 
-Instead of screwing around with javascript and npm, I wrote a CLIi in go.
+Instead of screwing around with javascript and npm, I wrote a CLI in go.
 
 It just minifies stdin, URL encodes, and adds the `javascript:` scheme.
 
