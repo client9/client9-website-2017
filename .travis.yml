@@ -9,7 +9,4 @@ git:
   depth: 1
 
 script:
-  - make setup
-  - make lint
-  - test $TRAVIS_BRANCH == "master" && make draft && s3push --bucket www-draft.client9.com || true
-  - test $TRAVIS_BRANCH == "public" && make public && s3push --bucket www.client9.com || true
+  - ./scripts/travis.sh
