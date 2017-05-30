@@ -16,6 +16,10 @@ draft:  ## build version with drafts
 	${HUGO} -t client9 -v -D -E -F --baseURL http://www-draft.client9.com
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
+# since I always forget
+push:  ## push master to public
+	git push origin HEAD:public
+
 clean: ## do clean
 	rm -rf public bin
 	git gc --aggressive
@@ -36,6 +40,7 @@ hooks: .git/hooks/pre-commit .git/hooks/commit-msg ## install git hooks
 
 .PHONY: hugo hooks lint clean setup compile run
 
+# https://www.client9.com/self-documenting-makefiles/
 help:
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ {\
 	printf "\033[36m%-30s\033[0m %s\n", $$1, $$NF \
