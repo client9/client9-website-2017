@@ -43,16 +43,15 @@ And try it out:
 
 ```sh
 $ make help
-build                   build but do not install
-install                 install command
-lint                    run linters
-clean                   cleanup
+build               build but do not install
+install             install command
+lint                run linters
+clean               cleanup
 ```
 
 If you want sorted output, by all means add a `| sort` to the end of the `help` target.
 
-I've seen some other approaches to this by [wrapping make](https://medium.com/@tjholowaychuk/modern-make-b55d53cf80d9). I was tempted to have `make help` call a golang program that would parse the Makefile to generate help.  But this `awk` trick is by far the best, as it will work out of the box on just about every system.  I've tested on macOS, linux, and [Alpine Linux](https://alpinelinux.org) with [busybox](https://busybox.net) awk.
+I've seen some other solutions to add documentation to Makefiles.  One wrapped [wrapping make](https://medium.com/@tjholowaychuk/modern-make-b55d53cf80d9) with another program.  I was tempted to have `make help` call a golang program that would parse the Makefile to generate help.  But this `awk` trick is by far the best, as it will work out of the box on just about every system.  I've tested on macOS, linux, and [Alpine Linux](https://alpinelinux.org) with [busybox](https://busybox.net) awk.
 
-Thank you [MarmeLab](https://marmelab.com/) and [m6w6](https://news.
-ycombinator.com/user?id=m6w6)!
+Thank you [MarmeLab](https://marmelab.com/) and [m6w6](https://news.ycombinator.com/user?id=m6w6) !
 
