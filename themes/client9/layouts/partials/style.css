@@ -35,7 +35,7 @@ p,li,blockquote {
 
 pre, kbd {
   font-family: {{ .Site.Data.css.codeFontFamily }};
-  font-size: {{ .Site.Data.css.bodyFontSize }};
+  font-size: {{ .Site.Data.css.codeFontSize }};
 }
 
 h1 {
