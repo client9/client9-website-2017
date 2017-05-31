@@ -13,9 +13,11 @@ The usual method to fix this is by means of a "userscript" using a browser exten
 
 The hack around this is to use a [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet). The main one to [adjust font size](https://marcos.kirsch.mx/2012/04/29/font-size-bookmarklets/) doean't work since GitHub has hardwired `line-height: 18px` instead of the more flexible `1.5` (in `em`s).
 
-So I wrote my own bookmarklet to adjust GitHub's CSS. Add these to your favorites, and use them when editing code. The 28px one works well on mobile, while the 20px gives the desktop a nice bump.
+So I wrote my own bookmarklet to adjust GitHub's CSS. Add these to your favorites, and use them when editing code. The 28px one works well on mobile, while the 20px gives the desktop a nice bump.  GitHub12 is the normal size.
 
-[GitHub 28](javascript:fs=28%3Bee=document.getElementsByClassName%28%27CodeMirror-code%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+fs+%27px%27%3Bee%5Bi%5D.style.lineHeight=%271.5%27%3B%7D%0Aee=document.getElementsByClassName%28%27markdown-body%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+%28fs+2%29+%27px%27%3B%7D)
+- [GitHub 12](javascript:fs=12%3Bee=document.getElementsByClassName%28%27CodeMirror-code%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+fs+%27px%27%3Bee%5Bi%5D.style.lineHeight=%271.5%27%3B%7D%0Aee=document.getElementsByClassName%28%27markdown-body%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+%28fs+2%29+%27px%27%3B%7D)
+- [GitHub 20](javascript:fs=20%3Bee=document.getElementsByClassName%28%27CodeMirror-code%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+fs+%27px%27%3Bee%5Bi%5D.style.lineHeight=%271.5%27%3B%7D%0Aee=document.getElementsByClassName%28%27markdown-body%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+%28fs+2%29+%27px%27%3B%7D)
+- [GitHub 28](javascript:fs=28%3Bee=document.getElementsByClassName%28%27CodeMirror-code%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+fs+%27px%27%3Bee%5Bi%5D.style.lineHeight=%271.5%27%3B%7D%0Aee=document.getElementsByClassName%28%27markdown-body%27%29%3Bfor%28i=0%3Bi%3Cee.length%3Bi++%29%7Bee%5Bi%5D.style.fontSize=%27%27+%28fs+2%29+%27px%27%3B%7D)
 
 or if cut-n-paste is easier:
 ```
