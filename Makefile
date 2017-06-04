@@ -38,7 +38,7 @@ setup: hooks ./bin/hugo  ## install hugo and other tools needed
 	cp -f scripts/commit-msg.sh .git/hooks/commit-msg
 hooks: .git/hooks/pre-commit .git/hooks/commit-msg ## install git hooks
 
-.PHONY: hugo hooks lint clean setup compile run
+.PHONY: hugo hooks lint clean setup compile run public
 
 # https://www.client9.com/self-documenting-makefiles/
 help:
