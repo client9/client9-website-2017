@@ -18,6 +18,6 @@ deploy:
   local_dir: ./public/
   fqdn: www.client9.com
   target_branch: master
-  repo: https://github.com/client9/client9.github.io.git
+  repo: client9/client9.github.io
   on:
     branch: master
