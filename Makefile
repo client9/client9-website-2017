@@ -7,12 +7,12 @@ run: setup ## start live server
 	${HUGO} -t client9 -v -D -E -F --watch server
 
 public: ## build live version
-	rm -rf public/*
+	rm -rf public
 	${HUGO} -t client9
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
 draft:  ## build version with drafts
-	rm -rf public/*
+	rm -rf public
 	${HUGO} -t client9 -v -D -E -F --baseURL http://www-draft.client9.com
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
