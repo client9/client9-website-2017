@@ -2,3 +2,4 @@
 set -ex
 ./scripts/setup.sh
 ./scripts/lint.sh
+make public

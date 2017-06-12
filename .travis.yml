@@ -7,8 +7,6 @@ git:
 
 script:
   - ./scripts/travis.sh
-  - ls -la public
-  - pwd
 
 deploy:
   provider: pages
