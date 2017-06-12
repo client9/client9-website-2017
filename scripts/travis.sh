@@ -1,5 +1,5 @@
 #!/bin/sh
 set -ex
-./scripts/setup.sh
+cat ./scripts/setup.sh | xargs -P4 -ICMD /bin/sh -exc CMD
 ./scripts/lint.sh
 make public
