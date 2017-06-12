@@ -10,3 +10,13 @@ git:
 
 script:
   - ./scripts/travis.sh
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: public
+  target_branch: master
+  repo: https://github.com/client9/client9.github.io.git
+  on:
+    branch: master
