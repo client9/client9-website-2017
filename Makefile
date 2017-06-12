@@ -6,19 +6,14 @@ MISPELL=./bin/misspell
 run: setup ## start live server
 	${HUGO} -t client9 -v -D -E -F --watch server
 
-public: ## build live version
+build: setup ## build live version
 	rm -rf public
-	${HUGO} -t client9
-	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
+	./scripts/build.sh
 
-draft:  ## build version with drafts
+draft: setup ## build version with drafts
 	rm -rf public
 	${HUGO} -t client9 -v -D -E -F --baseURL http://www-draft.client9.com
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
-
-# since I always forget
-push:  ## push master to public
-	git push origin HEAD:public
 
 clean: ## do clean
 	rm -rf public bin
@@ -32,6 +27,7 @@ lint:  ## do lints
 
 setup: hooks ./bin/hugo  ## install hugo and other tools needed
 
+# https://www.client9.com/automatically-install-git-hooks/
 .git/hooks/pre-commit: scripts/pre-commit.sh
 	cp -f scripts/pre-commit.sh .git/hooks/pre-commit
 .git/hooks/commit-msg: scripts/commit-msg.sh
