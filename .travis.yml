@@ -1,9 +1,6 @@
 sudo: false
-dist: trusty
 
-language: go
-go:
-  - 1.8.3
+language: bash
 
 git:
   depth: 1
