@@ -14,6 +14,5 @@ collections:
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Date", name: "Date", widget: "datetime"}
-      - {label: "Draft", name: "Draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
