@@ -3,7 +3,8 @@ draft: false
 title: Static Analysis for Bash and Shell Scripts
 date: 2017-05-28
 ---
-Your shell scripts need static analysis.  Here's how.<!--more-->
+Your shell scripts need static analysis.  Here's how.
+<!--more-->
 
 If you must write shell code, use the same techniques you use for your primary programming language:
 
@@ -33,7 +34,7 @@ It's a single binary written in go.  You can screw around trying to download fro
 
 ## client9/shlib
 
-Disclaimer:  I wrote this.
+Disclaimer: I wrote this.
 
 The best shell script is one not written.  But if you have to use shell, [client9/shlib](https://github.com/client9/shlib) is a collection of tested, portable functions to help you to bootstrap out of shell into something more sane. All the code is in the [public domain](http://unlicense.org), so use and remix as needed. Credit and pull requests are welcome but not required.
 
