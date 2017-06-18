@@ -1,6 +1,6 @@
 ---
-Date: 2017-04-09
-Title: "CSS System Font Stack - Monospace V1"
+date: 2017-04-09
+title: "CSS System Font Stack - Monospace V1"
 ---
 
 Most operating systems ship with a decent monospace fonts.
