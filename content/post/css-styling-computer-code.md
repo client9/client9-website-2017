@@ -1,7 +1,7 @@
 ---
-Date: 2017-05-12
-Title: CSS Styling Computer Code
-Draft: true
+date: 2017-05-12
+title: CSS Styling Computer Code
+draft: true
 ---
 Posting code online?  Here's how to use CSS to make it look great.<!--more-->
 

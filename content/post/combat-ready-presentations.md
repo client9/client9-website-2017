@@ -1,6 +1,6 @@
 ---
-Draft: true
-Title: Combat-ready presentations
+draft: true
+title: Combat-ready presentations
 ---
 
 For a pitch, almost everything I've read on "how to do a presentation is **completely wrong**.  You are not giving TED Talk.  you do not work at an advertising agency.  You are not a professional business graphics artist.  You are not summarizing your research. You do not have 90 hours to work on your deck. 

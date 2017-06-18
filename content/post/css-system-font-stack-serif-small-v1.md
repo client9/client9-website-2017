@@ -1,6 +1,6 @@
 ---
-Date: 2017-04-09
-Title: "CSS System Font Stack - Serif Small - V1"
+date: 2017-04-09
+title: "CSS System Font Stack - Serif Small - V1"
 ---
 
 Forget Times New Roman and upgrade with this CSS system font stack<!--more-->

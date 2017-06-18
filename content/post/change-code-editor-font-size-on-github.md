@@ -1,7 +1,7 @@
 ---
-Date: 2017-05-30
-Title: Changing code font size on Github
-Draft: true
+date: 2017-05-30
+title: Changing code font size on Github
+draft: true
 ---
 How to edit your code on GitHub.com, even on the smallest screens.<!--more-->
 

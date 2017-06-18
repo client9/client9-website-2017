@@ -1,7 +1,7 @@
 ---
-Date: 2017-05-20
-Draft: true
-Title: "Minimal Blog Sites, Part 1"
+date: 2017-05-20
+draft: true
+title: "Minimal Blog Sites, Part 1"
 ---
 
 There is a whole industry on "minimalist blogging." Sometimes the focus is on [minimalist](http://www.theminimalists.com), other times it's focus on [blogging themes](https://bylt.me/get/tru/).   Sometimes both.

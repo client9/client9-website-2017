@@ -1,7 +1,7 @@
 ---
-Date: 2017-04-30
-Title: Uninstall Xcode on macOS Sierra
-Draft: false
+date: 2017-04-30
+title: Uninstall Xcode on macOS Sierra
+draft: false
 ---
 
 Maybe you want to free up tens of gigabytes of space? Maybe you installed it once by mistake? Or maybe you just want the command line tools and not the full IDE? Or maybe you just want to start fresh? Here's how to delete Xcode completely from macOS.<!--more-->

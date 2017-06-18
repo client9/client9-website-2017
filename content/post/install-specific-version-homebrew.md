@@ -1,6 +1,6 @@
 ---
-Date: "2017-05-02"
-Title: "Using macOS Homebrew to Install a Specific Version"
+date: 2017-05-02
+title: "Using macOS Homebrew to Install a Specific Version"
 ---
 
 Here's how to install a specific version of a package on macOS using [homebrew](https://brew.sh/).  While the process isn't automatic, it's also not hard and provides stability.

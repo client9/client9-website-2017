@@ -1,6 +1,6 @@
 ---
-Date: 2017-04-09
-Title: "CSS System Font Stack - Serif Medium - V1"
+date: 2017-04-09
+title: "CSS System Font Stack - Serif Medium - V1"
 ---
 
 This system font stack is of a medium size, and suitable for body text and

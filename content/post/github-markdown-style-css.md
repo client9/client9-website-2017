@@ -1,7 +1,7 @@
 ---
-Draft: false
-Title: "Copying GitHub Markdown Style"
-Date: 2017-05-08
+draft: false
+title: "Copying GitHub Markdown Style"
+date: 2017-05-08
 ---
 Like how GitHub displays markdown?  Get the look with these CSS styles.
 <!--more-->

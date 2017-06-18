@@ -1,7 +1,7 @@
 ---
-Date: 2017-05-19
-Title: Reduce Golang Binary Size by 20%
-Draft: false
+date: 2017-05-19
+title: Reduce Golang Binary Size by 20%
+draft: false
 ---
 
 Here's how to reduce your golang binary size by 20%, for free.<!--more-->

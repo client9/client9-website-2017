@@ -1,6 +1,6 @@
 ---
-Date: 2017-05-08
-Title: git undo last commit
+date: 2017-05-08
+title: git undo last commit
 ---
 
 Ooops, I did it again. Here's how to undo your last git commit.<!--more-->

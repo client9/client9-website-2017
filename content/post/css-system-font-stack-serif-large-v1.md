@@ -1,6 +1,6 @@
 ---
-Date: 2017-04-09
-Title: "CSS System Font Stack - Serif Large - V1"
+date: 2017-04-09
+title: "CSS System Font Stack - Serif Large - V1"
 ---
 
 The large Serif font stack uses a number of more styled serif system fonts that have a larger size.  While this can be used as body text, it might be best at larger sizes.

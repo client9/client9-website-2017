@@ -1,7 +1,7 @@
 ---
-Draft: true
-Title: Bookmarklet Generator CLI
-Date: 2017-05-31
+draft: true
+title: Bookmarklet Generator CLI
+date: 2017-05-31
 ---
 
 Instead of screwing around with javascript and npm, I wrote a CLI in go.

@@ -1,6 +1,6 @@
 ---
-Date: 2017-05-29
-Title: "Convert strftime time format to Hugo"
+date: 2017-05-29
+title: "Convert strftime time format to Hugo"
 ---
 
 Convert strptime formats from PHP, Python, and Ruby to Hugo. <!--more-->

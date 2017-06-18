@@ -1,6 +1,6 @@
 ---
-Date: 2017-04-09
-Title: "CSS System Font Stack - Serif Charter - V1"
+date: 2017-04-09
+title: "CSS System Font Stack - Serif Charter - V1"
 ---
 
 [Charter](http://practicaltypography.com/charter.html) is a great font. 

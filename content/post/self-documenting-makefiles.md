@@ -1,6 +1,6 @@
 ---
-Date: 2017-05-30
-Title: Self-Documenting Makefiles
+date: 2017-05-30
+title: Self-Documenting Makefiles
 ---
 Automatically have "make help" print usage!<!--more-->
 

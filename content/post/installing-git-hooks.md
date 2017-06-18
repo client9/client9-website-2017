@@ -1,7 +1,7 @@
 ---
-Draft: false
-Title: Automatically Install Git Hooks
-Date: 2017-05-27
+draft: false
+title: Automatically Install Git Hooks
+date: 2017-05-27
 ---
 Improve your CI/CD by installing git hooks automatically.<!--more-->
 
