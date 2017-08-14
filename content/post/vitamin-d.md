@@ -10,8 +10,24 @@ TLDR: [Vitamin D prevents Death](https://www.vitamindwiki.com/Mortality). Not re
 
 {{< youtube Cq1t9WqOD-0 >}}
 
+## Testing
 
-## Recommendations
+* Your doctor can order a "25(OH)D" blood test, and insurance might cover it.
+* [Vitamin D Council](https://www.vitamindcouncil.org/shop-not-logged-in/) sells test at home kits for under $60.
+* [D*action](https://daction.org) is a long term study of Vitamin D and sells at home testing for about $60.
+
+## Serum Levels
+
+[Grassroots Heath](http://grassrootshealth.net/project/daction/) recommends 40-60 ng/ml.
+
+[Vitamin D Council](https://www.vitamindcouncil.org/about-vitamin-d/testing-for-vitamin-d/) "suggests that a level of 50 ng/ml is the ideal level to aim for."
+
+## Supplements
+
+* TK labdoor
+* TK Amazon's bizarre choice of selling D2
+
+## Supplement Dosage Recommendations
 
 USA FDA recommends "600 IU/day, 800 IU/day for seniors"
 
@@ -21,9 +37,12 @@ USA FDA recommends "600 IU/day, 800 IU/day for seniors"
 
 [Vitamin D Council](https://www.vitamindcouncil.org/about-vitamin-d/how-do-i-get-the-vitamin-d-my-body-needs/) recommends 5000 IU, with the goal of getting blood levels into the 40s.
 
-## Testing
 
-## Supplements
+##
+
+
+The Endocrine Society's [Scientific Statement](http://www.hormone.org/hormones-and-health/scientific-statements/vitamin-d-and-disease-prevention) (from 2013) is somewhat confusing and conservative in contrast to their [press releases on Vitamin D](https://www.endocrine.org/search?q=vitamin%20d) (and then select "press release" in left column).
+
 
 
 ## Other Sources
