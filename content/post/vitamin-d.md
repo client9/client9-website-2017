@@ -35,11 +35,12 @@ TLDR: [Vitamin D prevents Death](https://www.vitamindwiki.com/Mortality). Not re
 
 USA FDA recommends "600 IU/day, 800 IU/day for seniors"
 
-[Dr. Horlicks] recommends "1000 IU of vitamin D a day for children and 2000-3000 IU of vitamin D for adults."
+[Dr. Horlick](http://drholick.com) recommends "1000 IU of vitamin D a day for children and 2000-3000 IU of vitamin D for adults."
 
 [Linus Pauling Institute](http://lpi.oregonstate.edu/mic/vitamins/vitamin-D#LPI-recommendation) recommends 2000 IU.
 
 [Vitamin D Council](https://www.vitamindcouncil.org/about-vitamin-d/how-do-i-get-the-vitamin-d-my-body-needs/) recommends 5000 IU, with the goal of getting blood levels into the 40s.
+
 
 
 
