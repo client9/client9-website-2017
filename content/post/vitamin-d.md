@@ -18,9 +18,13 @@ TLDR: [Vitamin D prevents Death](https://www.vitamindwiki.com/Mortality). Not re
 
 ## Serum Levels
 
-[Grassroots Heath](http://grassrootshealth.net/project/daction/) recommends 40-60 ng/ml.
+[Grassroots Heath](http://grassrootshealth.net/project/daction/) recommends 40-60 ng/mL.
 
-[Vitamin D Council](https://www.vitamindcouncil.org/about-vitamin-d/testing-for-vitamin-d/) "suggests that a level of 50 ng/ml is the ideal level to aim for."
+[Vitamin D Council](https://www.vitamindcouncil.org/about-vitamin-d/testing-for-vitamin-d/) "suggests that a level of 50 ng/mL is the ideal level to aim for."
+
+[NourishBalanceThrive](http://www.nourishbalancethrive.com/blog/2016/03/21/optimizing-vitamin-d-athletic-performance/), 2016-03-21, reviewed research for peak athletic performance to determine 40-50 ng/mL.
+
+[Huffington Post](http://www.huffingtonpost.com/alan-christianson/update-how-much-vitamin-d_b_11254120.html) 2017-07-29 summarizes the optimal vitamin d blood level to reduce death. Appears to be 40 ng/mL.
 
 ## Supplements
 
@@ -38,15 +42,6 @@ USA FDA recommends "600 IU/day, 800 IU/day for seniors"
 [Vitamin D Council](https://www.vitamindcouncil.org/about-vitamin-d/how-do-i-get-the-vitamin-d-my-body-needs/) recommends 5000 IU, with the goal of getting blood levels into the 40s.
 
 
-##
 
-
-The Endocrine Society's [Scientific Statement](http://www.hormone.org/hormones-and-health/scientific-statements/vitamin-d-and-disease-prevention) (from 2013) is somewhat confusing and conservative in contrast to their [press releases on Vitamin D](https://www.endocrine.org/search?q=vitamin%20d) (and then select "press release" in left column).
-
-
-
-## Other Sources
-
-[Huffington Post](http://www.huffingtonpost.com/alan-christianson/update-how-much-vitamin-d_b_11254120.html) 2017-07-29 summarizes the optimal vitamin d blood level to reduce death. Appears to be 40 ng/mol.
 
 
