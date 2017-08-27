@@ -1,9 +1,10 @@
 ---
 title: improve your workouts with one simple trick
 date: 2017-08-20T19:33:45.551Z
-draft: true
+draft: false
 ---
-
+A simple way to maximize your workouts at the gym.
+<!--more-->
 
 ## Leave your phone in your locker
 
@@ -26,5 +27,9 @@ No podcasts while working out.  Either you are focusing on the exercise or not. 
 ## But I'm expecting a call
 
 Stop making excuses for not working out.  You can be off-line for an hour.  Really.
+
+## But I have 3-5 minutes of time between sets
+
+You should be exhausted. If you are not, you are doing it wrong.  Use more weight or lift faster.
 
 
