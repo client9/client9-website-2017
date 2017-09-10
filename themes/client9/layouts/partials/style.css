@@ -27,10 +27,15 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.3;
 }
 
-p,li,blockquote {
+p,li, blockquote {
   font-family: {{ .Site.Data.css.bodyFontFamily }};
   font-size: {{ .Site.Data.css.bodyFontSize }};
   letter-spacing: {{ .Site.Data.css.bodyLetterSpacing }};
+}
+
+/* needed for nested lists */
+li li {
+	font-size: 1em;
 }
 
 pre, kbd {
@@ -222,7 +227,6 @@ hr {
 }
 
 ul { list-style-type: square; }
-
 #front ul {
 }
 
