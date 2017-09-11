@@ -33,7 +33,6 @@ In the end, the short list includes four companies.  I'm sure one will meet your
 
 * Made in Italy
 * Simple sizing based on shoe size
-* Minor branding, no words
 * Not left/right specific. Any sock goes on any foot.
 
 ## [Zensah](https://www.zensah.com)
@@ -51,3 +50,4 @@ The origin story is interesting.  The founders in Australia saw another local co
 * Made in China, because according the to CEO, their "[factories have the best sewing and cutting machines](https://www.ft.com/content/81617ea8-9b31-11e1-b097-00144feabdc0)".  Although they do not say this on their website or product marketing.
 * Size based on calf circumference.  You need a [tape measure](http://amzn.to/2ewTFtr).
 * Left/Right specific
+
