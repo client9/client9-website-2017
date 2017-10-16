@@ -26,7 +26,11 @@ The level is a rating of write speed, and in a theoretical world a Level 10 card
 
 # What brand of MicroSD card works best in Raspberry Pi?
 
-SanDisk, Samsung, Kingston or another brand you have heard of.  Interestingly, I think Samsung only makes 32GB and higher now.
+SanDisk, Samsung, Kingston or another brand you have heard of.   Notes:
+
+* I think Samsung only makes 32GB and higher now.   
+* "Ultra" is SanDisk's brand for Level 10.
+* Kingston also makes some industrial MicroSD card with an extended operating temperature range.
 
 # Do I need the pre-installed Raspberry Pi image on a Micro SD card?
 
@@ -53,6 +57,7 @@ Here's the algorithm I used to find name brand 16GB, level 10 card for $10 (whic
 * You should see something for SanDisk 16GB, Level 10 for about $10.00 sold and shipped by Amazon.
 
 Good luck!
+
 
 
 
