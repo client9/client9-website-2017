@@ -46,7 +46,7 @@ Alternatively, I found [Vilros](https://www.vilros.com) has reasonable priced ca
 
 Oddly, for MicroSD cards amazon.com falls short.  It has a confusing search interface, and oddly has the most expensive selection of MicroSD cards.  However, if you are Prime member, if you find something you like, you might be able to get it delivered *that day*.
 
-One problem is that Amazon now sells stuff from third parties.  With memory cards and chips, their have been reports of counterfeits or used cards, so you'll want to buy directly from Amazon -- look for "sold and shipped by amazon.com LLC".  Unfortunately, the search results mix low quality and high quality together, which is why your local Best Buy might be easier.
+One problem is that Amazon now sells stuff from third parties.  With memory cards and chips, there have been reports of counterfeits or used cards, so you'll want to buy directly from Amazon -- look for "sold and shipped by amazon.com LLC".  Unfortunately, the search results mix low quality and high quality together, which is why your local Best Buy might be easier.
 
 Here's the algorithm I used to find name brand 16GB, level 10 card for $10 (which is an average price).
 
