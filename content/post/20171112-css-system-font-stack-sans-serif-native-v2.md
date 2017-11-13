@@ -7,14 +7,14 @@ This is an update to the original native font stack [article](https://www.client
 
 ## What's Changed?
 
-The W3C CSS Fonts 4 draft (https://drafts.csswg.org/css-fonts-4/#system-ui-def) now includes a built-in font `system-ui`.  It should render using the native san serif font.
+The [W3C CSS Fonts 4 draft](https://drafts.csswg.org/css-fonts-4/#system-ui-def) now includes a built-in font `system-ui`.  It should render using the native sans-serif font.  It's implemented in:
 
 * [Chrome](https://www.chromestatus.com/feature/5640395337760768), since 2017-01, version 56
 * [Safari](https://bugs.webkit.org/show_bug.cgi?id=151493), since 2017-02 but not clear which version
 
 As of 2017-11, neither Firefox or Microsoft Edge supports this, but I suspect in time they will.
 
-Due this change:
+Due this change, I'm updating the original font stack as follows:
 
 * Adding `system-ui` to first position
 * Removing the chrome-specific hack `BlinkMacSystemFont` since it's superseded by `system-ui` and chrome auto-updates
