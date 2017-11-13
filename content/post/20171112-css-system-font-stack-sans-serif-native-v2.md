@@ -3,7 +3,7 @@ date: 2017-11-13
 title: "CSS System Font Stack - Sans Serif Native - V2"
 ---
 
-This is an update to the original Native font stack.  It attempts to use the system sans serif font used by operating system for user interfaces. This is best for buttons and other UI elements on the page, but it also works for body text.
+This is an update to the original native font stack [article](https://www.client9.com/css-system-font-stack---sans-serif-native---v1/).  It attempts to use the system sans serif font used by operating system for user interfaces. This is best for buttons and other UI elements on the page, but it also works for body text.
 
 ## What's Changed?
 
