@@ -5,7 +5,9 @@ draft: false
 ---
 Find all Debian packages that are either orphans, user commands or critical components. <!-- more --> 
 
-When trying to make minimal OS, one wants to get rid of as many non-critical packages as possible.  Under Debian, `apt-cache rdepends --installed` on a given package show the reverse dependencies, or a list of other packages that depend on it.
+When trying to make minimal OS, one wants to get rid of as many non-critical packages as possible.  Under Debian, `apt-cache rdepends --installed` on a given package shows the reverse dependencies, or a list of other packages that depends on it.
+
+The bash script below scans all installed packages and emits a list of packages without any reverse dependencies.
 
 Packages without any reverse dependencies could be one of three things:
 
