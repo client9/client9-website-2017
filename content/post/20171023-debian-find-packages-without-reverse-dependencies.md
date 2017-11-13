@@ -11,9 +11,9 @@ The bash script below scans all installed packages and emits a list of packages 
 
 Packages without any reverse dependencies could be one of three things:
 
-1. Orphans - truly not used by anything.  `apt-get purge` away.
+1. Orphans - truly not used by anything. `apt-get purge` away.
 2. A top-level user command, something like `wget`
-3. Something critical for booting.  Interestingly, `bash` comes up in the list.  It's hard to imagine Debian booting without it.
+3. Something critical for booting. Interestingly, `bash` comes up without reverse dependencies, but it's hard to imagine Debian booting without it.
 
 
 Enjoy!
