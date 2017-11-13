@@ -6,7 +6,7 @@
 <h2>Notes and Presentations</h2>
 <section id="front">
 <ul>
-{{ range .Data.Pages -}}
+{{ range .Data.Pages.Reverse -}}
 <li>{{ if .Params.draft }}&#x26A0; {{ end }}<a href="{{ .Permalink }}">{{ .Title }}</a></li>
 {{ end -}}
 </ul>
