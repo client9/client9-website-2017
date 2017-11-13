@@ -319,7 +319,7 @@ End of functions from https://github.com/client9/shlib
 ------------------------------------------------------------------------
 EOF
 
-OWNER=spf13
+OWNER=gohugoio
 REPO=hugo
 BINARY=hugo
 FORMAT=tar.gz
