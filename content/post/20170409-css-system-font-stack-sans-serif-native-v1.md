@@ -3,7 +3,7 @@ date: 2017-04-09
 title: "CSS System Font Stack - Sans Serif Native - V1"
 ---
 
-The Native font stack attempts to use the system sans serif font used by  operating system for user interfaces.   This is best for buttons and other UI elements on the page, but it also works for body text.
+The Native font stack attempts to use the system sans serif font used by operating system for user interfaces. This is best for buttons and other UI elements on the page, but it also works for body text.
 
 ## The CSS
 
@@ -21,7 +21,7 @@ font-family:
   /* 4 */ sans-serif;
 ```
 
-This is what is looks like on your browser:
+This is what it looks like on your browser:
 
 {{< font-sample "font-family: -apple-system,BlinkMacSystemFont,segoe ui,helvetica neue,sans-serif;" >}}
 

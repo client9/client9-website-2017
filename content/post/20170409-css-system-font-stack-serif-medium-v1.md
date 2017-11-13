@@ -4,10 +4,10 @@ title: "CSS System Font Stack - Serif Medium - V1"
 ---
 
 This system font stack is of a medium size, and suitable for body text and
-larger headlines.   The primary fonts are similar in size and use
+larger headlines. The primary fonts are similar in size and use
 similar numeric forms.
 
-While Mac users get a very nice upgrade from Palatino using Iowan Old Style, there is no obviously choice for Windows users.
+While Mac users get a very nice upgrade from Palatino using Iowan Old Style, there is no obvious choice for Windows users.
 
 For linux and other systems, I let it fall to the default `serif` as it's unclear what the right thing to is.  Many linux systems are heavily customized: in which case using the default is correct.
 
@@ -19,6 +19,7 @@ font-family:
   /* 2 */ Palatino Linotype, Palatino,
   /* 3 */ serif;
 ```
+
 This is what it looks like on your browser:
 
 {{< font-sample  style="font-family: iowan old style, palatino linotype, palatino, serif;" >}} 

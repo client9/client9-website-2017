@@ -6,12 +6,12 @@ title: "CSS System Font Stack - Serif Charter - V1"
 [Charter](http://practicaltypography.com/charter.html) is a great font. 
 
 This was originally designed in 1987 for print.  In 1987 that meant 300 dpi laser
-printers.  That's very close to what we call retina or HiDPI for screens
-today. (It's not exactly the same but the point is holds up well on today's
+printers. That's very close to what we call retina or HiDPI for screens
+today. That's not exactly the same but Charter holds up well on today's
 screens).
 
 MacOS and iOS now make Charter available as a system font, so it's great
-choice.   It's also a free font, and so likely installed on many linux and
+choice.  It's also a free font, and so likely installed on many linux and
 Windows systems as well.  
 
 The next closest system front is Georgia, which happens to be designed by the
