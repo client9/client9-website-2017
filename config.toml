@@ -11,6 +11,7 @@ enableGitInfo = false
 [permalinks]
 post="/:title/"
 article="/article/:title"
+money="/money/:title"
 
 [params]
 sitename="Nick Galbreath"
@@ -18,3 +19,4 @@ twitter="@NGalbreath"
 
 [blackfriday]
 extensions = ["footnotes"]
+fractions = false
