@@ -7,7 +7,9 @@
 <section id="front">
 <ul>
 {{ range .Data.Pages.ByDate.Reverse -}}
+{{ if eq .Type "post" }}
 <li>{{ if .Params.draft }}&#x26A0; {{ end }}<a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
 {{ end -}}
 </ul>
 </section>
