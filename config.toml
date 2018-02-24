@@ -1,17 +1,15 @@
 baseurl = "https://www.client9.com"
-languageCode = "en-us"
+languageCode = "en"
 title = "Nick Galbreath"
 MetaDataFormat = "yaml"
 enableRobotsTXT= true
 googleAnalytics = ""
-FootnoteReturnLinkContents = "foo"
-copyright="&copy; 2017 Nick Galbreath"
-enableGitInfo = false
+FootnoteReturnLinkContents = ""
+copyright="&copy; 2018 Nick Galbreath"
 
 [permalinks]
 post="/:title/"
 article="/article/:title"
-money="/money/:title"
 
 [params]
 sitename="Nick Galbreath"

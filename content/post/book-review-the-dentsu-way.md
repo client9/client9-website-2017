@@ -1,7 +1,7 @@
 ---
 title: 'Book Review: The Dentsu Way'
 date: 2017-08-27T22:54:31.290Z
-draft: false
+draft: true
 ---
 
 

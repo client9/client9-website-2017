@@ -1,7 +1,7 @@
 ---
 title: Improve your workouts with one simple trick
 date: 2017-08-20T19:33:45.551Z
-draft: false
+draft: true
 ---
 A simple way to maximize your workouts at the gym.
 <!--more-->
