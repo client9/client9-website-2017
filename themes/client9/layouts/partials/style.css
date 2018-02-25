@@ -1,14 +1,3 @@
-/*
-body {
-  color: {{ .Site.Data.css.bodyColor }};
-  background-color: {{ .Site.Data.css.bodyBackgroundColor }};
-  max-width: 768px;
-  line-height: {{ .Site.Data.css.bodyLineHeight }};
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-*/
 body {
 	color: #000;
 }
@@ -96,25 +85,6 @@ table tbody tr {
 table th {
   text-align: left;
 }
-
-/* https://benrabicoff.com/better-link-underline/ */
-/*
-a {
-  background-image:linear-gradient(to bottom, {{ .Site.Data.css.linkColor }} 50%, {{ .Site.Data.css.linkColor }} 50%);
-  background-repeat:repeat-x;
-  background-size:1px 1px;
-  background-position:0 1.1em;
-  color: {{ .Site.Data.css.linkColor }};
-  font-weight:400;
-  text-shadow:-1px -1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, 1px -1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, -1px 1px 0 {{ .Site.Data.css.bodyBackgroundColor }}, 1px 1px 0 {{ .Site.Data.css.bodyBackgroundColor }};
-  text-decoration:none;
-}
-a:hover {
-  background-color: {{ .Site.Data.css.linkHoverBackgroundColor }};
-  text-shadow:-1px -1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }}, 1px -1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }}, -1px 1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }}, 1px 1px 0 {{ .Site.Data.css.linkHoverBackgroundColor }};
-  text-decoration:none;
-}
-*/
 
 #links a {
   text-decoration: none;

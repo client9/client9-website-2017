@@ -1,12 +1,11 @@
 ---
 date: 2017-05-29
-title: "Convert strftime time format to Hugo"
+title: "Convert strftime Time Format to Hugo"
 ---
 
 Convert strptime formats from PHP, Python, and Ruby to Hugo. <!--more-->
 
-Most languages use some variation of [strptime](http://pubs.opengroup.org/onlinepubs/009695399/functions/strptime.html) to format date and time values:w
-.  Hugo is based on the [the time package](https://golang.org/pkg/time/) from [Go](https://golang.org).  It uses the concept of the magic date as represented by:
+Most languages use some variation of [strptime](http://pubs.opengroup.org/onlinepubs/009695399/functions/strptime.html) to format date and time values.  Hugo is based on the [time package](https://golang.org/pkg/time/) from [Go](https://golang.org). It uses the concept of the magic date as represented by: 
 
 ```
 Mon Jan 2 15:04:05 MST 2006
@@ -20,7 +19,7 @@ or
 
 1, 2, 3, 4, 5, 6 , 7.  Month, Day, Hour, Minute, Second, Time zone offset.
 
-To print your time, just re-arrange, or edit one of these magic times any way you want.   Just want to print the month? The format is `Jan`, `January`, `1`, or `01` depending on how you want to format it.   The *real* month will be filled in. The same goes for all the other parts of the time.
+To print your time, just re-arrange, or edit one of these magic times any way you want. Just want to print the month? The format is `Jan`, `January`, `1`, or `01` depending on how you want to format it. The *real* month will be filled in. The same goes for all the other parts of the time.
 
 Once you get the hang of it, you'll find `January 2, 2006` a lot clearer than `%b %e, %Y`.
 
@@ -90,8 +89,7 @@ Instead of a time *format*, use the [UTC](https://golang.org/pkg/time/#Time.UTC)
 {{ .Date.UTC.Unix }}
 ```
 
-Common Time Formats
--------------------
+## Common Time Formats
 
 ### RFC 3339, ISO 8061
 
