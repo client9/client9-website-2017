@@ -140,20 +140,13 @@ ul { list-style-type: square; }
   html {
     font-size: 0.9rem;
   }
-  div#content {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 */
 /* under 414px covers portrait mode of iphone 5,6,6+ */
+/*
 @media (max-width: 26em) {
   html {
     font-size: 0.8rem;
-  }
-  div#content {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
   }
 }
 */
