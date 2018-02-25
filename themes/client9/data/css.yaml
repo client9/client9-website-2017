@@ -2,7 +2,7 @@ bodyColor: "#000"
 bodyBackgroundColor: "#FFFFFB"
 
 codeFontFamily: menlo,consolas,monospace
-codeFontSize: 1.15em
+codeFontSize: 1.0em
 codeBackgroundColor: "#F5F5F5"
 titleFontFamily: avenir next,system-ui,-apple-system,segoe ui,helvetica neue,sans-serif
 

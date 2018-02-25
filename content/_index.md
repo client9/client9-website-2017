@@ -1,7 +1,6 @@
 ---
 Title: ""
 ---
-# Nick Galbreath
 
 * CTO and Co-Founder of [Signal Sciences](https://www.signalsciences.com),
   along with [Andrew Peterson](https://twitter.com/AMPeters06) and [Zane Lackey](https://twitter.com/zanelackey)
