@@ -1,0 +1,17 @@
+---
+date: 2017-11-13
+lastmod: 2018-02-25T07:59:38.225Z
+title: CSS System Font Stack Sans Serif V2
+---
+<p>This is an update to the original native font stack <a href="https://www.client9.com/css-system-font-stack---sans-serif-native---v1/">article</a>.  It attempts to use the sans serif font used by operating system for user interfaces. This is best for buttons and other UI elements on the page, but it also works for body text.</p><h2 id="h.isafmml7a2i5">What&#39;s Changed?</h2><p>The <a href="https://drafts.csswg.org/css-fonts-4/%23system-ui-def">W3C CSS Fonts 4 draft</a> now includes a built-in font <code>system-ui</code>.  It should render using the native sans-serif font. It&#39;s implemented in:</p><ul><li><a href="https://www.chromestatus.com/feature/5640395337760768">Chrome</a> since 2017-01, version 56</li><li><a href="https://bugs.webkit.org/show_bug.cgi?id%3D151493">Safari</a>, since 2017-02 but not clear which version</li></ul><p>As of 2017-11, neither Firefox or Microsoft Edge supports this, but I suspect in time they will.</p><p>Due this change, I&#39;m updating the original font stack as follows:</p><ul><li>Adding <code>system-ui</code> to first position</li><li>Removing the chrome-specific hack <code>BlinkMacSystemFont</code> since it&#39;s superseded by <code>system-ui</code> and chrome auto-updates</li><li>Keeping the Safari-specific <code>-apple-system</code> font for now.</li></ul><h2 id="h.g3s4no5b2lml">The CSS</h2><pre class="p-1 bg-light border"><code>/* 0: CSS Font V4 standard
+/* 1: Safari special
+ * 2: Recent windows
+ * 3: Older Macs,
+ * 4: system default,
+ */
+font-family:
+  /* 0 */ system-ui,
+  /* 1 */ -apple-system,
+  /* 2 */ &#34;Segoe UI&#34;,
+  /* 3 */ Helvetica Neue,
+  /* 4 */ sans-serif;</code></pre><p>This is what it looks like on your browser:</p><p>{{< font-sample "font-family: system-ui,-apple-system,segoe ui,helvetica neue,sans-serif;" >}}</p><h2 id="h.on3azc54gk51">References</h2><p>More reference available in the <a href="https://www.client9.com/css-system-font-stack---sans-serif-native---v1/">original article</a> </p><p>2017-09-19 <a href="https://css-tricks.com/snippets/css/system-font-stack/">System Font Stack</a> by <a href="https://css-tricks.com/author/geoffgraham/">Geoff Graham</a> is a nice write up on OS default fonts and how to use them in CSS.</p>

@@ -1,0 +1,13 @@
+---
+date: 2017-05-27
+lastmod: 2018-02-25T08:38:13.784Z
+tags:
+- git
+title: Automatically Install Git Hooks
+---
+<p>Improve your CI/CD by installing git hooks automatically.</p><p><a href="https://git-scm.com">Git</a> has a great system of <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">hooks</a>, where actions are taken:</p><ul><li>after a commit is done, to run static analysis or units</li><li>before the commit message is generated, to provide a commit message template</li><li>after the commit message is finished, to do final validation on the message</li></ul><p>Proper use of hooks improves the success rate of pull requests and continuous integration runs.</p><p>The only problem is they are optional.  If a fresh clone is done, the hooks are not automatically installed. All the static analysis and unit testing in the world doesn&#39;t help if they are not used and run.</p><p>If you use <code>make</code>, then you can automatically set up your git hooks by adding some targets:</p><pre class="p-1 bg-light border"><code>.git/hooks/pre-commit: scripts/pre-commit.sh
+    cp -f scripts/pre-commit.sh .git/hooks/pre-commit
+.git/hooks/commit-msg: scripts/commit-msg.sh
+    cp -f scripts/commit-msg.sh .git/hooks/commit-msg
+hooks: .git/hooks/pre-commit .git/hooks/commit-msg</code></pre><p>Then in the most common used make command, add a dependency on `hooks`:</p><pre class="p-1 bg-light border"><code>build: hooks
+    go build .  # or whatever</code></pre><p>Now any time a build is done, the hooks will be set up and installed. If an commit and push happens it&#39;s much more likely it will meet your minimal standards. One still needs to redo all these checks at the server level, but having checks done locally will help reduce the number of failed continuous integration runs and rejected pull-requests.</p>

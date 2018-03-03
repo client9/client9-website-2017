@@ -15,6 +15,9 @@ draft: setup ## build version with drafts
 	${HUGO} -t client9 -v -D -E -F --baseURL http://www-draft.client9.com
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
+gen: ## generate content from google drive
+	go run $$GOPATH/src/github.com/client9/googledrive2hugo/cmd/export/main.go  -root client9-website-2017/content/posts -out content/post
+
 clean: ## do clean
 	rm -rf public bin
 	git gc --aggressive
