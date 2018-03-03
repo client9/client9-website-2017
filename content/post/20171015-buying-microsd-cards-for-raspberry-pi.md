@@ -1,7 +1,7 @@
 ---
 title: Buying MicroSD Cards for Raspberry PI
 date: 2017-10-15T23:32:44.618Z
-draft: false
+draft: true
 ---
 
 TLDR; you want a "Micro SD" or "Micro SDHC" card, with 16GB in storage size, with a speed of "Level 10" for about $10.00.  You can find something with storage and less performance but will likely only save a dollar or two at most.   Alternatively, if you find something under $5 (with any storage or speed), it's worth picking up a few.
