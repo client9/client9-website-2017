@@ -1,5 +1,5 @@
 #!/bin/sh -x
-go get github.com/client9/csstool/cmd/csscut
+go get github.com/client9/csstool/css
 ./scripts/godownloader-hugo.sh 0.37
 ./scripts/godownloader-misspell.sh 0.3.0
 ./scripts/godownloader-minify.sh
