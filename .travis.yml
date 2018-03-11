@@ -16,5 +16,6 @@ deploy:
   fqdn: www.client9.com
   target_branch: master
   repo: client9/client9.github.io
+  verbose: true
   on:
     branch: master
