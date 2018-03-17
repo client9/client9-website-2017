@@ -6,11 +6,12 @@ p,li {
 li li {
   font-size: 1em;
 }
-
+code, kbd, var {
+  white-space: pre;
+}
 pre, kbd {
   font-size: {{ .Site.Data.css.codeFontSize }};
 }
-
 blockquote {
   margin-top: 0;
   margin-bottom: 16px;
