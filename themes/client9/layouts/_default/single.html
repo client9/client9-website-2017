@@ -4,12 +4,14 @@
 <div class="small pb-3">
 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
 </div>
-{{- if .Params.draft }}
-<p id="draft">&#x26A0; Draft &#x26A0;</p>
-{{ end -}}
+{{- if .Params.draft }}<p id="draft">&#x26A0; Draft &#x26A0;</p>{{ end -}}
 {{ .Content }}
-<div id="links"></div>
 </article></div>
+
+{{ with .Params.tags }}
+<p>{{ range . }}
+<a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+{{ end }}</p>{{ end }}
 
 <script type="application/ld+json">{
  "@context"         : "http://schema.org"

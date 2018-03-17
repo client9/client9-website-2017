@@ -1,7 +1,6 @@
 
 HUGO=./bin/hugo
 MINIFY=./bin/minify
-MISPELL=./bin/misspell
 
 run: setup ## start live server
 	${HUGO} -t client9 -v -D -E -F --watch server

@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+{{.Content}}
+
+<ul>
+{{ range .Data.Pages }}
+     <li>
+       <a href="{{ .Permalink }}">{{ .Title }}</a>
+     </li>
+{{ end }}
+</ul>
+
+{{ partial "footer.html" . }}
