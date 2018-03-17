@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 ./bin/hugo -t client9
-mkdir -p public/assets
+mkdir -p public/assets static/assets
 
 # write once to public for publishing
 curl -s https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css | css cut --html 'public/**/*.html' > public/assets/bootstrap-csscut.min.css
