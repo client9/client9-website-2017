@@ -1,35 +1,23 @@
-/*
-body {
-	color: #000;
-}
-*/
-
-/*
-a {
-	color: #000;
-	text-decoration: underline;
-	text-decoration-style: dotted;
-	text-decoration-skip-ink: ink;
-}
-nav a {
-	text-decoration: none;
-}
-*/
 p,li {
-/*  font-family: {{ .Site.Data.css.bodyFontFamily }}; */
   font-size: {{ .Site.Data.css.bodyFontSize }};
-/*  letter-spacing: {{ .Site.Data.css.bodyLetterSpacing }}; */
 }
 
 /* needed for nested lists */
 li li {
-	font-size: 1em;
+  font-size: 1em;
 }
 
+/*
+code {
+  color: #000000;
+  background-color: {{ .Site.Data.css.codeBackgroundColor }};
+}
+*/
 pre, kbd {
   font-size: {{ .Site.Data.css.codeFontSize }};
 }
 
+/*
 pre {
   word-wrap: normal;
   tab-size: 2;
@@ -41,12 +29,12 @@ pre {
   padding-right: 1em;
   overflow: auto;
   line-height: 1.45;
-  background-color: {{ .Site.Data.css.codeBackgroundColor }};
   border-radius: 3px;
   border-style: solid;
   border-width: 1px;
   border-color: #CBCBCB;
 }
+*/
 
 blockquote {
   margin-top: 0;
@@ -89,36 +77,3 @@ table tbody tr {
 table th {
   text-align: left;
 }
-
-/*
-ul { list-style-type: square; }
-*/
-/*
-#front a {
-  text-decoration: none;
-  font-weight: 400;
-  color: #000;
-  background-image: none;
-  text-shadow: none;
-}
-
-#front a:hover {
-  background-color: #FFEBCD;
-}
-*/
-/* 672px covers iphone 5,6 in landscape */
-/*
-@media (max-width: 42em) {
-  html {
-    font-size: 0.9rem;
-  }
-}
-*/
-/* under 414px covers portrait mode of iphone 5,6,6+ */
-/*
-@media (max-width: 26em) {
-  html {
-    font-size: 0.8rem;
-  }
-}
-*/
