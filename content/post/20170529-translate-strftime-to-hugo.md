@@ -17,7 +17,7 @@ or
 01/02 03:04:05PM '06 -0700
 ```
 
-1, 2, 3, 4, 5, 6 , 7.  Month, Day, Hour, Minute, Second, Time zone offset.
+1, 2, 3, 4, 5, 6, 7.  Month, Day, Hour, Minute, Second, Year, Time zone offset.
 
 To print your time, just re-arrange, or edit one of these magic times any way you want. Just want to print the month? The format is `Jan`, `January`, `1`, or `01` depending on how you want to format it. The *real* month will be filled in. The same goes for all the other parts of the time.
 
