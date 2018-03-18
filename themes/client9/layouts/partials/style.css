@@ -1,17 +1,14 @@
-p,li {
+body {
   font-size: {{ .Site.Data.css.bodyFontSize }};
 }
-
-/* needed for nested lists */
-li li {
-  font-size: 1em;
-}
 code, kbd, var {
+  white-space: nowrap;
+}
+pre>code {
   white-space: pre;
 }
-pre, kbd {
-  font-size: {{ .Site.Data.css.codeFontSize }};
-}
+
+
 blockquote {
   margin-top: 0;
   margin-bottom: 16px;
