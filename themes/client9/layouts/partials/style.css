@@ -2,6 +2,7 @@ body {
   font-size: {{ .Site.Data.css.bodyFontSize }};
 }
 code, kbd, var {
+  tab-size: 2;
   white-space: nowrap;
 }
 pre>code {
