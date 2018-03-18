@@ -15,7 +15,8 @@ draft: setup ## build version with drafts
 	${MINIFY} --html-keep-whitespace --html-keep-end-tags --html-keep-document-tags -r -o public public
 
 gen: ## generate content from google drive
-	go run $$GOPATH/src/github.com/client9/googledrive2hugo/cmd/export/main.go  -root client9-website-2017/content/posts -out content/post
+	rm -rf tmp && mkdir tmp
+	go run $$GOPATH/src/github.com/client9/googledrive2hugo/cmd/export/main.go  -root client9-website-2017/content/posts -out content/post -tmp tmp
 
 clean: ## do clean
 	rm -rf public bin
