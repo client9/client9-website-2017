@@ -2,4 +2,5 @@ client_secret.json
 bin/*
 *.swp
 public/
+tmp/
 
