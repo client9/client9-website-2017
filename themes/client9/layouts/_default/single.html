@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <div><article>
-<h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+<h1 class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
 <div class="small pb-3">
 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
 </div>
