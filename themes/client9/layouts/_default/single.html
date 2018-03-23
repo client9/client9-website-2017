@@ -1,12 +1,13 @@
 {{ partial "header.html" . }}
-<div><article>
+<article>
 <h1 class="h2 font-weight-bold">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+<p class="small">{{ .Description }} </p>
 <div class="small pb-3">
 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
 </div>
 {{- if .Params.draft }}<p id="draft">&#x26A0; Draft &#x26A0;</p>{{ end -}}
 {{ .Content }}
-</article></div>
+</article>
 
 {{ with .Params.tags }}
 <p>{{ range . }}
