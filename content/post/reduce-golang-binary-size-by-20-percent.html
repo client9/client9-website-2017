@@ -1,9 +1,16 @@
 ---
 date: "2017-05-19"
 description: Here's how to reduce your golang binary size by 20%, for free.
-lastmod: "2018-03-12T11:42:36.126Z"
+lastmod: "2018-03-24T06:57:00.737Z"
 tags:
 - golang
+- software
 title: Reduce Golang Binary Size by 20 Percent
 ---
-<p>I first read about this on <a href="https://blog.filippo.io/shrink-your-go-binaries-with-this-one-weird-trick/">Shrink your go binaries with this one weird trick</a> by <a href="https://blog.filippo.io">Filippo Valsorda</a>. That&#39;s from 2016, but I retested on golang <del>1.8.1</del> 1.10.0.</p><p>Just add <code class="p-1 bg-light">-ldflags=&#34;-s -w&#34;</code> to your build and watch the output size drop by 20%.</p><pre class="p-1 bg-light border"><code class="p-1 bg-light">go build -ldflags=&#34;-s -w&#34;</code></pre><p>This strips away a bunch of symbols that are only used by debuggers. If you don&#39;t use them, then everything else is the same, including panic stack traces.</p><p>This also makes gzip compression work better. By packaging the reduced golang binary in a <code class="p-1 bg-light">tar.gz</code> results in a distribution 4x smaller than the original.</p><p>If you use <a href="https://github.com/goreleaser/goreleaser">Godownloader</a>, these flags and packaging are all done by default and the final results are uploaded to <a href="https://help.github.com/articles/about-releases/">GitHub releases</a>. Couldn&#39;t be easier.</p><p>The article also mentions using <a href="https://upx.github.io">UPX</a> to create self-decompressing binaries. It is interesting but it&#39;s not much better than the <code class="p-1 bg-light">ldflags</code> and <code class="p-1 bg-light">tar.gz</code> combination to justify the complexity.</p>
+<p>I first read about this on <a href="https://blog.filippo.io/shrink-your-go-binaries-with-this-one-weird-trick/">Shrink your go binaries with this one weird trick</a> by <a href="https://blog.filippo.io">Filippo Valsorda</a>. That&#39;s from 2016, but I retested on golang <del>1.8.1</del> 1.10.0.</p>
+<p>Just add <code class="p-1 bg-light">-ldflags=&#34;-s -w&#34;</code> to your build and watch the output size drop by 20%.</p>
+<pre class="p-1 bg-light border"><code class="p-1 bg-light">go build -ldflags=&#34;-s -w&#34;</code></pre>
+<p>This strips away a bunch of symbols that are only used by debuggers. If you don&#39;t use them, then everything else is the same, including panic stack traces.</p>
+<p>This also makes gzip compression work better. By packaging the reduced golang binary in a <code class="p-1 bg-light">tar.gz</code> results in a distribution 4x smaller than the original.</p>
+<p>If you use <a href="https://github.com/goreleaser/goreleaser">Godownloader</a>, these flags and packaging are all done by default and the final results are uploaded to <a href="https://help.github.com/articles/about-releases/">GitHub releases</a>. Couldn&#39;t be easier.</p>
+<p>The article also mentions using <a href="https://upx.github.io">UPX</a> to create self-decompressing binaries. It is interesting but it&#39;s not much better than the <code class="p-1 bg-light">ldflags</code> and <code class="p-1 bg-light">tar.gz</code> combination to justify the complexity.</p>

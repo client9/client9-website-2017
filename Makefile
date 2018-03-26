@@ -16,7 +16,7 @@ draft: setup ## build version with drafts
 
 gen: ## generate content from google drive
 	rm -rf tmp && mkdir tmp
-	go run $$GOPATH/src/github.com/client9/googledrive2hugo/cmd/export/main.go  -root client9-website-2017/content/posts -out content/post -tmp tmp
+	gdoc-export -root client9-website-2017/content/posts -out content/post -tmp tmp
 
 clean: ## do clean
 	rm -rf public bin
