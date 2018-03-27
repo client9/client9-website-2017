@@ -8,8 +8,8 @@ tags:
 title: CSS System Font Stack Sans Serif V1
 ---
 <p>This is best for buttons and other UI elements on the page, but it also works for body text.</p>
-<h2 id="h.mr269i5pozf7" class="h4 mt-4 mb-4 font-weight-bold">The CSS</h2>
-<pre class="p-1 bg-light border"><code class="p-1 bg-light">/* 1: Safari/Mac special, BlinkMac is the current
+<h2 id="h.mr269i5pozf7" class="h4 mt-4 mb-4">The CSS</h2>
+<pre class="p-1 pl-3"><code class="p-1">/* 1: Safari/Mac special, BlinkMac is the current
  *    Chrome method for using the macOS system font
  * 2: Recent windows
  * 3: Older Macs,
@@ -22,30 +22,30 @@ font-family:
   /* 4 */ sans-serif;</code></pre>
 <p>This is what it looks like on your browser:</p>
 <p>{{< font-sample "font-family: -apple-system,BlinkMacSystemFont,segoe ui,helvetica neue,sans-serif;" >}}</p>
-<h2 id="h.vwx3garxz910" class="h4 mt-4 mb-4 font-weight-bold">References</h2>
+<h2 id="h.vwx3garxz910" class="h4 mt-4 mb-4">References</h2>
 <ul>
 <li>2017-01-01 <a href="https://benrabicoff.com/system-fonts-are-great/">System Fonts Are Great</a> General praise and slight variation of the github sans-serif font stack.</li>
 <li>2016-09-20 <a href="https://bitsofco.de/the-new-system-font-stack/">The New System Font Stack?</a> is the article that got me started.</li>
 <li>2016-07-21 <a href="https://gitlab.com/gitlab-org/gitlab-ce/issues/20102">GitLab Issue 20102</a> has a discussion if gitlab should switch to system fonts.  They decided against, but has useful notes on monospace system fonts.</li>
-<li>2016-07-16 <a href="https://make.wordpress.org/core/2016/07/07/native-fonts-in-4-6/">Native Fonts in 4.6</a> Wordpress switched to native fonts for their admin UI. This documents their font stack.</li>
+<li>2016-07-16 <a href="https://make.wordpress.org/core/2016/07/07/native-fonts-in-4-6/">Native Fonts in 4.6</a>Wordpress switched to native fonts for their admin UI. This documents their font stack.</li>
 <li>2015-11-12 <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">Using System Fonts in Web Design: A Quick and Practical Guide</a></li>
 <li>2015-10-21 <a href="https://medium.design/system-shock-6b1dc6d6596f">System Shock</a> Discussion by <a href="https://medium.com">medium.com</a> on their use of system fonts for their web UI (they use a custom web font for their article text).</li>
 </ul>
-<h2 id="h.ci0320n2p439" class="h4 mt-4 mb-4 font-weight-bold">The Fonts</h2>
+<h2 id="h.ci0320n2p439" class="h4 mt-4 mb-4">The Fonts</h2>
 <p>If a font does not exist on your system, it will be rendered in a monospace font.</p>
-<h3 id="h.7rg1wd4pdqag" class="h5 mt-4 mb-4 font-weight-bold"> -apple-system</h3>
+<h3 id="h.7rg1wd4pdqag" class="h5 mt-4 mb-4"> -apple-system</h3>
 <p>This is the macOS or iOS system font, when <em>using Safari</em>.</p>
 <p>{{< font-sample "font-family: -apple-system, monospace;" >}}</p>
-<h3 id="h.mlgvzowifo0d" class="h5 mt-4 mb-4 font-weight-bold">BlinkMacSystemFont</h3>
+<h3 id="h.mlgvzowifo0d" class="h5 mt-4 mb-4">BlinkMacSystemFont</h3>
 <p>This is the macOS or iOS system font, when <em>using Chrome</em>.</p>
 <p>{{< font-sample "font-family: BlinkMacSystemFont, monospace;" >}}</p>
-<h3 id="h.ebmv393hdcyf" class="h5 mt-4 mb-4 font-weight-bold">Segoe UI</h3>
+<h3 id="h.ebmv393hdcyf" class="h5 mt-4 mb-4">Segoe UI</h3>
 <p>Segoe has been the system font for Windows since Vista, circa 2006.</p>
 <p>{{< font-sample "font-family: Segoe UI, monospace;" >}}</p>
-<h3 id="h.ezahtqxubzrf" class="h5 mt-4 mb-4 font-weight-bold">Helvetica Neue</h3>
-<p>Helvetica Neue is an optimization of Helvetica (<a href="https://www.fonts.com/content/learning/fyti/typefaces/helvetica-old-and-neue">Fonts.com</a> has a nice write up on the differences).  It’s likely to be 100% present on macOS and iOS, but also missing completely on Windows (which uses the clone Arial).  There is no reason <em>not</em> to use Helvetica Neue<em> </em>instead of plain Helvetica.</p>
+<h3 id="h.ezahtqxubzrf" class="h5 mt-4 mb-4">Helvetica Neue</h3>
+<p>Helvetica Neue is an optimization of Helvetica (<a href="https://www.fonts.com/content/learning/fyti/typefaces/helvetica-old-and-neue">Fonts.com</a> has a nice write up on the differences).  It’s likely to be 100% present on macOS and iOS, but also missing completely on Windows (which uses the clone Arial).  There is no reason <em>not</em> to use Helvetica Neue<em></em>instead of plain Helvetica.</p>
 <p>{{< font-sample "font-family: Helvetica Neue, monospace;" >}}</p>
-<h3 id="h.114tm0l7oy9n" class="h5 mt-4 mb-4 font-weight-bold">sans-serif (default)</h3>
+<h3 id="h.114tm0l7oy9n" class="h5 mt-4 mb-4">sans-serif (default)</h3>
 <table class="table table-sm">
 <thead>
 <tr>

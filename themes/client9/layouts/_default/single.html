@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <article>
-<h1 class="h2 font-weight-bold">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
-<p class="small font-weight-bold">{{ .Description }} </p>
+<h1 class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+<div class="pb-3">{{ .Description }} </div>
 <div class="small pb-3">
 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
 </div>
@@ -10,9 +10,9 @@
 </article>
 
 {{ with .Params.tags }}
-<p>{{ range . }}
+<div>{{ range . }}
 <a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-{{ end }}</p>{{ end }}
+{{ end }}</div>{{ end }}
 
 <script type="application/ld+json">{
  "@context"         : "http://schema.org"

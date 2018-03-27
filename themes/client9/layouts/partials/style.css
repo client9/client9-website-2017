@@ -1,7 +1,12 @@
 body {
-  font-size: {{ .Site.Data.css.bodyFontSize }};
+  font-size: 1.25rem; /* {{ .Site.Data.css.bodyFontSize }}; */
   color: #000;
 }
+
+p,li,td {
+ font-family: georgia, serif;
+}
+
 code, kbd, var {
   tab-size: 2;
   white-space: nowrap;
@@ -11,7 +16,9 @@ pre>code {
   white-space: pre;
   color:#000;
 }
-
+pre {
+  line-height: 1.25;
+}
 
 blockquote {
   margin-top: 0;

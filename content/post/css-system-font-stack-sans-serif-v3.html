@@ -7,17 +7,17 @@ tags:
 - css
 title: CSS System Font Stack Sans Serif V3
 ---
-<h2 id="h.x1y6akay4tbd" class="h4 mt-4 mb-4 font-weight-bold">What is this?</h2>
-<p>This attempts to create a CSS Font Stack that matches what the client’s OS uses for text. The benefits are for both performance and design. Performance is improved since no web-font needs to be loaded or and there is no need for various hacks to prevent <a href="https://css-tricks.com/fout-foit-foft/">text flashing</a>. Design is improved (or at least acceptable) since the font matches what is already being used across the computer, and the latest system fonts are very good compared to the <code class="p-1 bg-light">sans-serif</code> defaults.</p>
+<h2 id="h.x1y6akay4tbd" class="h4 mt-4 mb-4">What is this?</h2>
+<p>This attempts to create a CSS Font Stack that matches what the client’s OS uses for text. The benefits are for both performance and design. Performance is improved since no web-font needs to be loaded or and there is no need for various hacks to prevent <a href="https://css-tricks.com/fout-foit-foft/">text flashing</a>. Design is improved (or at least acceptable) since the font matches what is already being used across the computer, and the latest system fonts are very good compared to the <code class="p-1">sans-serif</code> defaults.</p>
 <p>This is an update to <a href="https://www.client9.com/css-system-font-stack-sans-serif-v2/">Version 2</a> and the <a href="https://www.client9.com/css-system-font-stack-sans-serif-v1/">original version</a>. Both contain a number of additional resources on system font stacks.</p>
-<h2 id="h.4mapwjsjbw1d" class="h4 mt-4 mb-4 font-weight-bold">What’s Changed?</h2>
+<h2 id="h.4mapwjsjbw1d" class="h4 mt-4 mb-4">What’s Changed?</h2>
 <p><a href="https://github.com/">Github.com</a> has now over six months of using a system font stack. <a href="https://getbootstrap.com">Bootstrap</a> (the UI framework) with the v4 release has also switched to a native system font stacks. Given the <a href="https://www.alexa.com/siteinfo/github.com">scale</a> and <a href="https://trends.builtwith.com/docinfo/Twitter-Bootstrap">scope</a> of these projects, their stacks are likely to work well across a diverse set of audiences.</p>
-<p><a href="https://twitter.com/mdo">Mark Otto</a> who is behind both GitHub and Bootstrap wrote a nice summary of the rollout of <a href="http://markdotto.com/2018/02/07/github-system-fonts/">GitHub System Fonts</a>. In particular, <code class="p-1 bg-light">system-ui </code>does not work as expected:</p>
+<p><a href="https://twitter.com/mdo">Mark Otto</a> who is behind both GitHub and Bootstrap wrote a nice summary of the rollout of <a href="http://markdotto.com/2018/02/07/github-system-fonts/">GitHub System Fonts</a>. In particular, <code class="p-1">system-ui </code>does not work as expected:</p>
 <blockquote class="blockquote border-left border-left-thick pl-3">Thankfully our users are always quick to notice problems and were quick to point out to our Support teams that the new system-ui alias caused issues in WebKit and Blink browsers with non-English languages. </blockquote>
-<p>So <code class="p-1 bg-light">system-ui</code> is out and <code class="p-1 bg-light">BlinkMacSystemFont</code> is back in.</p>
-<h2 id="h.ydgce03mtsc6" class="h4 mt-4 mb-4 font-weight-bold">GitHub 2018</h2>
-<p>Surprising they use regular Helvetica instead of Helvetica Neue, but at this point it doesn’t matter very much. The browser or OS is really ancient. Or it’s Android, which defaults to <code class="p-1 bg-light">sans-serif</code> which is actually <code class="p-1 bg-light">Roboto</code>, a fine choice.</p>
-<pre class="p-1 bg-light border"><code class="p-1 bg-light">font-family:
+<p>So <code class="p-1">system-ui</code> is out and <code class="p-1">BlinkMacSystemFont</code> is back in.</p>
+<h2 id="h.ydgce03mtsc6" class="h4 mt-4 mb-4">GitHub 2018</h2>
+<p>Surprising they use regular Helvetica instead of Helvetica Neue, but at this point it doesn’t matter very much. The browser or OS is really ancient. Or it’s Android, which defaults to <code class="p-1">sans-serif</code> which is actually <code class="p-1">Roboto</code>, a fine choice.</p>
+<pre class="p-1 pl-3"><code class="p-1">font-family:
     -apple-system,
     BlinkMacSystemFont,
     &#34;Segoe UI&#34;,
@@ -25,9 +25,9 @@ title: CSS System Font Stack Sans Serif V3
     Arial,
     sans-serif,
     &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;;</code></pre>
-<h2 id="h.peibtw8z7ta3" class="h4 mt-4 mb-4 font-weight-bold">Bootstrap V4.0.0</h2>
-<p>Unsurprisingly, Bootstrap’s stack is similar to what Github uses. This adds <code class="p-1 bg-light">Roboto</code> (why?) and swaps <code class="p-1 bg-light">Helvetica</code> for <code class="p-1 bg-light">Helvetica Neue</code>. Otherwise the same.</p>
-<pre class="p-1 bg-light border"><code class="p-1 bg-light">font-family: 
+<h2 id="h.peibtw8z7ta3" class="h4 mt-4 mb-4">Bootstrap V4.0.0</h2>
+<p>Unsurprisingly, Bootstrap’s stack is similar to what Github uses. This adds <code class="p-1">Roboto</code> (why?) and swaps <code class="p-1">Helvetica</code> for <code class="p-1">Helvetica Neue</code>. Otherwise the same.</p>
+<pre class="p-1 pl-3"><code class="p-1">font-family: 
     -apple-system,
     BlinkMacSystemFont,
     &#34;Segoe UI&#34;,
@@ -36,5 +36,5 @@ title: CSS System Font Stack Sans Serif V3
     Arial,
     sans-serif,
     &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;;</code></pre>
-<h2 id="h.wi8z53jfv8af" class="h4 mt-4 mb-4 font-weight-bold">Conclusion</h2>
-<p>Either of these stacks will be fine and function identically for 95%+ of the population. It’s likely that the browser compatibility story involving <code class="p-1 bg-light">system-ui</code>, <code class="p-1 bg-light">-apple-system</code> and <code class="p-1 bg-light">BlinkMacSystemFont</code> will continue. Instead of manually tracking this, I’m switching over to <a href="https://getbootstrap.com/docs/4.0/getting-started/download/">bootstrap’s CSS</a> (or at least using <a href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss">their font stacks</a>) so I don’t have to worry about it.</p>
+<h2 id="h.wi8z53jfv8af" class="h4 mt-4 mb-4">Conclusion</h2>
+<p>Either of these stacks will be fine and function identically for 95%+ of the population. It’s likely that the browser compatibility story involving <code class="p-1">system-ui</code>, <code class="p-1">-apple-system</code> and <code class="p-1">BlinkMacSystemFont</code> will continue. Instead of manually tracking this, I’m switching over to <a href="https://getbootstrap.com/docs/4.0/getting-started/download/">bootstrap’s CSS</a> (or at least using <a href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss">their font stacks</a>) so I don’t have to worry about it.</p>

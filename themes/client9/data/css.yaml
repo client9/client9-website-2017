@@ -7,7 +7,7 @@ codeBackgroundColor: "#F5F5F5"
 titleFontFamily: avenir next,system-ui,-apple-system,segoe ui,helvetica neue,sans-serif
 
 bodyFontFamily: charter,georgia,serif,apple color emoji,segoe ui emoji, segoe ui symbol
-bodyFontSize: 1.3rem
+bodyFontSize: 1.25rem
 bodyLineHeight: 1.58
 bodyLetterSpacing: -0.003em
 
