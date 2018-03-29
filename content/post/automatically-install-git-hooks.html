@@ -16,11 +16,11 @@ title: Automatically Install Git Hooks
 <p>If you use <code class="p-1">make</code>, then you can automatically set up your git hooks by adding some targets:</p>
 <pre class="p-1 pl-3"><code class="p-1"># https://www.client9.com/automatically-install-git-hooks/
 .git/hooks/pre-commit: scripts/pre-commit.sh
-    cp -f scripts/pre-commit.sh .git/hooks/pre-commit
+    cp -f scripts/pre-commit.sh .git/hooks/pre-commit
 .git/hooks/commit-msg: scripts/commit-msg.sh
-    cp -f scripts/commit-msg.sh .git/hooks/commit-msg
+    cp -f scripts/commit-msg.sh .git/hooks/commit-msg
 hooks: .git/hooks/pre-commit .git/hooks/commit-msg</code></pre>
-<p>Then in the most commonly used <code class="p-1">make</code> command, add a dependency on <code class="p-1">hooks</code>:</p>
+<p>Then in the most commonly used <code class="p-1">make</code> command, add a dependency on <code class="p-1">hooks</code>:</p>
 <pre class="p-1 pl-3"><code class="p-1">build: hooks
-    go build .  # or whatever</code></pre>
+    go build .  # or whatever</code></pre>
 <p>Now any time a build is done, the hooks will be set up and installed. If an commit and push happens it&#39;s much more likely it will meet your minimal standards. One still needs to redo all these checks at the server level, but having checks done locally will help reduce the number of failed continuous integration runs and rejected pull-requests.</p>
