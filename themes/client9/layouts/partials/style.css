@@ -1,10 +1,16 @@
+@font-face {
+  font-family: "tabular-numbers";
+  src: local("charter"),local("bitstream charter"),local("cambria");
+  unicode-range: U+0030-0039;
+}
+
 body {
   font-size: 1.25rem; /* {{ .Site.Data.css.bodyFontSize }}; */
   color: #000;
 }
 
 p,li,td {
- font-family: georgia, serif;
+ font-family: charter, bitstream charter, tabular-numbers, georgia, serif;
 }
 
 code, kbd, var {
