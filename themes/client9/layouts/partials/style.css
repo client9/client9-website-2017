@@ -3,6 +3,10 @@
   src: local("charter"),local("bitstream charter"),local("cambria");
   unicode-range: U+0030-0039;
 }
+@font-face {
+font-family: "emoji";
+src: local("Apple Color Emoji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
+}
 
 body {
   font-size: 1.25rem; /* {{ .Site.Data.css.bodyFontSize }}; */
@@ -10,7 +14,7 @@ body {
 }
 
 p,li,td {
- font-family: charter, bitstream charter, tabular-numbers, georgia,serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ font-family: charter,bitstream charter,tabular-numbers,georgia,serif,emoji;
 }
 
 code, kbd, var {
