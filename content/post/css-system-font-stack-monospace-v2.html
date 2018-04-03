@@ -2,10 +2,10 @@
 date: "2018-02-24T21:50:56.883Z"
 description: Get a great monospace font without using web-fonts. See the latest monospace
   system font stack based on work by GitHub and Bootstrap.
-lastmod: "2018-03-18T17:56:02.395Z"
+lastmod: "2018-03-31T20:17:47.566Z"
 tags:
 - css
-title: CSS System Font Stack Monospace V2
+title: CSS System Font Stack Monospace v2
 ---
 <h2 id="h.mcm5t4tv7hb1" class="h4 mt-4 mb-4">What is this?</h2>
 <p>For most systems the default monospace font is something horrible like Courier. This can easily improved by using an installed system font, that also avoids the overhead and hacks of using a web-font.</p>
@@ -22,6 +22,7 @@ title: CSS System Font Stack Monospace V2
     Menlo,
     Courier,
     monospace;</code></pre>
+<p>{{< font-sample "font-family: sfmono-regular, consolas, liberation mono, menlo, courier, monospace;">}}</p>
 <p><a href="https://developer.apple.com/fonts/">SFMono-Regular</a> isn’t available on iOS Safari and isn’t available on macOS Safari unless you do some <a href="http://osxdaily.com/2018/01/07/use-sf-mono-font-mac/">hackery</a>. I figure 0.00001% of people actually do this, but those that do must really love this font. For most macOS and iOS users, this stack defaults to <a href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</a>.</p>
 <p>The reason to add <a href="https://en.wikipedia.org/wiki/Liberation_fonts">Liberation Mono</a> is unclear. It must solve some problem for a Linux distribution but not clear how.  Since Liberation Mono is similar to Courier, I would have assumed it’s the default “monospace” font for these platforms. But maybe not. Either way it’s benign to put in the stack.</p>
 <h2 id="h.7ejv3md8xsf" class="h4 mt-4 mb-4">Bootstrap v4</h2>
@@ -34,7 +35,8 @@ title: CSS System Font Stack Monospace V2
     &#34;Liberation Mono&#34;,
     &#34;Courier New&#34;,
     monospace;</code></pre>
-<p>More mysterious choices! Monaco has not been a primary font on macOS since 2009, and has never been part of iOS. Courier New is absolutely not as good as Courier for code or the screen. But with a semi-modern system, it’s unlikely either Monaco or Courier New will ever get used.</p>
+<p>{{< font-sample "font-family: sfmono-regular, menlo, monaco, consolas, liberation mono, courier new, monospace;">}}</p>
+<p>More mysterious choices. Monaco has not been a primary font on macOS since 2009, and has never been part of iOS. Courier New is absolutely not as good as Courier for code or the screen. But with a semi-modern system, it’s unlikely either Monaco or Courier New will ever get used.</p>
 <h2 id="h.qz225hbft1n4" class="h4 mt-4 mb-4">Conclusion</h2>
 <p>While I don’t quite understand some of the choices in these font stack, both of these provide a great monospace font for anyone using macOS, iOS, Windows or Android from the last five years. I figure that’s most of your audience.</p>
 <p>Instead of tracking the latest browser/linux font combinations and the SFMono soap opera, I’m going to just use whatever Bootstrap uses and call it a day. It’s going to delivery a great monospace font without incurring the wrath of a web-font.</p>

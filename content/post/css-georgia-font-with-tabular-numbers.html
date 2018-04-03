@@ -1,0 +1,19 @@
+---
+date: "2018-03-29T19:32:29.030Z"
+draft: true
+lastmod: "2018-03-31T20:10:32.627Z"
+title: CSS Georgia Font with Tabular Numbers
+---
+<p>This is called by “old style” or “text figures”</p>
+<h2 id="h.drkabxjbulue" class="h4 mt-4 mb-4">CSS</h2>
+<pre class="p-1 pl-3"><code class="p-1">/* serif tabular numbers for macOS, iOS, debian/ubuntu, windows */
+@font-face {
+  font-family: &#34;tabular-numbers&#34;;
+  src: local(&#34;charter&#34;), local(&#34;bitstream charter&#34;), local(&#34;cambria&#34;);
+  unicode-range: U+0030-0039;
+}
+font-family:
+  /* 1 */ tabular-numbers,   /* tabular numbers for Windows, macOS, iOS */
+  /* 2 */ georgia,           /* windows, macOS, iOS */
+  /* 3 */ bitstream charter, /* debian &amp; ubuntu */
+  /* 4 */ serif;             /* everything else */</code></pre>
