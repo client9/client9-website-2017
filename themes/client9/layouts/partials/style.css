@@ -9,6 +9,7 @@ src: local("Apple Color Emoji"), local("Segoe UI Emoji"), local("Segoe UI Symbol
 }
 
 body {
+  font-family: -apple-system,BlinkMacSystemFont,segoe ui,ubuntu,sans-serif,emoji;
   font-size: 1.25rem; /* {{ .Site.Data.css.bodyFontSize }}; */
   color: #000;
 }
