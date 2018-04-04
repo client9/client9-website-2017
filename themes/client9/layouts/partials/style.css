@@ -22,6 +22,7 @@ code, kbd, var {
   tab-size: 2;
   white-space: nowrap;
   color: #000;
+  font-family: SFMono-Regular,menlo,consolas,ubuntu mono,liberation mono,monospace,emoji;
 }
 pre>code {
   white-space: pre;
