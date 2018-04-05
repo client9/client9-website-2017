@@ -2,13 +2,13 @@
 date: "2018-03-29T19:32:29.030Z"
 description: Replace Georgia’s dripping numbers with tabular numbers with this cross
   platform system font stack.
-lastmod: "2018-04-04T15:03:14.244Z"
+lastmod: "2018-04-05T04:53:56.947Z"
 tags:
 - css
 title: CSS Georgia Font Stack with Tabular Numbers
 ---
-<p>Georgia is used as both a primary and fallback typeface in many CSS stacks, as it is available on nearly all macOS and Windows machines. However, by default Georgia uses “old style, proportional numbers” or  “<a href="https://en.wikipedia.org/wiki/Text_figures">text figures</a>.” That is, the numbers have different widths so they don’t align well in tables, and different vertical size and alignment. Many (most?) other typefaces use “tabular, lining numbers” with similar horizontal size and vertical alignment. As the name indicates, they work well in tables. More detail on numerical types can be found in <a href="https://practicaltypography.com/alternate-figures.html">Practical Typography</a>, and <a href="https://design.tutsplus.com/articles/using-numeral-styles--cms-23710">Using Numerical Styles</a>.  Can we get the ubiquity of Georgia and have tabular numbers without resorting to web fonts?</p>
-<p>On almost every OS, there is similar system font that uses tabular numbers that blends well with Georgia. Then using CSS <code class="p-1">@font-face </code>we can splice together Georgia with the tabular numerical alternate. For macOS and Debian/Ubuntu Linux, <a href="https://practicaltypography.com/charter.html">Charter</a> is used.  For Windows and Fedora Linux, <a href="https://en.wikipedia.org/wiki/Cambria_(typeface)">Cambria</a> or it’s clone Caladea is used.  Android should end up using <a href="https://fonts.google.com/specimen/Noto%2BSerif">Noto Serif</a> which is a fine default with tabular numbers as well.</p>
+<p>Georgia is used as both a primary and fallback typeface in many CSS stacks, as it is available on nearly all macOS and Windows machines. However, by default Georgia uses “old style, proportional numbers” or  “<a href="https://en.wikipedia.org/wiki/Text_figures">text figures</a>.” That is, the numbers have different widths so they don’t align well in tables, and different vertical size and alignment. Many (most?) other typefaces use “tabular, lining numbers” with similar horizontal size and vertical alignment. As the name indicates, they work well in tables. More detail on numerical types can be found in <a href="https://practicaltypography.com/alternate-figures.html">Practical Typography</a>, and <a href="https://design.tutsplus.com/articles/using-numeral-styles--cms-23710">Using Numerical Styles</a>. Can we get the ubiquity of Georgia and have tabular numbers without resorting to web fonts?</p>
+<p>On almost every OS, there is similar system font that uses tabular numbers that blends well with Georgia. Then using CSS <code>@font-face </code>we can splice together Georgia with the tabular numerical alternate. For macOS and Debian/Ubuntu Linux, <a href="https://practicaltypography.com/charter.html">Charter</a> is used. For Windows and Fedora Linux, <a href="https://en.wikipedia.org/wiki/Cambria_(typeface)">Cambria</a> or it’s clone Caladea is used. Android should end up using <a href="https://fonts.google.com/specimen/Noto%2BSerif">Noto Serif</a> which is a fine default with tabular numbers as well.</p>
 <table class="table table-sm">
 <thead>
 <tr>
@@ -19,32 +19,28 @@ title: CSS Georgia Font Stack with Tabular Numbers
 <tbody>
 <tr>
 <td>macOS, iOS</td>
-<td><code class="p-1">Georgia</code> with numbers from <code class="p-1">Charter</code></td>
+<td><code>Georgia</code> with numbers from <code>Charter</code></td>
 </tr>
 <tr>
 <td>Windows</td>
-<td><code class="p-1">Georgia</code> with numbers from <code class="p-1">Cambria</code></td>
+<td><code>Georgia</code> with numbers from <code>Cambria</code></td>
 </tr>
 <tr>
 <td>Debian, Ubuntu</td>
-<td>
-<pre class="p-1 pl-3"><code class="p-1">Bitstream Charter</code></pre>
-</td>
+<td><code>Bitstream Charter</code></td>
 </tr>
 <tr>
 <td>Fedora</td>
-<td><code class="p-1">Caladea</code> (Cambria clone)</td>
+<td><code>Caladea</code> (Cambria clone)</td>
 </tr>
 <tr>
 <td>Everyone else</td>
-<td>
-<pre class="p-1 pl-3"><code class="p-1">serif</code></pre>
-</td>
+<td><code>serif</code></td>
 </tr>
 </tbody>
 </table>
 <p>The CSS to implement this strategy is:</p>
-<pre class="p-1 pl-3"><code class="p-1">/* serif tabular numbers for georgia on macOS, windows */
+<pre class="p-1 pl-3"><code>/* serif tabular numbers for georgia on macOS, windows */
 @font-face {
   font-family: &#34;tabular-numbers&#34;;
   src: local(&#34;charter&#34;), local(&#34;cambria&#34;);
@@ -56,5 +52,5 @@ font-family:
   /* 3 */ bitstream charter, /* debian &amp; ubuntu */
   /* 4 */ caladea,           /* fedora */
   /* 5 */ serif;             /* everything else */</code></pre>
-<p>You can see the results on this <a href="https://codepen.io/client9/pen/pLaZzE">CodePen</a>. There are also a  few variations one could do such as making Charter or Cambria be the primary font, with Georgia being the fallback.  Either way, these stacks should produce a consistent cross-platform experience with a serif font using tabular numbers.</p>
+<p>You can see the results on this <a href="https://codepen.io/client9/pen/pLaZzE">CodePen</a>. There are also a  few variations one could do such as making Charter or Cambria be the primary font, with Georgia being the fallback. Either way, these stacks should produce a consistent cross-platform experience with a serif font using tabular numbers.</p>
 <p>{{< pen id="pLaZzE" >}}</p>

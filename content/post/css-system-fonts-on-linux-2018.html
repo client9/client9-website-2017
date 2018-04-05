@@ -15,14 +15,14 @@ title: CSS System Fonts on Linux 2018
 <li><a href="https://elementary.io">Elementary.io</a> (early 2018)</li>
 </ul>
 <p>and the ran the following and analyzed the results.</p>
-<pre class="p-1 pl-3"><code class="p-1">fc-list -f &#39;%{family[0]}\n&#39; | sort -u</code></pre>
+<pre class="p-1 pl-3"><code>fc-list -f &#39;%{family[0]}\n&#39; | sort -u</code></pre>
 <h2 id="h.hy3qvyv8klb9" class="h4 mt-4 mb-4">What’s Installed</h2>
 <p>These generic fonts were installed on all systems:</p>
 <ul>
-<li><code class="p-1">Nimbus Roman</code>, <code class="p-1">FreeSerif</code>, <code class="p-1">Liberation Serif</code> are all replicas of Times New Roman.</li>
-<li><code class="p-1">Nimbus Sans</code>,  <code class="p-1">FreeSans</code>, <code class="p-1">Liberation Sans</code> are all replicas of Helvetica.</li>
-<li><code class="p-1">Nimbus Mono</code> and <code class="p-1">FreeMono</code> are clones of Courier New.</li>
-<li><code class="p-1">DejaVu Sans</code>, <code class="p-1">DejaVu Serif</code>, <code class="p-1">DejaVu Mono</code> are often the default browser font.  They are much larger in width and height than the ones listed previously.</li>
+<li><code>Nimbus Roman</code>, <code>FreeSerif</code>, <code>Liberation Serif</code> are all replicas of Times New Roman.</li>
+<li><code>Nimbus Sans</code>,  <code>FreeSans</code>, <code>Liberation Sans</code> are all replicas of Helvetica.</li>
+<li><code>Nimbus Mono</code> and <code>FreeMono</code> are clones of Courier New.</li>
+<li><code>DejaVu Sans</code>, <code>DejaVu Serif</code>, <code>DejaVu Mono</code> are often the default browser font.  They are much larger in width and height than the ones listed previously.</li>
 </ul>
 <p>There is little need to ever use these in CSS since they are the default. Beyond that are few cross-system Linux fonts.  However are some are definitely useful.  Below is a table of the most interesting additional fonts:</p>
 <table class="table table-sm">
@@ -93,21 +93,21 @@ title: CSS System Fonts on Linux 2018
 </table>
 <p>Notes:</p>
 <ul>
-<li><code class="p-1">Liberation Mono</code> is installed on all tested linux systems. It’s metric-compatible with Courier New but looks like Apple <a href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</a> or the <code class="p-1">DejaVu Mono</code> (above).  It’s also about the same size a Consolas on windows.</li>
-<li><code class="p-1">URW Palladio L</code> is a clone of Pallatino, which is a system font on macOS and Windows. While definitely usable on the screen, it is maybe most useful for printing.</li>
-<li><code class="p-1">Bitstream Charter</code> is the preginitor of <code class="p-1">Georgia</code>.  Is it is also a system font on macOS.  <a href="https://practicaltypography.com/charter.html">Practical Typography</a> has a nice history of this font as well.</li>
-<li><code class="p-1">Ubuntu</code> (the typeface) and <code class="p-1">Ubuntu Mono</code> are the OS system fonts for Ubuntu and Ubuntu-like systems. The monospace version is more dense and smaller than other monospace fonts.</li>
-<li><code class="p-1">Noto Mono</code> is installed on all Ubuntu systems. Oddly it’s a google font, but not hosted on <a href="https://fonts.google.com/">fonts.google.com</a>.</li>
-<li><code class="p-1">Caladea</code> is a clone of the Microsoft font <a href="https://docs.microsoft.com/en-us/typography/font-list/cambria">Cambria</a>.</li>
-<li><code class="p-1">Cantarell</code> is the OS System font for GNOME/Fedora.</li>
-<li><code class="p-1">Montserrat</code> is very nice sans-serif font for Fedora. It’s used for <a href="https://fedoraproject.org/wiki/Montserrat_Fonts">Fedora marketing</a>.</li>
-<li>Oddly, <code class="p-1">Noto Serif</code> is not on Ubuntu 18.04 but is available on the Mint and Elementary (which are based on ubuntu or debian).</li>
+<li><code>Liberation Mono</code> is installed on all tested linux systems. It’s metric-compatible with Courier New but looks like Apple <a href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</a> or the <code>DejaVu Mono</code> (above).  It’s also about the same size a Consolas on windows.</li>
+<li><code>URW Palladio L</code> is a clone of Pallatino, which is a system font on macOS and Windows. While definitely usable on the screen, it is maybe most useful for printing.</li>
+<li><code>Bitstream Charter</code> is the preginitor of <code>Georgia</code>.  Is it is also a system font on macOS.  <a href="https://practicaltypography.com/charter.html">Practical Typography</a> has a nice history of this font as well.</li>
+<li><code>Ubuntu</code> (the typeface) and <code>Ubuntu Mono</code> are the OS system fonts for Ubuntu and Ubuntu-like systems. The monospace version is more dense and smaller than other monospace fonts.</li>
+<li><code>Noto Mono</code> is installed on all Ubuntu systems. Oddly it’s a google font, but not hosted on <a href="https://fonts.google.com/">fonts.google.com</a>.</li>
+<li><code>Caladea</code> is a clone of the Microsoft font <a href="https://docs.microsoft.com/en-us/typography/font-list/cambria">Cambria</a>.</li>
+<li><code>Cantarell</code> is the OS System font for GNOME/Fedora.</li>
+<li><code>Montserrat</code> is very nice sans-serif font for Fedora. It’s used for <a href="https://fedoraproject.org/wiki/Montserrat_Fonts">Fedora marketing</a>.</li>
+<li>Oddly, <code>Noto Serif</code> is not on Ubuntu 18.04 but is available on the Mint and Elementary (which are based on ubuntu or debian).</li>
 <li>And yes, you read the table correctly, only the latest Ubuntu and Fedora have color emoji. Before that it’s only black-and-white versions.</li>
 </ul>
-<p>Most of these fonts, if not already present, can be installed by the end-user using the package manager of the OS.  In addition, <code class="p-1">Ubuntu</code>, <code class="p-1">Noto Serif</code>, <code class="p-1">Cambria</code>, <code class="p-1">Cantarell</code>, and <code class="p-1">Montserrat</code> are are all hosted as web fonts on <a href="https://fonts.google.com/">fonts.google.com</a>.</p>
+<p>Most of these fonts, if not already present, can be installed by the end-user using the package manager of the OS.  In addition, <code>Ubuntu</code>, <code>Noto Serif</code>, <code>Cambria</code>, <code>Cantarell</code>, and <code>Montserrat</code> are are all hosted as web fonts on <a href="https://fonts.google.com/">fonts.google.com</a>.</p>
 <h2 id="h.sbdckospmo5b" class="h4 mt-4 mb-4">Conclusions and Opinions</h2>
-<p>The good news is there are good system fonts for monospace. Adding <code class="p-1">Liberation Mono</code> to your font stack will prevent some horrible Courier New clone from being used on Linux. Since it’s the about the same size as the system fonts on Windows and macOS, it should blend in well.  <code class="p-1">Noto Mono</code> is a good alternative as well.</p>
-<p>For sans-serif fonts, the choice is less obvious. <code class="p-1">DejaVu Sans</code> is often a default but I find it a bit large and clunky. <code class="p-1">Liberation Sans</code> is option, although not that exciting. The <code class="p-1">Ubuntu</code> font is quite distinctive, and I find <code class="p-1">Cantarell</code> questionable, but they might work for your stacks.  <code class="p-1">Montserrat</code> is very nice, but is Fedora only.</p>
-<p>For serif typefaces, the choices are slim. Fortunately <code class="p-1">Bitstream Charter</code> is a good substitute for <code class="p-1">Georgia</code> on Ubuntu systems.  And <code class="p-1">Caladea</code> on Fedora systems is a good alternative.</p>
+<p>The good news is there are good system fonts for monospace. Adding <code>Liberation Mono</code> to your font stack will prevent some horrible Courier New clone from being used on Linux. Since it’s the about the same size as the system fonts on Windows and macOS, it should blend in well.  <code>Noto Mono</code> is a good alternative as well.</p>
+<p>For sans-serif fonts, the choice is less obvious. <code>DejaVu Sans</code> is often a default but I find it a bit large and clunky. <code>Liberation Sans</code> is option, although not that exciting. The <code>Ubuntu</code> font is quite distinctive, and I find <code>Cantarell</code> questionable, but they might work for your stacks.  <code>Montserrat</code> is very nice, but is Fedora only.</p>
+<p>For serif typefaces, the choices are slim. Fortunately <code>Bitstream Charter</code> is a good substitute for <code>Georgia</code> on Ubuntu systems.  And <code>Caladea</code> on Fedora systems is a good alternative.</p>
 <p>And emoji. Since Ubuntu 18.04 added <a href="https://www.google.com/get/noto/help/emoji/">Noto Color Emoji</a> it’s expected the respins will add it shortly as well. For Fedora, while <a href="https://bugzilla.redhat.com/show_bug.cgi?id%3D1496761">Bug 1496761</a> makes it very clear Fedora will not be using Noto for emoji, my pre-release version has it installed. Either way, it makes sense to add this to your color emoji stack.</p>
 <p>There is one other choice. Given the low volume of traffic, the limited choices for system fonts, and diversity of distributions, perhaps using a web font as fall back is the best option for Linux.</p>

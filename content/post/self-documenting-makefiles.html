@@ -4,10 +4,10 @@ description: Automatically have "make help" print the usage of your Makefile.
 lastmod: "2018-03-04T05:48:20.268Z"
 title: Self-Documenting Makefiles
 ---
-<p><a href="https://www.gnu.org/software/make/manual/html_node/Introduction.html">Makefiles</a> are making a come-back due to wide use in the <a href="https://golang.org">golang</a> community. The only problem is... what do they do? Reading a makefile can be hard -- it&#39;s often ugly and many of targets are for internal use only.  And unlike a good CLI program, there is no equivalent of  <code class="p-1">--help</code>.  </p>
-<p>Wouldn&#39;t it be great if you could mark-up the makefile and have <code class="p-1">make help</code> automatically produce a usage description?</p>
+<p><a href="https://www.gnu.org/software/make/manual/html_node/Introduction.html">Makefiles</a> are making a come-back due to wide use in the <a href="https://golang.org">golang</a> community. The only problem is... what do they do? Reading a makefile can be hard -- it&#39;s often ugly and many of targets are for internal use only.  And unlike a good CLI program, there is no equivalent of  <code>--help</code>.  </p>
+<p>Wouldn&#39;t it be great if you could mark-up the makefile and have <code>make help</code> automatically produce a usage description?</p>
 <p>I first read how to do this at the <a href="https://marmelab.com/blog/">Marme Lab Blog</a> in <a href="https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html">Self-Documented Makefile</a>. There was a follow-up in <a href="https://news.ycombinator.com/item?id%3D11195539">Hacker News</a>, and buried near the bottom, <a href="https://news.ycombinator.com/user?id%3Dm6w6">m6w6</a> posted an even better version:</p>
-<pre class="p-1 pl-3"><code class="p-1"># https://www.client9.com/self-documenting-makefiles/
+<pre class="p-1 pl-3"><code># https://www.client9.com/self-documenting-makefiles/
 help:
         @awk -F &#39;:|##&#39; &#39;/^[^\t].+?:.*?##/ {\
         printf &#34;\033[36m%-30s\033[0m %s\n&#34;, $$1, $$NF \
@@ -15,9 +15,9 @@ help:
 .DEFAULT_GOAL=help
 .PHONY=help</code></pre>
 <p>Add this to the bottom of your makefile (and be sure to replace leading spaces with a tab).  Or as a one-liner in bash:</p>
-<pre class="p-1 pl-3"><code class="p-1">@awk -F &#39;:|##&#39; &#39;/^[^\t].+?:.*?##/ {printf &#34;\033[36m%-30s\033[0m %s\n&#34;, $1, $NF}&#39; Makefile</code></pre>
-<p>Geez, in one line, you got makefile stuff, awk stuff, regular expressions, printf formats and terminal colors.  Understanding this might be hard, but using it is very easy.  Just document your targets on the same line using a <code class="p-1">##</code> comment:</p>
-<pre class="p-1 pl-3"><code class="p-1">build: ## build but do not install
+<pre class="p-1 pl-3"><code>@awk -F &#39;:|##&#39; &#39;/^[^\t].+?:.*?##/ {printf &#34;\033[36m%-30s\033[0m %s\n&#34;, $1, $NF}&#39; Makefile</code></pre>
+<p>Geez, in one line, you got makefile stuff, awk stuff, regular expressions, printf formats and terminal colors.  Understanding this might be hard, but using it is very easy.  Just document your targets on the same line using a <code>##</code> comment:</p>
+<pre class="p-1 pl-3"><code>build: ## build but do not install
         go build .
 install: ## install command
         go install .
@@ -26,11 +26,11 @@ lint: ## run linters
 clean:  ## cleanup
         go clean ./..</code></pre>
 <p>And try it out:</p>
-<pre class="p-1 pl-3"><code class="p-1">$ make help
+<pre class="p-1 pl-3"><code>$ make help
 build               build but do not install
 install             install command
 lint                run linters
 clean               cleanup</code></pre>
-<p>If you want sorted output, by all means add a <code class="p-1">|sort</code> to the end of the <code class="p-1">help</code> target.</p>
-<p>I&#39;ve seen some other solutions to add documentation to Makefiles. One involved <a href="https://medium.com/@tjholowaychuk/modern-make-b55d53cf80d9">wrapping make</a> with another program. I was tempted to have <code class="p-1">make help</code> call a golang program that would parse the Makefile to generate help. But this <code class="p-1">awk</code> trick is by far the best, as it will work out of the box on just about every system.  I&#39;ve tested on macOS, linux, and <a href="https://alpinelinux.org">Alpine Linux</a> with <a href="https://busybox.net">busybox</a> <code class="p-1">awk</code>.</p>
+<p>If you want sorted output, by all means add a <code>|sort</code> to the end of the <code>help</code> target.</p>
+<p>I&#39;ve seen some other solutions to add documentation to Makefiles. One involved <a href="https://medium.com/@tjholowaychuk/modern-make-b55d53cf80d9">wrapping make</a> with another program. I was tempted to have <code>make help</code> call a golang program that would parse the Makefile to generate help. But this <code>awk</code> trick is by far the best, as it will work out of the box on just about every system.  I&#39;ve tested on macOS, linux, and <a href="https://alpinelinux.org">Alpine Linux</a> with <a href="https://busybox.net">busybox</a> <code>awk</code>.</p>
 <p>Thank you <a href="https://marmelab.com/">MarmeLab</a> and <a href="https://news.ycombinator.com/user?id%3Dm6w6">m6w6</a> for this gift.</p>

@@ -10,7 +10,7 @@ title: CSS System Font Stack Monospace v1
 <p>Fortunately, it’s not hard to create a CSS-based system font stack with great monospace fonts. This expands on the work in <a href="http://z12t.com/system-shock-mono/">System Shock Mono</a> that originally described making a monospace CSS system font stack.</p>
 <h2 id="h.3jxyloqfgzj7" class="h4 mt-4 mb-4">CSS</h2>
 <p>Below is a high-quality, monospace stack, that works on most modern (last eight years) systems.</p>
-<pre class="p-1 pl-3"><code class="p-1">/* 1: Current MacOS/iOS font since 2009
+<pre class="p-1 pl-3"><code>/* 1: Current MacOS/iOS font since 2009
  * 2: Current Windows font since 2007
  * 3: If nothing else matches, use the system default.
  *    Either it&#39;s over 10 years old and it&#39;s hopeless.  Or
@@ -24,7 +24,7 @@ font-family:
 <p>This is what it looks like on your browser:</p>
 <p>{{< font-sample "font-family:menlo, consolas, monospace;">}}</p>
 <h2 id="h.8arxzb3ie6gc" class="h4 mt-4 mb-4">Winners</h2>
-<p>If font below is not available on your system, it will be rendered in a <code class="p-1">serif</code> font.</p>
+<p>If font below is not available on your system, it will be rendered in a <code>serif</code> font.</p>
 <p>{{< font-sample "font-family:serif;" >}}</p>
 <h3 id="h.bvctmuefc1zs" class="h5 mt-4 mb-4">Menlo</h3>
 <p>Menlo has been the current Mac (both MacOS and iOS) monospace system font since 2009 with the release of MacOS 10.6.  It is unique to Mac, so it comes first.</p>
@@ -33,7 +33,7 @@ font-family:
 <p><a href="https://www.microsoft.com/typography/fonts/font.aspx?FMID%3D1924">Consolas</a> has been available on Windows products since 2007.</p>
 <p>{{< font-sample "font-family: consolas;" >}}</p>
 <h3 id="h.42fkh5hqg7ho" class="h5 mt-4 mb-4">monospace (default)</h3>
-<p>This is the default <code class="p-1">monospace</code> font and it&#39;s probably something gross like Courier New. But maybe you are lucky and it&#39;s one of the above or something nicer.</p>
+<p>This is the default <code>monospace</code> font and it&#39;s probably something gross like Courier New. But maybe you are lucky and it&#39;s one of the above or something nicer.</p>
 <p>{{< font-sample "font-family: monospace;" >}}</p>
 <h2 id="h.pse728adlc5l" class="h4 mt-4 mb-4">Losers</h2>
 <p>The following fonts were rejected since they are deprecated, don&#39;t work across platforms, or don&#39;t exist.</p>
@@ -56,7 +56,7 @@ font-family:
 <p>The new <a href="https://developer.apple.com/fonts/">San Francisco</a> font has a monospace version &#34;SFMono-Regular&#34;. It&#39;s beautiful.  But it&#39;s <a href="https://forums.developer.apple.com/thread/49001">not a true system font</a> - it&#39;s only available in Apple&#39;s Terminal application and/or other custom applications via XCode.  On macOS, you can <a href="http://osxdaily.com/2018/01/07/use-sf-mono-font-mac/">manually install SFMono-Regular using some hackery</a> so it can be used in CSS, but no such trick exists for iOS. Until Apple clears this up, it&#39;s not going in the font stack.</p>
 <p>{{< font-sample "font-family: SFMono-Regular;">}}</p>
 <h3 id="h.1zmnulowchh3" class="h5 mt-4 mb-4">Any Linux or Android Font</h3>
-<p>I&#39;ve seen Liberation Mono, Ubuntu Mono, Roboto Mono, and Droid Sans Mono listed in other font stacks.  I&#39;m not including them however and just defaulting to <code class="p-1">monospace</code> after the main fonts.  Why?  For Linux:</p>
+<p>I&#39;ve seen Liberation Mono, Ubuntu Mono, Roboto Mono, and Droid Sans Mono listed in other font stacks.  I&#39;m not including them however and just defaulting to <code>monospace</code> after the main fonts.  Why?  For Linux:</p>
 <ul>
 <li>Linux is a moving target with most OS vendors providing updates every six months</li>
 <li>Linux users are more likely to actively customize and replace the default fonts.  In which case, I should not override their preferences</li>
