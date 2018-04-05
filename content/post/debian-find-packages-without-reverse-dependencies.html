@@ -1,0 +1,26 @@
+---
+date: "2017-10-23T00:51:25.060Z"
+description: Find all Debian packages that are either orphans, user commands or critical
+  components.
+lastmod: "2018-04-05T07:32:07.119Z"
+tags:
+- buildops
+title: 'Debian: find packages without reverse dependencies'
+---
+<p>When trying to make minimal OS, one wants to get rid of as many non-critical packages as possible.  Under Debian, <code>apt-cache rdepends --installed</code> on a given package shows the reverse dependencies, or a list of other packages that depends on it.</p>
+<p>The bash script below scans all installed packages and emits a list of packages without any reverse dependencies.</p>
+<p>Packages without any reverse dependencies could be one of three things:</p>
+<ol>
+<li>Orphans - truly not used by anything. <code>apt-get purge</code> away.</li>
+<li>A top-level user command, something like <code>wget</code></li>
+<li>Something critical for booting. Interestingly, <code>bash</code> comes up without reverse dependencies, but it&#39;s hard to imagine Debian booting without it.</li>
+</ol>
+<p>Enjoy!</p>
+<pre class="p-1 pl-3"><code>#!/bin/bash</code></pre>
+<pre class="p-1 pl-3"><code># provides list of packages that have
+# nothing depending on them</code></pre>
+<pre class="p-1 pl-3"><code>for target in `dpkg -l | grep &#39;^ii&#39; | awk &#39;{ print \$2 }&#39;`; do
+   if [ &#34;`apt-cache rdepends --installed $target | wc -l`&#34; = &#34;2&#34; ]; then
+      echo &#34;$target&#34;
+   fi
+done</code></pre>

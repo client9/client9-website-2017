@@ -1,0 +1,28 @@
+---
+date: "2017-04-09"
+description: This cross-platform CSS font stack is based on variations of Palatino.
+lastmod: "2018-04-05T07:35:22.788Z"
+title: CSS System Font Stack Serif Medium v1
+---
+<p>This system font stack is of a medium size, and suitable for body text and larger headlines. The primary fonts are based on variations of <a href="https://en.wikipedia.org/wiki/Palatino">Palatino</a> that are similar in size and use similar numeric forms.</p>
+<p>Mac users get a nice upgrade from Palatino using <a href="https://en.wikipedia.org/wiki/Iowan_Old_Style">Iowan Old Style</a>.  For Windows users there is no obvious alternate.</p>
+<p><del>For linux and other systems, I let it fall to the default `serif` as it&#39;s unclear what the right thing to is.  Many linux systems are heavily customized: in which case using the default is correct.</del>  Update April 2018: For Debian and Ubuntu Linux, the clone URW Palladio L is used since it’s installed by default.  See <a href="https://www.client9.com/css-system-fonts-on-linux-2018/">CSS System Fonts on Linux 2018</a> for details.</p>
+<pre class="p-1 pl-3"><code>font-family:
+  /* 1 */ &#34;Iowan Old Style&#34;,
+  /* 2 */ “Palatino Linotype”
+  /* 3 */ Palatino,
+  /* 4 */ &#34;URW Palladio L&#34;,
+  /* 5 */ serif;</code></pre>
+<p>This is what it looks like on your browser:</p>
+<p>{{< font-sample  style="font-family: iowan old style, palatino linotype, palatino, urw palladio l,serif;" >}} </p>
+<h2 id="h.750726zhkir9" class="h4 mt-4 mb-4">The Fonts</h2>
+<p>If font below is not available on your system, it will be rendered in a monospace font.</p>
+<h3 id="h.8qv80ghqbcxw" class="h5 mt-4 mb-4">Iowan Old Style</h3>
+<p>This is macOS/iOS font is used in iBooks and Safari reader-mode.</p>
+<p>{{< font-sample "font-family: iowan old style, monospace;">}}</p>
+<h3 id="h.du1iikktajhc" class="h5 mt-4 mb-4">Variations of Palatino</h3>
+<p>On Mac it is <code>Palatino</code>, but on Windows it is called <code>Palatino Linotype</code> (or even <code>Book Antiqua</code>).   As mentioned above, <code>URW Palladio L</code> is a clone on some Linux systems.  All are 99.9% the same.</p>
+<p>{{< font-sample "font-family: palatino, palatino linotype, urw palladio l,monospace;" >}}</p>
+<h3 id="h.2dhv93piorz9" class="h5 mt-4 mb-4">serif</h3>
+<p>At this stage you are not on a MacOS, iOS, Windows system and anything goes.  Default to <code>serif</code>.</p>
+<p>{{< font-sample "font-family: serif;" >}}</p>
