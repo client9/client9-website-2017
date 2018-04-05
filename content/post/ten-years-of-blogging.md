@@ -1,7 +1,7 @@
 ---
 title: Ten Years of Blogging
 date: 2017-06-18T04:10:37.771Z
-draft: false
+draft: true
 ---
 A look at various blogging platforms I've used over 10 years.
 <!--more-->
