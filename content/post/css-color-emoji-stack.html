@@ -1,12 +1,12 @@
 ---
 date: "2018-04-04T07:20:37.681Z"
 description: How to build a cross-platform color emoji stack. Even on Linux.
-lastmod: "2018-04-05T06:40:04.887Z"
+lastmod: "2018-04-06T06:30:17.609Z"
 tags:
 - css
 title: CSS Color Emoji Stack
 ---
-<p>Everyone loves emoji, and now finally in 2018 everyone can get them. As mentioned in <a href="https://www.client9.com/css-system-fonts-on-linux-2018/">CSS System Fonts for Linux 2018</a>, Ubuntu 18.04 and Fedora 28 now gain full color emoji support. For these platforms and other older systems, the color emoji fonts must be explicitly added to make them render correctly. You can add them directly to the relevant <code>font-family</code> property, but another way is making a new <code>font-face</code>. Then they can be added to any existing font stack with minimal cut and paste.  Below shows both:</p>
+<p>Everyone loves emoji, and now finally in 2018 everyone can get them. As mentioned in <a href="https://www.client9.com/css-system-fonts-on-linux-2018/">CSS System Fonts for Linux 2018</a>, Ubuntu 18.04 and Fedora 28 now gain color emoji support. For these platforms and other older systems, the color emoji fonts must be explicitly added to make them render correctly. They can be added directly to the relevant <code>font-family</code> property, but another way is making a new <code>font-face</code>. Then they can be added to any existing font stack with minimal cut and paste.  Below shows both:</p>
 <pre class="p-1 pl-3"><code>// define a new font face that just deals with emoji
 @font-face {
   font-family: &#34;color-emoji&#34;;
@@ -27,23 +27,4 @@ body {
      segoe ui symbol, noto color emoji;
 }</code></pre>
 <p>It’s probable that on the latest browsers using the latest OS for macOS, iOS and Windows, this isn’t needed.  However, I’m not going to back-test the numerous historical combinations. As mentioned in <a href="https://www.client9.com/css-system-font-stack-sans-serif-v3/">CSS System Font Stack Sans Serif v3</a> GitHub and Bootstrap add these to their stacks, so it’s likely it’s needed somewhere.</p>
-<p>{{< font-sample "font-family: sans-serif, emoji" >}}</p>
-<h2 id="h.7fm7l77dt0rn" class="h4 mt-4 mb-4">Color Dingbats</h2>
-<p>Before emoji, there were <a href="https://en.wikipedia.org/wiki/Dingbat">dingbats</a>.  In the sample you may see some of the glyphs render in black-and-white.  For iOS and Windows, it seems to (mostly) default to color emojis and there is nothing to do. For macOS and linux, the default often goes to older monochrome dingbats.  It can vary depending on your font stack and it’s only a few characters that are affected. In most cases this is fine and you’ll never notice.</p>
-<p>But if the monochrome dingbats are an issue, make a subset of the color emoji font stack and put it <em>first</em> so the default dingbats aren’t used. To do this,  a <code>unicode-range</code> property is added to restrict the color emoji to a dingbat heavy section. If you don’t put in this restriction, the browser uses odd spacing and letters. Here’s the CSS and a <a href="https://codepen.io/client9/pen/geKNvB">codepen</a> demonstrating this.</p>
-<pre class="p-1 pl-3"><code>// color dingbats for macOS and linux
-@font-face {
-  font-family: &#34;color-dingbat&#34;;
-  src: local(&#34;Apple Color Emoji&#34;),
-       local(&#34;Segoe UI Emoji&#34;), 
-       local(&#34;Segoe UI Symbol&#34;),
-       local(&#34;Noto Color Emoji&#34;);
-  unicode-range: U+2000-2c00;
-}</code></pre>
-<pre class="p-1 pl-3"><code>// and add to front
-body {
-  font-family: color-dingbat, your-font, sans-serif, color-emoji;
-  // or just before the default font.  Depends on the font.
-  font-family: your-font, color-dingbat, sans-serif, color-emoji;
-}</code></pre>
-<p>{{< pen id="geKNvB" >}}</p>
+<p>{{< pen id="qoJoZW" >}}</p>
