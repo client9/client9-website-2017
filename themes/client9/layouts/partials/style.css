@@ -13,8 +13,11 @@ body {
   font-size: 1.25rem; /* {{ .Site.Data.css.bodyFontSize }}; */
   color: #000;
 }
-
-p,li,td {
+a {
+/*  color: #0071bc; */
+  color: #0366d6;
+}
+p,li,td,blockquote {
  font-family: charter,bitstream charter,tabular-numbers,georgia,serif,emoji;
 }
 
