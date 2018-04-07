@@ -31,19 +31,8 @@ pre>code {
 pre {
   line-height: 1.25;
 }
-
 blockquote {
-  margin-top: 0;
-  margin-bottom: 16px;
-  padding: 0 1em;
+  margin-left: 10px;
   color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
-}
-
-blockquote>:first-child {
-  margin-top: 0;
-}
-
-blockquote>:last-child {
-  margin-bottom: 0;
+  line-height: 1.2;
 }
