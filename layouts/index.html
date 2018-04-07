@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 <div>
+<h1 class="h3">Nick Galbreath</h1>
 {{ .Content }}
 <div>
-<h2>Notes and Presentations</h2>
+<h2 class="h4">Notes and Presentations</h2>
 <section id="front">
 <ul>
 {{ range .Data.Pages.ByDate.Reverse -}}

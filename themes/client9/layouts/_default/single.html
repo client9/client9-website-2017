@@ -2,8 +2,8 @@
 <article>
 <h1 class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
 <div class="pb-3">{{ .Description }} </div>
-<div class="small pb-3">
-<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
+<div class="small pb-3 byline">
+<a class="text-dark" style="color:#000" href="https://www.client9.com/">Nick Galbreath</a> &#x00b7; <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
 </div>
 {{- if .Params.draft }}<p id="draft">&#x26A0; Draft &#x26A0;</p>{{ end -}}
 {{ .Content }}
