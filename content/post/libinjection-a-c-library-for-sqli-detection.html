@@ -4,15 +4,15 @@ aliases:
 - article/libinjection-a-c-library-for-sqli-detection-and-generation-through-lexical-analysis-of-real-world-attacks.
 date: "2012-07-25"
 description: Finding SQLi using lexical analysis of real world attacks
-lastmod: "2018-04-07T23:33:49.840Z"
+lastmod: "2018-04-08T01:03:17.027Z"
 tags:
 - presentations
 - security
 title: 'libinjection: a C library for SQLi detection'
 ---
 <p>First presented Wednesday July 25, 2012 at <a href="https://www.blackhat.com/html/bh-us-12/bh-us-12-briefings.html%23Galbreath">Black Hat USA,</a> Las Vegas, NV.  Augustus I/II at 2:45pm.</p>
-<p>{{% slideshare 13621872 %}}</p>
 <p>From the original abstract:</p>
 <blockquote class="blockquote border-left border-left-thick pl-3">SQLi and other injection attacks remain the top OWASP and CERT vulnerability. Current detection attempts frequently involve a myriad of regular expressions which are not only brittle and error prone but also proven by Hanson and Patterson at Black Hat 2005 to never be a complete solution. libinjection is a new open source C library that detects SQLi using lexical analysis. With little upfront knowledge of what SQLi is, the algorithm has been trained on tens of thousands of real SQLi attacks and hundreds of millions of user inputs taken from a Top 50 website for high precision and accuracy. In addition, the algorithm categorizes SQLi attacks and provides templates for new attacks or new fuzzing algorithms. libinjection is available now on github for integration into applications, web application firewalls, or porting to other programming languages.</blockquote>
+<p>{{% slideshare gMLzu4yyMyy6mB %}}</p>
 <p>Nice shout out from <a href="http://www.veracode.com/blog/2012/07/veracode-research-at-blackhat-2012/">Veracode&#39;s blog</a> on what to see at Black Hat 2012:</p>
 <blockquote class="blockquote border-left border-left-thick pl-3">Libinjection: A C library for SQLi Detection and Generation Through Lexical Analysis of Real World Attacks”. Comments: “Although there’s been some nifty research in mitigation and prevention of SQL injection at the language/compiler/API level, there’s been a strong tendency for people to publish a PoC and let it languish. The description appears to be aimed straight at app developers, which is great.</blockquote>
