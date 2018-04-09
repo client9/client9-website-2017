@@ -1,0 +1,13 @@
+---
+date: "2012-07-19"
+description: How Etsy fixed PHP to produce better and safer random numbers
+lastmod: "2018-04-09T06:03:40.670Z"
+tags:
+- security
+- software
+- php
+title: Better Random Numbers in PHP using /dev/urandom
+---
+<p>First posted in <a href="https://codeascraft.com/2012/07/19/better-random-numbers-in-php-using-devurandom/">Code as Craft blog</a>. Here’s the intro:</p>
+<blockquote class="blockquote border-left border-left-thick pl-3">The design of PHP’s basic random number generators <a href="http://php.net/manual/en/function.rand.php">rand</a> and it’s newer variant <a href="http://php.net/manual/en/function.mt-rand.php">mt_rand</a> is based off the <a href="http://www.gnu.org/software/libc/manual/html_node/ISO-Random.html">C Standard Library</a>. For better or worse, both use a single global state and this can be reset using <a href="http://php.net/manual/en/function.srand.php">stand</a> (or <a href="http://php.net/manual/en/function.mt-srand.php">mt_srand</a>). This means anyone (a developer, a third party module, a library) could set the state to a fixed value and every random number following will be the same for every request. Sometimes this is the desired behavior but this can also have disastrous consequences. For instance, everyone’s password reset code could end up being the same.<br/></blockquote>
+<p>Update 2018:  At the time I got a lot of feedback on how I’m wrong and one should really use <code>/dev/random</code>.  Be my guest, don’t call me when your server locks up waiting for “entropy.”  I assume PHP has since fixed how the default random number generation is done, but if not, this technique should still work. </p>
