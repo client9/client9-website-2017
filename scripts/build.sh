@@ -3,7 +3,7 @@
 mkdir -p public/assets static/assets
 
 # write once to public for publishing
-curl -s https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css | css cut --html 'public/**/*.html' --remove ':root' > public/assets/bootstrap-csscut.min.css
+curl -s https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css | css cut --html 'public/**/*.html' --remove ':root' > public/assets/bootstrap-csscut.min.css
 
 # copy it to static/assets for use in hugo run
 cp -f public/assets/bootstrap-csscut.min.css \
