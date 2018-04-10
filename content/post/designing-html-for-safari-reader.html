@@ -1,0 +1,47 @@
+---
+date: "2018-04-10T17:14:56.263Z"
+description: Simple rules to make your HTML page work with Safari Reader Mode, and
+  to create subtitles and bylines
+lastmod: "2018-04-10T18:22:16.608Z"
+tags:
+- html
+- hugo
+title: Designing HTML for Safari Reader Mode
+---
+<p>For whatever reason, Apple doesn’t provide any guidance on how to design for <a href="https://www.nytimes.com/2017/02/14/technology/personaltech/safari-reader.html">Safari Reader Mode </a>. Maybe they want the right to change it at any time or maybe it’s to prevent abuse and advertising sneaking in.  Likewise, it’s near impossible to find any third-party guidance on how to structure your HTML. It’s mostly guessing, checking reader mode, editing HTML, reloading until it works.  But after looking at the Reader javascript source code, and a lot of <em>View Source</em> on numerous publications, I’ve come up with some rules on how to structure HTML to optimize for Reader. There are no doubt many alternative rules and layouts, but this seems to work.</p>
+<h2 id="h.mwvtgrt197rw" class="h4 mt-4 mb-4">Structure the main content</h2>
+<p>The main content (include the headline and other content) should be in a single <code>&lt;article&gt;</code> tag. There may be some other alternate tags that also work.  The article should be text-heavy.  If there are too many links, lists, or other non-text items, Reader might not trigger.  Conversely, if the HTML node immediately prior to the article node is text-heavy it might bleed into the article under Reader mode. </p>
+<h2 id="h.mpz9kc8z0b7s" class="h4 mt-4 mb-4">Structure the title</h2>
+<p>The title of the article should be a <code>&lt;h1&gt;</code> immediately after the <code>&lt;article&gt;</code></p>
+<h2 id="h.s96j6swf6k05" class="h4 mt-4 mb-4">Structure the subtitle</h2>
+<p>Put the subtitle or (short) description as a <code>&lt;div&gt;</code> under the <code>&lt;h1&gt;</code></p>
+<h2 id="h.tjgdlz1jx7am" class="h4 mt-4 mb-4">Add a publication date byline</h2>
+<p>Underneath the subtitle, add a <code>&lt;div&gt;</code> that wraps a <code>&lt;time&gt;</code> tag, with a <code>datetime</code> attribute, for the publication date, will trigger Reader to make a byline with the author and the date.  It’s unclear where the author part comes from.  Possibly from <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Google search</a>, <a href="http://ogp.me">Open Graph</a>, or <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">Twitter Card</a> metadata.</p>
+<p>In <a href="https://gohugo.io">hugo</a>, the static site blog generator, this can be done using:</p>
+<pre class="p-1 pl-3"><code>&lt;div&gt;
+&lt;time datetime=&#34;{{ .Date.Format &#34;2006-01-02T15:04:05Z&#34; }}&#34;&gt;
+{{- .Date.Format (.Site.Params.dateform | default &#34;January 2, 2006&#34;) -}}
+&lt;/time&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="h.yf0whk85mms4" class="h4 mt-4 mb-4">Working with bylines</h2>
+<p>You can make limited custom bylines as well.  If you wrap the <code>&lt;time&gt;</code> in <code>&lt;div&gt;</code> that uses a <code>byline</code> class, Reader uses whatever you have as a byline.  You can use other classes, but <code>byline</code> must be included.  You do not need to define <code>byline</code> in your CSS.  It also needs to be short or Reader might not use it.</p>
+<p>Again, in hugo:</p>
+<pre class="p-1 pl-3"><code>&lt;div class=&#34;byline another-class etc&#34;&gt;
+By &lt;a href=&#34;/&#34;&gt;Your Name Here&lt;/a&gt; --
+&lt;time datetime=&#34;{{ .Date.Format &#34;2006-01-02T15:04:05Z&#34; }}&#34;&gt;
+{{- .Date.Format (.Site.Params.dateform | default &#34;January 2, 2006&#34;) -}}
+&lt;/time&gt;
+&lt;/div&gt;</code></pre>
+<h2 id="h.8zmvthrfjp8u" class="h4 mt-4 mb-4">All Together</h2>
+<p>In the end, the main HTML for the content should look like:</p>
+<pre class="p-1 pl-3"><code>&lt;article&gt;
+&lt;h1&gt;Your title&lt;h1&gt;
+&lt;div&gt;Your subtitle&lt;/div&gt;
+&lt;div class=&#34;byline&#34;&gt;
+By &lt;a href=&#34;/&#34;&gt;Your Name&lt;/a&gt; -- 
+&lt;time datetime=&#34;2018-04-06T05:52:50Z&#34;&gt;April 6, 2018&lt;/time&gt;
+&lt;/div&gt;
+&lt;p&gt; article content… &lt;/p&gt;
+&lt;p&gt; article content… &lt;/p&gt;
+&lt;/article&gt;</code></pre>
+<p>It’s likely there are many other variations that work, but this should provide a good base to start with. I have no investigated images, but Reader does provide some support for them. When in doubt, <em>View Source</em> on a major publication is your friend.</p>
