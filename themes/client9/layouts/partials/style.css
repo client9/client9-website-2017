@@ -39,3 +39,10 @@ blockquote {
   color: #6a737d;
   line-height: 1.2;
 }
+
+/* used for displaying font-awesome svg icons */
+.inline-svg {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+}
