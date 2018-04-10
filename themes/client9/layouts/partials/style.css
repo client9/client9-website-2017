@@ -40,9 +40,15 @@ blockquote {
   line-height: 1.2;
 }
 
+.nav-link {
+  color: #000;
+}
 /* used for displaying font-awesome svg icons */
 .inline-svg {
   display: inline-block;
   height: 1rem;
   width: 1rem;
+}
+.inline-svg:hover {
+  color:#0366d6;
 }
