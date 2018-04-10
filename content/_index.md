@@ -9,4 +9,3 @@ Title: ""
 * A large number of presentations are on
   [SpeakerDeck](https://speakerdeck.com/ngalbreath).  Older ones are on
   [SlideShare](https://www.slideshare.net/nickgsuperstar/presentations).
-* Say hello on [Twitter](https://twitter.com/NGalbreath), [GitHub](https://github.com/client9) or even email `nickg@guess`.
