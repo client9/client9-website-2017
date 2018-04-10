@@ -23,9 +23,6 @@
 <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{- end }}
-<!--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
--->
 <link rel="stylesheet" href="/assets/bootstrap-csscut.min.css">
 <style>
 {{ partial "style.css"  . | safeCSS  }}
@@ -35,3 +32,11 @@
 </head>
 <body>
 <div class="container mt-4"><div class="row justify-content-center"><div class="col-lg-8">
+<div class="header row mb-3 ml-3">
+	<div class="float-left"><a href="/"><img src="https://avatars0.githubusercontent.com/u/217179?s=64" class="rounded-circle"></a>
+	</div>
+	<div class="ml-3">
+		<div class=""><a class="text-body" href="/">Nick Galbreath</a></div>
+		<div class="small"> CTO and co-founder of <a class="text-body" href="https://www.signalsciences.com/">Signal Sciences</a></div>
+	</div>
+</div>

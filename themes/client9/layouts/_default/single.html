@@ -3,12 +3,11 @@
 <h1 class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
 <div class="">{{ .Description }} </div>
 <div class="small pb-3 byline">
-<a class="text-dark" style="color:#000" href="/">Nick Galbreath</a> &#x00b7; <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
+<a class="text-body" href="/">Nick Galbreath</a> &#x00b7; <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
 </div>
 {{- if .Params.draft }}<p id="draft">&#x26A0; Draft &#x26A0;</p>{{ end -}}
 {{ .Content }}
 </article>
-
 {{ with .Params.tags }}
 <div>{{ range . }}
 <a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
