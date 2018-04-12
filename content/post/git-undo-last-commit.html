@@ -15,14 +15,14 @@ title: Git Undo Last Commit
 </ul>
 <h2 id="h.i5z6xr4l7zue" class="h4 mt-4 mb-4">How do I just change the last commit message?</h2>
 <p>If you didn&#39;t push, and just need to change the last commit message, use <code>--amend</code></p>
-<pre class="p-1 pl-3"><code>git commit --amend -m &#34;new commit message&#34;</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>git commit --amend -m &#34;new commit message&#34;</code></pre>
 <p>See <a href="http://stackoverflow.com/questions/179123/edit-an-incorrect-commit-message-in-git">Stack Overflow</a>  or <a href="https://help.github.com/articles/changing-a-commit-message">GitHub</a>  for more details.</p>
 <h2 id="h.lpa3ecbz2obc" class="h4 mt-4 mb-4">How do I undo the last commit and but keep the changes locally</h2>
 <p>This is useful when you forgot to add a file or what to make a few more edits. If you did not push, then, this makes it so it never happened and restore everything just as you never typed <code>git commit</code></p>
-<pre class="p-1 pl-3"><code>git reset HEAD~1</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>git reset HEAD~1</code></pre>
 <h2 id="h.scnjuh3v3cl9" class="h4 mt-4 mb-4">Undo the commit and discard the changes</h2>
 <p>Same as above but also reverts any changes to to file as if you never did the edits at all.</p>
-<pre class="p-1 pl-3"><code>git reset --hard HEAD~1</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>git reset --hard HEAD~1</code></pre>
 <p>See <a href="https://stackoverflow.com/questions/927358/how-to-undo-the-last-git-commit">Stack Overflow</a> for more details.</p>
 <h2 id="h.2enm9hnty6p6" class="h4 mt-4 mb-4">Undo a push and the commit</h2>
 <p>The cute answer is &#34;keep going and don&#39;t try to revert.&#34; That&#39;s not appropriate in all occasions, so if you need to undo <em>a push and a commit</em>, see this <a href="http://stackoverflow.com/questions/1270514/undoing-a-git-push">Stack Overflow</a> thread.</p>

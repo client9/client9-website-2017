@@ -12,7 +12,7 @@ title: Styling Computer Source Code
 <p>Many blog engines rewrite content to improve typography: smart quotes, changing dash to a Unicode minus-sign, etc. This looks great in normal prose, but make sure it&#39;s not doing this to code blocks. If someone cut and pastes your code, it won&#39;t work. Historically a number of popular platforms destroyed code blocks.</p>
 <h2 id="h.450tpdbzolgk" class="h4 mt-4 mb-4">Use a modern monospace system font</h2>
 <p>On most browsers the default monospace font is something horrible like Courier, or worse Courier New.  These are really unsuited for computer code. To fix this you don’t need use a web font, with it’s inherit complexity and performance costs. Your computer and your visitor’s computer already has a number of excellent monospace fonts that are usable in CSS. I’ve written about these <a href="https://www.client9.com/css-system-font-stack-monospace-v2/">native font stacks</a> a few times, but in summary, this is what <a href="https://getbootstrap.com">Bootstrap</a> uses:</p>
-<pre class="p-1 pl-3"><code>code, kbd, var {
+<pre class="p-1 pl-3 lines-dense"><code>code, kbd, var {
   font-family:
     SFMono-Regular,
     Menlo,
@@ -25,15 +25,15 @@ title: Styling Computer Source Code
 <p>This will make your code look great, no matter what platform your visitor is using.</p>
 <h2 id="h.wwmlp4xm3uhr" class="h4 mt-4 mb-4">Watch out for line breaks </h2>
 <p>By default HTML will treat white space and the plain dash as a good place to insert a line break. This can cause a mess. For example:</p>
-<pre class="p-1 pl-3"><code>to prevent writes use the flag &lt;code&gt;--dry-run&lt;/code&gt;</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>to prevent writes use the flag &lt;code&gt;--dry-run&lt;/code&gt;</code></pre>
 <p>can render as:</p>
-<pre class="p-1 pl-3"><code>to prevent writes use the flag --
+<pre class="p-1 pl-3 lines-dense"><code>to prevent writes use the flag --
 dry-run</code></pre>
 <p>or</p>
-<pre class="p-1 pl-3"><code>to prevent writes use the flag --dry
+<pre class="p-1 pl-3 lines-dense"><code>to prevent writes use the flag --dry
 -run</code></pre>
 <p>Prevent this by setting the CSS property of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">white-space</a> to <code>nowrap.  </code></p>
-<pre class="p-1 pl-3"><code>/* for inline code */
+<pre class="p-1 pl-3 lines-dense"><code>/* for inline code */
 code, kbd, var {
   white-space: nowrap;
 }
@@ -43,7 +43,7 @@ pre&gt;code {
 }</code></pre>
 <h2 id="h.w8gpe77uuwpl" class="h4 mt-4 mb-4">Handle embedded tabs</h2>
 <p>If you do use tabs or if they sneak in by accident, you can control how much space they represent using this ancient CSS property <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/tab-size">tab-size</a>:</p>
-<pre class="p-1 pl-3"><code>/* set tabs to 2 spaces */
+<pre class="p-1 pl-3 lines-dense"><code>/* set tabs to 2 spaces */
 tab-size: 2</code></pre>
 <p>If you never use tabs, then consider setting this to large number to intentionally throw off the design so you can find and delete the hidden tabs.</p>
 <h2 id="h.b9sz6jrrfr1j" class="h4 mt-4 mb-4">Tone down the syntax colors</h2>

@@ -6,16 +6,16 @@ lastmod: "2018-03-12T12:05:10.502Z"
 title: Parallelize Shell or Bash Scripts Using Xargs
 ---
 <p>Who doesn&#39;t want to go faster? It is common to have a setup script that downloads various packages or tools. Here&#39;s an example: </p>
-<pre class="p-1 pl-3"><code>#!/bin/sh -ex</code></pre>
-<pre class="p-1 pl-3"><code># hugo https://gohugo.io
+<pre class="p-1 pl-3 lines-dense"><code>#!/bin/sh -ex</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code># hugo https://gohugo.io
 go get github.com/gohugoio/hugo</code></pre>
-<pre class="p-1 pl-3"><code># https://github.com/client9/misspell
+<pre class="p-1 pl-3 lines-dense"><code># https://github.com/client9/misspell
 ./godownloader-misspell 0.3.4</code></pre>
-<pre class="p-1 pl-3"><code># shellcheck.net
+<pre class="p-1 pl-3 lines-dense"><code># shellcheck.net
 docker pull koalaman/shellcheck</code></pre>
 <p>It runs one line after another in serial. That&#39;s slow.</p>
 <p>But notice how each line doesn&#39;t depend on any other (and comment and blank lines don&#39;t matter). If you can write a script in such a way, then you really speed things up by running in parallel using <a href="https://en.wikipedia.org/wiki/Xargs">xargs</a>:</p>
-<pre class="p-1 pl-3"><code>cat setup.sh | xargs -P4 -ICMD /bin/sh -exc CMD</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>cat setup.sh | xargs -P4 -ICMD /bin/sh -exc CMD</code></pre>
 <p>That&#39;s it. Your script could run 4x faster.</p>
 <p>Where <code>-P4</code> is number of processes to run in parallel. Since most of the time it is network calls, there is no harm in making this 8 or even 16.</p>
 <p>Where <code>-ICMD</code> is ... is the magic of mixing xargs and shell. You can use something else other than <code>CMD</code> if you want. It&#39;s the <code>-I</code> that&#39;s important and using the same word as the last arg. </p>

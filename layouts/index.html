@@ -2,8 +2,7 @@
 <div>
 {{ .Content }}
 <div>
-<h2 class="h4">Notes and Presentations</h2>
-<section id="front">
+<section>
 <ul>
 {{ range .Data.Pages.ByDate.Reverse -}}
 {{ if eq .Type "post" }}

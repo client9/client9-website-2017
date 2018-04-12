@@ -9,30 +9,30 @@ tags:
 title: Never Use Naked If Statements
 ---
 <p>For many programming languages based on the  C-syntax style, the body of an if-statement is delimited by braces:</p>
-<pre class="p-1 pl-3"><code>if (foo == 1) {
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1) {
     delete_everything();
 }</code></pre>
 <p>However, in Javascript, Java, PHP, C and C++, Java, PHP, “naked” if-statements are allowed. These have a single body statement without using braces.</p>
-<pre class="p-1 pl-3"><code>if (foo == 1) delete_everything();</code></pre>
-<pre class="p-1 pl-3"><code>if (foo == 1)
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1) delete_everything();</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1)
     delete_everything();</code></pre>
 <p>There are some other variation of naked statements, such are naked for-loops, but this is the most common.</p>
 <p>There are two reason never to use naked if-statements. First is they cause less than optimal diffs. Second, they can introduce dangerous logic changes.</p>
 <h2 id="h.wm2n3ghgeyo" class="h4 mt-4 mb-4">Diff Unfriendly</h2>
 <p>Modern programming is team sport, and a program is altered through a series of small changes (diffs) over time. These diffs are often scanned, and based on them, a full review is determined or not. Thus one really wants pull requests, commits and diffs to be as small and as targeted as possible, without a lot of noise. It’s very often the case that the body of an if-statement needs to be expanded, or debugging added. Let’s look at the diff of naked examples compared to:</p>
-<pre class="p-1 pl-3"><code>if (foo == 1) {
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1) {
     DEBUG(&#34;foo is 1)&#34;;
     delete_everything();
 }</code></pre>
 <p>The first result is a complete rewrite of the line:</p>
-<pre class="p-1 pl-3"><code>&lt; if (foo == 1) delete_everything();
+<pre class="p-1 pl-3 lines-dense"><code>&lt; if (foo == 1) delete_everything();
 ---
 &gt; if (foo == 1) {
 &gt;     DEBUG(&#34;foo is 1)&#34;;
 &gt;     delete_everything();
 &gt; }</code></pre>
 <p>The second form is even worse as it results in a more confusing partial rewrite.</p>
-<pre class="p-1 pl-3"><code>1c1,2
+<pre class="p-1 pl-3 lines-dense"><code>1c1,2
 &lt; if (foo == 1)
 ---
 &gt; if (foo == 1) {
@@ -40,22 +40,22 @@ title: Never Use Naked If Statements
 2a4
 &gt; }</code></pre>
 <p>If you used the normal, multi-line, with-brace format, the diff becomes the benign:</p>
-<pre class="p-1 pl-3"><code>&gt;     DEBUG(&#34;foo is 1&#34;);</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>&gt;     DEBUG(&#34;foo is 1&#34;);</code></pre>
 <p>A single change like this might not be a big deal, but often debugging is added in numerous places. With naked if-statements, adding trivial debugging statements turns a simple diff into a multi-page one.</p>
 <h2 id="h.4u29oht7vga4" class="h4 mt-4 mb-4">Accidental Logic Changes</h2>
 <p>The previous examples assumed the programmer did the right thing and convert a naked if-statement into one with braces. But what if they just added the debug statement naively?</p>
-<pre class="p-1 pl-3"><code>if (foo == 1)
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1)
     DEBUG(&#34;foo is 1)&#34;;
     delete_everything();</code></pre>
 <p>The diff is still simple:</p>
-<pre class="p-1 pl-3"><code>&gt;     DEBUG(&#34;foo is 1&#34;);</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>&gt;     DEBUG(&#34;foo is 1&#34;);</code></pre>
 <p>But the logic has dramatically changed, since the new version is actually:  </p>
-<pre class="p-1 pl-3"><code>if (foo == 1)
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1)
     DEBUG(&#34;foo is 1)&#34;;
 delete_everything();</code></pre>
 <p>oops. </p>
 <p>This can also happen in reverse, where quick commenting out of a line can also trigger logic changes.</p>
-<pre class="p-1 pl-3"><code>if (foo == 1)
+<pre class="p-1 pl-3 lines-dense"><code>if (foo == 1)
 //    delete_everything();
 copy_files();</code></pre>
 <h2 id="h.ttv65kh540ch" class="h4 mt-4 mb-4">In Summary</h2>

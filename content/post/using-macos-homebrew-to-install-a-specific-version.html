@@ -15,20 +15,20 @@ title: Using macOS Homebrew to Install a Specific Version
 <p>The good news is that getting the exact version you want already is indexed and ready, using git. It&#39;s more work, but it&#39;s more accurate too.</p>
 <h2 id="h.tiqgv4ce1gp5" class="h4 mt-4 mb-4">Find the Hash, Locally</h2>
 <p>If you are just trying to lock to the latest or a very recently edition, the fastest way is to use</p>
-<pre class="p-1 pl-3"><code>brew log -p NAME</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>brew log -p NAME</code></pre>
 <p>Then to <code>brew install</code> this version use the raw content from GitHub by replacing <code>_HASH_</code> and <code>_NAME_</code> appropriately:</p>
-<pre class="p-1 pl-3"><code>BREWURL=https://raw.githubusercontent.com/Homebrew/homebrew-core
+<pre class="p-1 pl-3 lines-dense"><code>BREWURL=https://raw.githubusercontent.com/Homebrew/homebrew-core
 brew install ${BREWURL}/HASH/Formula/NAME.rb</code></pre>
 <h2 id="h.2gbyqv6gq4oq" class="h4 mt-4 mb-4">Find the Hash, Remote Edition</h2>
 <p>Homebrew provided a nice command to pop open a browser window pointing to the change log of a formula:</p>
-<pre class="p-1 pl-3"><code>brew info --github NAME</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>brew info --github NAME</code></pre>
 <p>It takes a few clicks to get the full commit hash. First you&#39;ll have to click the <code>History</code> button, find the change you like, then click on another icon to get the full hash. It sounds gross, but in practice it&#39;s not too hard.</p>
 <h2 id="h.uqqmtjqdh40m" class="h4 mt-4 mb-4">When GitHub Lets You Down</h2>
 <p>The <code>Homebrew/homebrew-core</code> repo is very large and using GitHub to look at the commit history for a particular file may timeout. In this case you&#39;ll get a &#34;Sorry I&#39;m being lazy, go do it yourself&#34; message. OK then.</p>
 <p>Also because it&#39;s so big, Homebrew only downloads a bit.  However, you can get the full Homebrew history with:</p>
-<pre class="p-1 pl-3"><code>git -C &#34;$(brew --repo homebrew/core)&#34; fetch --unshallow</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>git -C &#34;$(brew --repo homebrew/core)&#34; fetch --unshallow</code></pre>
 <p>Then use git to find the entry you want:</p>
-<pre class="p-1 pl-3"><code>git -C &#34;$(brew --repo homebrew/core)&#34; log master -- Formula/phantomjs.rb</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>git -C &#34;$(brew --repo homebrew/core)&#34; log master -- Formula/phantomjs.rb</code></pre>
 <p>As before, craft the URL back to GitHub using the correct hash.</p>
 <h2 id="h.mwccxaogzs5n" class="h4 mt-4 mb-4">Next Steps</h2>
 <p>Now that you know how to install a specific version, it would be good time to review how `brew pin` works so you don&#39;t lose all your hard work.</p>

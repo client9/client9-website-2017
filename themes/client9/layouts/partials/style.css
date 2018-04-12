@@ -8,47 +8,54 @@ font-family: "emoji";
 src: local("Apple Color Emoji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
 }
 
+/* fix bootstrap defaults */
+/* change system font to cover more OS, make text large, black */
 body {
   font-family: -apple-system,BlinkMacSystemFont,segoe ui,ubuntu,sans-serif,emoji;
   font-size: 1.25rem; /* {{ .Site.Data.css.bodyFontSize }}; */
+}
+
+/* fix default color from gray to black
+ * should be fixed by directly hacking bootstrap */
+body, code, pre {
   color: #000;
 }
+
+/* default bootstrap blue is ghastly.
+ * should be fixed by directly hacking bootstrap */
 a {
   color: #0366d6;
 }
+
+/* use serif font for article text */
 p,li,td,blockquote {
  font-family: charter,bitstream charter,tabular-numbers,georgia,serif,emoji;
 }
 
+/* fix wrapping rules for code */
 code, kbd, var {
   tab-size: 2;
   white-space: nowrap;
-  color: #000;
 }
 pre>code {
   white-space: pre;
-  color:#000;
-}
-pre {
-  line-height: 1.25;
 }
 
+/* utility to tighten line-height */
 .lines-dense {
   line-height: 1.2;
 }
 
-blockquote {
-  margin-left: 10px;
-  color: #6a737d;
-  line-height: 1.2;
-}
-
+/* nav links are links in the header
+ * they are styled differently than in-article links */
 .nav-link {
   display: inline-block;
   color: #000;
   padding: 0;
 }
+
 /* used for displaying font-awesome svg icons */
+/* don't think this can be done using boot-strap utils */
 .inline-svg {
   display: inline-block;
   height: 1.10rem;

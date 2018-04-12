@@ -13,11 +13,11 @@ title: CSS System Font Stack Sans Serif v3
 <h2 id="h.4mapwjsjbw1d" class="h4 mt-4 mb-4">What’s Changed?</h2>
 <p><a href="https://github.com/">Github.com</a> has now over six months of using a system font stack. <a href="https://getbootstrap.com">Bootstrap</a> (the UI framework) with the v4 release has also switched to a native system font stacks. Given the <a href="https://www.alexa.com/siteinfo/github.com">scale</a> and <a href="https://trends.builtwith.com/docinfo/Twitter-Bootstrap">scope</a> of these projects, their stacks are likely to work well across a diverse set of audiences.</p>
 <p><a href="https://twitter.com/mdo">Mark Otto</a> who is behind both GitHub and Bootstrap wrote a nice summary of the rollout of <a href="http://markdotto.com/2018/02/07/github-system-fonts/">GitHub System Fonts</a>. In particular, <code>system-ui </code>does not work as expected:</p>
-<blockquote class="blockquote border-left border-left-thick pl-3">Thankfully our users are always quick to notice problems and were quick to point out to our Support teams that the new system-ui alias caused issues in WebKit and Blink browsers with non-English languages. </blockquote>
+<blockquote class="pl-3 lines-dense">Thankfully our users are always quick to notice problems and were quick to point out to our Support teams that the new system-ui alias caused issues in WebKit and Blink browsers with non-English languages. </blockquote>
 <p>So <code>system-ui</code> is out and <code>BlinkMacSystemFont</code> is back in.</p>
 <h2 id="h.ydgce03mtsc6" class="h4 mt-4 mb-4">GitHub 2018</h2>
 <p>Surprising they use regular Helvetica instead of Helvetica Neue, but at this point it doesn’t matter very much. The browser or OS is really ancient. Or it’s Android, which defaults to <code>sans-serif</code> which is actually <code>Roboto</code>, a fine choice.</p>
-<pre class="p-1 pl-3"><code>font-family:
+<pre class="p-1 pl-3 lines-dense"><code>font-family:
     -apple-system,
     BlinkMacSystemFont,
     &#34;Segoe UI&#34;,
@@ -30,7 +30,7 @@ title: CSS System Font Stack Sans Serif v3
 <p>{{< font-sample "font-family: -apple-system,BlinkMacSystemFont,segoe ui,helvetica,arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol">}}</p>
 <h2 id="h.peibtw8z7ta3" class="h4 mt-4 mb-4">Bootstrap V4.0.0</h2>
 <p>Unsurprisingly, Bootstrap’s stack is similar to what Github uses. This adds <code>Roboto</code> (why?) and swaps <code>Helvetica</code> for <code>Helvetica Neue</code>. Otherwise the same.</p>
-<pre class="p-1 pl-3"><code>font-family: 
+<pre class="p-1 pl-3 lines-dense"><code>font-family: 
     -apple-system,
     BlinkMacSystemFont,
     &#34;Segoe UI&#34;,

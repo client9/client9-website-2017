@@ -12,15 +12,15 @@ title: Uninstall Xcode on macOS Sierra
 <p>While title says this is for macOS Sierra, this should work for any version. And we assume that you are familiar with basic Mac functionality and using Terminal or the command line. Let&#39;s get cleaning!</p>
 <h2 id="h.hnky33vknls0" class="h4 mt-4 mb-4">Delete legacy Xcode installs</h2>
 <p>If you started with an old version of Xcode, this may need to be done first. If you get a &#34;not found&#34; error, don&#39;t worry and skip to the next step.</p>
-<pre class="p-1 pl-3"><code>sudo /Developer/Library/uninstall-devtools --mode=all</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>sudo /Developer/Library/uninstall-devtools --mode=all</code></pre>
 <h2 id="h.4kbbmyuimo0a" class="h4 mt-4 mb-4">Trash Xcode.app</h2>
 <p>Drag-n-drop Xcode into the trash can. Then empty the trash. You know how to do this.</p>
 <h2 id="h.cz27zhu9sf0f" class="h4 mt-4 mb-4">Delete Xcode 💩</h2>
 <p>Even after being trashed, Xcode turds still lurk. Delete them.</p>
-<pre class="p-1 pl-3"><code>sudo rm -rf ~/Library/Developer/
+<pre class="p-1 pl-3 lines-dense"><code>sudo rm -rf ~/Library/Developer/
 sudo rm -rf ~/Library/Caches/com.apple.dt.Xcode</code></pre>
 <p>Really old installs might have one more step:</p>
-<pre class="p-1 pl-3"><code>sudo rm -rf /Library/Developer/CommandLineTools</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>sudo rm -rf /Library/Developer/CommandLineTools</code></pre>
 <h2 id="h.55c194fa2vqm" class="h4 mt-4 mb-4">Win</h2>
 <p>Double check that the command line tools are also uninstalled. Open up Terminal and type <code>make</code>. If everything worked, an annoying dialog will pop up saying how it couldn&#39;t find Xcode.</p>
 <h2 id="h.5qmx63oduklx" class="h4 mt-4 mb-4">Bonus: Rebuild Spotlight and AppStore indexes</h2>

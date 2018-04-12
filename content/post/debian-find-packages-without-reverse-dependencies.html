@@ -16,10 +16,10 @@ title: 'Debian: find packages without reverse dependencies'
 <li>Something critical for booting. Interestingly, <code>bash</code> comes up without reverse dependencies, but it&#39;s hard to imagine Debian booting without it.</li>
 </ol>
 <p>Enjoy!</p>
-<pre class="p-1 pl-3"><code>#!/bin/bash</code></pre>
-<pre class="p-1 pl-3"><code># provides list of packages that have
+<pre class="p-1 pl-3 lines-dense"><code>#!/bin/bash</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code># provides list of packages that have
 # nothing depending on them</code></pre>
-<pre class="p-1 pl-3"><code>for target in `dpkg -l | grep &#39;^ii&#39; | awk &#39;{ print \$2 }&#39;`; do
+<pre class="p-1 pl-3 lines-dense"><code>for target in `dpkg -l | grep &#39;^ii&#39; | awk &#39;{ print \$2 }&#39;`; do
    if [ &#34;`apt-cache rdepends --installed $target | wc -l`&#34; = &#34;2&#34; ]; then
       echo &#34;$target&#34;
    fi

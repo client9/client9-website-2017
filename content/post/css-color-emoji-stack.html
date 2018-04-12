@@ -7,7 +7,7 @@ tags:
 title: CSS Color Emoji Stack
 ---
 <p>As part of a solid cross-platform system stack is emoji rendering.  As mentioned in <a href="https://www.client9.com/css-system-fonts-on-linux-2018/">CSS System Fonts for Linux 2018</a>, Ubuntu 18.04 and Fedora 28 gain color emoji support.  While most platforms now render emoji by default, the results are often inconsistent. Most emoji will be in color, but perhaps not the system emoji, and some emoji by default will render in monochrome versions. To help resolve these issues, color emoji fonts must be explicitly added to make them render correctly. They can be added directly to the relevant <code>font-family</code> property, but another way is making a new <code>font-face</code>. Then they can be added to any existing font stack with minimal cut and paste.  Below shows both:</p>
-<pre class="p-1 pl-3"><code>// define a new font face that just deals with emoji
+<pre class="p-1 pl-3 lines-dense"><code>// define a new font face that just deals with emoji
 @font-face {
   font-family: &#34;color-emoji&#34;;
   src: local(&#34;Apple Color Emoji&#34;),
@@ -15,12 +15,12 @@ title: CSS Color Emoji Stack
        local(&#34;Segoe UI Symbol&#34;),
        local(&#34;Noto Color Emoji&#34;);
 }</code></pre>
-<pre class="p-1 pl-3"><code>// add it *after* the serif, sans-serif or monospace
+<pre class="p-1 pl-3 lines-dense"><code>// add it *after* the serif, sans-serif or monospace
 // ending default.
 body {
   font-family: your-font, sans-serif, color-emoji;
 }</code></pre>
-<pre class="p-1 pl-3"><code>// the other way is explicitly adding them
+<pre class="p-1 pl-3 lines-dense"><code>// the other way is explicitly adding them
 body {
   font-family: your-font, sans-serif,
      apple color emoji, segoe ui emoji,
