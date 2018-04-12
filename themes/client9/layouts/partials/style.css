@@ -14,7 +14,6 @@ body {
   color: #000;
 }
 a {
-/*  color: #0071bc; */
   color: #0366d6;
 }
 p,li,td,blockquote {
@@ -33,6 +32,11 @@ pre>code {
 pre {
   line-height: 1.25;
 }
+
+.lines-dense {
+  line-height: 1.2;
+}
+
 blockquote {
   margin-left: 10px;
   color: #6a737d;
