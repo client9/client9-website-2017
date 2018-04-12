@@ -1,14 +1,17 @@
 #!/bin/sh -ex
+
+touch themes/client9/layouts/partials/style-bootstrap.css
+
+# generate the html
 ./bin/hugo -t client9
-mkdir -p public/assets static/assets
 
-# write once to public for publishing
-curl -s https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css | css cut --html 'public/**/*.html' --remove ':root' > public/assets/bootstrap-csscut.min.css
+# compute minimal bootstrap
+curl -s https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css | css cut --html 'public/**/*.html' --remove ':root' > themes/client9/layouts/partials/style-bootstrap.css
 
-# copy it to static/assets for use in hugo run
-cp -f public/assets/bootstrap-csscut.min.css \
-      static/assets/bootstrap-csscut.min.css
+# regenerate with minimal, embedded bootstrap
+./bin/hugo -t client9
 
+# let's shrink!
 ./bin/minify \
     --html-keep-whitespace \
     --html-keep-end-tags \
