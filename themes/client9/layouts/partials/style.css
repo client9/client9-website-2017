@@ -47,8 +47,8 @@ blockquote {
 /* used for displaying font-awesome svg icons */
 .inline-svg {
   display: inline-block;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.10rem;
+  width: 1.10rem;
 }
 .inline-svg:hover, .inline-svg:focus {
   color:#0366d6;
