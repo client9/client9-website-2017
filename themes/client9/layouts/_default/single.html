@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-<article>
+<main>
 <h1 class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
 <div class="">{{ .Description }} </div>
 <div class="small pb-3 byline">
@@ -7,7 +7,7 @@
 </div>
 {{- if .Params.draft }}<p id="draft">&#x26A0; Draft &#x26A0;</p>{{ end -}}
 {{ .Content }}
-</article>
+</main>
 {{ with .Params.tags }}
 <div>{{ range . }}
 <a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
