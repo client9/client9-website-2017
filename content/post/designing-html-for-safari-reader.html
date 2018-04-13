@@ -2,7 +2,7 @@
 date: "2018-04-10T17:14:56.263Z"
 description: Simple rules to make your HTML page work with Safari Reader Mode, and
   to create subtitles and bylines
-lastmod: "2018-04-10T18:24:14.523Z"
+lastmod: "2018-04-13T23:21:50.714Z"
 tags:
 - html
 - hugo
@@ -10,9 +10,9 @@ title: Designing HTML for Safari Reader Mode
 ---
 <p>For whatever reason, Apple doesn’t provide any guidance on how to design for <a href="https://www.nytimes.com/2017/02/14/technology/personaltech/safari-reader.html">Safari Reader Mode </a>. Maybe they want the right to change it at any time or maybe it’s to prevent abuse and advertising sneaking in.  Likewise, it’s near impossible to find any third-party guidance on how to structure your HTML. It’s mostly guessing, checking reader mode, editing HTML, reloading until it works.  But after looking at the Reader javascript source code, and a lot of <em>View Source</em> on numerous publications, I’ve come up with some rules on how to structure HTML to optimize for Reader. There are no doubt many alternative rules and layouts, but this seems to work.</p>
 <h2 id="h.mwvtgrt197rw" class="h4 mt-4 mb-4">Structure the main content</h2>
-<p>The main content (include the headline and other content) should be in a single <code>&lt;article&gt;</code> tag. There may be some other alternate tags that also work.  The article should be text-heavy.  If there are too many links, lists, or other non-text items, Reader might not trigger.  Conversely, if the HTML node immediately prior to the article node is text-heavy it might bleed into the article under Reader mode. </p>
+<p>The main content (include the headline and other content) should be in a single <code>&lt;main&gt;</code> tag.  Other tags like <code>&lt;article&gt;</code> also work.  The article should be text-heavy.  If there are too many links, lists, or other non-text items, Reader might not trigger.  Conversely, if the HTML node immediately prior to the article node is text-heavy it might bleed into the article under Reader mode. </p>
 <h2 id="h.mpz9kc8z0b7s" class="h4 mt-4 mb-4">Structure the title</h2>
-<p>The title of the article should be a <code>&lt;h1&gt;</code> immediately after the <code>&lt;article&gt;</code></p>
+<p>The title of the article should be a <code>&lt;h1&gt;</code> immediately after the <code>&lt;main&gt;</code></p>
 <h2 id="h.s96j6swf6k05" class="h4 mt-4 mb-4">Structure the subtitle</h2>
 <p>Put the subtitle or (short) description as a <code>&lt;div&gt;</code> under the <code>&lt;h1&gt;</code></p>
 <h2 id="h.tjgdlz1jx7am" class="h4 mt-4 mb-4">Add a publication date byline</h2>
@@ -34,7 +34,7 @@ By &lt;a href=&#34;/&#34;&gt;Your Name Here&lt;/a&gt; --
 &lt;/div&gt;</code></pre>
 <h2 id="h.8zmvthrfjp8u" class="h4 mt-4 mb-4">All Together</h2>
 <p>In the end, the main HTML for the content should look like:</p>
-<pre class="p-1 pl-3 lines-dense"><code>&lt;article&gt;
+<pre class="p-1 pl-3 lines-dense"><code>&lt;main&gt;
 &lt;h1&gt;Your title&lt;h1&gt;
 &lt;div&gt;Your subtitle&lt;/div&gt;
 &lt;div class=&#34;byline&#34;&gt;
@@ -43,5 +43,6 @@ By &lt;a href=&#34;/&#34;&gt;Your Name&lt;/a&gt; --
 &lt;/div&gt;
 &lt;p&gt; article content… &lt;/p&gt;
 &lt;p&gt; article content… &lt;/p&gt;
-&lt;/article&gt;</code></pre>
-<p>It’s likely there are many other variations that work, but this should provide a good base to start with. I have no investigated images, but Reader does provide some support for them. When in doubt, <em>View Source</em> on a major publication is your friend.</p>
+&lt;/main&gt;</code></pre>
+<p>It’s likely there are many other variations that work, but this should provide a good base to start with. I have no investigated images, but Reader does provide some support for them. When in doubt, <em>View Source</em> on a major publication is your friend. </p>
+<p>Update 2018-04-12:  Changed wrapper tag from <code>&lt;article&gt;</code> to <code>&lt;main&gt;</code>.  Using <code>&lt;main&gt;</code> is more <a href="https://dequeuniversity.com/rules/axe/2.2/bypass">accessible</a>.</p>
