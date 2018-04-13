@@ -57,9 +57,11 @@ pre>code {
 /* used for displaying font-awesome svg icons */
 /* don't think this can be done using boot-strap utils */
 .inline-svg {
-  display: inline-block;
-  height: 1.10rem;
-  width: 1.10rem;
+  display:inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
 }
 .inline-svg:hover, .inline-svg:focus {
   color:#0366d6;
