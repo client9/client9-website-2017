@@ -2,9 +2,9 @@
 date: "2018-04-10T17:14:56.263Z"
 description: Simple rules to make your HTML page work with Safari Reader Mode, and
   to create subtitles and bylines
-lastmod: "2018-04-13T23:21:50.714Z"
+lastmod: "2018-04-14T15:21:01.676Z"
 tags:
-- html
+- webdev
 - hugo
 title: Designing HTML for Safari Reader Mode
 ---
@@ -24,7 +24,7 @@ title: Designing HTML for Safari Reader Mode
 &lt;/time&gt;
 &lt;/div&gt;</code></pre>
 <h2 id="h.yf0whk85mms4" class="h4 mt-4 mb-4">Working with bylines</h2>
-<p>You can make limited custom bylines as well.  If you wrap the <code>&lt;time&gt;</code> in <code>&lt;div&gt;</code> that uses a <code>byline</code> class, Reader uses whatever you have as a byline.  You can use other classes, but <code>byline</code> must be included.  You do not need to define <code>byline</code> in your CSS.  It also needs to be short or Reader might not use it.</p>
+<p>You can make limited custom bylines as well.  If <code>&lt;div&gt;</code> above also uses a <code>byline</code> class, Reader uses the entire <code>&lt;div&gt;</code>as a byline.  Within reason: the total text needs to be short or Reader will reject it. The class <code>byline</code> does not need to be defined or provide style, it just needs to be present. Likewise, other CSS classes can be used, but <code>byline</code> must be included.</p>
 <p>Again, in hugo:</p>
 <pre class="p-1 pl-3 lines-dense"><code>&lt;div class=&#34;byline another-class etc&#34;&gt;
 By &lt;a href=&#34;/&#34;&gt;Your Name Here&lt;/a&gt; --
@@ -44,5 +44,5 @@ By &lt;a href=&#34;/&#34;&gt;Your Name&lt;/a&gt; --
 &lt;p&gt; article content… &lt;/p&gt;
 &lt;p&gt; article content… &lt;/p&gt;
 &lt;/main&gt;</code></pre>
-<p>It’s likely there are many other variations that work, but this should provide a good base to start with. I have no investigated images, but Reader does provide some support for them. When in doubt, <em>View Source</em> on a major publication is your friend. </p>
+<p>There are other variations that might work, but this provides a good base to start with. Not investigated are how images work with Reader.. When in doubt, <em>View Source</em> on a major publication is your friend. </p>
 <p>Update 2018-04-12:  Changed wrapper tag from <code>&lt;article&gt;</code> to <code>&lt;main&gt;</code>.  Using <code>&lt;main&gt;</code> is more <a href="https://dequeuniversity.com/rules/axe/2.2/bypass">accessible</a>.</p>
