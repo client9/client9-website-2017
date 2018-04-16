@@ -1,6 +1,8 @@
 baseurl = "https://www.client9.com"
 languageCode = "en"
 title = "Nick Galbreath"
+canonifyURLs = false
+relativeURLs = false
 MetaDataFormat = "yaml"
 enableRobotsTXT= true
 googleAnalytics = ""

@@ -6,7 +6,7 @@
 <ul>
 {{ range .Data.Pages.ByDate.Reverse -}}
 {{ if eq .Type "post" }}
-<li>{{ if .Params.draft }}&#x26A0; {{ end }}<a href="{{ .Permalink }}">{{ .Title }}</a></li>
+<li>{{ if .Params.draft }}&#x26A0; {{ end }}<a href="{{ .Permalink | relURL }}">{{ .Title }}</a></li>
 {{ end }}
 {{ end -}}
 </ul>
