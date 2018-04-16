@@ -1,0 +1,80 @@
+---
+date: "2018-04-13T05:23:08.722Z"
+description: If you just need a icon or two for your website, you can directly embed
+  the icons you need and skip with network. Here’s how.
+lastmod: "2018-04-16T16:50:42.558Z"
+tags:
+- hugo
+- webdev
+title: Using Font Awesome Icons in Hugo
+---
+<p>Icons are now essential for websites.  According to <a href="https://fontawesome.com">Font Awesome</a>, it’s icons are used in 100M websites.  Traditional methods for using icons can involve loading a web font, a sprite, or script.  That’s a lot of work if you need a single icon or two in the nav.  With Hugo we can preload the SVG icons, and inject them into our page with partial template or shortcode, skipping the network.  The example will use Font Awesome, but the technique will work many other icon systems.</p>
+<h2 id="h.n65t9rnv9o9x" class="h4 mt-4 mb-4">The Traditional Way</h2>
+<p>There are few choices, but the current and traditional way of adding Font Awesome icons is to add this in your page footer (or header).  For Hugo, this would go into your header or footer partial template:</p>
+<pre class="p-1 pl-3 lines-dense"><code>&lt;script defer src=&#34;/static/fontawesome/fontawesome-all.js&#34;&gt;&lt;/script&gt;</code></pre>
+<p>and referring to the icon using something like:</p>
+<pre class="p-1 pl-3 lines-dense"><code>&lt;i class=&#34;fab fa-github&#34;&gt;&lt;/i&gt;</code></pre>
+<p>This is certainly easy and provides the full range of icons (and some extra features).  However:</p>
+<ul>
+<li>this forces a network dependency on your website</li>
+<li>since it’s a script and deferred, there is a cost and a (small) delay in processing.</li>
+<li>may or may not trigger a repaint / reflow event</li>
+</ul>
+<p>If you are a performance maniac, this is a high cost to pay for a 300-byte GitHub icon used in the navigation bar.</p>
+<h2 id="h.87ag7i8lf5fa" class="h4 mt-4 mb-4">The Embedded Way</h2>
+<p>Font Awesome and many other icon foundries now provide SVG versions of the their icons.  With this we can directly embed the icon that is needed without any scripting or network call.  It’s final form, we’ll make a partial template and call it as:</p>
+<pre class="p-1 pl-3 lines-dense"><code>{{ partial &#34;fontawesome.html&#34; &#34;github&#34; }} </code></pre>
+<p>or even simpler with a shortcode in content:</p>
+<pre class="p-1 pl-3 lines-dense"><code>{{% fontawesome github %}}</code></pre>
+<p>Both use no network calls.  Here’s how to do it.</p>
+<h2 id="h.lb1r3spjzdb" class="h4 mt-4 mb-4">Create a icon directory</h2>
+<p>We need a place to put our SVG icons. Create a <code>fontawesome</code> directory at the top level of your hugo project. That is, it should be parallel to your <code>content</code> directory. This directory will not be published to your website.</p>
+<h2 id="h.8h6yuvjweny9" class="h4 mt-4 mb-4">Download the icons you want.</h2>
+<p>SVG icons are hosting in the <a href="https://github.com/FortAwesome/Font-Awesome">FontAwesome/Font-Awesome</a> repo in the <a href="https://github.com/FortAwesome/Font-Awesome/tree/master/advanced-options/raw-svg">advanced-options/raw-svg</a> directory. Find the icon you want in here. For example here’s the <a href="https://github.com/FortAwesome/Font-Awesome/blob/master/advanced-options/raw-svg/brands/github.svg">GitHub Icon</a>. Click on the <em>raw</em> button and you’ll see the raw SVG version. Save this locally to your <code>fontawesome</code> directory.</p>
+<p>Since I hate doing anything manually, I made a script to do this.  Adjust to your environment and needs:</p>
+<pre class="p-1 pl-3 lines-dense"><code>#!/bin/sh
+set -ex
+icons=&#34;twitter github&#34;</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>dest=fontawesome
+url=https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/raw-svg/brands</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>mkdir -p &#34;${dest}&#34;
+for icon in $icons; do
+  icon=&#34;${icon}.svg&#34;
+  wget -O &#34;${dest}/${icon}&#34; &#34;${url}/${icon}&#34;
+done</code></pre>
+<h2 id="h.iqk6z1t6bzsl" class="h4 mt-4 mb-4">Make a partial template</h2>
+<p>Create a <code>fontawesome.htm</code>l file in your <code>layout/partials</code> directory with:</p>
+<pre class="p-1 pl-3 lines-dense"><code>&lt;span class=&#34;inline-svg&#34; &gt;
+{{ readFile ( print &#34;fontawesome/&#34; . &#34;.svg&#34; ) | safeHTML  }}
+&lt;/span&gt;</code></pre>
+<p>This works for plain text but has problems if it’s used with hover and focus events that change color. To fix this <code>fill=currentColor</code> needs to be added to the SVG <code>&lt;path&gt;</code> element. A more full featured version of the template might be:</p>
+<pre class="p-1 pl-3 lines-dense"><code>&lt;span class=&#34;inline-svg&#34; &gt;
+{{- $fname:=print &#34;fontawesome/&#34; . &#34;.svg&#34; -}}
+{{- $path:=&#34;&lt;path&#34; -}}
+{{- $fill:=&#34;&lt;path fill=\&#34;currentColor\&#34;&#34; -}}
+{{ replace (readFile $fname) $path $fill | safeHTML }}
+&lt;/span&gt;</code></pre>
+<h2 id="h.vkcs7n88lhjx" class="h4 mt-4 mb-4">Style it</h2>
+<p>You need to add some style or else the icon will not render at all. This is where is get a little hacky. You’ll have to adjust the size to make sure it fits in with your text. This worked for me, but likely you’ll need to adjust the height, width, top (to push the icon down a bit to match the text line).  <a href="http://www.elliotdahl.com">Elliot Dalh</a> wrote up more details in <a href="https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4">Align SVG Icons to Text and Say Goodbye to Font Icons</a>.</p>
+<pre class="p-1 pl-3 lines-dense"><code>.inline-svg {
+  display: inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
+}</code></pre>
+<h2 id="h.v708bfis201c" class="h4 mt-4 mb-4">Use it in layouts</h2>
+<p>As advertised in the introduction, you can use the icon in your layouts or other partials using:</p>
+<pre class="p-1 pl-3 lines-dense"><code>{{ partial &#34;fontawesome.html&#34; &#34;github&#34; }}</code></pre>
+<h2 id="h.quutfbptd0mh" class="h4 mt-4 mb-4">Shortcodes</h2>
+<p>If you want your <em>content</em> to use icons, then you need to use a shortcode. It’s almost the same:</p>
+<pre class="p-1 pl-3 lines-dense"><code>&lt;span class=&#34;inline-svg&#34; &gt;
+{{- $fname:=print &#34;fontawesome/&#34; ( .Get 0 ) &#34;.svg&#34; -}}
+{{- $path:=&#34;&lt;path&#34; -}}
+{{- $fill:=&#34;&lt;path fill=\&#34;currentColor\&#34;&#34; -}}
+{{ replace (readFile $fname) $path $fill | safeHTML }}
+&lt;/span&gt;</code></pre>
+<p>Place <em>this</em> <code>fontawesome.html</code> in<code> layouts/shortcodes</code> and use it as:</p>
+<pre class="p-1 pl-3 lines-dense"><code>{{% fontawesome github %}}</code></pre>
+<h2 id="h.ondcsu8sh7ox" class="h4 mt-4 mb-4">Conclusion</h2>
+<p>One can add as many icons as needed, but there is only partial or shortcode for all of them. While Font Awesome’s javascript library and CDN offer additional features, if you just need an icon or two, it’s hard to beat using a shortcode or partial template with Hugo.</p>
