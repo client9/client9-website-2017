@@ -2,7 +2,7 @@
 date: "2018-04-13T05:23:08.722Z"
 description: If you just need a icon or two for your website, you can directly embed
   the icons you need and skip with network. Here’s how.
-lastmod: "2018-04-16T16:50:42.558Z"
+lastmod: "2018-04-16T17:53:46.797Z"
 tags:
 - hugo
 - webdev
@@ -25,7 +25,7 @@ title: Using Font Awesome Icons in Hugo
 <p>Font Awesome and many other icon foundries now provide SVG versions of the their icons.  With this we can directly embed the icon that is needed without any scripting or network call.  It’s final form, we’ll make a partial template and call it as:</p>
 <pre class="p-1 pl-3 lines-dense"><code>{{ partial &#34;fontawesome.html&#34; &#34;github&#34; }} </code></pre>
 <p>or even simpler with a shortcode in content:</p>
-<pre class="p-1 pl-3 lines-dense"><code>{{% fontawesome github %}}</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>{{&#037; fontawesome github &#037;}}</code></pre>
 <p>Both use no network calls.  Here’s how to do it.</p>
 <h2 id="h.lb1r3spjzdb" class="h4 mt-4 mb-4">Create a icon directory</h2>
 <p>We need a place to put our SVG icons. Create a <code>fontawesome</code> directory at the top level of your hugo project. That is, it should be parallel to your <code>content</code> directory. This directory will not be published to your website.</p>
@@ -75,6 +75,6 @@ done</code></pre>
 {{ replace (readFile $fname) $path $fill | safeHTML }}
 &lt;/span&gt;</code></pre>
 <p>Place <em>this</em> <code>fontawesome.html</code> in<code> layouts/shortcodes</code> and use it as:</p>
-<pre class="p-1 pl-3 lines-dense"><code>{{% fontawesome github %}}</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>{{&#037; fontawesome github &#037;}}</code></pre>
 <h2 id="h.ondcsu8sh7ox" class="h4 mt-4 mb-4">Conclusion</h2>
 <p>One can add as many icons as needed, but there is only partial or shortcode for all of them. While Font Awesome’s javascript library and CDN offer additional features, if you just need an icon or two, it’s hard to beat using a shortcode or partial template with Hugo.</p>
