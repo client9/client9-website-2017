@@ -10,8 +10,8 @@ FootnoteReturnLinkContents = ""
 copyright="&copy; 2018 Nick Galbreath"
 
 [permalinks]
-post="/:title/"
-article="/article/:title"
+post="/:slug/"
+article="/article/:slug"
 
 [taxonomies]
 tag="tags"
