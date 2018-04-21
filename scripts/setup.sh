@@ -1,6 +1,5 @@
 #!/bin/sh -x
 go get github.com/client9/csstool/css
-./scripts/godownloader-hugo.sh v0.38.2
-./scripts/godownloader-misspell.sh
-./scripts/godownloader-minify.sh
-#go get github.com/client9/s3push
+curl -sfL https://install.goreleaser.com/github.com/gohugoio/hugo.sh | bash
+curl -sfL https://install.goreleaser.com/github.com/client9/misspell.sh | bash
+curl -sfL https://install.goreleaser.com/github.com/tdewolff/minify.sh | bash
