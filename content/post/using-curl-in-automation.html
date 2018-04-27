@@ -3,7 +3,7 @@ date: "2018-04-25T03:55:59.176Z"
 description: By default curl isn’t well suited to automation tasks.  Learn how to
   optimize curl for downloading network resources in your batch scripts, provisioning
   systems and continuous deployment pipelines
-lastmod: "2018-04-27T00:20:37.032Z"
+lastmod: "2018-04-27T00:27:26.802Z"
 tags:
 - devops
 title: Using curl in automation
@@ -19,17 +19,17 @@ title: Using curl in automation
 <p>This is no surprise.  Curl has been worked on for dozens of years and grew organically.  And it has numerous, often non-obvious, flags to control its behavior.</p>
 <h2 id="h.imp0gphd9lha" class="h4 mt-4 mb-4">Crucial Flags</h2>
 <p>Here are the most important flags for use in batch scripts.</p>
-<p><strong>Turn off the progress bar</strong></p>
+<h3 id="h.2uhincjdh7i9" class="h5 mt-4 mb-4">Turn off the progress bar</h3>
 <p>The <code>-s</code> or <code>--silent</code> flag turns off all output.  Unfortunately this also means error output, which probably do want.  So...</p>
-<p><strong>Turn back on error output</strong></p>
+<h3 id="h.w5m05as853dj" class="h5 mt-4 mb-4">Turn back on error output</h3>
 <p>The flag <code>-S</code> or <code>--show-errors</code> turns back on error output.  You probably want this.</p>
-<p><strong>Fail on 404s</strong></p>
+<h3 id="h.1gdlxlmj2exg" class="h5 mt-4 mb-4">Fail on 404s</h3>
 <p>The flag -f or --fail cause curl to exit (or fail) with exit code 22 if it doesn&#39;t get an HTTP status of 200. The previous flag --show-errors is needed to actually see what the status code is.  <a href="#h.57f216mhkw8e">See below</a> for a way of getting the status code and exiting a bit more gracefully.</p>
-<p><strong>Follow redirects</strong></p>
+<h3 id="h.3pi4madw9z6k" class="h5 mt-4 mb-4">Follow redirects</h3>
 <p>The <code>-L</code> or <code>--location</code> flag instructs curl to follow redirects, which one probably wants.   Use the <code>--max-redirs</code> flag to prevent infinite loops from wildly misconfigured servers.</p>
-<p><strong>Timeout</strong></p>
+<h3 id="h.4iuxh6m0ykqa" class="h5 mt-4 mb-4">Timeout</h3>
 <p>There are many ways to timeouts in shell scripting, but curl provides one automatically.  The <code>-m</code> or <code>--max-time</code> flag will specify a timeout in seconds.  After that, the connections are cancelled and curl returns a non-zero exit code.</p>
-<p><strong>Retry</strong></p>
+<h3 id="h.xppa7kapw814" class="h5 mt-4 mb-4">Retry</h3>
 <p>Similar to timeouts, there are many ways to retry a command on transient failure.  Again, curl provides a built-in mechanism:</p>
 <pre class="p-1 pl-3 lines-dense"><code>--retry NUM   Retry request NUM times if transient problems occur
 --retry-connrefused  Retry on connection refused (use with --retry)
@@ -38,9 +38,9 @@ title: Using curl in automation
 <p>A good starting point might be:</p>
 <p>--retry 3 <code>--retry-connrefused --retry-delay 2</code></p>
 <h2 id="h.6dfehu73euv9" class="h4 mt-4 mb-4">All Together</h2>
-<p><code>curl </code><code>--silent --show-error</code><code> \</code></p>
-<p><code>  -L </code><code>--max-redirs 3 \</code></p>
-<pre class="p-1 pl-3 lines-dense"><code>  --retry 3 --retry-connrefused --retry-delay 2 \
+<pre class="p-1 pl-3 lines-dense"><code>curl --silent --show-error \
+  -L --max-redirs 3 \
+  --retry 3 --retry-connrefused --retry-delay 2 \
   --max-time 30</code></pre>
 <p>For quick and dirty scripts, you can cheat with</p>
 <pre class="p-1 pl-3 lines-dense"><code>curl -sfSL</code></pre>
