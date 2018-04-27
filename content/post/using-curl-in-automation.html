@@ -1,0 +1,59 @@
+---
+date: "2018-04-25T03:55:59.176Z"
+description: By default curl isn’t well suited to automation tasks.  Learn how to
+  optimize curl for downloading network resources in your batch scripts, provisioning
+  systems and continuous deployment pipelines
+lastmod: "2018-04-27T00:20:37.032Z"
+tags:
+- devops
+title: Using curl in automation
+---
+<p>Often times, in provisioning systems, batch scripts, and CI/CD pipelines, some call to fetch an external (network) resource is required. While it’s best to eliminate as many external dependencies and network calls as possible, sometimes it can’t be helped. In which case the omnipresent curl is useful.  However, by default, curl isn’t well optimized for automation. In particular:</p>
+<ul>
+<li>shows a progress meter designed for humans.  In CI/CD logs, progress meters add no value and make horrible log output.</li>
+<li>doesn’t follow redirects.  You almost always want to follow redirects.</li>
+<li>doesn’t timeout.  The lack of timeout can (and does) cause CI/CD runs to hang.  I’ve seen Jenkins and Travis-ci runs take hours due to a hanging download.</li>
+<li>doesn’t fail (or exit non-zero) on 404s. As long as curl received whatever the server sent back, it’s a success, and the HTTP code doesn’t matter. This is probably not your definition of success.</li>
+<li>doesn’t retry on transient errors.  Totally fine for humans.  Totally bad for CI/CD runs.</li>
+</ul>
+<p>This is no surprise.  Curl has been worked on for dozens of years and grew organically.  And it has numerous, often non-obvious, flags to control its behavior.</p>
+<h2 id="h.imp0gphd9lha" class="h4 mt-4 mb-4">Crucial Flags</h2>
+<p>Here are the most important flags for use in batch scripts.</p>
+<p><strong>Turn off the progress bar</strong></p>
+<p>The <code>-s</code> or <code>--silent</code> flag turns off all output.  Unfortunately this also means error output, which probably do want.  So...</p>
+<p><strong>Turn back on error output</strong></p>
+<p>The flag <code>-S</code> or <code>--show-errors</code> turns back on error output.  You probably want this.</p>
+<p><strong>Fail on 404s</strong></p>
+<p>The flag -f or --fail cause curl to exit (or fail) with exit code 22 if it doesn&#39;t get an HTTP status of 200. The previous flag --show-errors is needed to actually see what the status code is.  <a href="#h.57f216mhkw8e">See below</a> for a way of getting the status code and exiting a bit more gracefully.</p>
+<p><strong>Follow redirects</strong></p>
+<p>The <code>-L</code> or <code>--location</code> flag instructs curl to follow redirects, which one probably wants.   Use the <code>--max-redirs</code> flag to prevent infinite loops from wildly misconfigured servers.</p>
+<p><strong>Timeout</strong></p>
+<p>There are many ways to timeouts in shell scripting, but curl provides one automatically.  The <code>-m</code> or <code>--max-time</code> flag will specify a timeout in seconds.  After that, the connections are cancelled and curl returns a non-zero exit code.</p>
+<p><strong>Retry</strong></p>
+<p>Similar to timeouts, there are many ways to retry a command on transient failure.  Again, curl provides a built-in mechanism:</p>
+<pre class="p-1 pl-3 lines-dense"><code>--retry NUM   Retry request NUM times if transient problems occur
+--retry-connrefused  Retry on connection refused (use with --retry)
+--retry-delay SECONDS  Wait SECONDS between retries
+--retry-max-time SECONDS  Retry only within this period</code></pre>
+<p>A good starting point might be:</p>
+<p>--retry 3 <code>--retry-connrefused --retry-delay 2</code></p>
+<h2 id="h.6dfehu73euv9" class="h4 mt-4 mb-4">All Together</h2>
+<p><code>curl </code><code>--silent --show-error</code><code> \</code></p>
+<p><code>  -L </code><code>--max-redirs 3 \</code></p>
+<pre class="p-1 pl-3 lines-dense"><code>  --retry 3 --retry-connrefused --retry-delay 2 \
+  --max-time 30</code></pre>
+<p>For quick and dirty scripts, you can cheat with</p>
+<pre class="p-1 pl-3 lines-dense"><code>curl -sfSL</code></pre>
+<h2 id="h.57f216mhkw8e" class="h4 mt-4 mb-4">Better Fails on 404s</h2>
+<p>Curl has a way of customizing the output using the <code>-w</code> flag.  One can use this to fail on HTTP status in a different way:</p>
+<pre class="p-1 pl-3 lines-dense"><code>http_code=$(curl -w ‘%{http_code}’ -s -o dest src)
+if [ &#34;$http_code&#34; != &#34;200&#34; ]; then
+    echo &#34;curl received HTTP status $http_code&#34;
+    exit 1
+fi</code></pre>
+<h2 id="h.hz896acc075q" class="h4 mt-4 mb-4">Security</h2>
+<p>Since we are here, never use the  <code>-k</code> or <code>--insecure</code> flags.  This turns off critical security checks.  If you think you need to use this spend the time to debug and fix properly.  This isn’t some abstract concern.  Real sites have gotten popped by using turning off these security checks.</p>
+<h2 id="h.w8skfc5tlrtw" class="h4 mt-4 mb-4">Final Notes</h2>
+<p>The best solution is often to eliminate the network call from scripts, either by finding a different way or checking in a known-good version of the resource.  But when that’s not possible (or when it really isn’t critical), these curl flags will handle errors more gracefully.</p>
+<p>If you need to download multiple items, you can them download in parallel saving time. See <a href="https://www.client9.com/parallelize-shell-or-bash-scripts-using-xargs/">Parallelize Shell or Bash Scripts Using Xargs</a> for details.</p>
+<p>And if you are looking to bootstrap something from a unknown OS, then take a look at an posix shell abstraction <a href="https://github.com/client9/shlib">shlib</a> that wraps <code>curl</code> or <code>wget</code> depending on what’s present.</p>
