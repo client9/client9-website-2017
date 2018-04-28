@@ -46,7 +46,7 @@ title: Using curl in Automation
 <pre class="p-1 pl-3 lines-dense"><code>curl -sfSL</code></pre>
 <h2 id="h.57f216mhkw8e" class="h4 mt-4 mb-4">Better Fails on 404s</h2>
 <p>Curl has a way of customizing the output using the <code>-w</code> flag.  One can use this to fail on HTTP status in a different way:</p>
-<pre class="p-1 pl-3 lines-dense"><code>http_code=$(curl -w ‘%{http_code}’ -s -o dest src)
+<pre class="p-1 pl-3 lines-dense"><code>http_code=$(curl -w &#39;%{http_code}&#39; -s -o dest src)
 if [ &#34;$http_code&#34; != &#34;200&#34; ]; then
     echo &#34;curl received HTTP status $http_code&#34;
     exit 1
