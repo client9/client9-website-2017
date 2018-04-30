@@ -6,7 +6,7 @@ tags:
 - webdev
 title: CSS Color Emoji Stack
 ---
-<p>As part of a solid cross-platform system stack is emoji rendering.  As mentioned in <a href="https://www.client9.com/css-system-fonts-on-linux-2018/">CSS System Fonts for Linux 2018</a>, Ubuntu 18.04 and Fedora 28 gain color emoji support.  While most platforms now render emoji by default, the results are often inconsistent. Most emoji will be in color, but perhaps not the system emoji, and some emoji by default will render in monochrome versions. To help resolve these issues, color emoji fonts must be explicitly added to make them render correctly. They can be added directly to the relevant <code>font-family</code> property, but another way is making a new <code>font-face</code>. Then they can be added to any existing font stack with minimal cut and paste.  Below shows both:</p>
+<p>As part of a solid cross-platform system stack is emoji rendering.  As mentioned in <a href="/css-system-fonts-on-linux-2018/">CSS System Fonts for Linux 2018</a>, Ubuntu 18.04 and Fedora 28 gain color emoji support.  While most platforms now render emoji by default, the results are often inconsistent. Most emoji will be in color, but perhaps not the system emoji, and some emoji by default will render in monochrome versions. To help resolve these issues, color emoji fonts must be explicitly added to make them render correctly. They can be added directly to the relevant <code>font-family</code> property, but another way is making a new <code>font-face</code>. Then they can be added to any existing font stack with minimal cut and paste.  Below shows both:</p>
 <pre class="p-1 pl-3 lines-dense"><code>// define a new font face that just deals with emoji
 @font-face {
   font-family: &#34;color-emoji&#34;;
@@ -26,5 +26,5 @@ body {
      apple color emoji, segoe ui emoji,
      segoe ui symbol, noto color emoji;
 }</code></pre>
-<p>It’s probable that on the latest browsers using the latest OS for macOS, iOS and Windows, this isn’t needed.  However, I’m not going to back-test the numerous historical combinations. As mentioned in <a href="https://www.client9.com/css-system-font-stack-sans-serif-v3/">CSS System Font Stack Sans Serif v3</a> GitHub and Bootstrap add these to their stacks, so it’s likely it’s needed somewhere. The results can be in seen in the following <a href="https://codepen.io/client9/pen/qoJoZW">codepen</a>.  On some platforms, some emoji are still in black and white.  These <em>dingbats</em> need to handled specially.</p>
+<p>It’s probable that on the latest browsers using the latest OS for macOS, iOS and Windows, this isn’t needed.  However, I’m not going to back-test the numerous historical combinations. As mentioned in <a href="/css-system-font-stack-sans-serif-v3/">CSS System Font Stack Sans Serif v3</a> GitHub and Bootstrap add these to their stacks, so it’s likely it’s needed somewhere. The results can be in seen in the following <a href="https://codepen.io/client9/pen/qoJoZW">codepen</a>.  On some platforms, some emoji are still in black and white.  These <em>dingbats</em> need to handled specially.</p>
 <p>{{< pen id="qoJoZW" >}}</p>
