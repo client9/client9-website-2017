@@ -1,12 +1,12 @@
 ---
 date: "2017-05-29"
 description: Convert time formats from other blogging platforms to Hugo.
-lastmod: "2018-03-19T05:15:58.536Z"
+lastmod: "2018-04-30T23:04:00.901Z"
 tags:
 - hugo
 title: Convert strftime Time Format to Hugo
 ---
-<p>Many blogging platforms, such as <a href="https://codex.wordpress.org/Formatting_Date_and_Time">Wordpress</a> and <a href="https://shopify.github.io/liquid/filters/date/">Jekyll</a>, use some variation of <a href="http://pubs.opengroup.org/onlinepubs/009695399/functions/strptime.html">strptime</a> to format date and time values.  <a href="https://gohugo.io/">Hugo</a> does time formatting in a completely different way and is based on the <a href="https://golang.org/pkg/time/">time package</a> from <a href="https://golang.org">Go</a>. It uses the concept of a magic date as represented by: </p>
+<p>Many blogging platforms, such as <a href="https://codex.wordpress.org/Formatting_Date_and_Time">Wordpress</a> and <a href="https://shopify.github.io/liquid/filters/date/">Jekyll</a>, use some variation of <a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/strptime.html">strptime</a> to format date and time values.  <a href="https://gohugo.io/">Hugo</a> does time formatting in a completely different way and is based on the <a href="https://golang.org/pkg/time/">time package</a> from <a href="https://golang.org">Go</a>. It uses the concept of a magic date as represented by: </p>
 <pre class="p-1 pl-3 lines-dense"><code>Mon Jan 2 15:04:05 MST 2006</code></pre>
 <p>or</p>
 <pre class="p-1 pl-3 lines-dense"><code>01/02 03:04:05PM &#39;06 -0700</code></pre>
