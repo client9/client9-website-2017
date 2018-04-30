@@ -1,2 +1,4 @@
 User-agent: *
 {{ if .Site.BuildDrafts }}Disallow: /{{ end }}
+
+Sitemap: {{ .Sitemap.Filename | default "sitemap.xml" | absURL }}
