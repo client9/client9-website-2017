@@ -1,0 +1,32 @@
+---
+date: "2018-05-01T00:29:00.230Z"
+description: Replace expensive network calls to load image icons with an embedded
+  data URL in your Hugo site
+lastmod: "2018-05-01T02:11:15.389Z"
+tags:
+- hugo
+- webdev
+title: How to use Data URLs for Image Icons with Hugo
+---
+<p>Many times a site needs an image icon. They are commonly used once per page, in the header or footer, are small -- under 128x128 pixels and a few kilobytes. Using a network call, either back to the site, or another site (often a social media site) has a number of problems:</p>
+<ul>
+<li>loading requires a network round trip which is slow and possibly render blocking</li>
+<li>can cause the image to flash-in later, which is annoying</li>
+<li>requires fooling around with cache header settings, and debatable how much caching helps in this case</li>
+</ul>
+<p>Instead of a network call consider embedding the image into the page itself using a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data url</a>. With no network call, the page loads quickly. True, by having the the image embedded into the page, one loses any cache savings. However the savings is likely to be overstated. Especially for casual sites, like most blogs.  Especially when the icon is under a few kilobytes.</p>
+<p>In <a href="https://gohugo.io">Hugo</a>, the static site generator, making data URLs is easy to do with the <a href="https://gohugo.io/templates/partials/">partial templates</a> or shortcodes feature. This is similar to techniques to embed SVG icons in <a href="/using-font-awesome-icons-in-hugo/">Using Font Awesome Icons in Hugo</a>.  Here’s the steps this site used to the make the author icon.</p>
+<p>Create a file <code>icon.html</code> in the <code>layout/partials</code> folder with the following:</p>
+<pre class="p-1 pl-3 lines-dense"><code>&lt;img width=64 height=64 class=&#34;rounded-circle&#34; alt=&#34;picture of Your Name&#34;
+  src=&#34;data:image/jpeg;base64,{{ readFile &#34;icon.jpeg&#34; | base64Encode }}&#34; &gt;</code></pre>
+<p>It’s short, but there are a number of details:</p>
+<ul>
+<li>The <code>readFile</code> function reads files relative to the root directory of your site (where your config file is). </li>
+<li>The example uses a mime type of <code>image/jpeg</code> , but you can use <code>image/png</code> or any other image format you want.</li>
+<li>Setting the width and height allows the browser to render the page faster, with less repaints.</li>
+<li>The <code>alt</code> tag makes your page more accessible</li>
+<li>The <code>rounded-circle</code> class is from <a href="https://getbootstrap.com/docs/4.0/utilities/borders/%23border-radius">Bootstrap</a></li>
+</ul>
+<p>Then you can use it with</p>
+<pre class="p-1 pl-3 lines-dense"><code>{{ partial &#34;icon.html&#34; . }}</code></pre>
+<p>And that’s it.  Enjoy the load-times.</p>
