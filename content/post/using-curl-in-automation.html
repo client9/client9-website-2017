@@ -1,9 +1,8 @@
 ---
 date: "2018-04-25T03:55:59.176Z"
-description: By default curl isn’t well suited to automation tasks.  Learn how to
-  optimize curl for downloading network resources in your batch scripts, provisioning
-  systems and continuous deployment pipelines
-lastmod: "2018-04-27T01:02:12.844Z"
+description: Learn how to optimize curl for downloading network resources in your
+  batch scripts, provisioning systems and continuous deployment pipelines
+lastmod: "2018-05-01T15:17:26.755Z"
 tags:
 - devops
 title: Using curl in Automation
@@ -16,7 +15,7 @@ title: Using curl in Automation
 <li>doesn’t fail (or exit non-zero) on 404s. As long as curl received whatever the server sent back, it’s a success, and the HTTP code doesn’t matter. This is probably not your definition of success.</li>
 <li>doesn’t retry on transient errors.  Totally fine for humans.  Totally bad for CI/CD runs.</li>
 </ul>
-<p>This is no surprise.  Curl has been worked on for dozens of years and grew organically.  And it has numerous, often non-obvious, flags to control its behavior.</p>
+<p>This is no surprise. Curl has been worked on for dozens of years and grew organically.  And it has numerous, often non-obvious, flags to control its behavior.</p>
 <h2 id="h.imp0gphd9lha" class="h4 mt-4 mb-4">Crucial Flags</h2>
 <p>Here are the most important flags for use in batch scripts.</p>
 <h3 id="h.2uhincjdh7i9" class="h5 mt-4 mb-4">Turn off the progress bar</h3>
@@ -24,7 +23,7 @@ title: Using curl in Automation
 <h3 id="h.w5m05as853dj" class="h5 mt-4 mb-4">Turn back on error output</h3>
 <p>The flag <code>-S</code> or <code>--show-errors</code> turns back on error output.  You probably want this.</p>
 <h3 id="h.1gdlxlmj2exg" class="h5 mt-4 mb-4">Fail on 404s</h3>
-<p>The flag -f or --fail cause curl to exit (or fail) with exit code 22 if it doesn&#39;t get an HTTP status of 200. The previous flag --show-errors is needed to actually see what the status code is.  <a href="#h.57f216mhkw8e">See below</a> for a way of getting the status code and exiting a bit more gracefully.</p>
+<p>The flag <code>-f </code>or <code>--fail</code> cause curl to exit (or fail) with exit code 22 if it doesn&#39;t get an HTTP status of 200. The previous flag <code>--show-errors</code> is needed to actually see what the status code is.  <a href="#h.57f216mhkw8e">See below</a> for a way of getting the status code and exiting a bit more gracefully.</p>
 <h3 id="h.3pi4madw9z6k" class="h5 mt-4 mb-4">Follow redirects</h3>
 <p>The <code>-L</code> or <code>--location</code> flag instructs curl to follow redirects, which one probably wants.   Use the <code>--max-redirs</code> flag to prevent infinite loops from wildly misconfigured servers.</p>
 <h3 id="h.4iuxh6m0ykqa" class="h5 mt-4 mb-4">Timeout</h3>
@@ -52,8 +51,8 @@ if [ &#34;$http_code&#34; != &#34;200&#34; ]; then
     exit 1
 fi</code></pre>
 <h2 id="h.hz896acc075q" class="h4 mt-4 mb-4">Security</h2>
-<p>Since we are here, never use the  <code>-k</code> or <code>--insecure</code> flags.  This turns off critical security checks.  If you think you need to use this spend the time to debug and fix properly.  This isn’t some abstract concern.  Real sites have gotten popped by using turning off these security checks.</p>
+<p>Never use the  <code>-k</code> or <code>--insecure</code> flags.  This turns off critical security checks.  If you think you need to use this spend the time to debug and fix properly.  This isn’t some abstract concern.  Real sites have gotten popped by turning off these security checks.</p>
 <h2 id="h.w8skfc5tlrtw" class="h4 mt-4 mb-4">Final Notes</h2>
 <p>The best solution is often to eliminate the network call from scripts, either by finding a different way or checking in a known-good version of the resource.  But when that’s not possible (or when it really isn’t critical), these curl flags will handle errors more gracefully.</p>
-<p>If you need to download multiple items, you can them download in parallel saving time. See <a href="/parallelize-shell-or-bash-scripts-using-xargs/">Parallelize Shell or Bash Scripts Using Xargs</a> for details.</p>
+<p>If you need to download multiple items, time can be saved by downloading them in parallel. See <a href="/parallelize-shell-or-bash-scripts-using-xargs/">Parallelize Shell or Bash Scripts Using Xargs</a> for details.</p>
 <p>And if you are looking to bootstrap something from a unknown OS, then take a look at an posix shell abstraction <a href="https://github.com/client9/shlib">shlib</a> that wraps <code>curl</code> or <code>wget</code> depending on what’s present.</p>
