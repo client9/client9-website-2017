@@ -1,0 +1,63 @@
+---
+date: "2018-05-01T19:41:51.137Z"
+description: How to list, add, and delete git tags, both locally and remote
+lastmod: "2018-05-04T05:17:01.218Z"
+tags:
+- git
+title: Git Tagging Cheatsheet
+---
+<p>The best references for git tagging are in the <a href="https://git-scm.com/book/en/v2">git book</a>, specifically  <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">2.6 Git Basics Tagging</a>  and <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-References">10.3 Git References</a>. The built-in help <code>git tag --help</code> is also useful, especially the section on “Re-tagging”.</p>
+<p>When reading these, keep in mind that Git has two types of tags.  But “tag” almost always means “annotated tag.” The other type of tag, “lightweight tags” might have some use for some tools that need throwaway tags, but in most cases can be ignored.  Everything below is for the common case of annotated tags.</p>
+<h2 id="h.pff8tuq56xy2" class="h4 mt-4 mb-4">Cheatsheet</h2>
+<table class="table table-sm">
+<thead>
+<tr>
+<th>Action</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List All Tags</td>
+<td><code>git tag</code></td>
+</tr>
+<tr>
+<td>Latest Tag</td>
+<td><code>git describe --tags --abbrev=0</code></td>
+</tr>
+<tr>
+<td>Add A Tag Locally</td>
+<td><code>git tag -a TAG -m MESSAGE</code></td>
+</tr>
+<tr>
+<td>Add a Tag at Specific Commit</td>
+<td><code>git tag -a TAG -m MESSAGE HASH</code></td>
+</tr>
+<tr>
+<td>Delete a Tag Locally</td>
+<td><code>git tag -d TAG</code></td>
+</tr>
+<tr>
+<td>Redoing a Tag Locally</td>
+<td><code>git tag -f -a TAG -m MESSAGE</code></td>
+</tr>
+<tr>
+<td>Push a Tag to Remote</td>
+<td><code>git push origin TAG</code></td>
+</tr>
+<tr>
+<td>Push all Local Tags to Remove</td>
+<td><code>git push origin --tags</code></td>
+</tr>
+<tr>
+<td>Delete a Tag on Remote</td>
+<td><code>git push origin :refs/tags/TAG</code></td>
+</tr>
+<tr>
+<td>List Tags as References</td>
+<td><code>git show-ref --tags</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="h.a0mxo5p6abgj" class="h4 mt-4 mb-4">On Retagging</h2>
+<p>While a command to delete a remote tag is listed, it’s rarely needed.  Either the tag is  really screwed up and need to make a new tag (or release).  Or your build-release system screwed up and you need to redo your tag, using <code>-f -a</code> flags, and another <code>git push origin</code></p>
