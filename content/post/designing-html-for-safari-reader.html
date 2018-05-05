@@ -2,7 +2,7 @@
 date: "2018-04-10T17:14:56.263Z"
 description: Simple rules to make your HTML page work with Safari Reader Mode, and
   to create subtitles and bylines
-lastmod: "2018-04-14T15:21:01.676Z"
+lastmod: "2018-05-05T04:07:26.875Z"
 tags:
 - webdev
 - hugo
@@ -14,7 +14,8 @@ title: Designing HTML for Safari Reader Mode
 <h2 id="h.mpz9kc8z0b7s" class="h4 mt-4 mb-4">Structure the title</h2>
 <p>The title of the article should be a <code>&lt;h1&gt;</code> immediately after the <code>&lt;main&gt;</code></p>
 <h2 id="h.s96j6swf6k05" class="h4 mt-4 mb-4">Structure the subtitle</h2>
-<p>Put the subtitle or (short) description as a <code>&lt;div&gt;</code> under the <code>&lt;h1&gt;</code></p>
+<p>Put the subtitle or (short) description as a <code>&lt;div&gt;</code> under the <code>&lt;h1&gt;.</code></p>
+<p>Update 2018-05-01:  It appears the subtitle has a maximum length of under 200 character. If it exceeds this value, it’s just treated as paragraph. 150 characters seems safe, but unclear what the extract threshold is.</p>
 <h2 id="h.tjgdlz1jx7am" class="h4 mt-4 mb-4">Add a publication date byline</h2>
 <p>Underneath the subtitle, add a <code>&lt;div&gt;</code> that wraps a <code>&lt;time&gt;</code> tag, with a <code>datetime</code> attribute, for the publication date, will trigger Reader to make a byline with the author and the date.  It’s unclear where the author part comes from.  Possibly from <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Google search</a>, <a href="http://ogp.me">Open Graph</a>, or <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">Twitter Card</a> metadata.</p>
 <p>In <a href="https://gohugo.io">hugo</a>, the static site blog generator, this can be done using:</p>
