@@ -1,14 +1,14 @@
 ---
 date: "2017-05-29"
 description: Convert time formats from other blogging platforms to Hugo.
-lastmod: "2018-04-30T23:04:00.901Z"
+lastmod: "2018-05-05T06:24:14.103Z"
 tags:
 - hugo
 title: Convert strftime Time Format to Hugo
 ---
-<p>Many blogging platforms, such as <a href="https://codex.wordpress.org/Formatting_Date_and_Time">Wordpress</a> and <a href="https://shopify.github.io/liquid/filters/date/">Jekyll</a>, use some variation of <a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/strptime.html">strptime</a> to format date and time values.  <a href="https://gohugo.io/">Hugo</a> does time formatting in a completely different way and is based on the <a href="https://golang.org/pkg/time/">time package</a> from <a href="https://golang.org">Go</a>. It uses the concept of a magic date as represented by: </p>
+<p>Many blogging platforms, such as <a href="https://codex.wordpress.org/Formatting_Date_and_Time">Wordpress</a> and <a href="https://shopify.github.io/liquid/filters/date/">Jekyll</a>, use some variation of <a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/strptime.html">strptime</a> to format date and time values.  <a href="https://gohugo.io/">Hugo</a> does time formatting in a completely different way and is based on the <a href="https://golang.org/pkg/time/">time package</a> from <a href="https://golang.org">Go</a>. It uses the concept of a magic date as represented by:</p>
 <pre class="p-1 pl-3 lines-dense"><code>Mon Jan 2 15:04:05 MST 2006</code></pre>
-<p>or</p>
+<p>Why that?  When you convert it to all numericals you get the following:</p>
 <pre class="p-1 pl-3 lines-dense"><code>01/02 03:04:05PM &#39;06 -0700</code></pre>
 <p>Notice how it’s 1, 2, 3, 4, 5, 6, 7 for month, day, hour, minute, second, year, and time zone offset.</p>
 <p>To print your time, just re-arrange, or edit one of these magic times any way you want. Just want to print the month? The format is <code>Jan</code>, <code>January</code>, <code>1</code>, or <code>01</code> depending on how you want to format it. The <em>real</em> month will be filled in. The same goes for all the other parts of the time.</p>
@@ -227,7 +227,7 @@ post meridiem
 <h2 id="h.6rzm4mpfzyn2" class="h4 mt-4 mb-4">Common Time Formats</h2>
 <p>Below are commonly used time and date formats.</p>
 <h3 id="h.rh5jck4unl96" class="h5 mt-4 mb-4">RFC 3339, ISO 8061</h3>
-<p>This format is used in <a href="http://ogp.me/%23datetime">Open Graph</a>, and <a href="https://developers.google.com/schemas/formats/datetime-formatting">Google Schemas</a>.  <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> and <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8061</a> defines a number of variations, but the following should work: </p>
+<p>This format is used in <a href="http://ogp.me/%23datetime">Open Graph</a>, and <a href="https://developers.google.com/schemas/formats/datetime-formatting">Google Schemas</a>.  <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> and <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8061</a> defines a number of variations, but the following should work:</p>
 <pre class="p-1 pl-3 lines-dense"><code>{{ .Date.Format &#34;2006-01-02T15:04:05Z07:00&#34; }}</code></pre>
 <h3 id="h.sv7meyfqa6w5" class="h5 mt-4 mb-4">RFC 1123 HTTP dates</h3>
 <p><a href="https://tools.ietf.org/html/rfc1123">RFC 1123</a> is used in various HTTP headers. Note that it uses the old GMT time zone instead of UTC.</p>

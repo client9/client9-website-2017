@@ -1,7 +1,7 @@
 ---
 date: "2017-05-28"
 description: Your shell scripts need static analysis.  Here's how.
-lastmod: "2018-04-30T21:40:10.680Z"
+lastmod: "2018-05-05T16:00:18.581Z"
 tags:
 - buildops
 title: Static Analysis for Bash and Shell Scripts
@@ -14,7 +14,7 @@ title: Static Analysis for Bash and Shell Scripts
 </ul>
 <p>In fact, given how weird shellcode is, it probably needs these tools even more than your regular languages. Fortunately these tools now exist for shell.</p>
 <h2 id="h.6gyqge44pxda" class="h4 mt-4 mb-4">shellcheck</h2>
-<p><a href="https://github.com/koalaman/shellcheck">shellcheck</a> provides static analysis of shell scripts and covers an number of different dialects of shell. It&#39;s hard to overstate how great this. You&#39;ll be horrified at the output and likely learn something as well.  </p>
+<p><a href="https://github.com/koalaman/shellcheck">shellcheck</a> provides static analysis of shell scripts and covers an number of different dialects of shell. It&#39;s hard to overstate how great this. You&#39;ll be horrified at the output and likely learn something as well.</p>
 <p>You can use it three ways.</p>
 <ul>
 <li>Online at <a href="https://www.shellcheck.net">shellcheck.net</a>. It&#39;s a great way to quickly see how screwed-up your scripts actually are.</li>
@@ -24,9 +24,9 @@ title: Static Analysis for Bash and Shell Scripts
 <p>Protip: You can lint <a href="https://docs.docker.com/engine/reference/builder/">Dockerfiles</a> and the shell script inside them with <a href="https://github.com/lukasmartinelli/hadolint">hadolint</a>.</p>
 <h2 id="h.h4cmxakezq3x" class="h4 mt-4 mb-4">mvdan/sh and shfmt</h2>
 <p><a href="https://github.com/mvdan/sh">shfmt</a> takes your crappy shell code, and makes it beautiful. There is no customization of the format other than &#34;tabs or spaces&#34;, but it&#39;s a good default format.  Use it.</p>
-<p>It&#39;s a single binary written in go.  You can screw around trying to download from <a href="https://github.com/mvdan/sh/releases">GitHub Releases</a> or you can use this <a href="https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-shfmt.sh">downloader script</a> which will do the right thing for your platform. (Disclaimer: I wrote that script.)</p>
+<p>It&#39;s a single binary written in go.  You can screw around trying to download from <a href="https://github.com/mvdan/sh/releases">GitHub Releases</a> or you can use this <a href="https://install.goreleaser.com/github.com/mvdan/sh.sh">downloader script</a> which will do the right thing for your platform.</p>
 <h2 id="h.lmx0chf10k7c" class="h4 mt-4 mb-4">client9/shlib</h2>
-<p>Disclaimer: I wrote this.</p>
+<p>Disclaimer: I wrote this and the downloader script mentioned above.</p>
 <p>The best shell script is one not written.  But if you have to use shell, <a href="https://github.com/client9/shlib">client9/shlib</a> is a collection of tested, portable functions to help you to bootstrap out of shell into something more sane. All the code is in the <a href="https://unlicense.org">public domain</a>, so use and remix as needed. Credit and pull requests are welcome but not required.</p>
 <h2 id="h.qoifxx4zur8b" class="h4 mt-4 mb-4">bashate</h2>
 <p><a href="https://github.com/openstack-dev/bashate">bashate</a> used by <a href="https://www.openstack.org">OpenStack</a> to enforce bash style. I think it&#39;s mostly superseded by the other tools, but you might like some of it&#39;s checks.</p>

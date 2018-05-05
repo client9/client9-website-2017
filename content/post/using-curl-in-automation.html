@@ -2,7 +2,7 @@
 date: "2018-04-25T03:55:59.176Z"
 description: Learn how to optimize curl for downloading network resources in your
   batch scripts, provisioning systems and continuous deployment pipelines
-lastmod: "2018-05-01T15:19:51.890Z"
+lastmod: "2018-05-05T06:04:27.966Z"
 tags:
 - devops
 title: Using curl in Automation
@@ -35,13 +35,13 @@ title: Using curl in Automation
 --retry-delay SECONDS  Wait SECONDS between retries
 --retry-max-time SECONDS  Retry only within this period</code></pre>
 <p>A good starting point might be:</p>
-<p>--retry 3 <code>--retry-connrefused --retry-delay 2</code></p>
+<pre class="p-1 pl-3 lines-dense"><code>--retry 3 --retry-connrefused --retry-delay 2</code></pre>
 <h2 id="h.6dfehu73euv9" class="h4 mt-4 mb-4">All Together</h2>
 <pre class="p-1 pl-3 lines-dense"><code>curl --silent --show-error \
   -L --max-redirs 3 \
   --retry 3 --retry-connrefused --retry-delay 2 \
   --max-time 30</code></pre>
-<p>For quick and dirty scripts, you can cheat with</p>
+<p>For quick and dirty scripts, you can cheat with:</p>
 <pre class="p-1 pl-3 lines-dense"><code>curl -sfSL</code></pre>
 <h2 id="h.57f216mhkw8e" class="h4 mt-4 mb-4">Better Fails on 404s</h2>
 <p>Curl has a way of customizing the output using the <code>-w</code> flag.  One can use this to fail on HTTP status in a different way:</p>

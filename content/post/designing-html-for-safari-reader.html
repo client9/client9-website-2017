@@ -2,7 +2,7 @@
 date: "2018-04-10T17:14:56.263Z"
 description: Simple rules to make your HTML page work with Safari Reader Mode, and
   to create subtitles and bylines
-lastmod: "2018-05-05T04:07:26.875Z"
+lastmod: "2018-05-05T05:34:09.171Z"
 tags:
 - webdev
 - hugo
@@ -10,11 +10,11 @@ title: Designing HTML for Safari Reader Mode
 ---
 <p>For whatever reason, Apple doesn’t provide any guidance on how to design for <a href="https://www.nytimes.com/2017/02/14/technology/personaltech/safari-reader.html">Safari Reader Mode </a>. Maybe they want the right to change it at any time or maybe it’s to prevent abuse and advertising sneaking in.  Likewise, it’s near impossible to find any third-party guidance on how to structure your HTML. It’s mostly guessing, checking reader mode, editing HTML, reloading until it works.  But after looking at the Reader javascript source code, and a lot of <em>View Source</em> on numerous publications, I’ve come up with some rules on how to structure HTML to optimize for Reader. There are no doubt many alternative rules and layouts, but this seems to work.</p>
 <h2 id="h.mwvtgrt197rw" class="h4 mt-4 mb-4">Structure the main content</h2>
-<p>The main content (include the headline and other content) should be in a single <code>&lt;main&gt;</code> tag.  Other tags like <code>&lt;article&gt;</code> also work.  The article should be text-heavy.  If there are too many links, lists, or other non-text items, Reader might not trigger.  Conversely, if the HTML node immediately prior to the article node is text-heavy it might bleed into the article under Reader mode. </p>
+<p>The main content (include the headline and other content) should be in a single <code>&lt;main&gt;</code> tag.  Other tags like <code>&lt;article&gt;</code> also work.  The article should be text-heavy.  If there are too many links, lists, or other non-text items, Reader might not trigger.  Conversely, if the HTML node immediately prior to the article node is text-heavy it might bleed into the article under Reader mode.</p>
 <h2 id="h.mpz9kc8z0b7s" class="h4 mt-4 mb-4">Structure the title</h2>
-<p>The title of the article should be a <code>&lt;h1&gt;</code> immediately after the <code>&lt;main&gt;</code></p>
+<p>The title of the article should be a &lt;h1&gt; immediately after the <code>&lt;main&gt;</code> tag.</p>
 <h2 id="h.s96j6swf6k05" class="h4 mt-4 mb-4">Structure the subtitle</h2>
-<p>Put the subtitle or (short) description as a <code>&lt;div&gt;</code> under the <code>&lt;h1&gt;.</code></p>
+<p>Put the subtitle or a short description as a <code>&lt;div&gt;</code> under the <code>&lt;h1&gt;</code> tag.</p>
 <p>Update 2018-05-01:  It appears the subtitle has a maximum length of under 200 character. If it exceeds this value, it’s just treated as paragraph. 150 characters seems safe, but unclear what the extract threshold is.</p>
 <h2 id="h.tjgdlz1jx7am" class="h4 mt-4 mb-4">Add a publication date byline</h2>
 <p>Underneath the subtitle, add a <code>&lt;div&gt;</code> that wraps a <code>&lt;time&gt;</code> tag, with a <code>datetime</code> attribute, for the publication date, will trigger Reader to make a byline with the author and the date.  It’s unclear where the author part comes from.  Possibly from <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Google search</a>, <a href="http://ogp.me">Open Graph</a>, or <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">Twitter Card</a> metadata.</p>
@@ -45,5 +45,5 @@ By &lt;a href=&#34;/&#34;&gt;Your Name&lt;/a&gt; --
 &lt;p&gt; article content... &lt;/p&gt;
 &lt;p&gt; article content... &lt;/p&gt;
 &lt;/main&gt;</code></pre>
-<p>There are other variations that might work, but this provides a good base to start with. Not investigated are how images work with Reader.. When in doubt, <em>View Source</em> on a major publication is your friend. </p>
+<p>There are other variations that might work, but this provides a good base to start with. Not investigated are how images work with Reader.. When in doubt, <em>View Source</em> on a major publication is your friend.</p>
 <p>Update 2018-04-12:  Changed wrapper tag from <code>&lt;article&gt;</code> to <code>&lt;main&gt;</code>.  Using <code>&lt;main&gt;</code> is more <a href="https://dequeuniversity.com/rules/axe/2.2/bypass">accessible</a>.</p>

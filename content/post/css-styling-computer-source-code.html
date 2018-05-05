@@ -1,7 +1,7 @@
 ---
 date: "2018-03-17T16:24:26.692Z"
 description: Posting code online? Here's how to make it look great.
-lastmod: "2018-04-30T22:50:22.244Z"
+lastmod: "2018-05-05T06:33:03.873Z"
 tags:
 - webdev
 title: Styling Computer Source Code
@@ -26,13 +26,12 @@ title: Styling Computer Source Code
 <h2 id="h.wwmlp4xm3uhr" class="h4 mt-4 mb-4">Watch out for line breaks </h2>
 <p>By default HTML will treat white space and the plain dash as a good place to insert a line break. This can cause a mess. For example:</p>
 <pre class="p-1 pl-3 lines-dense"><code>to prevent writes use the flag &lt;code&gt;--dry-run&lt;/code&gt;</code></pre>
-<p>can render as:</p>
+<p>can render as any of the following:</p>
 <pre class="p-1 pl-3 lines-dense"><code>to prevent writes use the flag --
-dry-run</code></pre>
-<p>or</p>
-<pre class="p-1 pl-3 lines-dense"><code>to prevent writes use the flag --dry
+dry-run
+to prevent writes use the flag --dry
 -run</code></pre>
-<p>Prevent this by setting the CSS property of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">white-space</a> to <code>nowrap.  </code></p>
+<p>Prevent this by setting the CSS property of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">white-space</a> to <code>nowrap</code>.</p>
 <pre class="p-1 pl-3 lines-dense"><code>/* for inline code */
 code, kbd, var {
   white-space: nowrap;
@@ -46,6 +45,7 @@ pre&gt;code {
 <pre class="p-1 pl-3 lines-dense"><code>/* set tabs to 2 spaces */
 tab-size: 2</code></pre>
 <p>If you never use tabs, then consider setting this to large number to intentionally throw off the design so you can find and delete the hidden tabs.</p>
+<p>Update 2018-05-01:  IE does not support <code>tab-size</code>, according to <a href="https://caniuse.com/%23search%3Dtab-size">caniuse.com</a>.</p>
 <h2 id="h.b9sz6jrrfr1j" class="h4 mt-4 mb-4">Tone down the syntax colors</h2>
 <p>There are <a href="https://www.wilfred.me.uk/blog/2014/09/27/the-definitive-guide-to-syntax-highlighting/">many reasons</a> to colorize source code when <em>editing</em>. There are far fewer reasons to do so when excerpting 10 or 20 lines for <em>reading</em>. A good use of color is for keyboard session transcripts where you are distinguishing between request and response. Another good use is to distinguish between the code and the code comments. Beyond that, syntax coloring is <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> for computer code.</p>
 <p>If you must do it, use server-side rendering instead of client-side. It&#39;s not worth the cost of loading another JavaScript library and having the style flash in. It&#39;s more important that your site load and perform quickly than coloring keywords.</p>

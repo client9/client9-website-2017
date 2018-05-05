@@ -1,7 +1,7 @@
 ---
 date: "2017-05-02"
 description: Because sometimes you don’t want the bleeding edge.
-lastmod: "2018-04-05T07:55:09.831Z"
+lastmod: "2018-05-05T17:35:14.710Z"
 tags:
 - macos
 - buildops
@@ -11,10 +11,10 @@ title: Using macOS Homebrew to Install a Specific Version
 <h2 id="h.6ze0pe9ju0r9" class="h4 mt-4 mb-4">Why Isn&#39;t This Functionality Built-In?</h2>
 <p>Homebrew used to provide this functionality. If you do search you&#39;ll probably find one these methods that no longer works. My guess is the team behind Homebrew removed the functionality since it never worked very well, at scale.</p>
 <p>In most Linux distributions, formulas are in separate repositories and can change multiple times before being released with a manual process. The version number is handcrafted and can look like <code>1.2.3-rc2-ubuntu10</code>.</p>
-<p>With homebrew, every formula is in one git repository and every git commit is a potentially a new release for all formula. This makes version numbers hard. For example let&#39;s say homebrew did a mass whitespace reformatting of the formula in one commit. Would every package need new version numbers?  How would you add them?  In a way that is consistent and doesn&#39;t have race conditions? </p>
+<p>With homebrew, every formula is in one git repository and every git commit is a potentially a new release for all formula. This makes version numbers hard. For example let&#39;s say homebrew did a mass whitespace reformatting of the formula in one commit. Would every package need new version numbers?  How would you add them?  In a way that is consistent and doesn&#39;t have race conditions?</p>
 <p>The good news is that getting the exact version you want already is indexed and ready, using git. It&#39;s more work, but it&#39;s more accurate too.</p>
 <h2 id="h.tiqgv4ce1gp5" class="h4 mt-4 mb-4">Find the Hash, Locally</h2>
-<p>If you are just trying to lock to the latest or a very recently edition, the fastest way is to use</p>
+<p>If you are just trying to lock to the latest or a very recently edition, the fastest way is to use:</p>
 <pre class="p-1 pl-3 lines-dense"><code>brew log -p NAME</code></pre>
 <p>Then to <code>brew install</code> this version use the raw content from GitHub by replacing <code>_HASH_</code> and <code>_NAME_</code> appropriately:</p>
 <pre class="p-1 pl-3 lines-dense"><code>BREWURL=https://raw.githubusercontent.com/Homebrew/homebrew-core

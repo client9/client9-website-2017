@@ -4,7 +4,7 @@ description: Automatically have "make help" print the usage of your Makefile.
 lastmod: "2018-03-04T05:48:20.268Z"
 title: Self-Documenting Makefiles
 ---
-<p><a href="https://www.gnu.org/software/make/manual/html_node/Introduction.html">Makefiles</a> are making a come-back due to wide use in the <a href="https://golang.org">golang</a> community. The only problem is... what do they do? Reading a makefile can be hard -- it&#39;s often ugly and many of targets are for internal use only.  And unlike a good CLI program, there is no equivalent of  <code>--help</code>.  </p>
+<p><a href="https://www.gnu.org/software/make/manual/html_node/Introduction.html">Makefiles</a> are making a come-back due to wide use in the <a href="https://golang.org">golang</a> community. The only problem is... what do they do? Reading a makefile can be hard -- it&#39;s often ugly and many of targets are for internal use only.  And unlike a good CLI program, there is no equivalent of  <code>--help</code>.</p>
 <p>Wouldn&#39;t it be great if you could mark-up the makefile and have <code>make help</code> automatically produce a usage description?</p>
 <p>I first read how to do this at the <a href="https://marmelab.com/blog/">Marme Lab Blog</a> in <a href="https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html">Self-Documented Makefile</a>. There was a follow-up in <a href="https://news.ycombinator.com/item?id%3D11195539">Hacker News</a>, and buried near the bottom, <a href="https://news.ycombinator.com/user?id%3Dm6w6">m6w6</a> posted an even better version:</p>
 <pre class="p-1 pl-3 lines-dense"><code># https://www.client9.com/self-documenting-makefiles/
