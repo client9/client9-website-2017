@@ -23,7 +23,7 @@ title: Using curl in Automation
 <h3 id="h.w5m05as853dj" class="h5 mt-4 mb-4">Turn back on error output</h3>
 <p>The flag <code>-S</code> or <code>--show-errors</code> turns back on error output.  You probably want this.</p>
 <h3 id="h.1gdlxlmj2exg" class="h5 mt-4 mb-4">Fail on 404s</h3>
-<p>The flag <code>-f </code>or <code>--fail</code> cause curl to exit (or fail) with exit code 22 if it doesn&#39;t get an HTTP status of 200. The previous flag <code>--show-errors</code> is needed to actually see what the status code is.  <a href="#h.57f216mhkw8e">See below</a> for a way of getting the status code and exiting a bit more gracefully.</p>
+<p>The flag <code>-f</code> or <code>--fail</code> cause curl to exit (or fail) with exit code 22 if it doesn&#39;t get an HTTP status of 200. The previous flag <code>--show-errors</code> is needed to actually see what the status code is.  <a href="#h.57f216mhkw8e">See below</a> for a way of getting the status code and exiting a bit more gracefully.</p>
 <h3 id="h.3pi4madw9z6k" class="h5 mt-4 mb-4">Follow redirects</h3>
 <p>The <code>-L</code> or <code>--location</code> flag instructs curl to follow redirects, which one probably wants.   Use the <code>--max-redirs</code> flag to prevent infinite loops from wildly misconfigured servers.</p>
 <h3 id="h.4iuxh6m0ykqa" class="h5 mt-4 mb-4">Timeout</h3>

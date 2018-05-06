@@ -74,7 +74,7 @@ done</code></pre>
 {{- $fill:=&#34;&lt;path fill=\&#34;currentColor\&#34;&#34; -}}
 {{ replace (readFile $fname) $path $fill | safeHTML }}
 &lt;/span&gt;</code></pre>
-<p>Place <em>this</em> <code>fontawesome.html</code> in<code> layouts/shortcodes</code> and use it as:</p>
+<p>Place <em>this</em> <code>fontawesome.html</code> in <code>layouts/shortcodes</code> and use it as:</p>
 <pre class="p-1 pl-3 lines-dense"><code>{{&#037; fontawesome github &#037;}}</code></pre>
 <h2 id="h.ondcsu8sh7ox" class="h4 mt-4 mb-4">Conclusion</h2>
 <p>One can add as many icons as needed, but there is only partial or shortcode for all of them. While Font Awesome’s javascript library and CDN offer additional features, if you just need an icon or two, it’s hard to beat using a shortcode or partial template with Hugo.</p>
