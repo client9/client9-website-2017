@@ -2,7 +2,7 @@
 date: "2018-05-21T05:17:20.426Z"
 description: Support for logging in golang is fragmented. What logging packages should
   you use?
-lastmod: "2018-05-26T00:19:33.944Z"
+lastmod: "2018-05-26T02:01:30.546Z"
 tags:
 - golang
 title: Logging Packages in Golang
@@ -15,7 +15,7 @@ title: Logging Packages in Golang
 <li><a href="#h.2kpene2fxtg">Composable</a></li>
 </ul>
 <h3 id="h.ayzjdxq576f6" class="h5 mt-4 mb-4">The Basics</h3>
-<p>The basics are just that.  Common or installed by default. However none of these support context logging or structured logging.  They only support a printf style log message.</p>
+<p>The basics are just that - there do the job and are common or installed by default. However none of these support context logging or structured logging.  They only support a printf style log message.</p>
 <p>First is good ‘ol <a href="https://golang.org/pkg/log/">stdlib/log</a>. It was probably designed for building and debugging golang itself, and not a complete application logging framework. It’s just enough to get started. There is no support for structured logging, contexts, or even levels. That’s said it’s easy to build on top of this to do more. See <a href="https://github.com/spf13/jWalterWeatherman">spf/jwalterweatherman</a> and <a href="https://github.com/hashicorp/logutils">hashicorp/logutils</a> for inspiration.</p>
 <p>At other end of the spectrum is <a href="https://github.com/golang/glog">golang/glog</a>. It’s a implementation of the <a href="https://github.com/google/glog">C++ log package</a> that google uses.  It’s supports leveled logging and few other features. While it’s on github, its frozen. No updates are accepted. It’s assume this for google’s internal use and compatibility. Besides logging, it also provides configuration if you use <a href="https://golang.org/pkg/flag/">stdlib/flag</a>. This may good or bad depending on your use case.</p>
 <h3 id="h.i2lc3hs3gmrb" class="h5 mt-4 mb-4">General Purpose</h3>
