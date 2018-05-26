@@ -1,0 +1,94 @@
+---
+date: "2018-05-21T05:17:20.426Z"
+description: Support for logging in golang is fragmented. What logging packages should
+  you use?
+lastmod: "2018-05-26T00:19:33.944Z"
+tags:
+- golang
+title: Logging Packages in Golang
+---
+<p>Out of the 35 packages in <a href="https://awesome-go.com/%23logging">Awesome Go</a>, a majority are obsolete, duplicative or fail to address what problem they are trying to solve.  Of the remaining (and some not on the list), they fall into four categories.</p>
+<ul>
+<li><a href="#h.ayzjdxq576f6">Basics</a></li>
+<li><a href="#h.i2lc3hs3gmrb">General purpose</a></li>
+<li><a href="#h.gu2r6fr4jhw6">Performance focused</a></li>
+<li><a href="#h.2kpene2fxtg">Composable</a></li>
+</ul>
+<h3 id="h.ayzjdxq576f6" class="h5 mt-4 mb-4">The Basics</h3>
+<p>The basics are just that.  Common or installed by default. However none of these support context logging or structured logging.  They only support a printf style log message.</p>
+<p>First is good ‘ol <a href="https://golang.org/pkg/log/">stdlib/log</a>. It was probably designed for building and debugging golang itself, and not a complete application logging framework. It’s just enough to get started. There is no support for structured logging, contexts, or even levels. That’s said it’s easy to build on top of this to do more. See <a href="https://github.com/spf13/jWalterWeatherman">spf/jwalterweatherman</a> and <a href="https://github.com/hashicorp/logutils">hashicorp/logutils</a> for inspiration.</p>
+<p>At other end of the spectrum is <a href="https://github.com/golang/glog">golang/glog</a>. It’s a implementation of the <a href="https://github.com/google/glog">C++ log package</a> that google uses.  It’s supports leveled logging and few other features. While it’s on github, its frozen. No updates are accepted. It’s assume this for google’s internal use and compatibility. Besides logging, it also provides configuration if you use <a href="https://golang.org/pkg/flag/">stdlib/flag</a>. This may good or bad depending on your use case.</p>
+<h3 id="h.i2lc3hs3gmrb" class="h5 mt-4 mb-4">General Purpose</h3>
+<p>General purpose (and every other logger listed here), support a variety of output and export formats, and provide context and structured logging support.</p>
+<p>First is <a href="https://github.com/sirupsen/logrus">sirupsen/log</a>. It’s <a href="https://godoc.org/github.com/sirupsen/logrus%23FieldLogger">client interface</a> duplicates the methods of stdlib log, so you can drop in and replace your existing logging and everything will just work.</p>
+<pre class="p-1 pl-3 lines-dense"><code>// import &#34;log&#34;
+import github.com/sirupsen/log</code></pre>
+<p>sirupus has a lot of output handlers and formats.  It’s likely it can export the log into whatever format or consumer you wish.</p>
+<p>The downside is that IMHO is messy. The interface is huge, and leaks things (e.g.  <code>Entry</code>) logging customers don’t need.  It has two output mechanisms: the regular handlers and hooks, but unclear why both are needed. The main package imports a few secondary packages for use in console logging, even if you aren’t use console logging.</p>
+<p>An alternative is <a href="https://github.com/apex/log">apex/log</a>.  It’s inspired by logrus but has a <a href="https://github.com/apex/log/blob/master/interface.go">simpler interface</a> and completely separates out the handler implementations. The console handers are especially snazzy and not loaded in by default.  It has additional features for error logging and supports <a href="https://github.com/pkg/errors">pkg/errors</a> which you are probably already using (or should be).</p>
+<p>Both use a <code>WithFields</code> method, along with a <code>Fields</code> object, to provide structured and context logging:</p>
+<pre class="p-1 pl-3 lines-dense"><code>log.WithFields(log.Fields{
+  &#34;event&#34;: event,
+  &#34;topic&#34;: topic,
+  &#34;key&#34;: key,
+}).Fatal(&#34;Failed to send event&#34;)</code></pre>
+<p>While type-safe, it seems clunky to use in practice and forces creating a throwaway object. Both are “relatively slow.”  It won’t matter a bit for console and light duty applications.</p>
+<h3 id="h.gu2r6fr4jhw6" class="h5 mt-4 mb-4">High Performance</h3>
+<p>The packages <a href="https://github.com/uber-go/zap">uber/zap</a> and <a href="https://github.com/rs/zerolog">rs/zerolog</a> are designed for absolute performance. In particular they strive for no memory allocations. They both provide structured, leveled and context logging. They output JSON to stdout and expect someone else to consume and import it. For performance reasons, they both avoid using reflection and instead use explicit typed fields:</p>
+<pre class="p-1 pl-3 lines-dense"><code>// zap uses a vararg style -- message first
+logger.Info(&#34;failed to fetch URL&#34;,
+  // Structured context as strongly typed Field values.
+  zap.String(&#34;url&#34;, url),
+  zap.Int(&#34;attempt&#34;, 3),
+  zap.Duration(&#34;backoff&#34;, time.Second),
+)</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>// zerolog uses a fluent style -- message last
+log.Debug().
+  Str(&#34;Scale&#34;, &#34;833 cents&#34;).
+  Float64(&#34;Interval&#34;, 833.09).
+  Msg(&#34;Fibonacci is everywhere&#34;)</code></pre>
+<p>Zap also has a helper to skip this step.  It’s easier to use, but slightly slower:</p>
+<pre class="p-1 pl-3 lines-dense"><code>sugar.Infow(&#34;failed to fetch URL&#34;,
+  &#34;url&#34;, url,
+  &#34;attempt&#34;, 3,
+  &#34;backoff&#34;, time.Second,
+)</code></pre>
+<p>They are both large packages (as everything is customized for performance) and do not provide interfaces.  As mentioned they only output JSON (they are some console packages for debugging) and it’s expected someone else is importing these or converting to whatever the destination needs. But if you need the speed, these are the loggers use.</p>
+<h3 id="h.2kpene2fxtg" class="h5 mt-4 mb-4">Composable Kits</h3>
+<p>Somewhere in the middle are logging packages that are based from composable functions.</p>
+<p>The first is <a href="https://github.com/inconshreveable/log15">inconshreveable/log15</a>.  The <a href="https://godoc.org/github.com/inconshreveable/log15">godoc reference</a> is worth reading, not just to see how log15 works, but also on the practice of logging. Especially good are sections on context and lazy logging.</p>
+<p>The <a href="https://godoc.org/github.com/inconshreveable/log15%23Logger">interface</a> is mostly simple and uses a vararg, message-first style (like uber/zap) for structured and context logging:</p>
+<pre class="p-1 pl-3 lines-dense"><code>requestlogger := log.New(&#34;path&#34;, r.URL.Path)
+requestlogger.Debug(&#34;db txn commit&#34;, &#34;duration&#34;, txnTimer.Finish())</code></pre>
+<p>The only problem being the Logger interface also exposes it’s Handler which seems un-necessary.  Included by default is a console handler which loads in three external packages (mostly dealing with colorization).  FWIW, log15 seems always rank last in performance testing.</p>
+<p>Inspired by log15 is <a href="https://github.com/go-kit/kit/tree/master/log">go-kit/kit/log</a>.  It works off a single logging interface:</p>
+<pre class="p-1 pl-3 lines-dense"><code>Log(keyval ...interface{}) error</code></pre>
+<p>Using this interface, more complicated loggers for levels and context are made while preserving this interface. While it is very clever, the end result for leveled loggers is unusual compared to other systems:</p>
+<pre class="p-1 pl-3 lines-dense"><code>import (
+    &#34;github.com/go-kit/kit/log&#34;
+    &#34;github.com/go-kit/kit/log/level&#34;
+)
+logger := log.NewLogfmtLogger(os.Stderr)
+logger.Log(&#34;foo&#34;, &#34;bar&#34;) // as normal, no level
+level.Debug(logger).Log(&#34;request_id&#34;, reqID, &#34;foo&#34;, &#34;bar&#34;)</code></pre>
+<p>Everything can return an error which also seems unusual for <em>application</em> logging.  The idea is that the universal  interface could be used for any type of logging, including transaction processing, so errors need to be returned.</p>
+<p>It includes by default two handlers (output formats), one for JSON and another in <a href="https://brandur.org/logfmt">logfmt</a>, which loads in 2 or 3 external packages.</p>
+<p>For performance, go-kit isn’t as fast as zerolog or zap, but faster than just about everything else.</p>
+<p>The following design documents are worth reading even if you chose not to use go-kit/kit/log:</p>
+<ul>
+<li>Summary slides: <a href="https://speakerdeck.com/chrishines/go-kit-log-package">go-kit/log package</a> </li>
+<li>More slides: <a href="https://go-talks.appspot.com/github.com/ChrisHines/talks/structured-logging/structured-logging.slide%231">The Hunt For a Logger Interface</a></li>
+<li>Why return an error? <a href="https://github.com/go-kit/kit/issues/164">GitHub Issue164</a></li>
+</ul>
+<h3 id="h.fspcougs4cah" class="h5 mt-4 mb-4">Conclusion</h3>
+<p>What package to use? These all work, but it all depends on what problem are you trying to solve.</p>
+<ul>
+<li>For high volume (think: 100s or 1000s logs per second) or constrained devices (think Raspberry Pi): zap or zerolog.</li>
+<li>To quickly replace all your crappy stdlib log calls to have a better output: sirupus, maybe apex</li>
+<li>To exported logs to an existing system: logrus or apex/log</li>
+<li>For pretty console applications: apex/log</li>
+</ul>
+<p>While log15 and go-kit are excellent loggers, I couldn’t really find a sweet spot for them.</p>
+<p>There is nothing wrong with keeping it simple and using stdlib. Consider this from <a href="https://twitter.com/peterbourgon">Peter Bourgon</a> in <a href="https://peter.bourgon.org/go-in-production/%23logging-and-telemetry">Go: Best Practices for Product Environments</a>:</p>
+<blockquote class="pl-3 lines-dense">We played around with several logging frameworks, providing things like leveled logging, debug, output routing, special formatting, and so on. In the end, we settled on plain package log. It works because we only log actionable information. </blockquote>
+<p>Log on…</p>

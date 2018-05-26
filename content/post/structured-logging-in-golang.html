@@ -1,0 +1,47 @@
+---
+date: "2018-05-13T17:54:22.249Z"
+description: What is structured logging, what are the benefits, and how to do it in
+  golang
+lastmod: "2018-05-26T00:17:22.573Z"
+tags:
+- golang
+title: Structured Logging in Golang
+---
+<p>Out of the box, golang provides the <a href="https://golang.org/pkg/log/">stdlib/log</a> package.  It provides “printf” style logging.  A template string is used along with a list of arguments, and a log message is generated:</p>
+<pre class="p-1 pl-3 lines-dense"><code>log.Printf(&#34;user %d wasn&#39;t found&#34;, 1234)
+// user 1234 wasn&#39;t found</code></pre>
+<p>This dynamically generated message is easy and convenient but has a number of issues involving storage, searching, and consistency.</p>
+<p>Structured logging solves these problems by replacing the printf message template with named-fields.  They come in two styles:</p>
+<pre class="p-1 pl-3 lines-dense"><code>// vargargs style
+log.Info(&#34;user not found&#34;, &#34;userid&#34;, 1234)</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>// or using another popular syntax
+log.WithField(&#34;userid&#34;, 1234).Info(&#34;user not found&#34;)</code></pre>
+<p>The output is a list of key-value pairs followed by the static message:</p>
+<pre class="p-1 pl-3 lines-dense"><code>// userid=1234 msg=&#34;user not found&#34;</code></pre>
+<p>Most if not all structured loggers output in some serializable format such as JSON or <a href="https://brandur.org/logfmt">logfmt</a>. That makes it trivial to export or import data into Splunk or Kibana.</p>
+<h3 id="h.vqkri7von8q8" class="h5 mt-4 mb-4">Solving Problems with Grep</h3>
+<p>Because the message is a static string, searching, sorting, aggregating, and counting various types of different error messages can be <strong>solved using grep</strong>.  Both in the log file (what happened), and in code (where did it happen). If your problem can be reduced to grep, you win. For example:</p>
+<pre class="p-1 pl-3 lines-dense"><code>// sample message
+msg=&#34;user not found&#34; id=1234</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>// How many times did this happen?
+grep -c &#34;user not found&#34; mylogfile.log</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>// what happened with user id &#34;1234&#34; ?
+grep &#39;id=1234&#39; mylogfile.log</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>// what line of code emitted this?
+find . -name &#39;*.go&#39; | xargs grep &#34;user not found&#34;</code></pre>
+<p>One can still do the same with a message in the form of “<code>user id 1234 not found&#34;</code> but it’s a lot harder and error prone.</p>
+<h3 id="h.yodhyllau2re" class="h5 mt-4 mb-4">Better English, Better Internationalization</h3>
+<p>Another benefit to structured logging and the use of static string for a message is that the message becomes a lot simpler grammatically.  Plurals and special forms typically go away (1 user vs. 2 users).  The language becomes a lot more consistent, e.g.  “user not found”  vs.  “user 1234 not found” vs “unable to find user 1234” vs “couldn’t find user 1234”.   As mentioned above this make searching easier, but also makes for easier reading, especially for if English is not their primary language.  And if you end up internationalizing the  application, “user not found” is a lot easier to translate than a dynamic string.</p>
+<h3 id="h.xdv2uhfwsyl9" class="h5 mt-4 mb-4">Context Logging</h3>
+<p>Most structured loggers in golang also provide a helper called “context logging”.  This allows you to pre populate some fields so critical data doesn’t need to be repeated.  It also make the code more readable.</p>
+<pre class="p-1 pl-3 lines-dense"><code>func setupUser(uid int) {
+   logger = logger.With(&#34;userid&#34;, uid)
+   logger.Debug(&#34;looking up user&#34;)
+   // ...
+   logger.Debug(&#34;updating record&#34;)
+}</code></pre>
+<pre class="p-1 pl-3 lines-dense"><code>// userid=1234 msg=&#34;looking up user&#34;
+// userid=1234 msg=&#34;updating record&#34;</code></pre>
+<h3 id="h.uc7k2vdinohc" class="h5 mt-4 mb-4">Golang</h3>
+<p>As mentioned the standard log in golang doesn’t support structured logging. However many if not most third party packages support it. To get started, two good general packages are <a href="https://github.com/sirupsen/logrus">sirupus/log</a> and <a href="https://github.com/apex/log">apex/log</a>. For high performance logging, see <a href="https://github.com/uber-go/zap">uber/zap</a> or <a href="https://github.com/rs/zerolog">rs/zerolog</a>.  More details are on found in <a href="/logging-packages-in-golang/">Logging Packages in Golang</a>.</p>
+<p>Log on...</p>
