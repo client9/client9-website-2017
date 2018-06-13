@@ -8,6 +8,7 @@ enableRobotsTXT= true
 googleAnalytics = ""
 FootnoteReturnLinkContents = ""
 copyright="&copy; 2018 Nick Galbreath"
+theme="client9"
 
 [permalinks]
 post="/:slug/"
