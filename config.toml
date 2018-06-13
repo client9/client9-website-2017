@@ -21,5 +21,5 @@ sitename="Nick Galbreath"
 twitter="@NGalbreath"
 
 [blackfriday]
-extensions = ["footnotes"]
+extensions = []
 fractions = false
