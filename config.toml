@@ -19,7 +19,8 @@ tag="tags"
 
 [params]
 sitename="Nick Galbreath"
-twitter="@NGalbreath"
+twitter="NGalbreath"
+github="client9"
 
 [blackfriday]
 extensions = []

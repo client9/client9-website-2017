@@ -37,10 +37,10 @@
 	<div>
 		<div class="h4 mb-0 row">
 			<div class="col-9">
-				<a class="nav-link" href="/">Nick Galbreath</a>
+				<a class="nav-link" href="/">{{ .Site.Title }}</a>
 			</div>
 			<div class="col-3 text-right">
-<a class="nav-link" aria-label="github" href="https://github.com/client9">{{ partial "fontawesome.html" "github" }}</a> <a class="nav-link" aria-label="twitter" href="https://twitter.com/NGalbreath">{{ partial "fontawesome.html" "twitter" }}</a>
+				{{ with .Site.Params.github }}<a class="nav-link" aria-label="github" href="https://github.com/{{ . }}">{{ partial "fontawesome.html" "github" }}</a>{{ end }}{{ with .Site.Params.twitter }} <a class="nav-link" aria-label="twitter" href="https://twitter.com/{{ . }}">{{ partial "fontawesome.html" "twitter" }}</a>{{ end }}
 			</div>
 		</div>
 		<div class="small lines-dense">CTO and co-founder of <a class="nav-link" href="https://www.signalsciences.com/">Signal Sciences</a>. Author and <a class="nav-link" href="/tags/presentations">speaker</a> on software engineering, devops, and security.</div>
