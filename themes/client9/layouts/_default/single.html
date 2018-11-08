@@ -1,15 +1,12 @@
 {{ partial "header.html" . }}
-<main>
-<h1 class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
-<div class="lines-dense pb-2">{{ .Description }} </div>
-<div class="small pb-3 byline">
-{{ with or .Params.author .Site.Params.author }} <a class="nav-link" href="/">{{ . }}</a> &#x00b7; {{ end }} <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
-</div>
-<!--
 {{- if .Params.draft }}<p id="draft">&#x26A0; Draft &#x26A0;</p>{{ end -}}
--->
+<article><h1 itemprop="title" class="h2">{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+<div itemprop="subheading" class="lines-dense pb-2">{{ .Description }}</div>
+<div class="small pb-3 byline">
+{{ with or .Params.author .Site.Params.author }} <a itemprop="author" class="nav-link" href="/">{{ . }}</a> &#x00b7; {{ end }} <time itemprop="pubdate" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }}</time>
+</div>
 {{ .Content }}
-</main>
+</article>
 {{ with .Params.tags }}
 <div>{{ range . }}
 <a class="btn btn-light" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
